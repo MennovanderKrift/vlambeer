@@ -10,13 +10,15 @@
 	<meta charset="UTF-8">
 	<title>Invoice overview</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="sorttable.js"></script>
 </head>
 <body>
 
 <div class="container">
 	
+<h2>Invoice overview</h2>
 
-	<table class="table table-striped">
+	<table class="table table-striped sortable">
 		<thead>
 			<tr>
 				<td>Invoice #</td>
@@ -39,6 +41,6 @@
 	</table>
 
 </div>
-	
+
 </body>
 </html>
