@@ -2,6 +2,9 @@
 
 // include to header file goes here
 
+$con = mysqli_connect('localhost', 'root', '', 'vlambeer');
+$query = mysqli_query($con, "SELECT * FROM invoices");
+
 ?>
 
 <!DOCTYPE html>
@@ -27,16 +30,20 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>#201411001</td>
-				<td>21-11-2014</td>
-				<td><a href="#">x</a></td>
-			</tr>
-			<tr>
-				<td>#201411002</td>
-				<td>21-11-2014</td>
-				<td><a href="#">x</a></td>
-			</tr>
+	<?php
+	while($row = mysqli_fetch_assoc($query)) {
+		$invoiceNr 	= $row['invoice_nr'];
+		$date		= $row['invoice_date'];
+		$dl 		= $row['invoice_dl'];
+
+	echo "<tr>
+			<td>#" . $invoiceNr . "</td>
+			<td>" . $date . "</td>
+			<td><a href='" . $dl . "'>x</a></td>
+			</tr>"; 
+	}
+
+	?>
 		</tbody>
 	</table>
 
