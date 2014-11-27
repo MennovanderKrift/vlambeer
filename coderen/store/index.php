@@ -94,7 +94,7 @@
 	</div>
 
 	<footer>
-		<div class="store-footer" cols='md-6'>
+		<div class="store-footer">
 			<h1>.store-footer</h1>
 >>>>>>> 3262600abd747c682b8f346b5ee6cd1d7ef87b13
 		</div>
