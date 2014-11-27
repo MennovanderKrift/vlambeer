@@ -1,19 +1,53 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	text-align: center;
+}
+.header-top {
+	height: 40px;
+	width: 100%;
 	border: 1px solid black;
 }
-
-h1{
-	text-align: center;
-	border: none;
+.header-calltoaction {
+	height: 200px;
+	width: 900px;
+	margin: 0 auto;
+	border: 1px solid black;
 }
-.header-top{
-
+.header-menu {
+	height: 40px;
+	width: 100%;
+	border: 1px solid black;
 }
-.header-calltoaction{
+.container {
+ 	width: 900px;
+ 	margin: 0 auto;
+ 	padding: 0px;
+ 	border: 1px solid black;
 }
-.header-menu{
+.slider {
+	float: left;
+	width: 100%;
+	height: 200px;
+	border: 1px solid black;
+}
+.info {
+	float: left;
+	width: 100%;
+	height: 200px;
+	border: 1px solid black;
+}
+.newsitem {
+	/*float: right;
+	width: 198px;
+	height: 300px;
+	background-color: green;*/
+}
+.footer {
+	height: 50px;
+	width: 900px;
+	margin: 0 auto;
+	border: 1px solid black;
 }
 
 .store-header-top{
