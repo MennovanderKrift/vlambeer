@@ -17,9 +17,54 @@ h1{
 }
 
 .store-header-top{
+	min-height: 250px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.store-logo{
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	margin: 0;
+}
+
+.store-slider{
+	display: inline-block;
+	width: 800px;
 	height: 250px;
 }
 
 .store-header-menu{
 	height: 20px;
+}
+
+.store-header-menu ul{
+	text-align: center;
+}
+
+.store-header-menu ul li{
+	display: inline;
+	margin: 10px;
+	font-weight: bold;
+}
+
+.store-container{
+	padding-bottom: 30px;
+}
+
+.store-items-wrapper{
+	margin: 0 auto;
+	width: 730px;
+	height: 202px;
+}
+
+.store-about{
+	height: 250px;
+}
+.store-item{
+	width: 200px;
+	height: 200px;
+	margin: 0 20px;
+	display: inline-block;
 }
