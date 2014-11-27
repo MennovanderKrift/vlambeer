@@ -19,7 +19,16 @@ if(isset($_POST['register'])) {
 	} else {
 		$hashedPass = password_hash("$password", PASSWORD_DEFAULT);
 		$query = mysqli_query($con, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPass')");
-		header("location: index.php?msg=sr1");
+	} if (!$query) {
+		trigger_error("Registration failed");
+	} else {
+            $to = $email;
+            $subject = "Registration vlambeer.com";
+            $message = "Welcome " . $username . "<br><br>Welcome on the new vlambeer.com website.<br>Your login info:</br>Username: " . $username . "<br>Password: " . $password . "<br>";
+            $from = "info@vlambeer.com";
+            $headers = "From: $from";
+            mail($to,$subject,$message,$headers);
+            header("location: ../index.php?msg=rs");
 	}
 }
 
