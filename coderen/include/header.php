@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/css.css">
 
   <meta charset="UTF-8">
   <meta name="description" content="Vlambeer webstore">
