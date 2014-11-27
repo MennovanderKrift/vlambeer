@@ -3,12 +3,23 @@
 	padding: 0px;
 	border: 1px solid black;
 }
-.header-top {
+
+h1{
+	text-align: center;
+	border: none;
+}
+.header-top{
 
 }
-.header-calltoaction {
-
+.header-calltoaction{
 }
-.header-menu {
-	
+.header-menu{
+}
+
+.store-header-top{
+	height: 250px;
+}
+
+.store-header-menu{
+	height: 20px;
 }
