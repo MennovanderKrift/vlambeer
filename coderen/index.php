@@ -3,7 +3,7 @@
 ?>
 	<header>
 		<div class="header-top">
-			click to store / zoeken
+			<a href="store/index.php">click to store</a> / zoeken
 		</div>
 		<div class="header-calltoaction">
 			<h1>Logo</h1>

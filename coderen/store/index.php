@@ -1,6 +1,4 @@
 <?php include '../include/header.php';?>
-<<<<<<< HEAD
-
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -35,7 +33,6 @@
 		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
-=======
 	<h1> Vlambeer Games & Social media icons</h1>
 	<header>
 		<div class="store-header-top">
@@ -96,7 +93,6 @@
 	<footer>
 		<div class="store-footer">
 			<h1>.store-footer</h1>
->>>>>>> 3262600abd747c682b8f346b5ee6cd1d7ef87b13
 		</div>
 	<script src="../../assets/js/bootstrap.js" type="text/javascript"></script>
 	</body>
