@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Vlambeer</title>
-
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/style.css">
 
   <meta charset="UTF-8">
