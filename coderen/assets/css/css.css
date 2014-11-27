@@ -1,0 +1,20 @@
+.slider {
+	height: 150px;
+}
+
+.logo img{
+	height: 148px;
+}
+
+.nav {
+	padding: 20px;
+
+}
+.nav li {
+margin-right: 20px;
+
+}
+.navbar{
+	position: none;
+	float: left;
+} 
