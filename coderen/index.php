@@ -14,12 +14,16 @@
 	</header>
 	<section>
 		<div class="container">
+			<div class="newsitem">
+
+			</div>
 			<div class="slider">
 				<h1>slider | gameinfo (linksonder)</h1>
 			</div>
 			<div class="info">
 				<h1>info bedrijf</h1>
 			</div>
+			
 		</div>
 	</section>
 	<footer>
