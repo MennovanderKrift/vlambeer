@@ -8,9 +8,9 @@ $password 		=		$_POST['password'];
 $password2		=		$_POST['password2'];
 
 if(isset($_POST['register'])) {
-	if($password != $password2) {
+	if($password !== $password2) {
 		header("location: index.php?msg=pe1");
-	}elseif(!(strlen($_POST['password']) >= 8)) {
+	}elseif(!(strlen($password) >= 8)) {
 		header("location: index.php?msg=pe2");
 	}elseif(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE username = '$username'"))) {
 		header("location: index.php?msg=ue1");
