@@ -57,7 +57,7 @@
 	</div>
 
 	<footer>
-		<div class="store-footer" cols='md-6'>
+		<div class="store-footer">
 			<h1>.store-footer</h1>
 		</div>
 	</footer>
