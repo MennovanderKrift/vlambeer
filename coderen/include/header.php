@@ -2,9 +2,13 @@
 <html>
 <head>
   <title>Vlambeer</title>
+<<<<<<< HEAD
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+=======
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+>>>>>>> f91dd2650f81379af6aa33e2f614d0dd20eaad17
   <link rel="stylesheet" href="assets/style.css">
 
   <meta charset="UTF-8">
