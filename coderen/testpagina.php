@@ -1,6 +1,6 @@
 <?php
 	require 'config/config.php';
-	include 'include/header.php';
+	include 'includes/header.php';
 
 	$sql = "SELECT * FROM product";
 	$stmt = $db->query($sql);
@@ -12,7 +12,8 @@
 	$product_price = $product->product_price;
 	$product_with_btw = $product_price * $btw;
 
-	$sale = $product_price - $product->sales_amount;
+	$sale = $product_price * 0.$product->sales_amount;
+
 
 	// deel / geheel x 100
 
