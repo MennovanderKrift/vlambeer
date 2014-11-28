@@ -12,7 +12,8 @@
 	$product_price = $product->product_price;
 	$product_with_btw = $product_price * $btw;
 
-	$sale = $product_price * 0.$product->sales_amount;
+	$salepercentage = $product->sales_amount / 100;
+	$sale = $product->product_price * $salepercentage;
 
 
 	// deel / geheel x 100
