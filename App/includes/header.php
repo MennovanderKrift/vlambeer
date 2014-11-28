@@ -1,3 +1,6 @@
+<?php
+  require '../config/Database.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
