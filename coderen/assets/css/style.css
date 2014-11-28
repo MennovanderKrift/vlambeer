@@ -15,6 +15,25 @@
 	margin: 0 auto;
 	border: 1px solid black;
 }
+.logo-slogan {
+	text-align: left;
+	float: left;
+	width: 500px;
+	height: 200px;
+}
+.logo-slogan img {
+	float: left;
+	margin-top: 10px;
+	height: 180px;
+	width: 180px;
+}
+.header-title {
+	margin-top: 115px;
+	text-align: left;
+}
+.slogantext {
+	text-align: left;
+}
 .header-menu {
 	height: 40px;
 	width: 100%;

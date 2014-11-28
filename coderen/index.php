@@ -6,7 +6,11 @@
 			<a href="store/index.php">click to store</a> / zoeken
 		</div>
 		<div class="header-calltoaction">
-			<h1>Logo</h1>
+			<div class="logo-slogan">
+				<img src="assets/img/vlambeer-logo.png">
+				<h1 class="header-title">Vlambeer</h1>
+				<p id="slogan" class="slogantext"></p>
+			</div>
 		</div>
 		<div class="header-menu">
 			menu1 | menu2 | menu3 | menu4
@@ -31,5 +35,6 @@
 			Vlambeer is a Dutch independent Game Studio | twitter | info / Friends of Vlambeer
 		</div>
 	</footer>
-</body>
-</html>
+<?php
+	require 'include/footer.php';
+?>

@@ -12,7 +12,13 @@
 	$product_price = $product->product_price;
 	$product_with_btw = $product_price * $btw;
 
-	echo '€' . $product->product_price . ',- + 21% btw €' . $product_with_btw . ',-';
+	$sale = $product_price - $product->sales_amount;
+
+	// deel / geheel x 100
+
+	echo '<h1>€' . $product->product_price . ',- + 21% btw €' . $product_with_btw . ',-</h1>';
+	echo '<br>';
+	echo '<h1>€' . $product->product_price . ' - ' . $product->sales_amount . '% = €' . $sale . '</h1>';
 
 	}
 ?>
