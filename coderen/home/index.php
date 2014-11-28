@@ -1,13 +1,13 @@
 <?php
-  include 'include/header.php';
+  include '../includes/header.php';
 ?>
 	<header>
 		<div class="header-top">
-			<a href="store/index.php">click to store</a> / zoeken
+			<a href="../store/index.php">click to store</a> / zoeken
 		</div>
 		<div class="header-calltoaction">
 			<div class="logo-slogan">
-				<img src="assets/img/vlambeer-logo.png">
+				<img src="../assets/img/vlambeer-logo.png">
 				<h1 class="header-title">Vlambeer</h1>
 				<p id="slogan" class="slogantext"></p>
 			</div>
@@ -36,5 +36,5 @@
 		</div>
 	</footer>
 <?php
-	require 'include/footer.php';
+	require '../includes/footer.php';
 ?>
