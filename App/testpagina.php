@@ -1,5 +1,4 @@
 <?php
-	require 'config/config.php';
 	include 'includes/header.php';
 
 	$sql = "SELECT * FROM product";
