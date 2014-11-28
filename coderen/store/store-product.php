@@ -1,4 +1,4 @@
-<?php require '../include/header.php'; ?>
+<?php require '../includes/header.php'; ?>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
 <p id="slogan"></p>
 <div class="container">
@@ -70,6 +70,6 @@
 		</div>
 	</div>
 </div>
-<?php require '../include/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>
 
 
