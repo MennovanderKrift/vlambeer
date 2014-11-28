@@ -13,7 +13,13 @@
 			</div>
 		</div>
 		<div class="header-menu">
-			menu1 | menu2 | menu3 | menu4
+			<ul>
+				<li><a href="">menu1</a></li>
+				<li><a href="">menu2</a></li>
+				<li><a href="">menu3</a></li>
+				<li><a href="">menu4</a></li>
+				<li><a href="../store/store-product.php">regilio</a></li>
+			</ul>
 		</div>
 	</header>
 	<section>
