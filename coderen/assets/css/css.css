@@ -1,5 +1,6 @@
-.game-slider {
+.game-slider img {
 	height: 150px;
+	width: 700px;
 }
 
 .logo img{
@@ -19,14 +20,24 @@ margin-right: 20px;
 	float: left;
 } 
 
-.game-logo {
+.game-logo img{
 	height: 150px;
-	width: 150px;
+	width: 300px;
 	margin-bottom: 20px;
 }
 
 .foto-album div {
 	margin-top: 20px;
+	margin-right: 10px; 	
 	height: 100px;
 	width: 100px;
+}
+
+.foto-album img {
+	margin-top: 20px;
+	height: 100px;
+	width: 100px;
+}
+.container {
+	height: 100%;
 }

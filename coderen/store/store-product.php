@@ -1,12 +1,12 @@
 <?php require '../include/header.php'; ?>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
-
+<p id="slogan"></p>
 <div class="container">
 	<div class="page-header">
 		<div class="col-md-2 logo"><img src="../assets/img/vlambeer-logo.png" alt="vlambeer"></div>
-		<div class="col-md-10 game-slider" >slider van de game</div>	
+		<div class="col-md-10 game-slider" ><img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt=""></div>	
 	</div>
-<p id="slogan"></p>
+
 	<div class="navbar">
 
 		<ul class="nav navbar-nav">
@@ -23,53 +23,53 @@
 
 	<div class="col-md-8 col-md-offset-1">
 
-		<div class="col-md-4 game-logo">
-			game-logo
+		<div class="col-md-7 game-logo">
+			<img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt="">
 		</div>
 
-		<div class="col-md-8">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quia quibusdam vel consectetur quis enim velit quo accusantium alias repellat. Dolores eius blanditiis ad! Eaque commodi tenetur rerum voluptates molestias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio unde possimus perferendis laborum quisquam tenetur quia numquam incidunt maxime neque! Ducimus, iusto quibusdam ipsum accusamus facilis nobis at magni. Consequatur.</p>
+		<div class="col-md-5">
+			<p>Titel: Call of Duty®: Advanced Warfare<br>Genre: Actie <br> Ontwikkelaar: Sledgehammer Games ,	Raven Software <br> Uitgever: Activision <br> Releasedatum: 3 nov 2014</p>
 		</div>
 
 		<div class="col-md-12">
-			<p>beschrijving    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quibusdam necessitatibus nobis, eligendi non vel? Aperiam incidunt possimus dolore voluptate, ab blanditiis atque tenetur distinctio asperiores quae. Doloremque, tenetur, at.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam amet doloribus pariatur nesciunt facilis quidem suscipit nobis ea, blanditiis odit optio dolorem laborum dignissimos quia ullam, reprehenderit illum nam est?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sapiente, explicabo nulla. Voluptatem omnis, libero rerum pariatur? Maiores ipsa debitis, dolorum aspernatur iusto reprehenderit in non rem facere accusantium, alias.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, placeat, repudiandae! Vitae error inventore, ipsa voluptatum similique facere sit ab cumque, libero! Tempore vel veniam nobis atque labore sunt corporis.</p>
+			<p>Call of Duty®: Advanced Warfare, developed by Sledgehammer Games (co-developers of Call of Duty®: Modern Warfare® 3), harnesses the first three-year, all next-gen development cycle in franchise history. Call of Duty®: Advanced Warfare envisions a powerful future, where both technology and tactics have evolved to usher in a new era of combat for the franchise. Delivering a stunning performance, Academy Award® winning actor Kevin Spacey stars as Jonathan Irons - one of the most powerful men in the world - shaping this chilling vision of the future of war. All digital purchases of Call of Duty: Advanced Warfare include the bonus Digital Edition Personalization Pack with a custom weapon camo, reticle set and playercard. Power Changes Everything.</p>
 		</div>
 	</div>
 
 	<div class="col-md-2">
-		<p>prijs info</p>
+		<p>59,99€ <a href="#" class="btn">In winkelwagen</a></p>
 	</div>
 
 	<div class="col-md-9 col-md-offset-1 foto-album">
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_9c2a0040aec3508c40134442597987eaa01cc7c4.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_101172dd16fc318668589aa1638dcf5d6f3f4e8a.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_48bfc681fdf8ecb4ecabf4553f2f6a7fcb9183de.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 		
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_f12882d87813b949695b14861ee8618e935413c8.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_6d7ea64261cae4ebd2212290282cc8bff4bb2afe.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_7f8c39d7b3b89cf79804f48df3b54d5cddd8e2d2.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 
 		<div class="col-md-1">
-			foto
+			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" alt="">
 		</div>
 	</div>
-
-<?php require '../include/footer.php'; ?>
 </div>
+<?php require '../include/footer.php'; ?>
+
 
