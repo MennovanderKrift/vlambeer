@@ -4,10 +4,11 @@
 <div class="container">
 	<div class="page-header">
 		<div class="col-md-2 logo"><img src="../assets/img/vlambeer-logo.png" alt="vlambeer"></div>
-		<div class="col-md-10 slider" >slider van de game</div>	
+		<div class="col-md-10 game-slider" >slider van de game</div>	
 	</div>
-
+<p id="slogan"></p>
 	<div class="navbar">
+
 		<ul class="nav navbar-nav">
 	    	<li class="active"><a href="#">games</a></li>
 	    	<li ><a href="#">bundles</a></li>
