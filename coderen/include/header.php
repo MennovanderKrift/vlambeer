@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/css.css">
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 
   <meta charset="UTF-8">
   <meta name="description" content="Vlambeer webstore">
