@@ -27,11 +27,11 @@
 			<img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt="">
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-5 omschrijving">
 			<p>Titel: Call of Duty®: Advanced Warfare<br>Genre: Actie <br> Ontwikkelaar: Sledgehammer Games ,	Raven Software <br> Uitgever: Activision <br> Releasedatum: 3 nov 2014</p>
 		</div>
 
-		<div class="col-md-12">
+		<div class="col-md-12 beschrijving">
 			<p>Call of Duty®: Advanced Warfare, developed by Sledgehammer Games (co-developers of Call of Duty®: Modern Warfare® 3), harnesses the first three-year, all next-gen development cycle in franchise history. Call of Duty®: Advanced Warfare envisions a powerful future, where both technology and tactics have evolved to usher in a new era of combat for the franchise. Delivering a stunning performance, Academy Award® winning actor Kevin Spacey stars as Jonathan Irons - one of the most powerful men in the world - shaping this chilling vision of the future of war. All digital purchases of Call of Duty: Advanced Warfare include the bonus Digital Edition Personalization Pack with a custom weapon camo, reticle set and playercard. Power Changes Everything.</p>
 		</div>
 	</div>
