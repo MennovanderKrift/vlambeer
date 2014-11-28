@@ -3,7 +3,13 @@
 ?>
 	<header>
 		<div class="header-top">
-			<a href="../store/index.php">click to store</a> / zoeken
+			<a href="../store/index.php"><button>click to store</button></a> 
+
+			<!-- <form method="POST" action=""> -->
+				<input type="search">
+				<input type="submit" value="Zoeken">
+			</form>
+
 		</div>
 		<div class="header-calltoaction">
 			<div class="logo-slogan">
@@ -13,13 +19,15 @@
 			</div>
 		</div>
 		<div class="header-menu">
-			<ul>
-				<li><a href="">menu1</a></li>
-				<li><a href="">menu2</a></li>
-				<li><a href="">menu3</a></li>
-				<li><a href="">menu4</a></li>
-				<li><a href="../store/store-product.php">regilio</a></li>
-			</ul>
+			<div class="navibar">
+				<ul class="navi navibar-nav">
+					<li class="active"><a href="">Home</a></li>
+					<li><a href="">menu2</a></li>
+					<li><a href="">menu3</a></li>
+					<li><a href="">menu4</a></li>
+					<li><a href="../store/store-product.php">regilio</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<section>

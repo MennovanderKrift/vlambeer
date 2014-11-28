@@ -4,16 +4,19 @@
 	text-align: center;
 	font-family: 'Arimo', sans-serif;
 }
+body {
+	background-color: #FAC846;
+}
 .header-top {
 	height: 40px;
 	width: 100%;
-	border: 1px solid black;
+	background-color: black;
 }
 .header-calltoaction {
+	background-color: #FFFFFF;
 	height: 200px;
 	width: 900px;
 	margin: 0 auto;
-	border: 1px solid black;
 }
 .logo-slogan {
 	text-align: left;
@@ -37,25 +40,40 @@
 .header-menu {
 	height: 40px;
 	width: 100%;
-	border: 1px solid black;
+	background-color: black;
+}
+.navibar {
+	margin: 0 auto;
+	width: 900px;
+	height: 40px;
+	margin-top: -10px;
+} 
+.navibar a {
+	color: white;
+	text-decoration: none;
+}
+.navi li {
+	float: left;
+	padding: 10px;
+	list-style: none;
+	display: inline-block;
 }
 .container {
  	width: 900px;
  	margin: 0 auto;
  	padding: 0px;
- 	border: 1px solid black;
 }
 .slider {
+	background-color: #FFFFFF;
 	float: left;
 	width: 100%;
 	height: 200px;
-	border: 1px solid black;
 }
 .info {
 	float: left;
 	width: 100%;
 	height: 200px;
-	border: 1px solid black;
+	background-color: #FFFFFF;
 }
 .newsitem {
 	/*float: right;
@@ -67,5 +85,6 @@
 	height: 50px;
 	width: 900px;
 	margin: 0 auto;
-	border: 1px solid black;
+	background-color: black;
+	color: white;
 }
