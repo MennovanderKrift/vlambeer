@@ -33,7 +33,7 @@
 		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
-	<h1> Vlambeer Games & Social media icons</h1>
+	<h1> Vlambeer Games & Social media icons | <a href="login.php">login</a><form action="../controllers/authController.php" method="POST"><input type="submit" value="logout" name="logout"></form></h1>
 	<header>
 		<div class="store-header-top">
 		<h1> .store-header-top</h1>

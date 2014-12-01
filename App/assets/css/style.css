@@ -75,16 +75,48 @@ body {
 	height: 200px;
 	background-color: #FFFFFF;
 }
-.newsitem {
-	/*float: right;
-	width: 198px;
-	height: 300px;
-	background-color: green;*/
-}
 .footer {
 	height: 50px;
-	width: 900px;
-	margin: 0 auto;
+	width: 100%;
 	background-color: black;
 	color: white;
+}
+.login-title {
+	margin-top: 0px;
+}
+.login-error-msg {
+	margin-bottom: 5px;
+	padding: 10px;
+	list-style: none;
+	background-color: #FF8D8D;
+	border: 1px solid #FF0000;
+}
+.login-screen {
+	height: 300px;
+	width: 900px;
+	margin: 0 auto;
+	background-color: white;
+}
+.login-form {
+	padding-top: 20px;
+	width: 500px;
+	margin: 0 auto;
+}	
+.login-input {
+	margin-bottom: 10px !important;
+	margin: 0 auto;
+	width: 500px;
+	height: 30px;
+}
+.login-submit-button {
+	float: right;
+	width: 150px;
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	font-size: 25px;
+	background: #FAC846;
+}
+.login-submit-button:hover {
+	background: #8fc800;
 }
