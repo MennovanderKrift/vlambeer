@@ -1,0 +1,9 @@
+Om een voorbeeld te zien van deze test, zie onderstaande link.
+De Twitter API werkt alleen maar op een online-webhost, en eigenlijk ook alleen met een SSL certificaat (hier heb ik omheen weten te werken xD)
+http://filmoutlet.nl/test/
+
+Instructies voor de API heb ik gevolgt vanaf onderstaande tutorial:
+http://www.downwithdesign.com/web-development-tutorials/add-twitter-feed-website-new-api/
+
+Twitter documentatie:
+https://dev.twitter.com/overview/documentation

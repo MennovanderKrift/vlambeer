@@ -1,0 +1,54 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html, body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+	background-color: #888;
+	padding-bottom: 10px;
+}
+
+.tweets-header{
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	font-style: italic;
+	padding: 10px;
+}
+
+.tweet{
+	background-color: #fac846;
+	border-radius: 4px;
+	border: 1px solid #888;
+	width: 250px;
+	margin: 10px;
+	padding: 20px;
+	font-size: 0.9em;
+}
+
+.tweets li{
+	list-style-type: none;
+}
+
+.twtr-hashtag{
+	color: #888;
+}
+
+.twtr-hastag:hover{
+	color: #888;
+}
+
+.twtr-atreply{
+	color: #888;
+}
+
+.twtr-atreply:hover{
+	text-decoration: underline;
+	color: #333;
+}
