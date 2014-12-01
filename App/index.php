@@ -1,3 +1,3 @@
 <?php
-  header('location: home/index.php');
+  header('location: store/index.php');
 ?>
