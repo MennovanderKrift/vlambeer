@@ -1,4 +1,5 @@
 <?php
+  session_start();
   require '../config/Database.php';
 ?>
 <!DOCTYPE html>
