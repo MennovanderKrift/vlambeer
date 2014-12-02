@@ -2,7 +2,6 @@
  	include '../includes/header.php';
 ?>
 	<header>
-		</div>
 		<div class="header-calltoaction">
 			<div class="logo-slogan">
 				<img src="../assets/img/vlambeer-logo.png">

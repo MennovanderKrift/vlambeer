@@ -1,4 +1,22 @@
-<?php include '../includes/header.php';?>
+<?php
+ 	include '../includes/header.php';
+?>
+	<header>
+<?php
+	include '../includes/head.php';
+?>
+		<div class="header-calltoaction">
+			<div class="logo-slogan">
+				<img src="../assets/img/vlambeer-logo.png">
+				<h1 class="header-title">Vlambeer</h1>
+				<p id="slogan" class="slogantext"></p>
+			</div>
+		</div>
+<?php
+	include '../includes/menu.php';
+?>
+	</header>
+
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
@@ -94,6 +112,6 @@
 		<div class="store-footer">
 			<h1>.store-footer</h1>
 		</div>
-	<script src="../../assets/js/bootstrap.js" type="text/javascript"></script>
-	</body>
-</html>
+<?php
+	include '../includes/footer.php';
+?>

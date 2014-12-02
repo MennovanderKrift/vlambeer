@@ -4,12 +4,6 @@ if (! isset($_POST['loginUser'])) {
 	header('location:../store/login.php');
 }
 
-if (isset($_POST['logout'])) {
-	session_destroy();
-	header('location: ../store/index.php');
-	die();
-}
-
 if(empty($_POST['email']) || empty($_POST['password'])){
 	$msg = urlencode("beide velden moeten ingevuld zijn");
 	header("location: store/login.php?msg=$msg");
@@ -20,7 +14,7 @@ $stmt->bindParam(":email",$_POST['email']);
 $stmt->bindParam(":password",$_POST['password']);
 $stmt->execute();
 
-if (! $user = $stmt->fetch(PDO::FETCH_OBJ)) {
+if ($user = $stmt->fetch(PDO::FETCH_OBJ)) {
 	$msg = urlencode("wachtwoord of gebruikers naam fout");
 	header("location:../store/login.php?msg=$msg");
 	die();
@@ -28,5 +22,12 @@ if (! $user = $stmt->fetch(PDO::FETCH_OBJ)) {
 
 session_start();
 $_SESSION['email'] = $user->email;
+$_SESSION['username'] = $user->username;
 header('location:../store/index.php?username=' . $user->username);
-die();
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    $msg = urlencode("You have successfully logged out");
+    header('location:../index.php?msg='. $msg );   
+    die(); 
+}

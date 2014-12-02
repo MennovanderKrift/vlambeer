@@ -2,14 +2,14 @@
   require '../config/Database.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
   <title>Vlambeer | Store</title>
   <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/css.css">
-  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--   <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> -->
 
   <meta charset="UTF-8">
   <meta name="description" content="Vlambeer webstore">

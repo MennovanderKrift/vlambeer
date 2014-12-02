@@ -1,16 +1,46 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	text-align: center;
 	font-family: 'Arimo', sans-serif;
 }
 body {
 	background-color: #FAC846;
 }
+.profile-wrapper {
+	right: 0px;
+	width: 204px;
+}
 .header-top {
 	height: 40px;
 	width: 100%;
-	background-color: black;
+	background-color: red;
+}
+.header-profile-bar {
+	width: 900px;
+	height: 40px;
+	margin: 0 auto;
+	color: white;
+}
+.header-profile-menu {
+	float: right;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	border: 1px solid black;
+}
+.header-profile p {
+	margin-left: 5px;
+	line-height: 40px;
+	float: right;
+	vertical-align: bottom;
+}
+.header-profile img {
+	float: right;
+	margin: 1px;
+	height: 35px;
+	width: 35px;
+	border: 1px solid black;
 }
 .header-calltoaction {
 	background-color: #FFFFFF;
