@@ -5,16 +5,19 @@ session_start();
 
 if(isset($_GET['action'])) {
 	$action = $_GET['action'];
+	if($action ==  'removed') {
+	echo $name . "was removed from shoppingcart";
+}else if($action == 'quantity_updated') {
+	echo $name . "quantity was updated";
+}
 }
 
 if(isset($_GET['name'])) {
 	$name = $_GET['name'];
 }
 
-if($action ==  'removed') {
-	echo $name . "was removed from shoppingcart";
-}else if($action == 'quantity_updated') {
-	echo $name . "quantity was updated";
+if(!isset($_SESSION['cart_items'])) {
+	echo "No products found in your cart";
 }
 
 if(count($_SESSION['cart_items'])>0) {
@@ -65,7 +68,5 @@ if(count($_SESSION['cart_items'])>0) {
 }else {
 	echo "No products found in your cart";
 }
-
-echo "<a href='emptycart.php'>Remove all items from shoppingcart</a>";
 
 ?>
