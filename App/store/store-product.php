@@ -1,4 +1,5 @@
 <?php require '../includes/header.php'; ?>
+<head><link href="../assets/css/lightbox.css" rel="stylesheet" /></head>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
 <p id="slogan"></p>
 <div class="container">
@@ -66,10 +67,13 @@
 		</div>
 
 		<div class="col-md-1">
-			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" alt="">
+			
+			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" data-lightbox="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" data-title="My caption"></a>			
 		</div>
 	</div>
 </div>
+<script src="../assets/js/jquery-1.11.0.min.js"></script>
+<script src="../assets/js/lightbox.min.js"></script>
 <?php require '../includes/footer.php'; ?>
 
 
