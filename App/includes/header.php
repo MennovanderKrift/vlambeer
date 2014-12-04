@@ -9,7 +9,7 @@
   <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/css.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="../assets/js/jquery-1.11.0.min.js"></script>
 <!--   <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> -->
 
   <meta charset="UTF-8">

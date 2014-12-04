@@ -1,8 +1,5 @@
 <div class="header-top">
 <?php
-
-	session_start();
-
 	if (isset($_SESSION['email'])) {
 	echo "
 		<div class='header-profile-bar'>
