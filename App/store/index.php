@@ -1,8 +1,6 @@
 <?php
  	include '../includes/header.php';
-?>
-	<header>
-<?php
+
 	include '../includes/head.php';
 ?>
 		<div class="header-calltoaction">
@@ -15,8 +13,6 @@
 <?php
 	include '../includes/menu.php';
 ?>
-	</header>
-
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ol class="carousel-indicators">

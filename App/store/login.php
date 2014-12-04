@@ -17,15 +17,15 @@
 		<div class="container">	
 			<div class="login-screen">
 				<form class="login-form" action="../controllers/authController.php" method="POST">
-					<h1 class="login-title">Inloggen</h1>
+					<h1 class="login-title">Log in</h1>
 <?php 
 					if (isset($_GET['msg'])) {
 						echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
 					}
 ?>
-					<label for="username">Email</label>
+					<label for="email">Email</label>
 					<input type="email" class="login-input" name="email" id="email" required>
-					<label for="username">Password</label>
+					<label for="password">Password</label>
 					<input type="password" class="login-input" name="password" id="password" required>
 					<input type="submit" name="loginUser" class="login-submit-button" value="Login">
 				</form>

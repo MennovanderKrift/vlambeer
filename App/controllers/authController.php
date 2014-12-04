@@ -14,8 +14,16 @@ $stmt->bindParam(":email",$_POST['email']);
 $stmt->bindParam(":password",$_POST['password']);
 $stmt->execute();
 
-if ($user = $stmt->fetch(PDO::FETCH_OBJ)) {
-	$msg = urlencode("wachtwoord of gebruikers naam fout");
+if (isset($_GET['logout'])) {
+    session_start();
+	session_destroy();
+    $msg = urlencode("You have successfully logged out");
+    header('location:../index.php?logout' );   
+    die(); 
+}
+
+if (! $user = $stmt->fetch(PDO::FETCH_OBJ)) {
+	$msg = urlencode("Wrong username or password");
 	header("location:../store/login.php?msg=$msg");
 	die();
 }
@@ -23,11 +31,8 @@ if ($user = $stmt->fetch(PDO::FETCH_OBJ)) {
 session_start();
 $_SESSION['email'] = $user->email;
 $_SESSION['username'] = $user->username;
-header('location:../store/index.php?username=' . $user->username);
+$_SESSION['zip_code'] = $user->zip_code;
+$_SESSION['gender'] = $user->gender;
+$_SESSION['address'] = $user->address;
+header('location:../store/index.php');
 
-if (isset($_GET['logout'])) {
-    session_destroy();
-    $msg = urlencode("You have successfully logged out");
-    header('location:../index.php?msg='. $msg );   
-    die(); 
-}
