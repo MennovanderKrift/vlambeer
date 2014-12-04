@@ -16,10 +16,6 @@ if(isset($_GET['name'])) {
 	$name = $_GET['name'];
 }
 
-if(!isset($_SESSION['cart_items'])) {
-	echo "No products found in your cart";
-}
-
 if(count($_SESSION['cart_items'])>0) {
 	$pids = "";
 	foreach($_SESSION['cart_items'] as $id=>$value) {
@@ -48,7 +44,7 @@ if(count($_SESSION['cart_items'])>0) {
 		echo "<td>{$name}</td>";
 		echo "<td>&euro;{$price}</td>";
 		echo "<td>";
-		echo "<a href='removefromcart.php?id={$id}&&name={$name}'>";
+		echo "<a href='removefromcart.php?id={$id}&&name={$row['name']}'>";
 		echo "Remove from cart";
 		echo "</a>";
 		echo "</td>";
