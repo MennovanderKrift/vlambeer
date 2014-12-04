@@ -6,7 +6,7 @@ if (! isset($_POST['loginUser'])) {
 
 if(empty($_POST['email']) || empty($_POST['password'])){
 	$msg = urlencode("beide velden moeten ingevuld zijn");
-	header("location: store/login.php?msg=$msg");
+	header("location: store/login.php?error=$msg");
 }
 
 $stmt = $db->prepare("SELECT * FROM users WHERE email = :email && password = :password");
@@ -24,7 +24,7 @@ if (isset($_GET['logout'])) {
 
 if (! $user = $stmt->fetch(PDO::FETCH_OBJ)) {
 	$msg = urlencode("Wrong username or password");
-	header("location:../store/login.php?msg=$msg");
+	header("location:../store/login.php?error=$msg");
 	die();
 }
 
@@ -35,4 +35,3 @@ $_SESSION['zip_code'] = $user->zip_code;
 $_SESSION['gender'] = $user->gender;
 $_SESSION['address'] = $user->address;
 header('location:../store/index.php');
-

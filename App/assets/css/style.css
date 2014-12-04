@@ -154,6 +154,14 @@ body {
 	background-color: #FF8D8D;
 	border: 1px solid #FF0000;
 }
+.login-msg {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	list-style: none;
+	background-color: #65ff00;
+	border: 1px solid #4cbf00;
+}
 .login-screen {
 	height: 300px;
 	width: 900px;
