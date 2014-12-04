@@ -39,11 +39,21 @@ margin-right: 20px;
 	width: 100px;
 }
 .container {
-	height: 100%;
+
 }
 .omschrijving p {
 text-align: left;
 }
 .beschrijving p {
 	text-align: left;
+}
+
+.index-header {
+	height: 180px;
+	width: 100%;
+
+}
+
+.menu{
+	height: 60px;
 }
