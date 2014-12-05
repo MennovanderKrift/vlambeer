@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2014 at 01:39 PM
+-- Generation Time: Dec 05, 2014 at 02:26 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
   `password` varchar(255) NOT NULL,
   `name` varchar(40) NOT NULL,
   `last_name` varchar(40) NOT NULL,
+  `gender` varchar(10) NOT NULL COMMENT 'Customer''s gender',
   `address` varchar(40) NOT NULL,
   `house_number` int(4) NOT NULL,
   `zipcode` varchar(6) NOT NULL,
