@@ -32,6 +32,7 @@ session_start();
 $_SESSION['id'] = $user->user_id;
 $_SESSION['email'] = $user->email;
 $_SESSION['username'] = $user->username;
+$_SESSION['password'] = $user->password;
 $_SESSION['zip_code'] = $user->zip_code;
 $_SESSION['gender'] = $user->gender;
 $_SESSION['address'] = $user->address;

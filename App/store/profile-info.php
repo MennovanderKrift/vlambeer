@@ -21,36 +21,48 @@
 	if (isset($_GET['msg'])) {
 		echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
 	}
+
+	if (isset($_GET['id'])) {
+		$id = $_GET['id'];
+	}
 ?>
 		<div class="profile-info">
-			<form class="profile-info-form" method="POST" action="../controllers/profileController.php">
+			<form class="profile-info-form" method="post" action="../controllers/profileController.php?id=<?php echo $id; ?>">
 				<label for="email">Email</label>
-					<input type="email" class="profile-info-input" value="<?php echo $_SESSION['email']; ?>" placeholder="example@hotmail.com">
+					<input type="email" class="profile-info-input" value="<?php echo $_SESSION['email']; ?>" placeholder="example@hotmail.com" name="email">
 				<label for="username">Username</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['username']; ?>">
-				<label for="username">Password</label>
-					<input type="password" class="profile-info-input" placeholder="********">
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['username']; ?>" name="username">
+				<label for="password">Password</label>
+					<input type="password" class="profile-info-input" value="<?php echo $_SESSION['password']; ?>" name="password">
 <?php
-			if ($_SESSION['gender'] === 'male') {
+			if ($_SESSION['gender'] == 'male') {
 			echo 	"<label for='gender'>Gender</label>
-						<select>
-							<option class='profile-info-input' value='male'>Male</option>
-							<option class='profile-info-input' value='female'>Female</option>
+						<select name='gender'>
+							<option value='male' class='profile-info-input'>Male</option>
+							<option value='female' class='profile-info-input'>Female</option>
 						</select>
 			";
-			} elseif ($_SESSION['gender'] === 'female') {
+			} elseif ($_SESSION['gender'] == 'female') {
 			echo 	"<label for='gender'>Gender</label>
-						<select>
-							<option class='profile-info-input' value='Female'>Female</option>
-							<option class='profile-info-input' value='Male'>Male</option>
+						<select name='gender'>
+							<option value='female' class='profile-info-input'>Female</option>
+							<option value='male' class='profile-info-input'>Male</option>
+						</select>
+			";
+			} else {
+			echo 	"Please select your <label for='gender'>Gender</label>
+						<select name='gender'>
+							<option value='male' class='profile-info-input'>Male</option>
+							<option value='female' class='profile-info-input'>Female</option>
 						</select>
 			";
 			}
+
 ?>
-				<label for="username">Zip code</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['zip_code']; ?>" placeholder="0000XX">
-				<label for="username">Address</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>">
+				<label for="zipcode">Zip code</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['zip_code']; ?>" placeholder="0000XX" name="zip_code">
+				<label for="address">Address</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>" name="address">
 				<input type="submit" value="Edit" name="editProfile">
 			</form>
 		</div>
