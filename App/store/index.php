@@ -3,21 +3,52 @@
 
 	include '../includes/head.php';
 ?>
-<div class="container">
+
 	<div class="index-header">
-		hier zit die
+		<img class="displayed" src="../assets/img/logo.png" alt="">
 	</div>
-</div>
+
 
 <?php
 	include '../includes/menu.php';
 ?>
-<div class="container">
-	<div class="index-head">
-		hier zit die2
-	</div>
-</div>
 
+	<div class="index-slider">
+		<img src="../assets/img/slider1.png" alt="">
+	</div>
+<div class="container">
+	<div class="index-slogan">
+		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Persson</p>
+	</div>
+
+	<div class="index-games">
+		<h2><center>games</center></h2>
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+		<div class="arrow-down"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+		<div class="arrow-down"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+		<div class="arrow-down"></div>
+		</div>
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+		<div class="arrow-down"></div>
+		</div>
+	</div>
+
+
+
+</div>
 <?php
 	include '../includes/footer.php';
 ?>
