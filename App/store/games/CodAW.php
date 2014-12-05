@@ -50,11 +50,11 @@ require '../../includes/storeGameHeader.php';
 		</div>
 
 		<div class="col-md-1">
-			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_48bfc681fdf8ecb4ecabf4553f2f6a7fcb9183de.1920x1080.jpg?t=1416441302" alt="">
+			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_48bfc681fdf8ecb4ecabf4553f2f6a7fcb9183de.1920x1080.jpg?t=1416441302" data-lightbox="cod" data-title="My caption"><img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_48bfc681fdf8ecb4ecabf4553f2f6a7fcb9183de.1920x1080.jpg?t=1416441302" alt="" ></a>
 		</div>
 		
 		<div class="col-md-1">
-			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_f12882d87813b949695b14861ee8618e935413c8.1920x1080.jpg?t=1416441302" alt="">
+			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_f12882d87813b949695b14861ee8618e935413c8.1920x1080.jpg?t=1416441302" data-lightbox="cod" data-title="My caption"><img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_f12882d87813b949695b14861ee8618e935413c8.1920x1080.jpg?t=1416441302" alt="" ></a>
 		</div>
 
 		<div class="col-md-1">

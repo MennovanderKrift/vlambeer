@@ -45,7 +45,7 @@ body:after {
   background-color: white;
   *zoom: 1;
   width: 80% !important;
-  height: 50% !important;
+  height: 500px !important;
   margin: 0 auto !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -75,6 +75,7 @@ body:after {
 
 .lb-container {
   padding: 4px;
+  height: 100% !important;
 }
 
 .lb-loader {
