@@ -17,9 +17,9 @@ if(isset($_GET['action'])) {
 }
 }
 
-
-
-if(count($_SESSION['cart_items'])>0) {
+if(!isset($_SESSION['cart_items'])) {
+	echo "There are no items in your shopping cart";
+} elseif(count($_SESSION['cart_items'])>0) {
 	$pids = "";
 	foreach($_SESSION['cart_items'] as $id=>$value) {
 		$pids = $pids . $id . ",";
@@ -64,8 +64,6 @@ if(count($_SESSION['cart_items'])>0) {
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
-}else {
-	echo "No products found in your cart";
 }
 
 ?>
