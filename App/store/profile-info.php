@@ -1,10 +1,10 @@
 <?php
  	include '../includes/header.php';
 
-	$stmt = $db->prepare("SELECT * FROM users");
+	$stmt = $db->prepare("SELECT * FROM tbl_users");
 	$stmt->execute();
 
-	include '../includes/head.php';
+	include '../includes/profile.php';
 ?>
 	<div class="header-calltoaction">
 		<div class="logo-slogan">
@@ -28,8 +28,8 @@
 ?>
 		<div class="profile-info">
 			<form class="profile-info-form" method="post" action="../controllers/profileController.php?id=<?php echo $id; ?>">
-				<label for="email">Email</label>
-					<input type="email" class="profile-info-input" value="<?php echo $_SESSION['email']; ?>" placeholder="example@hotmail.com" name="email">
+				<label for="email_address">Email</label>
+					<input type="email" class="profile-info-input" value="<?php echo $_SESSION['email_address']; ?>" placeholder="example@hotmail.com" name="email_address">
 				<label for="username">Username</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['username']; ?>" name="username">
 				<label for="password">Password</label>

@@ -1,6 +1,6 @@
 <div class="header-top">
 <?php
-	if (isset($_SESSION['email'])) {
+	if (isset($_SESSION['email_address'])) {
 	echo "
 		<div class='header-profile-bar'>
 			<div class='profile-wrapper'>
@@ -28,10 +28,11 @@
 						</div>
 						</a>
 	";
-
-	$id = $_SESSION['id'];
+	if (isset($_SESSION['id'])) {
+		$id = $_SESSION['id'];
+	}
 ?>
-						<a href="<?php echo "profile-info.php?id=$id" ?>">
+						<a href="profile-info.php?id= <?php echo $id; ?>">
 <?php
 	echo 				"<div class='header-profile-menu-item'>
 							<img src='../assets/img/settings.png'>
