@@ -1,7 +1,7 @@
 <?php 
 require '../../includes/storeGameHeader.php';
 ?>
-<head><link href="../assets/css/lightbox.css" rel="stylesheet" /></head>
+<head><link href="../../assets/css/lightbox.css" rel="stylesheet" /></head>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
 
 <div class="container">
@@ -58,21 +58,19 @@ require '../../includes/storeGameHeader.php';
 		</div>
 
 		<div class="col-md-1">
-			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_6d7ea64261cae4ebd2212290282cc8bff4bb2afe.1920x1080.jpg?t=1416441302" alt="">
-		</div>
-
-		<div class="col-md-1">
-			<img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_7f8c39d7b3b89cf79804f48df3b54d5cddd8e2d2.1920x1080.jpg?t=1416441302" alt="">
-		</div>
-
-		<div class="col-md-1">
 			
-			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" data-lightbox="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_ac5ee74cafe98e84187429c82ceeaa6845fe4021.1920x1080.jpg?t=1416441302" data-title="My caption"></a>			
+			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_6d7ea64261cae4ebd2212290282cc8bff4bb2afe.1920x1080.jpg?t=1416441302" data-lightbox="cod" data-title="My caption"><img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_6d7ea64261cae4ebd2212290282cc8bff4bb2afe.1920x1080.jpg?t=1416441302" alt="" ></a>
 		</div>
+
+		<div class="col-md-1">	
+			<a href="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_7f8c39d7b3b89cf79804f48df3b54d5cddd8e2d2.1920x1080.jpg?t=1416441302" data-lightbox="cod" data-title="My caption "><img src="https://steamcommunity.com/linkfilter/?url=http://cdn.akamai.steamstatic.com/steam/apps/209650/ss_7f8c39d7b3b89cf79804f48df3b54d5cddd8e2d2.1920x1080.jpg?t=1416441302" alt=""></a>
+		</div>
+
 	</div>
+
+
+
 </div>
-<script src="../../assets/js/jquery-1.11.0.min.js"></script>
-<script src="../../assets/js/lightbox.min.js"></script>
 <?php require '../../includes/footer.php'; ?>
 
 

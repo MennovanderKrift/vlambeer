@@ -44,9 +44,22 @@ body:after {
   position: relative;
   background-color: white;
   *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
+  width: 80% !important;
+  height: 50% !important;
+  margin: 0 auto !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.lb-outerContainer img {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 auto !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -208,3 +221,4 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+ 

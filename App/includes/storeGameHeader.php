@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
   <script src="../../assets/js/jquery-1.11.0.min.js"></script>
+  
+<script src="../../assets/js/lightbox.min.js"></script>
   <meta charset="UTF-8">
   <meta name="description" content="Vlambeer webstore">
   <meta name="keywords" content="vlambeer, games, action, schooter, shirt, webshop">
