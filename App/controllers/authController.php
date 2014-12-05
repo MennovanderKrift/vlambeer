@@ -9,7 +9,7 @@ if(empty($_POST['email']) || empty($_POST['password'])){
 	header("location: store/login.php?error=$msg");
 }
 
-$stmt = $db->prepare("SELECT * FROM users WHERE email = :email && password = :password");
+$stmt = $db->prepare("SELECT * FROM tbl_users WHERE email = :email && password = :password");
 $stmt->bindParam(":email",$_POST['email']);
 $stmt->bindParam(":password",$_POST['password']);
 $stmt->execute();
