@@ -6,9 +6,12 @@
 			<div class='profile-wrapper'>
 				<div class='header-profile'>
 					<p>" . $_SESSION['username'] . "</p>";
-				if ($_SESSION['gender'] == 'male') {
+				if ($_SESSION['gender'] == 'male') 
+				{
 					echo "<img src='../assets/img/profile-male.png'>";
-				} elseif ($_SESSION['gender'] == 'female') {
+				} 
+				elseif ($_SESSION['gender'] == 'female') 
+				{
 					echo "<img src='../assets/img/profile-female.png'>";
 				}
 	echo		"</div>
@@ -50,13 +53,12 @@
 			</div>
 		</div>
 	";
-	} else {
-	echo "	<div class='header-profile-bar'>
-	 			<a href='login.php'><button class='login-index-button'>Log in</button></a>
-	 		</div>
-
-	";
+	} 
+	else 
+	{
+		echo "	<div class='header-profile-bar'>
+	 				<a href='login.php'><button class='login-index-button'>Log in</button></a>
+	 			</div>";
 	}
-?>
-	
+?>	
 </div>
