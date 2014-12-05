@@ -1,0 +1,58 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.navborder{
+	background: #dddddd;
+	height: 60px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.navcolour{
+	background: #dddddd;
+}
+
+ul{
+	padding: 0;
+	list-style: none;
+}
+
+ul li{
+	display: inline-block;
+	float: left;
+	width: 145px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+ul li a{
+    display: block;
+    background: #dddddd;
+    text-decoration: none;
+    padding: 20px 20px 19px 20px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	color: #191407;
+    }
+
+ul li a:hover{
+    background: #fac846;
+}
+
+li{
+	display: inline;
+	text-decoration: none;
+}
+
+ul li ul{
+	display: none;
+}
+
+ ul li:hover ul{
+    display: block;
+}
+
+
+
+
+
