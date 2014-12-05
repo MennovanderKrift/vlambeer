@@ -3,18 +3,21 @@
  require '../config/Database.php';
 session_start();
 
-if(isset($_GET['action'])) {
-	$action = $_GET['action'];
-	if($action ==  'removed') {
-	echo $name . "was removed from shoppingcart";
-}else if($action == 'quantity_updated') {
-	echo $name . "quantity was updated";
-}
-}
-
 if(isset($_GET['name'])) {
 	$name = $_GET['name'];
 }
+
+
+if(isset($_GET['action'])) {
+	$action = $_GET['action'];
+	if($action ==  'removed') {
+	echo $name . " was removed from shoppingcart";
+}else if($action == 'quantity_updated') {
+	echo $name . " quantity was updated";
+}
+}
+
+
 
 if(count($_SESSION['cart_items'])>0) {
 	$pids = "";
