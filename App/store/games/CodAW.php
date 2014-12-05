@@ -1,15 +1,16 @@
-<?php require '../includes/header.php'; ?>
+<?php 
+require '../../includes/storeGameHeader.php';
+?>
 <head><link href="../assets/css/lightbox.css" rel="stylesheet" /></head>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
-<p id="slogan"></p>
+
 <div class="container">
 	<div class="page-header">
-		<div class="col-md-2 logo"><img src="../assets/img/vlambeer-logo.png" alt="vlambeer"></div>
+		<div class="col-md-2 logo"><img src="../../assets/img/vlambeer-logo.png" alt="vlambeer"></div>
 		<div class="col-md-10 game-slider" ><img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt=""></div>	
 	</div>
 
 	<div class="navbar">
-
 		<ul class="nav navbar-nav">
 	    	<li class="active"><a href="#">games</a></li>
 	    	<li ><a href="#">bundles</a></li>
@@ -17,9 +18,7 @@
 	    	<li><a href="#">music</a></li>
 	    	<li><a href="#">non vlambeer games</a></li>
 	    	<li><a href="#">login</a></li>
-
 	  	</ul>
-
 	</div>
 
 	<div class="col-md-8 col-md-offset-1">
@@ -72,8 +71,8 @@
 		</div>
 	</div>
 </div>
-<script src="../assets/js/jquery-1.11.0.min.js"></script>
-<script src="../assets/js/lightbox.min.js"></script>
-<?php require '../includes/footer.php'; ?>
+<script src="../../assets/js/jquery-1.11.0.min.js"></script>
+<script src="../../assets/js/lightbox.min.js"></script>
+<?php require '../../includes/footer.php'; ?>
 
 
