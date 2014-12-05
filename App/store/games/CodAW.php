@@ -37,7 +37,7 @@ require '../../includes/storeGameHeader.php';
 	</div>
 
 	<div class="col-md-2">
-		<p>59,99€ <a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a></p>
+		<p>59,99€ <a href="../addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a></p>
 	</div>
 
 	<div class="col-md-9 col-md-offset-1 foto-album">

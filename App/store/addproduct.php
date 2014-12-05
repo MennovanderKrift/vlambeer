@@ -6,9 +6,16 @@ if(isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
 
+$quantity = isset($_GET['quantity']) ? $_GET['quantity'] : "";
+
 // if (isset($_GET['name'])) {
 // 	$name = $_GET['name'];
 // }
+
+$cart_item=array(
+	'name'=>$name,
+	'quantity'=>$quantity
+);
 
 if(!isset($_SESSION['cart_items'])) {
 	$_SESSION['cart_items'] = array();
