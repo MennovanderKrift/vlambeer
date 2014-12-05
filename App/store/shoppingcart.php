@@ -64,6 +64,8 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
+} else {
+	echo "There are no items in your shoppingcart.";
 }
 
 ?>
