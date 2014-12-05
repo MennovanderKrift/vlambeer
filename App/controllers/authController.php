@@ -29,6 +29,7 @@ if (! $user = $stmt->fetch(PDO::FETCH_OBJ)) {
 }
 
 session_start();
+$_SESSION['id'] = $user->user_id;
 $_SESSION['email'] = $user->email;
 $_SESSION['username'] = $user->username;
 $_SESSION['zip_code'] = $user->zip_code;

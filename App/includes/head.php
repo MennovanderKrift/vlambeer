@@ -24,8 +24,13 @@
 							Store
 						</div>
 						</a>
-						<a href='profile-info.php'>
-						<div class='header-profile-menu-item'>
+	";
+
+	$id = $_SESSION['id'];
+?>
+						<a href="<?php echo "profile-info.php?id=$id" ?>">
+<?php
+	echo 				"<div class='header-profile-menu-item'>
 							<img src='../assets/img/settings.png'>
 							Settings
 						</div>

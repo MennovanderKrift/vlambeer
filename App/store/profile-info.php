@@ -14,12 +14,22 @@
 		</div>
 	</div>
 	<div class="container">
+<?php
+	if (isset($_GET['error'])) {
+		echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['error']) . '</b></li>';
+	}
+	if (isset($_GET['msg'])) {
+		echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
+	}
+?>
 		<div class="profile-info">
-			<form class="profile-info-form">
+			<form class="profile-info-form" method="POST" action="../controllers/profileController.php">
 				<label for="email">Email</label>
 					<input type="email" class="profile-info-input" value="<?php echo $_SESSION['email']; ?>" placeholder="example@hotmail.com">
 				<label for="username">Username</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['username']; ?>">
+				<label for="username">Password</label>
+					<input type="password" class="profile-info-input" placeholder="********">
 <?php
 			if ($_SESSION['gender'] === 'male') {
 			echo 	"<label for='gender'>Gender</label>
@@ -41,7 +51,7 @@
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['zip_code']; ?>" placeholder="0000XX">
 				<label for="username">Address</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>">
-				<input type="submit" value="Edit">
+				<input type="submit" value="Edit" name="editProfile">
 			</form>
 		</div>
 	</div>
