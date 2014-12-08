@@ -1,11 +1,18 @@
-<div class="header-menu">
-	<div class="navibar">
-		<ul class="navi navibar-nav">
-			<li class="active"><a href="">Home</a></li>
-			<li><a href="">menu2</a></li>
-			<li><a href="">menu3</a></li>
-			<li><a href="">menu4</a></li>
-			<li><a href="../store/store-product.php">regilio</a></li>
-		</ul>
-	</div>
-</div>
+	<nav>
+		<div class="navcolour">
+			<div class="navborder">
+				<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">GAMES</a>
+					<ul>
+					<li><a href="#">PC</a></li>
+					<li><a href="#">iOS</a></li>
+					<li><a href="#">VITA</a></li>
+					</ul></li>
+				<li><a href="#">MERCHANDISE</a></li>
+				<li><a href="#">MUSIC</a></li>
+				<li><a href="#">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>		
+	</nav>
