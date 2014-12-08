@@ -44,11 +44,9 @@ body:after {
   position: relative;
   background-color: white;
   *zoom: 1;
-<<<<<<< HEAD
   width: 250px;
   height: 250px;
   margin: 0 auto;
-=======
   width: 80% !important;
   height: 500px !important;
   margin: 0 auto !important;
@@ -65,7 +63,6 @@ body:after {
   width: 100% !important;
   height: 100% !important;
   margin: 0 auto !important;
->>>>>>> df45a2a374895416061fca23d730741942ee6fe9
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
