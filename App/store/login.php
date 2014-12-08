@@ -1,5 +1,5 @@
 <?php
- 	include '../includes/header.php';
+ 	require '../includes/header.php';
 ?>
 	<header>
 		<div class="header-calltoaction">
@@ -9,7 +9,13 @@
 				<p id="slogan" class="slogantext"></p>
 			</div>
 		</div>
+<<<<<<< HEAD
 
+=======
+<?php
+	require '../includes/menu.php';
+?>
+>>>>>>> origin/master
 	</header>
 	<section>
 		<div class="container">	
