@@ -455,7 +455,12 @@ ul li ul{
     display: block;
 }
 
+li input {
+	margin-top: 20px;
+}
 
-
+li img {
+	float: right;
+}
 
 

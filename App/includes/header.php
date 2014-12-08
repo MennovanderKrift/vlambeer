@@ -16,6 +16,10 @@
   <meta name="author" content="Mike Oerlemans, Koen de Bont, Friso Kin, Regilio Dielemans, Menno van der Krift, Daniel van Bavel, Jan, Rick">
 </head>
 <body>
+    <div class="index-header">
+    <img class="displayed" src="../assets/img/logo.png" alt="">
+    <p class="sloganscript" id="slogan"></p>
+  </div>
   <nav>
     <div class="navcolour">
       <div class="navborder">
@@ -30,6 +34,7 @@
         <li><a href="#">MERCHANDISE</a></li>
         <li><a href="#">MUSIC</a></li>
         <li><a href="#">CONTACT</a></li>
+        <li><input type="text"> <img src="../assets/img/search.png" alt=""></li>
         </ul>
       </div>
     </div>    

@@ -1,14 +1,8 @@
-<?php
- 
-	include '../includes/profile.php';
+<?php 
+require '../includes/profile.php';
+require '../includes/header.php';
 ?>
-	<div class="index-header">
-		<img class="displayed" src="../assets/img/logo.png" alt="">
-		<p class="sloganscript" id="slogan"></p>
-	</div>
-<?php
-	include '../includes/header.php';
-?>
+
 <div class="index-slider">
 	<img src="../assets/img/slider1.png" alt="">
 </div>
@@ -90,5 +84,5 @@
 </div>
 
 <?php
-	include '../includes/footer.php';
+	require '../includes/footer.php';
 ?>

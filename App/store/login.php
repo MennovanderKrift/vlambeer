@@ -9,9 +9,7 @@
 				<p id="slogan" class="slogantext"></p>
 			</div>
 		</div>
-<?php
-	include '../includes/menu.php';
-?>
+
 	</header>
 	<section>
 		<div class="container">	

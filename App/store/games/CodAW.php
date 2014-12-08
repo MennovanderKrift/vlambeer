@@ -10,16 +10,6 @@ require '../../includes/storeGameHeader.php';
 		<div class="col-md-10 game-slider" ><img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt=""></div>	
 	</div>
 
-	<div class="navbar">
-		<ul class="nav navbar-nav">
-	    	<li class="active"><a href="#">games</a></li>
-	    	<li ><a href="#">bundles</a></li>
-	    	<li><a href="#">clothes</a></li>
-	    	<li><a href="#">music</a></li>
-	    	<li><a href="#">non vlambeer games</a></li>
-	    	<li><a href="#">login</a></li>
-	  	</ul>
-	</div>
 
 	<div class="col-md-8 col-md-offset-1">
 
