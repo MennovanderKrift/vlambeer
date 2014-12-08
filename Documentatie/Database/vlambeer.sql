@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2014 at 02:26 PM
+-- Generation Time: Dec 08, 2014 at 01:24 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -41,7 +41,14 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
   `news_letter` tinyint(1) NOT NULL,
   PRIMARY KEY (`customer_id`),
   UNIQUE KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tbl_customers`
+--
+
+INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `last_name`, `gender`, `address`, `house_number`, `zipcode`, `phone_number`, `email_address`, `news_letter`) VALUES
+(1, 'menno', 'admin', 'Menno', 'van der Krift', 'Male', 'Sesamstraat', 666, '4848aa', '0764975134', 'menno.vd.krift@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -91,6 +98,7 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
   `name` varchar(40) NOT NULL COMMENT 'Product name',
   `description` longtext NOT NULL COMMENT 'Product description',
   `price` float NOT NULL COMMENT 'Product price',
+  `stock` int(3) NOT NULL COMMENT 'Number of product in stock',
   `tags` varchar(255) NOT NULL COMMENT 'Product tags',
   `category` int(11) NOT NULL COMMENT 'Product category',
   PRIMARY KEY (`product_id`),
@@ -111,7 +119,14 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `last_name` varchar(40) NOT NULL COMMENT 'User last name',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `name`, `last_name`) VALUES
+(1, 'menno', 'admin', 'Menno', 'van der Krift');
 
 --
 -- Constraints for dumped tables
