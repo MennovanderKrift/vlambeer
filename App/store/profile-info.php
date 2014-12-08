@@ -57,12 +57,34 @@
 						</select>
 			";
 			}
-
 ?>
-				<label for="zipcode">Zip code</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['zip_code']; ?>" placeholder="0000XX" name="zip_code">
+				<label for="name">First name</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['name']; ?>" placeholder="0000XX" name="name">
+				<label for="last_name">Last name</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['last_name']; ?>" name="last_name">
+				<label for="phone_number">Phone number</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['phone_number']; ?>" placeholder="0000XX" name="phone_number">
 				<label for="address">Address</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>" name="address">
+				<label for="zipcode">Zip code</label>
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['zipcode']; ?>" placeholder="0000XX" name="zipcode">
+<?php
+			if ($_SESSION['news_letter'] == 1) {
+				echo 	"<label for='news_letter'>Newsletter</label>
+							<select name='news_letter'>
+								<option value='1' class='profile-info-input'>Subscribed</option>
+								<option value='0' class='profile-info-input'>unsubscribe</option>
+							</select>
+			";
+			} elseif ($_SESSION['news_letter'] == 0) {
+			echo 	"<label for='news_letter'>Newsletter</label>
+							<select name='news_letter'>
+								<option value='0' class='profile-info-input'>unsubscribed</option>
+								<option value='1' class='profile-info-input'>subscribe</option>
+							</select>
+			";
+			}
+?>
 				<input type="submit" value="Edit" name="editProfile">
 			</form>
 		</div>

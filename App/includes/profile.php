@@ -32,17 +32,19 @@
 		$id = $_SESSION['id'];
 	}
 ?>
-						<a href="profile-info.php?id= <?php echo $id; ?>">
+						<a href="profile-info.php?id=<?php echo $id; ?>">
 <?php
 	echo 				"<div class='header-profile-menu-item'>
 							<img src='../assets/img/settings.png'>
 							Settings
 						</div>
 						</a>
+						<a href='invoices'>
 						<div class='header-profile-menu-item'>
 							<img src='../assets/img/invoices.png'>
 							Invoices
 						</div>
+						</a>
 						<a href='../controllers/authController.php?logout'>
 						<div class='header-profile-menu-item'>
 							<img src='../assets/img/logout.png'>

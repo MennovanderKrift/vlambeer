@@ -13,6 +13,6 @@
   <meta charset="UTF-8">
   <meta name="description" content="Vlambeer webstore">
   <meta name="keywords" content="vlambeer, games, action, schooter, shirt, webshop">
-  <meta name="author" content="Mike Oerlemans, Koen de Bont, Friso Kin, Regilio Dielemans, Menno van der Krift, Daniel van Bavel">
+  <meta name="author" content="Mike Oerlemans, Koen de Bont, Friso Kin, Regilio Dielemans, Menno van der Krift, Daniel van Bavel, Jan, Rick">
 </head>
 <body>
