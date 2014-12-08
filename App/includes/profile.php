@@ -39,8 +39,11 @@
 							Settings
 						</div>
 						</a>
-						<a href='invoiceOverview.php'>
-						<div class='header-profile-menu-item'>
+						";
+?>
+						<a href="invoiceOverview.php?id=<?php echo $_SESSION['id']; ?>">
+<?php
+	echo 				"<div class='header-profile-menu-item'>
 							<img src='../assets/img/invoices.png'>
 							Invoices
 						</div>
