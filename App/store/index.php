@@ -1,5 +1,5 @@
 <?php
- 	include '../includes/header.php';
+ 
 	include '../includes/profile.php';
 ?>
 	<div class="index-header">
@@ -7,7 +7,7 @@
 		<p class="sloganscript" id="slogan"></p>
 	</div>
 <?php
-	include '../includes/menu.php';
+	include '../includes/header.php';
 ?>
 <div class="index-slider">
 	<img src="../assets/img/slider1.png" alt="">
