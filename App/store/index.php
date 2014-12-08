@@ -44,6 +44,49 @@
 			<div class="arrow-down"></div>
 		</div>
 	</div>
+
+	<div class="index-bundles">
+		<h2><center>bundles</center></h2>
+		<div class="col-md-3">
+			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+	</div>
+
+
+		<div class="index-games">
+		<h2><center>clothes</center></h2>
+		<div class="col-md-3">
+			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
+			<div class="arrow-down"></div>
+		</div>
+	</div>
 </div>
 
 <?php
