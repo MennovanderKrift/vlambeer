@@ -13,6 +13,13 @@
 
 /* header */
 
+.index-header 
+{
+	height: 180px;
+	width: 100%;
+	background-color: black;
+}
+
 .header-top {
 	height: 40px;
 	width: 100%;
@@ -94,8 +101,6 @@
 	width: 100%;
 	background-color: black;
 }
-
-
 /*----------------------------------------------------------------------------------------------
 EINDE HEADERBAR CSS
 ------------------------------------------------------------------------------------------------*/
@@ -181,18 +186,56 @@ ul li ul{
     display: block;
 }
 
+li input 
+{
+	margin-top: 20px;
+}
+
+li img 
+{
+	float: right;
+}
+
 /*----------------------------------------------------------------------------------------------
 EINDE MENU CSS
 ------------------------------------------------------------------------------------------------*/
 
-.slider {
+.index-slider 
+{
+	height: 400px;
+	position: absolute;
+	z-index: 500;
+	width: 100%;
+}
+
+.slider 
+{
 	background-color: #FFFFFF;
 	float: left;
 	width: 100%;
 	height: 200px;
 }
 
-/* LOGIN CSS SCRIPT */
+.index-slider img
+{
+	width: 100%;
+}
+
+p.sloganscript 
+{
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	margin: 15px 0px 0px 0;
+}
+
+.index-slogan 
+{
+	height: 20px;
+}
+
+/*------------------------------------------------------------------------------------------
+LOGIN CSS SCRIPT */
 
 .login-title {
 	margin-top: 0px;
@@ -320,31 +363,32 @@ EINDE LOGIN SCRIPT CSS
 	width: 100px;
 }
 
-.omschrijving p {
-text-align: left;
-}
-.beschrijving p {
+.omschrijving p 
+{
 	text-align: left;
 }
 
-.index-header {
-	height: 180px;
-	width: 100%;
-	background-color: black;
+.beschrijving p
+{
+	text-align: left;
 }
 
-IMG.displayed {
+IMG.displayed 
+{
     display: block;
     margin-left: auto;
     margin-right: auto 
 }
-.col-md-3 {
+
+.col-md-3 
+{
 	width: 225px;
 }
 
-.product-img img { 
-height:175px; 
-width:100%;
+.product-img img 
+{ 
+	height:175px; 
+	width:100%;
 }
 
 .product-info {
@@ -352,26 +396,13 @@ width:100%;
 	background-color: #fac846;
 }
 
-.menu{
-	height: 60px;
-}
-.index-slider {
-	height: 400px;
-	position: absolute;
-	z-index: 500;
-	width: 100%;
-}
-.index-slider img{
-
-	width: 100%;
-
-}
-.index-slogan {
-	height: 20px;
-}
-
-.index-items {
+.index-items 
+{
 	height: 450px;
+}
+
+.index-items h2{
+	margin-bottom: 50px;
 }
 
 .arrow-down {
@@ -382,6 +413,8 @@ width:100%;
 	border-right: 12px solid transparent;
 	border-top: 12px solid #fac846;
 }
+
+/*STORE CSS*/
 
 .store-header-top{
 	min-height: 250px;
@@ -429,31 +462,14 @@ width:100%;
 	display: inline-block;
 }
 
-p.sloganscript 
+/*----------------------------------------------------------------------------------------------
+EINDE STORE CSS
+------------------------------------------------------------------------------------------------*/
+
+.footer 
 {
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	margin: 15px 0px 0px 0;
-}
-
-.index-items h2{
-	margin-bottom: 50px;
-}
-
-.footer {
 	height: 50px;
 	width: 100%;
 	background-color: black;
 	color: white;
 }
-
-li input {
-	margin-top: 20px;
-}
-
-li img {
-	float: right;
-}
-
-
