@@ -473,3 +473,51 @@ EINDE STORE CSS
 	background-color: black;
 	color: white;
 }
+
+@media (min-width: 1920px) {
+
+	.tm-fullscreen
+	{
+		max-height: 470px;
+	}
+}
+
+@media (max-width: 1680px) {
+
+	.sloganscript 
+	{
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 1366px) {
+
+	.tm-fullscreen
+	{
+		max-height: 310px;
+	}
+}
+
+@media (max-width: 1220px) {
+
+	.tm-fullscreen
+	{
+		max-height: 290px;
+	}
+}
+
+@media (max-width: 992px) {
+
+	.tm-fullscreen
+	{
+		max-height: 210px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.tm-fullscreen
+	{
+		max-height: 90px;
+	}
+} 
