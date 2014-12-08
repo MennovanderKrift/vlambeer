@@ -492,9 +492,9 @@ EINDE STORE CSS
 
 @media (max-width: 1366px) {
 
-	.tm-fullscreen
+	.container
 	{
-		max-height: 310px;
+		margin-top: 370px;
 	}
 }
 
