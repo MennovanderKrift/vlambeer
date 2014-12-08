@@ -1,5 +1,5 @@
 <?php
- 	include '../includes/header.php';
+ 	require '../includes/header.php';
 ?>
 	<header>
 		<div class="header-calltoaction">
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 <?php
-	include '../includes/menu.php';
+	require '../includes/menu.php';
 ?>
 	</header>
 	<section>
