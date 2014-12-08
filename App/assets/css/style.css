@@ -8,7 +8,6 @@
 	width: 960px;
 	position: relative;
 	z-index: 1;
-	margin-top: 370px;
 }
 
 /* header */
@@ -206,6 +205,7 @@ EINDE MENU CSS
 	position: absolute;
 	z-index: 500;
 	width: 100%;
+	float: left;
 }
 
 .slider 
@@ -476,48 +476,29 @@ EINDE STORE CSS
 
 @media (min-width: 1920px) {
 
-	.tm-fullscreen
-	{
-		max-height: 470px;
-	}
 }
 
 @media (max-width: 1680px) {
 
-	.container 
-	{
-		margin-top: 430px;
-	}
+	
 }
 
 @media (max-width: 1366px) {
 
-	.container
-	{
-		margin-top: 370px;
-	}
+	
 }
 
 @media (max-width: 1220px) {
 
-	.tm-fullscreen
-	{
-		max-height: 290px;
-	}
+	
 }
 
 @media (max-width: 992px) {
 
-	.tm-fullscreen
-	{
-		max-height: 210px;
-	}
+	
 }
 
 @media (max-width: 767px) {
 
-	.tm-fullscreen
-	{
-		max-height: 90px;
-	}
+	
 } 
