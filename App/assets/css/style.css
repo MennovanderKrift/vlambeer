@@ -310,6 +310,7 @@ width:100%;
 	height: 400px;
 	position: absolute;
 	z-index: 500;
+	width: 100%;
 }
 .index-slider img{
 
@@ -407,6 +408,7 @@ p.sloganscript
 
 .navcolour{
 	background: #dddddd;
+	margin-top: -10px;
 }
 
 ul{

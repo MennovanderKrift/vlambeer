@@ -18,7 +18,7 @@
 		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Persson</p>
 	</div>
 
-	<div class="index-games">
+	<div class="index-games col-md-12">
 		<h2><center>games</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	<div class="index-bundles">
+	<div class="index-bundles col-md-12">
 		<h2><center>bundles</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
@@ -61,7 +61,7 @@
 	</div>
 
 
-		<div class="index-games">
+		<div class="index-games col-md-12">
 		<h2><center>clothes</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
