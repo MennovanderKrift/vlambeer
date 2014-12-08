@@ -39,7 +39,7 @@
 							Settings
 						</div>
 						</a>
-						<a href='invoices'>
+						<a href='invoiceOverview.php'>
 						<div class='header-profile-menu-item'>
 							<img src='../assets/img/invoices.png'>
 							Invoices
