@@ -147,9 +147,7 @@ require '../includes/header.php';
 			<div class="arrow-down"></div>
 		</div>
 	</div>
-	</div>	
-</div>
-
+</div>	
 <?php
 	require '../includes/footer.php';
 ?>
