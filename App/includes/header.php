@@ -16,10 +16,6 @@
   <meta name="author" content="Mike Oerlemans, Koen de Bont, Friso Kin, Regilio Dielemans, Menno van der Krift, Daniel van Bavel, Jan, Rick">
 </head>
 <body>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
     <div class="index-header">
     <img class="displayed" src="../assets/img/logo.png" alt="">
     <p class="sloganscript" id="slogan"></p>
