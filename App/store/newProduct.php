@@ -1,12 +1,5 @@
 <?php
  	require '../includes/header.php';
-	require '../includes/profile.php';
-?>
-	<div class="index-header">
-		<img class="displayed" src="../assets/img/logo.png" alt="logo.png">
-		<p class="sloganscript" id="slogan"></p>
-	</div>
-<?php
 
 if(!isset($_POST['new-product'])){
 ?>
