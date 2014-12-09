@@ -4,10 +4,21 @@
 	font-family: 'Arimo', sans-serif;
 }
 
-.profile-wrapper {
-	float: right;
-	width: 200px;
+.container {
+	width: 960px;
+	position: relative;
+	z-index: 1;
 }
+
+/* header */
+
+.index-header 
+{
+	height: 180px;
+	width: 100%;
+	background-color: black;
+}
+
 .header-top {
 	height: 40px;
 	width: 100%;
@@ -79,6 +90,22 @@
 	width: 900px;
 	margin: 0 auto;
 }
+
+.header-title {
+	margin-top: 115px;
+	text-align: left;
+}
+
+.header-menu {
+	height: 40px;
+	width: 100%;
+	background-color: black;
+}
+/*----------------------------------------------------------------------------------------------
+EINDE HEADERBAR CSS
+------------------------------------------------------------------------------------------------*/
+
+/*Logo CSS*/
 .logo-slogan {
 	text-align: left;
 	float: left;
@@ -91,51 +118,126 @@
 	height: 180px;
 	width: 180px;
 }
-.header-title {
-	margin-top: 115px;
-	text-align: left;
+
+/*----------------------------------------------------------------------------------------------
+EINDE LOGO CSS
+------------------------------------------------------------------------------------------------*/
+
+.profile-wrapper {
+	float: right;
+	width: 200px;
 }
 
-.header-menu {
-	height: 40px;
-	width: 100%;
-	background-color: black;
-}
-.navibar {
+/* MENU CSS */
+
+.navborder{
+	background: #dddddd;
+	height: 60px;
+	width: 960px;
 	margin: 0 auto;
-	width: 900px;
-	height: 40px;
+}
+
+.navcolour{
+	background: #dddddd;
 	margin-top: -10px;
-} 
-.navibar a {
-	color: white;
+}
+
+ul{
+	padding: 0;
+	list-style: none;
+
+}
+
+ul li{
+	display: inline-block;
+	float: left;
+	width: 145px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+ul li a{
+    display: block;
+    background: #dddddd;
+    text-decoration: none;
+    padding: 20px 20px 19px 20px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	color: #191407;
+	z-index: 9999;
+	position: relative;
+    }
+
+ul li a:hover{
+    background: #fac846;
+
+}
+
+li{
+	display: inline;
 	text-decoration: none;
 }
-.navi li {
-	float: left;
-	padding: 10px;
-	list-style: none;
-	display: inline-block;
+
+ul li ul{
+	display: none;
 }
 
-.slider {
+ ul li:hover ul{
+    display: block;
+}
+
+li input 
+{
+	margin-top: 20px;
+}
+
+li img 
+{
+	float: right;
+}
+
+/*----------------------------------------------------------------------------------------------
+EINDE MENU CSS
+------------------------------------------------------------------------------------------------*/
+
+.index-slider 
+{
+	height: 400px;
+	position: absolute;
+	z-index: 500;
+	width: 100%;
+	float: left;
+}
+
+.slider 
+{
 	background-color: #FFFFFF;
 	float: left;
 	width: 100%;
 	height: 200px;
 }
-.info {
-	float: left;
+
+.index-slider img
+{
 	width: 100%;
-	height: 200px;
-	background-color: #FFFFFF;
 }
-.footer {
-	height: 50px;
-	width: 100%;
-	background-color: black;
+
+p.sloganscript 
+{
+	text-align: center;
 	color: white;
+	font-size: 20px;
+	margin: 15px 0px 0px 0;
 }
+
+.index-slogan 
+{
+	height: 20px;
+}
+
+/*------------------------------------------------------------------------------------------
+LOGIN CSS SCRIPT */
+
 .login-title {
 	margin-top: 0px;
 }
@@ -181,17 +283,7 @@
 	font-size: 25px;
 	background: #FAC846;
 }
-.login-submit-button:hover {
-	background: #8fc800;
-}
-.arrow-up {
-	margin-left: 100px;
-	width: 0; 
-	height: 0; 
-	border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
-	border-bottom: 12px solid #A6A7A8;
-}
+
 .login-index-button {
 	float: right;
 	width: 90px;
@@ -202,6 +294,25 @@
 	font-size: 25px;
 	background: #FAC846;
 }
+
+.login-submit-button:hover {
+	background: #8fc800;
+}
+
+
+/*----------------------------------------------------------------------------------------------
+EINDE LOGIN SCRIPT CSS
+------------------------------------------------------------------------------------------------*/
+
+/* .arrow-up {
+	margin-left: 100px;
+	width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid #A6A7A8;
+} */
+
 .profile-info {
 	width: 100%;
 	margin-bottom: 20px;
@@ -224,12 +335,15 @@
 	width: 500px;
 	height: 30px;
 }
+<<<<<<< HEAD
 .container {
 	width: 960px;
 	position: relative;
 	z-index: 1;
 
 }
+=======
+>>>>>>> origin/master
 
 .game-slider img {
 	height: 150px;
@@ -239,19 +353,6 @@
 .logo img{
 	height: 148px;
 }
-
-.nav {
-	padding: 20px;
-
-}
-.nav li {
-margin-right: 20px;
-
-}
-.navbar{
-	position: none;
-	float: left;
-} 
 
 .game-logo img{
 	height: 150px;
@@ -272,55 +373,46 @@ margin-right: 20px;
 	width: 100px;
 }
 
-.omschrijving p {
-text-align: left;
-}
-.beschrijving p {
+.omschrijving p 
+{
 	text-align: left;
 }
 
-.index-header {
-	height: 180px;
-	width: 100%;
-	background-color: black;
-
+.beschrijving p
+{
+	text-align: left;
 }
-IMG.displayed {
+
+IMG.displayed 
+{
     display: block;
     margin-left: auto;
     margin-right: auto 
 }
-.col-md-3 {
+
+.col-md-3 
+{
 	width: 225px;
 }
-.product-img img { 
-height:175px; 
-width:100%;
+
+.product-img img 
+{ 
+	height:175px; 
+	width:100%;
 }
+
 .product-info {
 	height: 90;
 	background-color: #fac846;
 }
 
-.menu{
-	height: 60px;
-}
-.index-slider {
-	height: 400px;
-	position: absolute;
-	z-index: 500;
-}
-.index-slider img{
-
-	width: 100%;
-
-}
-.index-slogan {
-	height: 20px;
-}
-
-.index-games {
+.index-items 
+{
 	height: 450px;
+}
+
+.index-items h2{
+	margin-bottom: 50px;
 }
 
 .arrow-down {
@@ -330,8 +422,9 @@ width:100%;
 	border-left: 12px solid transparent;
 	border-right: 12px solid transparent;
 	border-top: 12px solid #fac846;
-
 }
+
+/*STORE CSS*/
 
 .store-header-top{
 	min-height: 250px;
@@ -379,80 +472,43 @@ width:100%;
 	display: inline-block;
 }
 
-p.sloganscript 
+/*----------------------------------------------------------------------------------------------
+EINDE STORE CSS
+------------------------------------------------------------------------------------------------*/
+
+.footer 
 {
-	text-align: center;
+	height: 50px;
+	width: 100%;
+	background-color: black;
 	color: white;
-	font-size: 20px;
-	margin: 15px 0px 0px 0;
 }
 
-.index-games h2{
-	margin-bottom: 50px;
-}
-
-
-
-*{
-	margin: 0px;
-	padding: 0px;
-}
-.navborder{
-	background: #dddddd;
-	height: 60px;
-	width: 960px;
-	margin: 0 auto;
-}
-
-.navcolour{
-	background: #dddddd;
-}
-
-ul{
-	padding: 0;
-	list-style: none;
+@media (min-width: 1920px) {
 
 }
 
-ul li{
-	display: inline-block;
-	float: left;
-	width: 145px;
-	text-align: center;
-	margin: 0 auto;
+@media (max-width: 1680px) {
 
+	
 }
 
-ul li a{
-    display: block;
-    background: #dddddd;
-    text-decoration: none;
-    padding: 20px 20px 19px 20px;
-    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-	color: #191407;
-	z-index: 9999;
-	position: relative;
-    }
+@media (max-width: 1366px) {
 
-ul li a:hover{
-    background: #fac846;
-
+	
 }
 
-li{
-	display: inline;
-	text-decoration: none;
+@media (max-width: 1220px) {
+
+	
 }
 
-ul li ul{
-	display: none;
+@media (max-width: 992px) {
+
+	
 }
 
- ul li:hover ul{
-    display: block;
-}
+@media (max-width: 767px) {
 
-
-
-
-
+	
+} 
