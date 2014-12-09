@@ -168,6 +168,7 @@ li{
 
 ul li ul{
 	display: none;
+	position: absolute;
 }
 
  ul li:hover ul{
@@ -284,15 +285,6 @@ LOGIN CSS SCRIPT */
 EINDE LOGIN SCRIPT CSS
 ------------------------------------------------------------------------------------------------*/
 
-/* .arrow-up {
-	margin-left: 100px;
-	width: 0; 
-	height: 0; 
-	border-left: 12px solid transparent;
-	border-right: 12px solid transparent;
-	border-bottom: 12px solid #A6A7A8;
-} */
-
 .profile-info {
 	width: 100%;
 	margin-bottom: 20px;
@@ -315,13 +307,6 @@ EINDE LOGIN SCRIPT CSS
 	width: 500px;
 	height: 30px;
 }
-.container {
-	width: 960px;
-	position: relative;
-	z-index: 1;
-
-}
-
 .game-slider img {
 	height: 150px;
 	width: 700px;
@@ -393,64 +378,11 @@ EINDE LOGIN SCRIPT CSS
 
 .arrow-down {
 	margin: 0 auto;
-	height: 0;
-	width:0;
+	width: 0;
 	border-left: 12px solid transparent;
 	border-right: 12px solid transparent;
 	border-top: 12px solid #fac846;
 }
-
-/*STORE CSS*/
-
-.store-header-top{
-	min-height: 250px;
-	padding-bottom: 30px;
-	text-align: center;
-}
-.store-logo{
-	width: 250px;
-	height: 250px;
-	display: inline-block;
-	margin: 0;
-}
-.store-slider{
-	display: inline-block;
-	width: 800px;
-	height: 250px;
-}
-.store-header-menu{
-	height: 20px;
-}
-.store-header-menu ul{
-	text-align: center;
-	padding: 10px 0;
-}
-.store-header-menu ul li{
-	display: inline;
-	margin: 10px;
-	font-weight: bold;
-}
-.store-container{
-	padding-bottom: 30px;
-}
-.store-items-wrapper{
-	margin: 0 auto;
-	width: 730px;
-	height: 202px;
-}
-.store-about{
-	height: 250px;
-}
-.store-item{
-	width: 200px;
-	height: 200px;
-	margin: 0 20px;
-	display: inline-block;
-}
-
-/*----------------------------------------------------------------------------------------------
-EINDE STORE CSS
-------------------------------------------------------------------------------------------------*/
 
 .footer 
 {
