@@ -1,27 +1,35 @@
 <?php
 
- require '../config/Database.php';
+require '../config/Database.php';
 session_start();
 
-if(isset($_GET['name'])) {
+if(isset($_GET['name'])) 
+{
 	$name = $_GET['name'];
 }
 
-
-if(isset($_GET['action'])) {
+if(isset($_GET['action'])) 
+{
 	$action = $_GET['action'];
-	if($action ==  'removed') {
-	echo $name . " was removed from shoppingcart";
-}else if($action == 'quantity_updated') {
-	echo $name . " quantity was updated";
+
+	if($action ==  'removed') 
+	{
+		echo $name . " was removed from shoppingcart";
+	}
+	else if($action == 'quantity_updated') 
+	{
+		echo $name . " quantity was updated";
+	}
 }
-}
+
+$query = $db->query("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids})");
+$result = $query->fetch();
 
 if(!isset($_SESSION['cart_items'])) {
 	echo "There are no items in your shopping cart";
 } elseif(count($_SESSION['cart_items'])>0) {
 	$pids = "";
-	foreach($_SESSION['cart_items'] as $id=>$value) {
+	foreach($_SESSION['cart_items'] as $id => $value) {
 		$pids = $pids . $id . ",";
 	}
 
@@ -36,23 +44,29 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "<td>Sub total</td>";
 	echo "<td>Action</td>";
 	echo "</tr>";
+
+
  
 
-	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
-	$stmt->execute();
+/*	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
+	$stmt->execute();*/
 
-	$total_price=0;
-	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-		extract($row);
+	$total_price = 0;
+/*	while($row = $stmt->fetch(PDO::FETCH_ASSOC))*/
+	while ($result = $query->fetch(PDO::FETCH_OBJ)) 
+	{
+		extract($result);
 
-		if(!isset($_SESSION['cart_items'][$id]['quantity'])) {
+		if(!isset($_SESSION['cart_items'][$id]['quantity'])) 
+		{
 			$quantity = 1;
-		} else {
-					$quantity=$_SESSION['cart_items'][$id]['quantity'];
+		} 
+		else 
+		{
+			$quantity=$_SESSION['cart_items'][$id]['quantity'];
 		}
 
-
-		$sub_total=$price*$quantity;
+		$sub_total = $price * $quantity;
 
 		echo "<tr>";
 		echo "<td>{$name}</td>";
@@ -69,7 +83,7 @@ if(!isset($_SESSION['cart_items'])) {
 		echo "</td>";
 		echo "</tr>";
 
-		$total_price+=$price;
+		$total_price += $price;
 	}
 
 	echo "<tr>";
@@ -80,10 +94,11 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
-} else {
+} 
+else 
+{
 	echo "There are no items in your shoppingcart.";
 }
-
 ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

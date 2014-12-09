@@ -6,7 +6,7 @@ require '../../includes/storeGameHeader.php';
 
 <div class="container">
 	<div class="page-header">
-		<div class="col-md-2 logo"><img src="../../assets/img/vlambeer-logo.png" alt="vlambeer"></div>
+		<!-- <div class="col-md-2 logo"><img src="../../assets/img/vlambeer-logo.png" alt="vlambeer"></div> -->
 		<div class="col-md-10 game-slider" ><img src="http://cdn.akamai.steamstatic.com/steam/apps/209650/header.jpg?t=1416441302" alt=""></div>	
 	</div>
 
