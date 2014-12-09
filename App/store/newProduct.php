@@ -7,7 +7,6 @@
 		<p class="sloganscript" id="slogan"></p>
 	</div>
 <?php
-	require '../includes/menu.php';
 
 if(!isset($_POST['new-product'])){
 ?>
