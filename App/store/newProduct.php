@@ -5,9 +5,6 @@ if(!isset($_POST['new-product'])){
 ?>
 
 <div class="container">
-	<div class="index-slogan">
-		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Person</p>
-	</div>
 
 	<div class="index-games">
 		<h2><center>New product</center></h2>
