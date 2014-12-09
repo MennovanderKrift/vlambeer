@@ -21,6 +21,7 @@
 	color: white;
 }
 .header-profile-menu {
+	z-index: 99;
 	float: right;
 	position: absolute;
 	width: 200px;
@@ -223,13 +224,11 @@
 	width: 500px;
 	height: 30px;
 }
-
-
 .container {
 	width: 960px;
 	position: relative;
 	z-index: 1;
-	margin-top: 370px;
+
 }
 
 .game-slider img {

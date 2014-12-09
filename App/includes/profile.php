@@ -41,7 +41,7 @@
 						</a>
 						";
 ?>
-						<a href="invoiceOverview.php?id=<?php echo $_SESSION['id']; ?>">
+						<a href="invoiceOverview.php?customer_id=<?php echo $_SESSION['id']; ?>">
 <?php
 	echo 				"<div class='header-profile-menu-item'>
 							<img src='../assets/img/invoices.png'>

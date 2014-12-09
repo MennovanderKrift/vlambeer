@@ -3,14 +3,10 @@
 
 	include '../includes/profile.php';
 
-	$stmt = $db->prepare("SELECT * FROM tbl_invoice");
-	$stmt->execute();
+	$customer_id = $_GET['customer_id'];
 
-	if (! $invoice = $stmt->fetch(PDO::FETCH_OBJ)) {
-	$msg = urlencode("Can't get invoices");
-	header("location: ../store/invoicesOverview.php?error=$msg");
-	die();
-}
+	$stmt = $db->prepare("SELECT * FROM tbl_invoice WHERE customer_id = $customer_id");
+	$stmt->execute();
 ?>
 
 <!DOCTYPE html>
@@ -39,17 +35,30 @@
 		</thead>
 		<tbody>
 <?php
+	$invoice = $stmt->fetch(PDO::FETCH_OBJ);
+
+	if ($invoice == false) {
+		echo 	"<tr>
+					<td>De tabel is leeg</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>"; 
+				
+	} else {
 		echo 	"<tr>
 					<td>#" . $invoice->order_status . "</td>
 					<td>" . $invoice->amount . "</td>
 					<td>#" . $invoice->payment_status . "</td>
-					<td>" . $invoice ->date. "</td>
+					<td>" . $invoice->date. "</td>
 					<td><a href='#'>x</a></td>
 				</tr>"; 
+	}
 ?>
 		</tbody>
 	</table>
-
 <?php
 	include '../includes/footer.php';
 ?>

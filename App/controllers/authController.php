@@ -8,11 +8,6 @@ if (isset($_GET['logout'])) {
     die(); 
 }
 
-if (! isset($_POST['loginUser'])) {
-	header('location:../store/login.php');
-}
-
-
 $stmt = $db->prepare("SELECT * FROM tbl_customers WHERE email_address = :email_address && password = :password");
 $stmt->bindParam(":email_address",$_POST['email_address']);
 $stmt->bindParam(":password",$_POST['password']);
