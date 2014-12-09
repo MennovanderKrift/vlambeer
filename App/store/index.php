@@ -1,6 +1,8 @@
 <?php 
 require '../includes/profile.php';
 require '../includes/header.php';
+
+
 ?>
 
 <div class="index-slider">
