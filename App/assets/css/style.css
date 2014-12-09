@@ -173,6 +173,7 @@ ul li ul{
 
  ul li:hover ul{
     display: block;
+    width: 60px;
 }
 
 li input 
