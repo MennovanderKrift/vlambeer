@@ -202,9 +202,6 @@ EINDE MENU CSS
 
 .index-slider 
 {
-	height: 400px;
-	position: absolute;
-	z-index: 500;
 	width: 100%;
 	float: left;
 }
@@ -490,18 +487,12 @@ EINDE STORE CSS
 
 @media (max-width: 1680px) {
 
-	.index-container
-	{
-		margin-top: 490px;
-	}
+	
 }
 
 @media (max-width: 1366px) {
 
-	.index-container
-	{
-		margin-top: 370px;
-	}	
+		
 }
 
 @media (max-width: 1220px) {
