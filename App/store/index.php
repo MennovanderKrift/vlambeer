@@ -1,12 +1,15 @@
 <?php 
-	require '../includes/header.php';
+
+require '../includes/header.php';
+
+
 ?>
 
 <div class="index-slider">
 	<img src="../assets/img/slider1.png" alt="">
 </div>
 
-<div class="container">
+<div class="container index-container">
 	<div class="index-slogan">
 		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Persson</p>
 	</div>

@@ -1,3 +1,4 @@
+<div class="header-top">
 <?php
 	if (isset($_SESSION['email_address'])) {
 	echo "
