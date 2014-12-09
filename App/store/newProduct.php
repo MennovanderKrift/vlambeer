@@ -5,7 +5,6 @@ if(!isset($_POST['new-product'])){
 ?>
 
 <div class="container">
-
 	<div class="index-games">
 		<h2><center>New product</center></h2>
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
@@ -50,16 +49,21 @@ if(!isset($_POST['new-product'])){
 		    	</select>
 		    </div>
 
+		    <span class="col-md-12">
+		    	&nbsp;
+		    </span>
+
 		    <span class="col-md-12" align="center">
 				<button type="submit" class="btn btn-primary" name="new-product" align="center">Add product</button>
 				<a type="button" href="index.php" class="btn btn-danger">Cancel</a>
 			</span>
 		  </div>
 		</form>
-
 	</div>
 </div>
 <?php
+// var_dump($_POST);
+
 }else{
 	$name = $_POST['name'];
 	$description = $_POST['description'];
@@ -81,14 +85,14 @@ if(!isset($_POST['new-product'])){
 
 		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['tags']) || empty($_POST['category']) ){
 			$msg = urlencode("All fields are required");
-			header("location: newProduct.php?msg=$msg");
+			header('location: newProduct.php?msg=' .$msg);
 		} else {
 			if (! $stmt->execute()) {
 	        $msg = urlencode("Cannot add new product");
 	        header('location: ../newProduct.php?msg=' .$msg);
 	    } else {
 	        $msg = urlencode("New product added");
-	        header('location: ../store/newProduct.php?msg=' .$msg);
+	        header('location: ../store/newProduct.php?msg=' .$msg. '&new-product=true');
     }
 
 		}
