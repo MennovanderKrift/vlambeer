@@ -4,6 +4,10 @@
 if(!isset($_POST['new-product'])){
 ?>
 
+<div class="index-slider">
+	<img src="../assets/img/slider1.png" alt="">
+</div>
+
 <div class="container">
 	<div class="index-slogan">
 		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Person</p>
@@ -41,13 +45,13 @@ if(!isset($_POST['new-product'])){
 
 		 	<label for="tags" class="col-sm-2 col-md-2 control-label">Tags:</label>
 		    <div class="col-sm-10 col-md-10">
-		    	<textarea class="form-control" rows="3" placeholder="ex. Shoot, RPG, Bazooka, Mario, plumber" name="tags" id="tags"></textarea>
+		    	<textarea class="form-control" rows="3" placeholder="ex. Mario, Luigi, Yoshi, Peach, Toad, Bowser, Koopa, Kart, etc." name="tags" id="tags"></textarea>
 		    </div>
 
 		 	<label for="category" class="col-sm-2 col-md-2 control-label">Category:</label>
 		    <div class="col-sm-10 col-md-10">
 		    	<select class="form-control" name="category" id="category">
-		    		<option value="undefined">Undefined</option>
+		    		<option value="action">Action</option>
 			    	<option value="shooter">Shooter</option>
 			    	<option value="rpg">RPG</option>
 		    	</select>
