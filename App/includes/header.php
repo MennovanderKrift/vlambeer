@@ -17,9 +17,15 @@
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/master
+=======
+  <?php 
+  require 'profile.php';
+  ?>
+>>>>>>> parent of 1f56d7b... niet gaan huilen jongens, ik fix het wel
     <div class="index-header">
     <img class="displayed" src="../assets/img/logo.png" alt="">
     <p class="sloganscript" id="slogan"></p>
@@ -40,8 +46,6 @@
         <li><a href="#">CONTACT</a></li>
         <li><input type="text"> <img src="../assets/img/search.png" alt=""></li>
         </ul>
-        <?php require 'profile.php'; ?>  
       </div>
-    </div>  
-    
+    </div>    
   </nav>
