@@ -4,10 +4,6 @@
 if(!isset($_POST['new-product'])){
 ?>
 
-<div class="index-slider">
-	<img src="../assets/img/slider1.png" alt="">
-</div>
-
 <div class="container">
 	<div class="index-slogan">
 		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Person</p>
