@@ -9,10 +9,12 @@ require '../includes/header.php';
 	<img src="../assets/img/slider1.png" alt="">
 </div>
 
+<div class="index-slogan">
+	<p>"Also, I freaking love Vlambeer" - Markus `Notch` Persson</p>
+</div>
+
 <div class="container index-container">
-	<div class="index-slogan">
-		<p>"Also, I freaking love Vlambeer" - Markus `Notch` Persson</p>
-	</div>
+
 
 	<div class="index-items col-md-12">
 		<h2><center>games</center></h2>
