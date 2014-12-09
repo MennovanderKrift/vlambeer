@@ -10,6 +10,11 @@
 	z-index: 1;
 }
 
+.index-container
+{
+	margin-top: 370px;
+}
+
 /* header */
 
 .index-header 
