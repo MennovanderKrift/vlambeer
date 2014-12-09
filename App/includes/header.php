@@ -35,7 +35,6 @@
         <li><a href="#">MUSIC</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><input type="text"> <img src="../assets/img/search.png" alt=""></li>
-        <li>  <?php require 'profile.php';?></li>
         </ul>
         <?php require 'profile.php'; ?>  
       </div>
