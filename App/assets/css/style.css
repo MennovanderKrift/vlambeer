@@ -20,6 +20,7 @@
 }
 
 .header-top {
+	position: absolute;
 	height: 40px;
 	width: 100%;
 	background-color: black;
@@ -124,6 +125,7 @@ EINDE LOGO CSS
 ------------------------------------------------------------------------------------------------*/
 
 .profile-wrapper {
+	z-index: 99;
 	float: right;
 	width: 200px;
 }
@@ -332,15 +334,12 @@ EINDE LOGIN SCRIPT CSS
 	width: 500px;
 	height: 30px;
 }
-<<<<<<< HEAD
 .container {
 	width: 960px;
 	position: relative;
 	z-index: 1;
 
 }
-=======
->>>>>>> origin/master
 
 .game-slider img {
 	height: 150px;
@@ -379,12 +378,11 @@ EINDE LOGIN SCRIPT CSS
 {
 	text-align: left;
 }
-
-IMG.displayed 
+.displayed 
 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto 
+	margin: 0 auto;
+	display: block;
+    z-index: -99;
 }
 
 .col-md-3 
