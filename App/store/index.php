@@ -15,7 +15,7 @@ require '../includes/header.php';
 <div class="backgroundcolor1-index">
 	<div class="container">
 		<div class="index-items col-md-12">
-			<h2><center>games</center></h2>
+			<h2><center>Games</center></h2>
 			<div class="col-md-3">
 				<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
@@ -44,7 +44,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2><center>bundles</center></h2>
+		<h2><center>Bundles</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
@@ -62,7 +62,7 @@ require '../includes/header.php';
 	<div class="container">
 
 		<div class="index-items col-md-12">
-		<h2><center>clothes</center></h2>
+		<h2><center>Clothes</center></h2>
 			<div class="col-md-3">
 				<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
@@ -91,7 +91,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2><center>miscellaneous</center></h2>
+		<h2><center>Miscellaneous</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
@@ -108,7 +108,7 @@ require '../includes/header.php';
 <div class="backgroundcolor1-index">
 	<div class="container">
 		<div class="index-items col-md-12">
-			<h2><center>music</center></h2>
+			<h2><center>Music</center></h2>
 			<div class="col-md-3">
 				<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
@@ -132,7 +132,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2><center>non-vlambeer games</center></h2>
+		<h2><center>Non-Vlambeer games</center></h2>
 		<div class="col-md-3">
 			<a href="games/CodAW.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 			<div class="product-info"><p>Serious Sam:The Random Encounter (PC) (Steam)</p></div>
