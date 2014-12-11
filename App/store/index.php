@@ -14,7 +14,7 @@ require '../includes/header.php';
 		<div class="index-items col-md-12">
 			<h2>Games</h2>
 			<div class="col-md-3">
-				<a href="games/CodAW.php?id=1"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
+				<a href="games/serious-sam.php?id=1"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam: <br>The Random Encounter <br>(PC, Steam)</p></div>
 				<div class="arrow-down"></div>
 			</div>
@@ -157,3 +157,5 @@ require '../includes/header.php';
 <?php
 	require '../includes/footer.php';
 ?>
+
+

@@ -31,6 +31,7 @@
           <li><a href="../store/games/pcGames.php">PC</a></li>
           <li><a href="../store/games/iOSgames.php">iOS</a></li>
           <li><a href="../store/games/vitaGames.php">VITA</a></li>
+          <li><a href="../store/games/CodAW.php">cod test page</a></li>
           </ul></li>
         <li><a href="#">MERCHANDISE</a></li>
         <li><a href="#">MUSIC</a></li>
