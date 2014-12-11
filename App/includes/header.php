@@ -25,16 +25,16 @@
     <div class="navcolour">
       <div class="navborder">
         <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">GAMES</a>
+        <li><a href="../store/index.php">HOME</a></li>
+        <li><a href="../store/games/index.php">GAMES</a>
           <ul>
-          <li><a href="#">PC</a></li>
-          <li><a href="#">iOS</a></li>
-          <li><a href="#">VITA</a></li>
+          <li><a href="../store/games/pcGames.php">PC</a></li>
+          <li><a href="../store/games/iOSgames.php">iOS</a></li>
+          <li><a href="../store/games/vitaGames.php">VITA</a></li>
           </ul></li>
         <li><a href="#">MERCHANDISE</a></li>
         <li><a href="#">MUSIC</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="../store/contact.php">CONTACT</a></li>
 <!--         <li><input type="text"> <img src="../assets/img/search.png" alt=""></li> -->
         </ul>
       </div>
