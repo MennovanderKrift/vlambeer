@@ -3,7 +3,7 @@
 $con = mysqli_connect('localhost', 'root', '', 'vlambeer');
 
 $username		=		$_POST['username'];
-$email			=		$_POST['email'];
+$email_address	=		$_POST['email_address'];
 $password 		=		$_POST['password'];
 $password2		=		$_POST['password2'];
 
@@ -18,7 +18,7 @@ if(isset($_POST['register'])) {
 		header("location: register.php?msg=ee1");
 	} else {
 		$hashedPass = password_hash("$password", PASSWORD_DEFAULT);
-		$query = mysqli_query($con, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPass')");
+		$query = mysqli_query($con, "INSERT INTO tbl_customers (username, email_address, password) VALUES ('$username', '$email_address', '$hashedPass')");
 		header("location: index.php?msg=sr1");
 	}
 }
