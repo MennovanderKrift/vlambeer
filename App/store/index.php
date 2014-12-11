@@ -12,7 +12,7 @@ require '../includes/header.php';
 <div class="backgroundcolor1-index">
 	<div class="container">
 		<div class="index-items col-md-12">
-			<h2>games</h2>
+			<h2>Games</h2>
 			<div class="col-md-3">
 				<a href="games/CodAW.php?id=1"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam: <br>The Random Encounter <br>(PC, Steam)</p></div>
@@ -41,7 +41,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2>bundles</h2>
+		<h2>Bundles</h2>
 		<div class="col-md-3">
 			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
 			<div class="product-info"><p>Vlambeer’s <br> Crate Box Bundle</p></div>
@@ -58,7 +58,7 @@ require '../includes/header.php';
 <div class="backgroundcolor1-index">
 	<div class="container">
 		<div class="index-items col-md-12">
-		<h2>clothes</h2>
+		<h2>Clothes</h2>
 			<div class="col-md-3">
 				<div class="product-img"><img src="../assets/img/tshirt1.png" alt=""></div>	
 				<div class="product-info"><p>Luftrausers <br> Mens & ladies T-shirt</p></div>
@@ -87,7 +87,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2>miscellaneous</h2>
+		<h2>Miscellaneous</h2>
 		<div class="col-md-3">
 			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>
 			<div class="product-info"><p>Vlambeer <br> Enemies Poster</p></div>
@@ -104,7 +104,7 @@ require '../includes/header.php';
 <div class="backgroundcolor1-index">
 	<div class="container">
 		<div class="index-items col-md-12">
-			<h2>music</h2>
+			<h2>Music</h2>
 			<div class="col-md-3">
 				<div class="product-img"><img src="../assets/img/music1.png" alt=""></div>
 				<div class="product-info"><p>Vlambeer <br> Original Soundtrack <br> (Physical)</p></div>
@@ -128,7 +128,7 @@ require '../includes/header.php';
 </div>
 <div class="container">
 	<div class="index-items col-md-12">
-		<h2>non-vlambeer games</h2>
+		<h2>Non-Vlambeer games</h2>
 		<div class="col-md-3">
 			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
 			<div class="product-info"><p>Radical Fishing <br> via bored.com</p></div>
