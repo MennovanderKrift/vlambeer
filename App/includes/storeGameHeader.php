@@ -26,7 +26,7 @@
     <div class="navcolour">
       <div class="navborder">
         <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="../index.php">HOME</a></li>
         <li><a href="#">GAMES</a>
           <ul>
             <li><a href="#">PC</a></li>
