@@ -18,7 +18,7 @@
 <body>
 
     <div class="index-header">
-    <img class="displayed" src="../assets/img/logo.png" alt="">
+    <img class="displayed" src="../assets/img/geanimeerd-logo.gif" width="160" height="130">
     <p class="sloganscript" id="slogan"></p>
   </div>
   <nav>
