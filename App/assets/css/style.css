@@ -9,6 +9,9 @@
 	position: relative;
 	z-index: 1;
 }
+.backgroundcolor1-index {
+	background-color: #EBEBEB;
+}
 
 /* header */
 
@@ -205,17 +208,17 @@ p.sloganscript
 
 .index-slogan 
 {
-	height: 30px;
+	height: 45px;
 	text-align: center;
-	margin-bottom: 30px;
 	background-color: gray;
 	width: 100%;
 }
 
 .index-slogan p
 {
-	font-size: 18px;
+	font-size: 20px;
 	font-family: 'Century Gothic';
+	padding-top: 5px;
 }
 /*------------------------------------------------------------------------------------------
 LOGIN CSS SCRIPT */
@@ -370,7 +373,7 @@ EINDE LOGIN SCRIPT CSS
 
 .index-items 
 {
-	height: 450px;
+	height: 400px;
 }
 
 .index-items h2{
@@ -404,6 +407,10 @@ EINDE LOGIN SCRIPT CSS
 
 @media (max-width: 1366px) {
 
+	.arrow-down
+	{
+		margin-top: -10px;
+	}
 		
 }
 

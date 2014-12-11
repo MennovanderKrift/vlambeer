@@ -1,6 +1,8 @@
 <?php
+session_start();
+session_destroy();
+require '../config/Database.php';
 
- require '../config/Database.php';
 session_start();
 
 if(isset($_GET['name'])) {

@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+session_destroy();
+
 require '../config/Database.php';
 session_start();
 
