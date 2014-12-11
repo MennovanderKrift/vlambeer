@@ -1,7 +1,7 @@
 <?php
  	include '../includes/header.php';
 
-	$stmt = $db->prepare("SELECT * FROM tbl_users");
+	$stmt = $db->prepare("SELECT * FROM tbl_customers");
 	$stmt->execute();
 
 	include '../includes/profile.php';
