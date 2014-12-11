@@ -1,6 +1,13 @@
 <?php 
 	include '../includes/header.php';
 
+	$urlid = $_GET['customer_id'];
+	if ($_SESSION['id'] == $urlid) {
+	} else {
+		$msg = urlencode('Jij mag hier niet komen');
+		header("location: index.php?msg=$msg");
+	}
+
 	include '../includes/profile.php';
 
 	$customer_id = $_GET['customer_id'];
@@ -20,9 +27,7 @@
 <body>
 
 <div class="container">
-	
 <h2>Invoice overview</h2>
-
 	<table class="table table-striped sortable">
 		<thead>
 			<tr>

@@ -1,6 +1,13 @@
 <?php
  	include '../includes/header.php';
 
+ 	$urlid = $_GET['id'];
+	if ($_SESSION['id'] == $urlid) {
+	} else {
+		$msg = urlencode('Jij mag hier niet komen');
+		header("location: index.php?msg=$msg");
+	}
+
 	$stmt = $db->prepare("SELECT * FROM tbl_customers");
 	$stmt->execute();
 
