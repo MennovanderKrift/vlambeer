@@ -57,7 +57,6 @@ require '../includes/header.php';
 </div>
 <div class="backgroundcolor1-index">
 	<div class="container">
-
 		<div class="index-items col-md-12">
 		<h2>clothes</h2>
 			<div class="col-md-3">
