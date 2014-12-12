@@ -65,6 +65,7 @@
 	color: #777777;
 	background-color: white;
 	border-bottom: 1px solid #A4A5A6;
+	z-index: 999;
 }
 .header-profile-menu-item:hover {
 	background-color: #ededed;
@@ -160,8 +161,8 @@ ul li a{
     padding: 20px 20px 19px 20px;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	color: #191407;
-	z-index: 9999;
-	position: relative;
+	/*z-index: 9999;*/
+/*	position: relative;*/
     }
 
 ul li a:hover{
