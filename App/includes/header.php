@@ -18,6 +18,7 @@
 <body>
 
     <div class="index-header">
+      <?php require 'profile.php'; ?>
     <img class="displayed" src="../assets/img/geanimeerd-logo.gif" width="160" height="130">
     <p class="sloganscript" id="slogan"></p>
   </div>

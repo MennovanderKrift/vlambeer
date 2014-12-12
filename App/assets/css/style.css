@@ -29,8 +29,9 @@
 .header-top {
 	position: absolute;
 	height: 40px;
-	width: 100%;
+	width: 100px;
 	background-color: black;
+	margin-left: 170px;
 }
 .header-profile-bar {
 	width: 900px;
