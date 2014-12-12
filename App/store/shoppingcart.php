@@ -1,6 +1,5 @@
 <?php
-session_start();
-session_destroy();
+
 require '../config/Database.php';
 
 session_start();
@@ -40,7 +39,7 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "</tr>";
  
 
-	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
+	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id = '1' /*IN ({$pids})*/ ORDER BY name");
 	$stmt->execute();
 
 	$total_price=0;
@@ -78,7 +77,7 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "<td><b>Total</b></td>";
 	echo "<td>&euro;{$total_price}</td>";
 	echo "<td>";
-	echo "<a href='#'>Checkout</a>";
+	echo "<a href='checkout.php'>Checkout</a>";
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
