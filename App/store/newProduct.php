@@ -8,7 +8,7 @@ if(!isset($_POST['new-product'])){
 	<div class="index-games">
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
 		  <div class="form-group">
-			<h2 style="font-family: 'Century Gothic', 'Helvetica', sans-serif"><center>New product</center></h2>
+			<h2><center>New product</center></h2>
 		  <span class="col-sm2 col-md-2"></span>
 			<p class="col-sm-10 col-md-10" style="color:#3cb878"><b><?php if(!empty($_GET['msg'])){
 			echo "- " .$_GET['msg'];
