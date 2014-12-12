@@ -19,7 +19,8 @@ if(isset($_POST['register'])) {
 	} else {
 		$hashedPass = password_hash("$password", PASSWORD_DEFAULT);
 		$query = mysqli_query($con, "INSERT INTO tbl_customers (username, email_address, password) VALUES ('$username', '$email_address', '$hashedPass')");
-		header("location: index.php?msg=sr1");
+		$msg = urlencode('You are succesfully registered, please login');
+		header("location: login.php?msg=$msg");
 	}
 }
 
