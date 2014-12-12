@@ -128,7 +128,7 @@ EINDE LOGO CSS
 .navborder{
 	background: #dddddd;
 	height: 60px;
-	width: 960px;
+	width: 1100px;
 	margin: 0 auto;
 }
 
@@ -185,12 +185,24 @@ ul li ul{
 
 li input 
 {
-	margin-top: 20px;
-}
-
-li img 
-{
+	margin-top: 18px;
+	width: 120px;
 	float: right;
+	height: 25px;
+}
+.search-form {
+	float: right;
+	width: 200px;
+}
+.search-btn {
+	background-image: url('../img/search.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	float: right;
+	width: 25px;
+	height: 25px;
+	background-color: #5f5f5f;
+	border: none;
 }
 
 /*----------------------------------------------------------------------------------------------
