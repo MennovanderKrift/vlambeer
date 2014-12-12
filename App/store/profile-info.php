@@ -2,16 +2,16 @@
  	include '../includes/header.php';
 
  	$urlid = $_GET['id'];
+ 	$session_id = $_SESSION['id'];
+
 	if ($_SESSION['id'] == $urlid) {
 	} else {
-		$msg = urlencode('Jij mag hier niet komen');
-		header("location: index.php?msg=$msg");
+		$msg = urlencode('Je mag hier niet komen');
+		header("location: ?id=$session_id&error=$msg");
 	}
 
 	$stmt = $db->prepare("SELECT * FROM tbl_customers");
 	$stmt->execute();
-
-	include '../includes/profile.php';
 ?>
 	<div class="header-calltoaction">
 		<div class="logo-slogan">
@@ -66,11 +66,11 @@
 			}
 ?>
 				<label for="name">First name</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['name']; ?>" placeholder="0000XX" name="name">
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['name']; ?>" name="name">
 				<label for="last_name">Last name</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['last_name']; ?>" name="last_name">
 				<label for="phone_number">Phone number</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['phone_number']; ?>" placeholder="0000XX" name="phone_number">
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['phone_number']; ?>" placeholder="06 0000000" name="phone_number">
 				<label for="address">Address</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>" name="address">
 				<label for="zipcode">Zip code</label>

@@ -17,10 +17,10 @@
 					<h1 class="login-title">Log in</h1>
 <?php 
 					if (isset($_GET['error'])) {
-						echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['error']) . '</b></li>';
+						echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['error']) . '</b></li><br><br>';
 					}
 					if (isset($_GET['msg'])) {
-						echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
+						echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li><br><br>';
 					}
 ?>
 					<label for="email">Email</label>

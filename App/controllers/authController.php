@@ -36,8 +36,9 @@ if (isset($_POST['loginUser'])) {
   $_SESSION['zipcode'] = $user->zipcode;
   $_SESSION['phone_number'] = $user->phone_number;
   $_SESSION['news_letter'] = $user->news_letter;
-  header('location: ../store/index.php?Hij werkt');    
+  header('location: ../store/index.php');    
  } else {
-     echo "Password incorrect";
+     $msg = urlencode('Password or username incorrect');
+     header("location: ../store/login.php?error=$msg");
  }
 }
