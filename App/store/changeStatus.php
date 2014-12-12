@@ -32,29 +32,35 @@ $result = mysqli_query($con, $query);
 					echo "<form role='form' action='changeStatus.php?invoice_id=" .$row['invoice_id']. "' method='POST'>";
 						echo "<tr>";
 
-						echo "<td>" .$row['invoice_id']. '</td>';
-						echo "<td>" .$row['product_id']. '</td>';
-						echo "<td>" .$row['customer_id']. '</td>';
+						echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). '</td>';
+						echo "<td>" .mysqli_real_escape_string($con, $row['product_id']). '</td>';
+						echo "<td>" .mysqli_real_escape_string($con, $row['customer_id']). '</td>';
+
 						echo "<td>";
-							echo "<select class='form-control' name='status'>";
-								echo "<option name ='invoice_id'>" .ucfirst($row['order_status']). "</option>";
-
-								if($row['order_status'] = 'send'){
-									echo "<option value='paid'>Paid</option>";
-									echo "<option value='canceled'>Canceled</option>";
-
-								}else if ($row['order_status'] = 'paid'){
-									echo "<option value='send'>Send</option>";
-									echo "<option value='canceled'>Canceled</option>";								
-								}else if ($row['order_status'] = 'canceled'){
-									echo "<option value='send'>Send</option>";
-									echo "<option value='paid'>Paid</option>";
+							echo "<select class='form-control' name='order_status'>";
+								echo "<option value='" .$row['order_status']. "'>" .ucfirst($row['order_status']). "</option>";
+								switch($row['order_status']){
+								case 'send':
+										echo "<option value='paid'>Paid</option>";
+										echo "<option value='canceled'>Canceled</option>";
+									break;
+								case 'paid':
+										echo "<option value='send'>Send</option>";
+										echo "<option value='canceled'>Canceled</option>";
+										break;
+								case 'canceled':
+										echo "<option value='send'>Send</option>";
+										echo "<option value='paid'>Paid</option>";
+										break;
+								default:
+									echo "";
+									break;
 								}
 
 							echo "</select>";
-
 						echo '</td>';
-						echo "<td><input type='submit' value='Update' class='btn btn-primary' name='order-status'></td>";
+
+						echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
 
 						echo "</tr>";
 					echo "</form>";
@@ -62,9 +68,9 @@ $result = mysqli_query($con, $query);
 
 					if(isset($_POST['order-status'])){
 						$invoice_id = $_GET['invoice_id'];
-						$status = $_POST['status'];
+						$order_status = $_POST['order_status'];
 
-						$query = mysqli_query($con, "UPDATE tbl_invoice SET order_status = '$status' WHERE invoice_id = $invoice_id ")
+						$query = mysqli_query($con, "UPDATE tbl_invoice SET order_status = '$order_status' WHERE invoice_id = $invoice_id ")
 						or die ('Could not update the order status. Please contact the web developer.');
 
 						$msg = urlencode('- Order status has been updated');
