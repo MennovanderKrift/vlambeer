@@ -161,8 +161,8 @@ ul li a{
     padding: 20px 20px 19px 20px;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	color: #191407;
-	/*z-index: 9999;*/
-/*	position: relative;*/
+	z-index: 9999;
+	position: relative;
     }
 
 ul li a:hover{
@@ -412,12 +412,33 @@ EINDE LOGIN SCRIPT CSS
 }
 
 
+
 /* serious sam game page */
 
 
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
 	background-image: url('../img/ss_bg.png');
+}
+
+.backgroundcolor-seriuos-sam1 .container {
+	padding-top: 45px;
+}
+
+
+.backgroundcolor-seriuos-sam1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-ss {
+	height: 250px;
+	width: 300px;
+}
+
+.slider-serious-sam{
+	height: 370px;
+	margin-left: 20px;
 }
 
 .backgroundcolor-seriuos-sam2{
@@ -428,6 +449,8 @@ EINDE LOGIN SCRIPT CSS
 	height: 380px;
 	background-color: #cdd8dc;
 }
+
+
 
 
 /* einde serious sam game page */
