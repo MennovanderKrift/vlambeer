@@ -9,7 +9,7 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_POST['loginUser'])) {
- $stmt = $db->prepare("SELECT * FROM tbl_customers WHERE email_address = :email_address ");
+ $stmt = $db->prepare("SELECT * FROM tbl_customers WHERE email_address = :email_address");
  $stmt->bindParam("email_address",$_POST['email_address']);
  $result = $stmt->execute();
 
