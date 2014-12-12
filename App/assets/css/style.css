@@ -394,6 +394,14 @@ EINDE LOGIN SCRIPT CSS
 	border-top: 12px solid #fac846;
 }
 
+.arrow-up {
+	margin: 0 auto;
+	width: 0;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 12px solid #fac846;
+}
+
 .footer 
 {
 	height: 50px;
@@ -402,6 +410,26 @@ EINDE LOGIN SCRIPT CSS
 	color: white;
 }
 
+
+/* serious sam game page */
+
+
+.backgroundcolor-seriuos-sam1 {
+	height: 480px;
+	background-image: url('../img/ss_bg.png');
+}
+
+.backgroundcolor-seriuos-sam2{
+	height: 480px
+}
+
+.backgroundcolor-seriuos-sam3{
+	height: 380px;
+	background-color: #cdd8dc;
+}
+
+
+/* einde serious sam game page */
 @media (min-width: 1920px) {
 
 }
