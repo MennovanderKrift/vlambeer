@@ -39,7 +39,7 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "</tr>";
  
 
-	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id = '1' /*IN ({$pids})*/ ORDER BY name");
+	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
 	$stmt->execute();
 
 	$total_price=0;
