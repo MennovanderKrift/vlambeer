@@ -6,46 +6,56 @@ if(!isset($_POST['new-product'])){
 
 <div class="container">
 	<div class="index-games">
-		<h2><center>New product</center></h2>
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
 		  <div class="form-group">
-
+			<h2 style="font-family: 'Century Gothic', 'Helvetica', sans-serif"><center>New product</center></h2>
 		  <span class="col-sm2 col-md-2"></span>
-			<p class="col-sm-10 col-md-10" style="color:red"><b><?php if(!empty($_GET['msg'])){
+			<p class="col-sm-10 col-md-10" style="color:#3cb878"><b><?php if(!empty($_GET['msg'])){
 			echo "- " .$_GET['msg'];
 			}?></b></p>
 
 		   	<label for="name" class="col-sm-2 col-md-2 control-label">Name:</label>
 			<div class="col-sm-10 col-md-10">
-				<input type="text" class="form-control" placeholder="Product name" name="name" id="name">
+				<input type="text" class="form-control" placeholder="Product name" name="name" id="name" style="background-color: #fac846">
 		    </div>
 
 		    <label for="description" class="col-sm-2 col-md-2 control-label">Description:</label>
 		    <div class="col-sm-10 col-md-10">
-		    	<textarea class="form-control" rows="3" placeholder="Product description" name="description" id="description"></textarea>
+		    	<textarea class="form-control" rows="3" placeholder="Product description" name="description" id="description" style="background-color: #fac846"></textarea>
 		    </div>
 
 		    <label for="price" class="col-sm-2 col-md-2 control-label">Price:</label>
 			<div class="col-sm-10 col-md-10">
-				<input type="number" step="0.01" class="form-control" placeholder="$9.99" name="price" id="price" min="0.00" max="9999.99">
+				<input type="number" step="0.01" class="form-control" placeholder="9.99" name="price" id="price" min="0.00" max="9999.99" style="background-color: #fac846">
+		    </div>
+
+		    <label for="size" class="col-sm-2 col-md-2 control-label">Size:</label>
+			<div class="col-sm-10 col-md-10">
+				<select type="text" class="form-control" name="size" id="size" max-length="10" style="background-color: #fac846">
+					<option value="">n/a</option>
+					<option value="S">S</option>
+					<option value="L">L</option>
+					<option value="XL">XL</option>
+					<option value="XXL">XXL</option>
+				</select>
 		    </div>
 
 		    <label for="stock" class="col-sm-2 col-md-2 control-label">Stock:</label>
 			<div class="col-sm-10 col-md-10">
-				<input type="number" class="form-control" placeholder="0-9999" name="stock" id="stock" min="0" max="9999">
+				<input type="number" class="form-control" placeholder="0-9999" name="stock" id="stock" min="0" max="9999" style="background-color: #fac846">
 		    </div>
 
 		 	<label for="tags" class="col-sm-2 col-md-2 control-label">Tags:</label>
 		    <div class="col-sm-10 col-md-10">
-		    	<textarea class="form-control" rows="3" placeholder="ex. Mario, Luigi, Yoshi, Peach, Toad, Bowser, Koopa, Kart, etc." name="tags" id="tags"></textarea>
+		    	<textarea class="form-control" rows="3" placeholder="ex. Mario, Luigi, Yoshi, Peach, Toad, Bowser, Koopa, Kart, etc." name="tags" id="tags" style="background-color: #fac846"></textarea>
 		    </div>
 
 		 	<label for="category" class="col-sm-2 col-md-2 control-label">Category:</label>
 		    <div class="col-sm-10 col-md-10">
-		    	<select class="form-control" name="category" id="category">
-		    		<option value="action">Action</option>
-			    	<option value="shooter">Shooter</option>
-			    	<option value="rpg">RPG</option>
+		    	<select class="form-control" name="category" id="category" style="background-color: #fac846">
+		    		<option value="action">T-shirt</option>
+			    	<option value="shooter">Soundtrack</option>
+			    	<option value="rpg">Pluche</option>
 		    	</select>
 		    </div>
 
@@ -53,8 +63,8 @@ if(!isset($_POST['new-product'])){
 		    	&nbsp;
 		    </span>
 
-		    <span class="col-md-12" align="center">
-				<button type="submit" class="btn btn-primary" name="new-product" align="center">Add product</button>
+		    <span class="col-md-12" align="right">
+				<button type="submit" class="btn btn-success" name="new-product">Add</button>
 				<a type="button" href="index.php" class="btn btn-danger">Cancel</a>
 			</span>
 		  </div>
@@ -68,17 +78,19 @@ if(!isset($_POST['new-product'])){
 	$name = $_POST['name'];
 	$description = $_POST['description'];
 	$price = $_POST['price'];
+	$size = $_POST['size'];
 	$stock = $_POST['stock'];
 	$tags = $_POST['tags'];
 	$category = $_POST['category'];
 
 
-        $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, stock, tags, category) VALUES (:name, :description, :price, :stock, :tags, :category)");
+        $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, size, stock, tags, category) VALUES (:name, :description, :price, :size, :stock, :tags, :category)");
 
         $stmt->bindParam("name", $_POST['name'], PDO::PARAM_STR);
 
         $stmt->bindParam("description", $_POST['description'], PDO::PARAM_STR);
         $stmt->bindParam("price", $_POST['price'], PDO::PARAM_STR);
+        $stmt->bindParam("size", $_POST['size'], PDO::PARAM_STR);
         $stmt->bindParam("stock", $_POST['stock'], PDO::PARAM_STR);
         $stmt->bindParam("tags", $_POST['tags'], PDO::PARAM_STR);
         $stmt->bindParam("category", $_POST['category'], PDO::PARAM_STR);

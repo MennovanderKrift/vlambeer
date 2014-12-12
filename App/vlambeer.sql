@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2014 at 01:24 PM
+-- Generation Time: Dec 12, 2014 at 11:13 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
 --
 
 INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `last_name`, `gender`, `address`, `house_number`, `zipcode`, `phone_number`, `email_address`, `news_letter`) VALUES
-(1, 'menno', 'admin', 'Menno', 'van der Krift', 'Male', 'Sesamstraat', 666, '4848aa', '0764975134', 'menno.vd.krift@gmail.com', 1);
+(1, 'menno', 'admin', 'Menno', 'van der Krift', 'male', 'Sesamstraat', 666, '4848aa', '0764975134', 'menno.vd.krift@gmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,16 @@ CREATE TABLE IF NOT EXISTS `tbl_invoice` (
   UNIQUE KEY `invoice_id` (`invoice_id`),
   KEY `product_id` (`product_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_invoice`
+--
+
+INSERT INTO `tbl_invoice` (`invoice_id`, `product_id`, `customer_id`, `order_status`, `amount`, `payment_status`, `date`) VALUES
+(1, 36, 1, 'awaiting payment', 3, '2', '2014-12-12'),
+(2, 37, 1, 'send', 12, 'paid', '2014-12-12'),
+(3, 38, 1, 'Canceled', 99, 'not paid', '2014-12-12');
 
 -- --------------------------------------------------------
 
@@ -98,12 +107,24 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
   `name` varchar(40) NOT NULL COMMENT 'Product name',
   `description` longtext NOT NULL COMMENT 'Product description',
   `price` float NOT NULL COMMENT 'Product price',
+  `size` varchar(10) DEFAULT NULL COMMENT 'Product size ex. M, L, Large, Small, 32, 36, One size fits all',
   `stock` int(3) NOT NULL COMMENT 'Number of product in stock',
   `tags` varchar(255) NOT NULL COMMENT 'Product tags',
-  `category` int(11) NOT NULL COMMENT 'Product category',
+  `category` varchar(40) NOT NULL COMMENT 'Product category',
   PRIMARY KEY (`product_id`),
   UNIQUE KEY `product_id` (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+
+--
+-- Dumping data for table `tbl_products`
+--
+
+INSERT INTO `tbl_products` (`product_id`, `name`, `description`, `price`, `size`, `stock`, `tags`, `category`) VALUES
+(36, 'Luftrauser T-shirt', 'Luftrauser T-shirt. Made from legendary WWII fabric.', 14.99, 'L', 30, 'T-shirt, Luftrausers, L, apparel', 'T-shirt'),
+(37, 'Luftrauser zwei! T-shirt', 'Luftrauser zwei! T-shirt. Made from legendary WWII fabric.', 14.99, 'L', 30, 'T-shirt, Luftrausers, L, apparel', 'T-shirt'),
+(38, 'Luftrauser T-shirt (kids)', 'Luftrauser T-shirt. Made from legendary WWII fabric. Now in special kids sizes!', 14.99, '176', 30, 'T-shirt, Luftrausers, apparel, Kids', 'T-shirt'),
+(39, 'T-Shirt Lufrausers Zwei!', 'Made from fabulous cotton farmed from cotton farms in Africa,', 14.99, 'S', 12, 't-shirt, lufrausers, zwei, adult, apparel', 'shooter'),
+(40, 'Pluche luftraiser drei!', 'Pluche luftraiser drei! Made from intergalatic space debris.', 6.66, '', 10, 'pluche, debris, space, intergalatic, luftrausers', 'rpg');
 
 -- --------------------------------------------------------
 
@@ -136,8 +157,8 @@ INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `name`, `last_name`)
 -- Constraints for table `tbl_invoice`
 --
 ALTER TABLE `tbl_invoice`
-  ADD CONSTRAINT `tbl_invoice_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `tbl_customers` (`customer_id`),
-  ADD CONSTRAINT `tbl_invoice_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `tbl_products` (`product_id`);
+  ADD CONSTRAINT `tbl_invoice_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `tbl_products` (`product_id`),
+  ADD CONSTRAINT `tbl_invoice_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `tbl_customers` (`customer_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
