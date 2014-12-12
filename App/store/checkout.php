@@ -10,11 +10,11 @@ try
 {
 	$payment = $mollie->payments->create(
 		array(
-			'amount'      => 10.00,
+			'amount'      => '10.00',
 			'description' => 'My first API payment',
 			'redirectUrl' => 'https://webshop.example.org/order/12345/',
 			'metadata'    => array(
-				'order_id' => '12345'
+			'order_id' => '12345'
 			)
 		)
 	);
