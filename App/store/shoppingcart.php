@@ -1,8 +1,6 @@
 <?php
 
-require '../config/Database.php';
-
-session_start();
+require '../includes/header.php';
 
 if(isset($_GET['name'])) {
 	$name = $_GET['name'];
@@ -42,7 +40,7 @@ if(!isset($_SESSION['cart_items'])) {
 	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
 	$stmt->execute();
 
-	$total_price=0;
+	$total_price = 0;
 	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 		extract($row);
 
@@ -53,7 +51,7 @@ if(!isset($_SESSION['cart_items'])) {
 		}
 
 
-		$sub_total=$price*$quantity;
+		$sub_total = $price * $quantity;
 
 		echo "<tr>";
 		echo "<td>{$name}</td>";
@@ -70,7 +68,7 @@ if(!isset($_SESSION['cart_items'])) {
 		echo "</td>";
 		echo "</tr>";
 
-		$total_price+=$price;
+		$total_price += $price * $quantity;
 	}
 
 	echo "<tr>";
@@ -84,7 +82,7 @@ if(!isset($_SESSION['cart_items'])) {
 } else {
 	echo "There are no items in your shoppingcart.";
 }
-
+require '../includes/footer.php';
 ?>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
