@@ -205,6 +205,10 @@ li input
 	border: none;
 }
 
+td, th {
+padding: 5px;
+}
+
 /*----------------------------------------------------------------------------------------------
 EINDE MENU CSS
 ------------------------------------------------------------------------------------------------*/
@@ -453,18 +457,22 @@ EINDE LOGIN SCRIPT CSS
 }
 
 .backgroundcolor-seriuos-sam2{
-	height: 480px
+	height: 480px;
+	padding-top: 50px;
 }
 
 .backgroundcolor-seriuos-sam3{
 	height: 380px;
 	background-color: #cdd8dc;
+	padding-top: 42px;
+}
+.streep {
+	border-top: 1px solid #bbc5c8;
 }
 
 
-
-
 /* einde serious sam game page */
+
 @media (min-width: 1920px) {
 
 }

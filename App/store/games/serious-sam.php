@@ -32,7 +32,21 @@ require '../../includes/storeGameHeader.php';
 
 <div class="backgroundcolor-seriuos-sam3">
 	<div class="container">
-
+		<div class="col-md-6">
+			<h1>Systeemeisen</h1>
+			<hr class="streep">
+			<p><b>OS:</b> Windows xp, vista, 7</p>
+			<p><b>Processor:</b> 2.0Ghz or faster processor</p>
+			<p><b>Memory:</b> 1GB RAM</p>
+			<p><b>Hard Disk Space:</b> 100MB free space</p>
+			<p><b>Video Card:</b> 256MB Video Memory or higher</p>
+			<p><b>DirectX:</b> 8.0 or later</p>
+		</div>
+		<div class="col-md-6">
+			<img src="../../assets/img/ss_afb3.png" alt="">
+		</div>
+	
+	
 	</div>
 </div>
 <?php
