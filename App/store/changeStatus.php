@@ -38,23 +38,39 @@ $result = mysqli_query($con, $query);
 
 						echo "<td>";
 							echo "<select class='form-control' name='order_status'>";
-								echo "<option value='" .$row['order_status']. "'>" .ucfirst($row['order_status']). "</option>";
+								// echo "<option value='" .$row['order_status']. "'>" .ucfirst($row['order_status']). "</option>";
 								switch($row['order_status']){
 								case 'send':
+										echo"<option value='send'>Send</option>";
 										echo "<option value='paid'>Paid</option>";
 										echo "<option value='canceled'>Canceled</option>";
+										echo "<option value='backorder'>Backorder</option>";
 									break;
 								case 'paid':
+										echo "<option value='paid'>Paid</option>";
 										echo "<option value='send'>Send</option>";
 										echo "<option value='canceled'>Canceled</option>";
+										echo "<option value='backorder'>Backorder</option>";
 										break;
 								case 'canceled':
+										echo "<option value='canceled'>Canceled</option>";
 										echo "<option value='send'>Send</option>";
 										echo "<option value='paid'>Paid</option>";
+										echo "<option value='backorder'>Backorder</option>";
+										break;
+								case 'backorder':
+										echo "<option value='backorder'>Backorder</option>";
+										echo "<option value='send'>Send</option>";
+										echo "<option value='paid'>Paid</option>";
+										echo "<option value='canceled'>Canceled</option>";
 										break;
 								default:
-									echo "";
-									break;
+										echo "<option value='-'>-</option>";			
+										echo "<option value='send'>Send</option>";
+										echo "<option value='paid'>Paid</option>";
+										echo "<option value='canceled'>Canceled</option>";
+										echo "<option value='backorder'>Backorder</option>";
+										break;
 								}
 
 							echo "</select>";
