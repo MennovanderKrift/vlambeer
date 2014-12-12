@@ -14,13 +14,6 @@
 	$stmt->execute();
 
 ?>
-	<div class="header-calltoaction">
-		<div class="logo-slogan">
-			<img src="../assets/img/vlambeer-logo.png">
-			<h1 class="header-title">Vlambeer</h1>
-			<p id="slogan" class="slogantext"></p>
-		</div>
-	</div>
 	<div class="container">
 <?php
 	if (isset($_GET['error'])) {
