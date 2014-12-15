@@ -278,7 +278,8 @@ LOGIN CSS SCRIPT */
 	margin: 0 auto;
 }	
 .login-screen button {
-	float: left;
+	float: right;
+	margin-right: 10px;
 }
 .login-form-button {
 	float: right;
