@@ -268,7 +268,7 @@ LOGIN CSS SCRIPT */
 
 .login-screen {
 	height: 300px;
-	width: 900px;
+	width: 500px;
 	margin: 0 auto;
 	background-color: white;
 }
@@ -277,6 +277,12 @@ LOGIN CSS SCRIPT */
 	width: 500px;
 	margin: 0 auto;
 }	
+.login-screen button {
+	float: left;
+}
+.login-form-button {
+	float: right;
+}
 .login-input {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
@@ -303,9 +309,15 @@ LOGIN CSS SCRIPT */
 	font-size: 25px;
 	background: #FAC846;
 }
-
+/*.login-index-button:hover {
+	background: #8fc800;
+}
 .login-submit-button:hover {
 	background: #8fc800;
+}*/
+
+.header-profile-bar button {
+	float: right;
 }
 
 

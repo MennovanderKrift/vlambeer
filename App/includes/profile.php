@@ -56,7 +56,7 @@
 <?php
 	} else {
 		echo "	<div class='header-profile-bar'>
-	 				<a href='login.php'><button class='login-index-button'>Log in</button></a>
+	 				<a href='login.php'><button class='btn btn-warning'>Login</button></a>
 	 			</div>";
 	}
 ?>	
