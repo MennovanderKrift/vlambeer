@@ -6,8 +6,7 @@
 
 	if ($_SESSION['id'] == $urlid) {
 	} else {
-		$msg = urlencode('Je mag hier niet komen');
-		header("location: ?customer_id=$session_id&error=$msg");
+		header("location: ?customer_id=$session_id");
 	}
 
 	$customer_id = $_GET['customer_id'];
