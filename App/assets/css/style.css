@@ -4,6 +4,11 @@
 	font-family: 'Arimo', sans-serif;
 }
 
+.btn-warning{
+	background-color: #fac846;
+	color: #333;
+}
+
 .index-items h2{
 	text-align: center;
 }
