@@ -43,7 +43,7 @@
 
 	if ($invoice == false) {
 		echo 	"<tr>
-					<td>De tabel is leeg</td>
+					<td>No invoices found</td>
 					<td></td>
 					<td></td>
 					<td></td>

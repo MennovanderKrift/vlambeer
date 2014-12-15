@@ -7,11 +7,13 @@
 				<form class="login-form" action="../controllers/authController.php" method="POST">
 					<h1 class="login-title">Log in</h1>
 <?php 
-					if (isset($_GET['error'])) {
-						echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['error']) . '</b></li><br><br>';
+					if (isset($_SESSION['wrongCredentials'])) {
+						echo '<li class="login-error-msg"><b>' .  $_SESSION['wrongCredentials'] . '</b></li><br><br>';
+						session_unset();
 					}
-					if (isset($_GET['msg'])) {
-						echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li><br><br>';
+					if (isset($_SESSION['emptyFields'] )) {
+						echo '<li class="login-error-msg"><b>' .  $_SESSION['emptyFields']  . '</b></li><br><br>';
+						session_unset();
 					}
 ?>
 					<label for="email">Email</label>
