@@ -442,14 +442,7 @@ EINDE LOGIN SCRIPT CSS
 	color: white;
 }
 
-.form-horizontal ::-webkit-input-placeholder, .form-horizontal select {
-	color: #333;
-}
-
-
 /* serious sam game page */
-
-
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
 	background-image: url('../img/ss_bg.png');
@@ -458,7 +451,6 @@ EINDE LOGIN SCRIPT CSS
 .backgroundcolor-seriuos-sam1 .container {
 	padding-top: 45px;
 }
-
 
 .backgroundcolor-seriuos-sam1 .product-info{
 	padding-top: 20px;
@@ -488,8 +480,6 @@ EINDE LOGIN SCRIPT CSS
 .streep {
 	border-top: 1px solid #bbc5c8;
 }
-
-
 /* einde serious sam game page */
 
 @media (min-width: 1920px) {
