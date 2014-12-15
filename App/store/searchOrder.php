@@ -2,31 +2,61 @@
 
 $con = mysqli_connect('localhost','root','','vlambeer')
 	or die('Could not connect to the database. Please contact the web developer.');
-
-$query = ("SELECT * FROM tbl_invoice");
-$result = mysqli_query($con, $query);
 ?>
 
 <div class="container">
 	<div class="index-games">
 		<h2><center>Change order status</center></h2>
+
+		<?php var_dump($_POST); ?>
+
 		<p style='color: green'><b><?php
 			if(isset($_GET['msg'])){
 				echo $_GET['msg'];
 			}
+
+			if(isset($_POST['search-order'])){
+				$searchTerm = trim($_POST['search-term']);
+
+				if($searchTerm == '' ){
+				$searchTerm = '';
+				}
+
+				$searchOption = trim($_POST['search-option']);
+
+				switch($_POST['search-option']){
+				case 'customer-id':
+						$query = ("SELECT * FROM tbl_invoice WHERE customer_id = '$searchTerm'");	
+						break;
+				case 'order-id':
+						$query = ("SELECT * FROM tbl_invoice WHERE order_id = '$searchTerm'");
+						break;				
+				default:
+						$query = ("SELECT * FROM tbl_invoice");
+						break;
+				}
+				$result = mysqli_query($con, $query);
+			}
+			var_dump($query);
+			var_dump($result);
 			?>
+
 		</b></p>
 
-		<!-- search form start -->
+			<!-- search form start -->
 			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php" method="POST">
-			   	<label for="term" class="col-sm-4 col-md-2 control-label">Search order:</label>
+			   	<label for="search-term" class="col-sm-4 col-md-2 control-label">Search order:</label>
 
 				<div class="col-sm-11 col-md-6">
-					<input type="text" class="form-control" placeholder="Order id or customer id" name="search-term" id="search-term">
+					<input type="text" class="form-control" placeholder="Customer name, customer id or order id"
+						<?php if (isset($_POST['search-term'])){
+							echo $searchTerm;
+						};
+					?>name="search-term" id="search-term">
 			    </div>
 
 			    <div class="col-sm-8 col-md-3">
-					<select type="text" class="form-control" name="search-option" max-length="10">
+					<select type="text" class="form-control" name="search-option" id="size" max-length="10">
 				   		<option value="order-id">Order id</option>
 				   		<option value="customer-id">Customer id</option>
 			   		</select>
@@ -34,7 +64,7 @@ $result = mysqli_query($con, $query);
 
 				<button type="submit" class="btn btn-warning" name="search-order">Search</button>
 		    </form>
-		<!-- search form end -->
+			<!-- search form end -->
 
 		<!-- results table start -->
 		<table class="table table-hover">
