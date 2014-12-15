@@ -442,6 +442,9 @@ EINDE LOGIN SCRIPT CSS
 	color: white;
 }
 
+.form-horizontal ::-webkit-input-placeholder, .form-horizontal select {
+	color: #333;
+}
 
 
 /* serious sam game page */
