@@ -1,26 +1,33 @@
 <?php
-
 require '../includes/header.php';
 
-if(isset($_GET['name'])) {
+if(isset($_GET['name'])) 
+{
 	$name = $_GET['name'];
 }
 
-
-if(isset($_GET['action'])) {
+if(isset($_GET['action'])) 
+{
 	$action = $_GET['action'];
-	if($action ==  'removed') {
-	echo $name . " was removed from shoppingcart";
-}else if($action == 'quantity_updated') {
-	echo $name . " quantity was updated";
-}
+	if($action ==  'removed') 
+	{
+		echo $name . " was removed from shoppingcart";
+	}
+	else if($action == 'quantity_updated') 
+	{
+		echo $name . " quantity was updated";
+	}	
 }
 
-if(!isset($_SESSION['cart_items'])) {
+if(!isset($_SESSION['cart_items'])) 
+{
 	echo "There are no items in your shopping cart";
-} elseif(count($_SESSION['cart_items'])>0) {
+} 
+elseif(count($_SESSION['cart_items'])>0) 
+{
 	$pids = "";
-	foreach($_SESSION['cart_items'] as $id=>$value) {
+	foreach($_SESSION['cart_items'] as $id=>$value) 
+	{
 		$pids = $pids . $id . ",";
 	}
 
@@ -41,16 +48,18 @@ if(!isset($_SESSION['cart_items'])) {
 	$stmt->execute();
 
 	$total_price = 0;
-	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC)) 
+	{
 		extract($row);
 
-		if(!isset($_SESSION['cart_items'][$id]['quantity'])) {
+		if(!isset($_SESSION['cart_items'][$id]['quantity'])) 
+		{
 			$quantity = 1;
-		} else {
-					$quantity=$_SESSION['cart_items'][$id]['quantity'];
+		} 
+		else 
+		{
+			$quantity = $_SESSION['cart_items'][$id]['quantity'];
 		}
-
-
 		$sub_total = $price * $quantity;
 
 		echo "<tr>";
@@ -79,7 +88,9 @@ if(!isset($_SESSION['cart_items'])) {
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
-} else {
+} 
+else 
+{
 	echo "There are no items in your shoppingcart.";
 }
 require '../includes/footer.php';
