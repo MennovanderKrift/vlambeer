@@ -37,7 +37,7 @@
         <li><a href="#">MERCHANDISE</a></li>
         <li><a href="#">MUSIC</a></li>
         <li><a href="../store/contact.php">CONTACT</a></li>
-<!--         <li><input type="text"> <img src="../assets/img/search.png" alt=""></li> -->
+        <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>
       </div>
     </div>    

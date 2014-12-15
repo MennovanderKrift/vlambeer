@@ -35,9 +35,9 @@ try
 	$payment = $mollie->payments->create(array(
 		"amount"       => 10.00,
 		"description"  => "My first API payment",
-		"redirectUrl"  => "{$protocol}://{$hostname}{$path}/3-return-page.php?order_id={$order_id}",
+		"redirectUrl"  => "App/mollie/examples/3-return-page.php?order_id={$order_id}",
 		"metadata"     => array(
-			"order_id" => $order_id,
+		"order_id" => $order_id,
 		),
 	));
 

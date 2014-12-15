@@ -2,13 +2,12 @@
 	include '../includes/header.php';
 
 	$urlid = $_GET['customer_id'];
+ 	$session_id = $_SESSION['id'];
+
 	if ($_SESSION['id'] == $urlid) {
 	} else {
-		$msg = urlencode('Jij mag hier niet komen');
-		header("location: index.php?msg=$msg");
+		header("location: ?customer_id=$session_id");
 	}
-
-	include '../includes/profile.php';
 
 	$customer_id = $_GET['customer_id'];
 
@@ -44,7 +43,7 @@
 
 	if ($invoice == false) {
 		echo 	"<tr>
-					<td>De tabel is leeg</td>
+					<td>No invoices found</td>
 					<td></td>
 					<td></td>
 					<td></td>

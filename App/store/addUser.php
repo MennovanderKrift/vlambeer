@@ -12,14 +12,15 @@ if(isset($_POST['register'])) {
 		header("location: register.php?msg=pe1");
 	}elseif(!(strlen($password) >= 8)) {
 		header("location: register.php?msg=pe2");
-	}elseif(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE username = '$username'"))) {
+	}elseif(mysqli_num_rows(mysqli_query($con, "SELECT * FROM tbl_customers WHERE username = '$username'"))) {
 		header("location: register.php?msg=ue1");
-	}elseif(mysqli_num_rows(mysqli_query($con, "SELECT * FROM users WHERE email = '$email'"))) {
+	}elseif(mysqli_num_rows(mysqli_query($con, "SELECT * FROM tbl_customers WHERE email_address = '$email_address'"))) {
 		header("location: register.php?msg=ee1");
 	} else {
 		$hashedPass = password_hash("$password", PASSWORD_DEFAULT);
 		$query = mysqli_query($con, "INSERT INTO tbl_customers (username, email_address, password) VALUES ('$username', '$email_address', '$hashedPass')");
-		header("location: index.php?msg=sr1");
+		$msg = urlencode('You are succesfully registered, please login');
+		header("location: login.php?msg=$msg");
 	}
 }
 
