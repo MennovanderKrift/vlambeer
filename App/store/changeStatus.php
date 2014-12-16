@@ -18,7 +18,27 @@ if(isset($_POST['order-status'])){
 $query = ("SELECT * FROM tbl_invoice");
 $result = mysqli_query($con, $query);
 ?>
+<style>
+.container ::-webkit-input-placeholder {
+	color: #555;
+}
 
+.container::-webkit-input-placeholder {
+   color: #555;
+}
+
+.container :-moz-placeholder { /* Firefox 18- */
+   color: #555;  
+}
+
+.container ::-moz-placeholder {  /* Firefox 19+ */
+   color: #555;  
+}
+
+.container :-ms-input-placeholder {  
+   color: #555;  
+}	
+</style>
 <div class="container">
 	<div class="index-games">
 		<h2><center>Change order status</center></h2>

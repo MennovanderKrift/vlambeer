@@ -17,6 +17,29 @@
 	position: relative;
 	z-index: 1;
 }
+
+
+/* .container input field placeholder text color */
+.container ::-webkit-input-placeholder {
+	color: #555;
+}
+
+.container::-webkit-input-placeholder {
+   color: #555;
+}
+
+.container :-moz-placeholder { /* Firefox 18- */
+   color: #555;  
+}
+
+.container ::-moz-placeholder {  /* Firefox 19+ */
+   color: #555;  
+}
+
+.container :-ms-input-placeholder {  
+   color: #555;  
+}
+
 .backgroundcolor1-index {
 	background-color: #EBEBEB;
 }
