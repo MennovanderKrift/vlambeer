@@ -4,12 +4,12 @@ require '../../includes/storeGameHeader.php';
 <div class="backgroundcolor-seriuos-sam1">
 	<div class="container">
 			<div class="col-md-4">
-				<div class="product-img-ss"><img src="../../assets/img/SCB-1.png" alt=""></div>	
+				<div class="product-img-ss"><img src="../../assets/img/SCB-logo.png" alt=""></div>	
 				<div class="product-info"><p>Kies je wapen en richt op het <br>meest willekeurige Serious <br>Sam-avontuur tot nu toe!</p></div>
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">
-				<img class="slider-serious-sam" src="../../assets/img/ss_afb1.png" alt="">
+				<img class="slider-serious-sam" src="../../assets/img/scb_afb1.png" alt="">
 			</div>
 
 	</div>
@@ -18,7 +18,7 @@ require '../../includes/storeGameHeader.php';
 <div class="backgroundcolor-seriuos-sam2">
 	<div class="container">
 		<div class="col-md-4">
-			<img src="../../assets/img/ss_afb2.png" alt="">
+			<img src="../../assets/img/scb_afb2.png" alt="">
 		</div>
 		<div class="col-md-8">
 			<h3>lorem ipson</h3>
@@ -43,7 +43,7 @@ require '../../includes/storeGameHeader.php';
 			<p><b>DirectX:</b> 8.0 or later</p>
 		</div>
 		<div class="col-md-6">
-			<img src="../../assets/img/ss_afb3.png" alt="">
+			<img src="../../assets/img/scb_afb3.png" alt="">
 		</div>
 	
 	
