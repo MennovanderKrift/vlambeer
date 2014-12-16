@@ -1,18 +1,19 @@
 <?php
  	include '../includes/header.php';
 
-	$stmt = $db->prepare("SELECT * FROM tbl_users");
+ 	$urlid = $_GET['id'];
+ 	$session_id = $_SESSION['id'];
+
+	if ($session_id == $urlid) {
+	} else {
+		header("location: profile-info.php?id=$session_id");
+	}
+
+	$stmt = $db->prepare("SELECT * FROM tbl_customers WHERE customer_id = :customer_id");
+	$stmt->bindParam("customer_id", $_SESSION['id'], PDO::PARAM_STR);
 	$stmt->execute();
 
-	include '../includes/profile.php';
 ?>
-	<div class="header-calltoaction">
-		<div class="logo-slogan">
-			<img src="../assets/img/vlambeer-logo.png">
-			<h1 class="header-title">Vlambeer</h1>
-			<p id="slogan" class="slogantext"></p>
-		</div>
-	</div>
 	<div class="container">
 <?php
 	if (isset($_GET['error'])) {
@@ -21,7 +22,6 @@
 	if (isset($_GET['msg'])) {
 		echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
 	}
-
 	if (isset($_GET['id'])) {
 		$id = $_GET['id'];
 	}
@@ -33,7 +33,7 @@
 				<label for="username">Username</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['username']; ?>" name="username">
 				<label for="password">Password</label>
-					<input type="password" class="profile-info-input" value="<?php echo $_SESSION['password']; ?>" name="password">
+					<input type="password" class="profile-info-input" placeholder="*******" name="password">
 <?php
 			if ($_SESSION['gender'] == 'male') {
 			echo 	"<label for='gender'>Gender</label>
@@ -59,11 +59,11 @@
 			}
 ?>
 				<label for="name">First name</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['name']; ?>" placeholder="0000XX" name="name">
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['name']; ?>" name="name">
 				<label for="last_name">Last name</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['last_name']; ?>" name="last_name">
 				<label for="phone_number">Phone number</label>
-					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['phone_number']; ?>" placeholder="0000XX" name="phone_number">
+					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['phone_number']; ?>" placeholder="06 0000000" name="phone_number">
 				<label for="address">Address</label>
 					<input type="text" class="profile-info-input" value="<?php echo $_SESSION['address']; ?>" name="address">
 				<label for="zipcode">Zip code</label>

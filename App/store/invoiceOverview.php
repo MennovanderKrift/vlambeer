@@ -1,7 +1,13 @@
 <?php 
 	include '../includes/header.php';
 
-	include '../includes/profile.php';
+	$urlid = $_GET['customer_id'];
+ 	$session_id = $_SESSION['id'];
+
+	if ($_SESSION['id'] == $urlid) {
+	} else {
+		header("location: ?customer_id=$session_id");
+	}
 
 	$customer_id = $_GET['customer_id'];
 
@@ -20,9 +26,7 @@
 <body>
 
 <div class="container">
-	
 <h2>Invoice overview</h2>
-
 	<table class="table table-striped sortable">
 		<thead>
 			<tr>
@@ -39,7 +43,7 @@
 
 	if ($invoice == false) {
 		echo 	"<tr>
-					<td>De tabel is leeg</td>
+					<td>No invoices found</td>
 					<td></td>
 					<td></td>
 					<td></td>

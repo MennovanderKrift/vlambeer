@@ -18,7 +18,8 @@
 <body>
 
     <div class="index-header">
-    <img class="displayed" src="../assets/img/logo.png" alt="">
+      <?php require 'profile.php'; ?>
+    <img class="displayed" src="../assets/img/geanimeerd-logo.gif" width="160" height="130">
     <p class="sloganscript" id="slogan"></p>
   </div>
   <nav>
@@ -31,11 +32,12 @@
           <li><a href="../store/games/pcGames.php">PC</a></li>
           <li><a href="../store/games/iOSgames.php">iOS</a></li>
           <li><a href="../store/games/vitaGames.php">VITA</a></li>
+          <li><a href="../store/games/CodAW.php?id=1">cod test page</a></li>
           </ul></li>
         <li><a href="#">MERCHANDISE</a></li>
         <li><a href="#">MUSIC</a></li>
         <li><a href="../store/contact.php">CONTACT</a></li>
-<!--         <li><input type="text"> <img src="../assets/img/search.png" alt=""></li> -->
+        <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>
       </div>
     </div>    
