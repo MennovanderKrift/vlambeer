@@ -15,6 +15,10 @@
   <meta name="description" content="Vlambeer webstore">
   <meta name="keywords" content="vlambeer, games, action, schooter, shirt, webshop">
   <meta name="author" content="Mike Oerlemans, Koen de Bont, Friso Kin, Regilio Dielemans, Menno van der Krift, Daniel van Bavel, Jan, Rick">
+
+  <!-- Pagination js script -->
+  <link rel="stylesheet" href="../assets/css/simplePagination.css">
+  <script src="../assets/js/jquery.simplePagination.js" type="text/javascript"></script>
 </head>
 <body>
 

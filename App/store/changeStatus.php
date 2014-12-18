@@ -150,8 +150,9 @@ if(isset($_POST['order-status'])){
 					?>
 			</tbody>
 		</table>
+		<div class="pagination-page"></div>
 		<!-- results table start -->
 	</div>
 </div>
-
+<script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
 <?php include '../includes/footer.php'; ?>
