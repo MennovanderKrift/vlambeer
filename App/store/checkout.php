@@ -3,6 +3,8 @@
 require_once '../mollie/src/Mollie/API/Autoloader.php';
 
 
+
+
 $mollie = new Mollie_API_Client;
 $mollie->setApiKey('test_jMjGtjLRSSr9GhNjifWtbEmfkz7WmP');
 

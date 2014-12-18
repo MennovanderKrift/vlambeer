@@ -8,6 +8,19 @@
 	background-color: #fac846;
 }
 
+.bg-success, .bg-danger{
+	padding: 20px;
+	font-weight: bold;
+}
+
+.bg-success{
+	color: green;
+}
+
+.bg-danger{
+	color: red;
+}
+
 .index-items h2{
 	text-align: center;
 }
@@ -17,6 +30,28 @@
 	position: relative;
 	z-index: 1;
 }
+
+/* .container input field placeholder text color */
+.container ::-webkit-input-placeholder {
+	color: #555;
+}
+
+.container::-webkit-input-placeholder {
+   color: #555;
+}
+
+.container :-moz-placeholder { /* Firefox 18- */
+   color: #555;  
+}
+
+.container ::-moz-placeholder {  /* Firefox 19+ */
+   color: #555;  
+}
+
+.container :-ms-input-placeholder {  
+   color: #555;  
+}
+
 .backgroundcolor1-index {
 	background-color: #EBEBEB;
 }
@@ -128,11 +163,11 @@ EINDE LOGO CSS
 
 /* MENU CSS */
 
-.navborder{
+.navborder {
 	background: #dddddd;
 	height: 60px;
-	width: 1100px;
 	margin: 0 auto;
+	margin-left: 310px;
 }
 
 .navcolour{
@@ -243,28 +278,32 @@ p.sloganscript
 	font-family: 'Century Gothic';
 	padding-top: 5px;
 }
-/*------------------------------------------------------------------------------------------
-LOGIN CSS SCRIPT */
+
+/*----------------------------------------------------------------------------------------------
+LOGIN CSS SCRIPT
+------------------------------------------------------------------------------------------------*/
 
 .login-title {
 	margin-top: 0px;
 }
-.login-error-msg {
+
+/*.login-error-msg {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
 	list-style: none;
 	background-color: #FF8D8D;
 	border: 1px solid #FF0000;
-}
-.login-msg {
+}*/
+
+/*.login-msg {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
 	list-style: none;
 	background-color: #65ff00;
 	border: 1px solid #4cbf00;
-}
+}*/
 
 .login-screen {
 	height: 300px;
@@ -272,24 +311,29 @@ LOGIN CSS SCRIPT */
 	margin: 0 auto;
 	background-color: white;
 }
+
 .login-form {
 	padding-top: 20px;
 	width: 500px;
 	margin: 0 auto;
-}	
+}
+
 .login-screen button {
 	float: right;
 	margin-right: 10px;
 }
+
 .login-form-button {
 	float: right;
 }
+
 .login-input {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .login-submit-button {
 	float: right;
 	width: 150px;
@@ -310,6 +354,7 @@ LOGIN CSS SCRIPT */
 	font-size: 25px;
 	background: #FAC846;
 }
+
 /*.login-index-button:hover {
 	background: #8fc800;
 }
@@ -331,23 +376,27 @@ EINDE LOGIN SCRIPT CSS
 	margin-bottom: 20px;
 	background-color: transparent;
 }
+
 .profile-info-form {
 	padding-top: 20px;
 	width: 500px;
 	margin: 0 auto;
 }
+
 .profile-info-input {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .profile-info-form select {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .game-slider img {
 	height: 150px;
 	width: 700px;
@@ -433,13 +482,96 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
+/*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
+
+#contact-form {
+	margin: 0 auto;
+}
+#contact-form p {
+    float: left;
+    width: 100%;
+    margin: 0 0 5px;
+}
+#contact-form input[type="text"] {
+    height: 13px;
+}
+#contact-form input, #contact-form textarea {
+    border: medium none;
+    float: right;
+    color: #333;
+    padding: 15px;
+    width: 420px;
+}
+#contact-form textarea {
+    resize:none;
+    height:89px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+.submit-button.button{
+    background-color:#444;
+}
+.submit-button.button:hover{
+    background-color:#ee1d25;
+}
+#contact-form p input.button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    color: #FFF;
+    width: 450px;
+    cursor:pointer;
+}
+.contact-adress{
+	width: 465px;
+	height: 315px;
+	border: 2px solid #f0f0f0;
+}
+
+/*.contact-page{
+	margin: 50px 50px 50px 50px;
+}*/
+
+#contact-info{
+	 font-family: 'Century Gothic', sans-serif;
+	 font-size: 21px;
+	 padding: 30px 10px 10px 30px;
+	 margin-bottom: 10px;
+}
+/*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
+
 
 .footer 
 {
-	height: 50px;
+/*	min-height: 50px;*/
+	padding-top: 30px;
 	width: 100%;
 	background-color: black;
 	color: white;
+}
+
+.merchandise{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.merchandise h3 {
+	margin-top: -15px;
+	margin-bottom: -15px;
+	
+}
+
+.shirt-img img {
+	height: 640px;
+}
+.shirt-info{
+	background-color: #63676a;
+	height: 320px;
+}
+
+.shirt-maat{
+	margin-top: 30px;
+	height: 290px;
+	background-color: #63676a;
 }
 
 /* serious sam game page */
@@ -477,10 +609,25 @@ EINDE LOGIN SCRIPT CSS
 	background-color: #cdd8dc;
 	padding-top: 42px;
 }
+
 .streep {
 	border-top: 1px solid #bbc5c8;
 }
+
 /* einde serious sam game page */
+
+
+/* Pagination CSS start */
+#page_navigation a{
+	margin:10px;
+}
+
+.active_page{
+	background:darkblue;
+	color: #fff !important;
+}
+
+/* Pagination CSS end*/
 
 @media (min-width: 1920px) {
 
@@ -510,4 +657,4 @@ EINDE LOGIN SCRIPT CSS
 @media (max-width: 767px) {
 
 	
-} 
+}

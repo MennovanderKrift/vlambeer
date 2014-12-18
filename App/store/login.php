@@ -8,11 +8,11 @@
 					<h1 class="login-title">Log in</h1>
 <?php 
 					if (isset($_SESSION['wrongCredentials'])) {
-						echo '<li class="login-error-msg"><b>' .  $_SESSION['wrongCredentials'] . '</b></li><br><br>';
+						echo '<p class="bg-danger">' .  $_SESSION['wrongCredentials'] . '</p>';
 						session_unset();
 					}
 					if (isset($_SESSION['emptyFields'] )) {
-						echo '<li class="login-error-msg"><b>' .  $_SESSION['emptyFields']  . '</b></li><br><br>';
+						echo '<p class="bg-danger">' .  $_SESSION['emptyFields']  . '</p>';
 						session_unset();
 					}
 ?>

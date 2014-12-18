@@ -39,26 +39,28 @@
 		</thead>
 		<tbody>
 <?php
-	$invoice = $stmt->fetch(PDO::FETCH_OBJ);
+	$invoices = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-	if ($invoice == false) {
-		echo 	"<tr>
-					<td>No invoices found</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>"; 
-				
-	} else {
-		echo 	"<tr>
-					<td>#" . $invoice->order_status . "</td>
-					<td>" . $invoice->amount . "</td>
-					<td>#" . $invoice->payment_status . "</td>
-					<td>" . $invoice->date. "</td>
-					<td><a href='#'>x</a></td>
-				</tr>"; 
+	foreach ($invoices as $invoice) {
+		if ($invoice == false) {
+			echo 	"<tr>
+						<td>No invoices found</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>"; 
+					
+		} else {
+			echo 	"<tr>
+						<td>#" . $invoice->order_status . "</td>
+						<td>" . $invoice->amount . "</td>
+						<td>#" . $invoice->payment_status . "</td>
+						<td>" . $invoice->date. "</td>
+						<td><a href='#'>x</a></td>
+					</tr>"; 
+		}
 	}
 ?>
 		</tbody>
