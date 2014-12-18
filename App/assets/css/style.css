@@ -482,7 +482,52 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
+/*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
+#contact{
+    float:left;
+    width:450px;
+}
 
+#contact-area p {
+    margin: 0 0 5px;
+}
+#contact-area p {
+    float: left;
+    width: 100%;
+}
+#contact-area input[type="text"] {
+    height: 13px;
+}
+#contact-area input, #contact-area textarea {
+    border: medium none;
+    float: left;
+    color: #333;
+    float: left;
+    padding: 15px;
+    width: 420px;
+}
+#contact-area textarea {
+    resize:none;
+    height:89px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+    
+}
+.submit-button.button{
+    background-color:#444;
+}
+.submit-button.button:hover{
+    background-color:#ee1d25;
+}
+#contact-area p input.button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    color: #FFF;
+    width: 450px;
+    cursor:pointer;
+}/**/
+/*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
 .footer 
 {
 /*	min-height: 50px;*/
