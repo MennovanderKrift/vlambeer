@@ -13,56 +13,51 @@ if(isset($_POST['order-status'])){
 	$msg = urlencode('Order status has been updated');
 	header('location: changeStatus.php?msg=' .$msg);
 }
-?>
 
+$query = ("SELECT * FROM tbl_invoice");
+$result = mysqli_query($con, $query);
+?>
+<style>
+.container ::-webkit-input-placeholder {
+	color: #555;
+}
+
+.container::-webkit-input-placeholder {
+   color: #555;
+}
+
+.container :-moz-placeholder { /* Firefox 18- */
+   color: #555;  
+}
+
+.container ::-moz-placeholder {  /* Firefox 19+ */
+   color: #555;  
+}
+
+.container :-ms-input-placeholder {  
+   color: #555;  
+}	
+</style>
 <div class="container">
 	<div class="index-games">
 		<h2><center>Change order status</center></h2>
-
 		<?php
 			if(isset($_GET['msg'])){
 				echo "<p class='bg-success'>" .$_GET['msg']. "</p>";
 			}
-
-			if(isset($_POST['search-order'])){
-				$searchTerm = trim($_POST['search-term']);
-
-				if(empty($searchTerm)){
-				$searchTerm = '';
-				}
-
-				$searchOption = trim($_POST['search-option']);
-				echo $searchOption;
-
-				if($searchOption == 'customer-id'){
-					$query = ("SELECT * FROM tbl_invoice WHERE customer_id = '$searchTerm'");
-				}else if ($searchOption == 'order-id'){
-					$query = ("SELECT * FROM tbl_invoice WHERE order_id = '$searchTerm'");
-				}
-
-			}else{
-				$query = ("SELECT * FROM tbl_invoice");
-			}
-
-			$result = mysqli_query($con, $query);
 			?>
-
 		</b></p>
 
-			<!-- search form start -->
-			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php<?php if(isset($_POST['search-term'])){ echo "?s=" .$searchTerm; }?>" method="POST">
-			   	<label for="search-term" class="col-sm-4 col-md-2 control-label">Search order:</label>
+		<!-- search form start -->
+			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php" method="POST">
+			   	<label for="term" class="col-sm-4 col-md-2 control-label">Search order:</label>
 
 				<div class="col-sm-11 col-md-6">
-					<input type="text" class="form-control" placeholder="Customer name, customer id or order id"
-						<?php if (isset($_POST['search-term'])){
-							echo "value='" .$searchTerm. "'";
-						};
-					?>name="search-term" id="search-term">
+					<input type="text" class="form-control" placeholder="Order id or customer id" name="search-term" id="search-term">
 			    </div>
 
 			    <div class="col-sm-8 col-md-3">
-					<select type="text" class="form-control" name="search-option" id="size" max-length="10">
+					<select type="text" class="form-control" name="search-option" max-length="10">
 				   		<option value="order-id">Order id</option>
 				   		<option value="customer-id">Customer id</option>
 			   		</select>
@@ -70,7 +65,7 @@ if(isset($_POST['order-status'])){
 
 				<button type="submit" class="btn btn-warning" name="search-order">Search</button>
 		    </form>
-			<!-- search form end -->
+		<!-- search form end -->
 
 		<!-- results table start -->
 		<table class="table table-hover">
@@ -89,61 +84,64 @@ if(isset($_POST['order-status'])){
 					$msg = $row['invoice_id'];
 					echo "<form role='form' action='changeStatus.php?invoice_id=" .$row['invoice_id']. "' method='POST'>";
 						echo "<tr>";
+							echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). "</td>";
+							echo "<td>" .mysqli_real_escape_string($con, $row['customer_id']). "</td>";
 
-						echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). "</td>";
-						echo "<td>" .mysqli_real_escape_string($con, $row['customer_id']). "</td>";
-
-						echo "<td>";
-							echo "<select class='form-control' name='order_status'>";
-								switch($row['order_status']){
-								case 'send':
-										echo"<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
-									break;
-								case 'paid':
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
+							echo "<td>";
+								echo "<select class='form-control' name='order_status'>";
+									switch($row['order_status']){
+									case 'send':
+											echo"<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
 										break;
-								case 'canceled':
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='backorder'>Backorder</option>";
-										break;
-								case 'backorder':
-										echo "<option value='backorder'>Backorder</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										break;
-								default:
-										echo "<option value='-'>-</option>";			
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
-										break;
-								}
+									case 'paid':
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									case 'canceled':
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									case 'backorder':
+											echo "<option value='backorder'>Backorder</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											break;
+									default:
+											echo "<option value='-'>-</option>";			
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									}
 
-							echo "</select>";
-						echo '</td>';
+								echo "</select>";
+							echo '</td>';
 
-						echo '<td>' .ucfirst($row['payment_status']). '</td>';
-						echo '<td>' .$row['date']. '<td>';
+							echo '<td>' .ucfirst($row['payment_status']). '</td>';
+							echo '<td>' .$row['date']. '<td>';
 
-						echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
-
+							echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
 						echo "</tr>";
 					echo "</form>";
 					}
+
 					?>
 			</tbody>
 		</table>
 		<!-- results table start -->
+
+		<!-- An empty div which will be populated using jQuery -->	
+		<div id='page_navigation'></div>
+		<hr>
 
 	</div>
 </div>
