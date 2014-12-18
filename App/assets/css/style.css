@@ -537,6 +537,30 @@ EINDE LOGIN SCRIPT CSS
 	color: white;
 }
 
+.merchandise{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.merchandise h3 {
+	margin-top: -15px;
+	margin-bottom: -15px;
+	
+}
+
+.shirt-img img {
+	height: 640px;
+}
+.shirt-info{
+	background-color: #63676a;
+	height: 320px;
+}
+
+.shirt-maat{
+	margin-top: 30px;
+	height: 290px;
+	background-color: #63676a;
+}
+
 /* serious sam game page */
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
@@ -573,7 +597,7 @@ EINDE LOGIN SCRIPT CSS
 	padding-top: 42px;
 }
 
-.streep /* WTF is een 'streep' ... ?*/ {
+.streep {
 	border-top: 1px solid #bbc5c8;
 }
 
