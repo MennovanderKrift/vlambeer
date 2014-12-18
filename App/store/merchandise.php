@@ -8,6 +8,8 @@
 		<hr>
 		<p><h3>prijzen</h3><br>mannen: 19.95 <br>vrouwen: 17.95</p>
 	</div>
-	<div class="col-md-3 shirt-maat">hierzo</div>
+	<div class="col-md-3 shirt-maat">
+		<p><a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a></p>
+	</div>
 </div>
 <?php require '../includes/footer.php'; ?>

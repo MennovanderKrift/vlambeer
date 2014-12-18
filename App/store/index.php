@@ -60,7 +60,7 @@ require '../includes/header.php';
 		<div class="index-items col-md-12">
 		<h2>Clothes</h2>
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/tshirt1.png" alt=""></div>	
+				<a href="merchandise.php?id=1"><div class="product-img"><img src="../assets/img/tshirt1.png" alt=""></div></a>	
 				<div class="product-info"><p>Luftrausers <br> Mens & ladies T-shirt</p></div>
 				<div class="arrow-down"></div>
 			</div>
