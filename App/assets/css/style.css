@@ -483,35 +483,30 @@ EINDE LOGIN SCRIPT CSS
 	border-bottom: 12px solid #A4A5A6;
 }
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
-#contact{
-    float:left;
-    width:450px;
-}
 
-#contact-area p {
-    margin: 0 0 5px;
+#contact-form {
+	margin: 0 auto;
 }
-#contact-area p {
+#contact-form p {
     float: left;
     width: 100%;
+    margin: 0 0 5px;
 }
-#contact-area input[type="text"] {
+#contact-form input[type="text"] {
     height: 13px;
 }
-#contact-area input, #contact-area textarea {
+#contact-form input, #contact-form textarea {
     border: medium none;
-    float: left;
+    float: right;
     color: #333;
-    float: left;
     padding: 15px;
     width: 420px;
 }
-#contact-area textarea {
+#contact-form textarea {
     resize:none;
     height:89px;
     font-family:Arial, Helvetica, sans-serif;
     font-size:13px;
-    
 }
 .submit-button.button{
     background-color:#444;
@@ -519,15 +514,33 @@ EINDE LOGIN SCRIPT CSS
 .submit-button.button:hover{
     background-color:#ee1d25;
 }
-#contact-area p input.button {
+#contact-form p input.button {
     font-family: 'Ubuntu', sans-serif;
     font-size:18px;
     font-weight:bold;
     color: #FFF;
     width: 450px;
     cursor:pointer;
-}/**/
+}
+.contact-adress{
+	width: 465px;
+	height: 315px;
+	border: 2px solid #f0f0f0;
+}
+
+/*.contact-page{
+	margin: 50px 50px 50px 50px;
+}*/
+
+#contact-info{
+	 font-family: 'Century Gothic', sans-serif;
+	 font-size: 21px;
+	 padding: 30px 10px 10px 30px;
+	 margin-bottom: 10px;
+}
 /*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
+
+
 .footer 
 {
 /*	min-height: 50px;*/
