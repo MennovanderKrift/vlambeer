@@ -3,7 +3,6 @@
 $con = mysqli_connect('localhost','root','','vlambeer')
 	or die('Could not connect to the database. Please contact the web developer.');
 
-
 if(isset($_POST['order-status'])){
 	$invoice_id = $_GET['invoice_id'];
 	$order_status = $_POST['order_status'];
@@ -11,7 +10,7 @@ if(isset($_POST['order-status'])){
 	$query = mysqli_query($con, "UPDATE tbl_invoice SET order_status = '$order_status' WHERE invoice_id = $invoice_id ")
 	or die ('Could not update the order status. Please contact the web developer.');
 
-	$msg = urlencode('- Order status has been updated');
+	$msg = urlencode('Order status has been updated');
 	header('location: changeStatus.php?msg=' .$msg);
 }
 
@@ -42,9 +41,9 @@ $result = mysqli_query($con, $query);
 <div class="container">
 	<div class="index-games">
 		<h2><center>Change order status</center></h2>
-		<p style='color: green'><b><?php
+		<?php
 			if(isset($_GET['msg'])){
-				echo $_GET['msg'];
+				echo "<p class='bg-success'>" .$_GET['msg']. "</p>";
 			}
 			?>
 		</b></p>
@@ -139,6 +138,10 @@ $result = mysqli_query($con, $query);
 			</tbody>
 		</table>
 		<!-- results table start -->
+
+		<!-- An empty div which will be populated using jQuery -->	
+		<div id='page_navigation'></div>
+		<hr>
 
 	</div>
 </div>

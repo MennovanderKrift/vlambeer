@@ -8,6 +8,19 @@
 	background-color: #fac846;
 }
 
+.bg-success, .bg-danger{
+	padding: 20px;
+	font-weight: bold;
+}
+
+.bg-success{
+	color: green;
+}
+
+.bg-danger{
+	color: red;
+}
+
 .index-items h2{
 	text-align: center;
 }
@@ -17,7 +30,6 @@
 	position: relative;
 	z-index: 1;
 }
-
 
 /* .container input field placeholder text color */
 .container ::-webkit-input-placeholder {
@@ -266,28 +278,32 @@ p.sloganscript
 	font-family: 'Century Gothic';
 	padding-top: 5px;
 }
-/*------------------------------------------------------------------------------------------
-LOGIN CSS SCRIPT */
+
+/*----------------------------------------------------------------------------------------------
+LOGIN CSS SCRIPT
+------------------------------------------------------------------------------------------------*/
 
 .login-title {
 	margin-top: 0px;
 }
-.login-error-msg {
+
+/*.login-error-msg {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
 	list-style: none;
 	background-color: #FF8D8D;
 	border: 1px solid #FF0000;
-}
-.login-msg {
+}*/
+
+/*.login-msg {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 10px;
 	list-style: none;
 	background-color: #65ff00;
 	border: 1px solid #4cbf00;
-}
+}*/
 
 .login-screen {
 	height: 300px;
@@ -295,24 +311,29 @@ LOGIN CSS SCRIPT */
 	margin: 0 auto;
 	background-color: white;
 }
+
 .login-form {
 	padding-top: 20px;
 	width: 500px;
 	margin: 0 auto;
-}	
+}
+
 .login-screen button {
 	float: right;
 	margin-right: 10px;
 }
+
 .login-form-button {
 	float: right;
 }
+
 .login-input {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .login-submit-button {
 	float: right;
 	width: 150px;
@@ -333,6 +354,7 @@ LOGIN CSS SCRIPT */
 	font-size: 25px;
 	background: #FAC846;
 }
+
 /*.login-index-button:hover {
 	background: #8fc800;
 }
@@ -354,23 +376,27 @@ EINDE LOGIN SCRIPT CSS
 	margin-bottom: 20px;
 	background-color: transparent;
 }
+
 .profile-info-form {
 	padding-top: 20px;
 	width: 500px;
 	margin: 0 auto;
 }
+
 .profile-info-input {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .profile-info-form select {
 	margin-bottom: 10px !important;
 	margin: 0 auto;
 	width: 500px;
 	height: 30px;
 }
+
 .game-slider img {
 	height: 150px;
 	width: 700px;
@@ -459,7 +485,8 @@ EINDE LOGIN SCRIPT CSS
 
 .footer 
 {
-	height: 50px;
+/*	min-height: 50px;*/
+	padding-top: 30px;
 	width: 100%;
 	background-color: black;
 	color: white;
@@ -500,10 +527,25 @@ EINDE LOGIN SCRIPT CSS
 	background-color: #cdd8dc;
 	padding-top: 42px;
 }
-.streep {
+
+.streep /* WTF is een 'streep' ... ?*/ {
 	border-top: 1px solid #bbc5c8;
 }
+
 /* einde serious sam game page */
+
+
+/* Pagination CSS start */
+#page_navigation a{
+	margin:10px;
+}
+
+.active_page{
+	background:darkblue;
+	color: #fff !important;
+}
+
+/* Pagination CSS end*/
 
 @media (min-width: 1920px) {
 
@@ -533,4 +575,4 @@ EINDE LOGIN SCRIPT CSS
 @media (max-width: 767px) {
 
 	
-} 
+}

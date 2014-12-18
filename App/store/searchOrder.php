@@ -2,55 +2,61 @@
 
 $con = mysqli_connect('localhost','root','','vlambeer')
 	or die('Could not connect to the database. Please contact the web developer.');
+
+if(isset($_POST['order-status'])){
+	$invoice_id = $_GET['invoice_id'];
+	$order_status = $_POST['order_status'];
+
+	$query = mysqli_query($con, "UPDATE tbl_invoice SET order_status = '$order_status' WHERE invoice_id = $invoice_id ")
+	or die ('Could not update the order status. Please contact the web developer.');
+
+	$msg = urlencode('Order status has been updated');
+	header('location: changeStatus.php?msg=' .$msg);
+}
 ?>
 
 <div class="container">
 	<div class="index-games">
 		<h2><center>Change order status</center></h2>
 
-		<?php var_dump($_POST); ?>
-
-		<p style='color: green'><b><?php
+		<?php
 			if(isset($_GET['msg'])){
-				echo $_GET['msg'];
+				echo "<p class='bg-success'>" .$_GET['msg']. "</p>";
 			}
 
 			if(isset($_POST['search-order'])){
 				$searchTerm = trim($_POST['search-term']);
 
-				if($searchTerm == '' ){
+				if(empty($searchTerm)){
 				$searchTerm = '';
 				}
 
 				$searchOption = trim($_POST['search-option']);
+				echo $searchOption;
 
-				switch($_POST['search-option']){
-				case 'customer-id':
-						$query = ("SELECT * FROM tbl_invoice WHERE customer_id = '$searchTerm'");	
-						break;
-				case 'order-id':
-						$query = ("SELECT * FROM tbl_invoice WHERE order_id = '$searchTerm'");
-						break;				
-				default:
-						$query = ("SELECT * FROM tbl_invoice");
-						break;
+				if($searchOption == 'customer-id'){
+					$query = ("SELECT * FROM tbl_invoice WHERE customer_id = '$searchTerm'");
+				}else if ($searchOption == 'order-id'){
+					$query = ("SELECT * FROM tbl_invoice WHERE order_id = '$searchTerm'");
 				}
-				$result = mysqli_query($con, $query);
+
+			}else{
+				$query = ("SELECT * FROM tbl_invoice");
 			}
-			var_dump($query);
-			var_dump($result);
+
+			$result = mysqli_query($con, $query);
 			?>
 
 		</b></p>
 
 			<!-- search form start -->
-			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php" method="POST">
+			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php<?php if(isset($_POST['search-term'])){ echo "?s=" .$searchTerm; }?>" method="POST">
 			   	<label for="search-term" class="col-sm-4 col-md-2 control-label">Search order:</label>
 
 				<div class="col-sm-11 col-md-6">
 					<input type="text" class="form-control" placeholder="Customer name, customer id or order id"
 						<?php if (isset($_POST['search-term'])){
-							echo $searchTerm;
+							echo "value='" .$searchTerm. "'";
 						};
 					?>name="search-term" id="search-term">
 			    </div>
@@ -133,17 +139,6 @@ $con = mysqli_connect('localhost','root','','vlambeer')
 
 						echo "</tr>";
 					echo "</form>";
-					}
-
-					if(isset($_POST['order-status'])){
-						$invoice_id = $_GET['invoice_id'];
-						$order_status = $_POST['order_status'];
-
-						$query = mysqli_query($con, "UPDATE tbl_invoice SET order_status = '$order_status' WHERE invoice_id = $invoice_id ")
-						or die ('Could not update the order status. Please contact the web developer.');
-
-						$msg = urlencode('- Order status has been updated');
-						header('location: changeStatus.php?msg=' .$msg);
 					}
 					?>
 			</tbody>
