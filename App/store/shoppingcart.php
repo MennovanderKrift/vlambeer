@@ -44,11 +44,7 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "</tr>";
  
 
-<<<<<<< HEAD
-	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id = '1' IN ({$pids}) ORDER BY name");
-=======
 	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
->>>>>>> origin/master
 	$stmt->execute();
 
 	$total_price = 0;
@@ -88,7 +84,16 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "<td><b>Total</b></td>";
 	echo "<td>&euro;{$total_price}</td>";
 	echo "<td>";
-	echo "<a href='checkout.php'>Checkout</a>";
+?>
+<form action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="daniel.ajax.1996@hotmail.com">
+	<input type="hidden" name="item_name" value="<?= $name ?>">
+	<input type="hidden" name="currency_code" value="EUR">
+	<input type="hidden" name="amount" value="<?= $total_price ?>">
+	<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form>
+<?php
 	echo "</td>";
 	echo "</tr>";
 	echo "</table>";
@@ -100,11 +105,7 @@ else
 require '../includes/footer.php';
 ?>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <script>

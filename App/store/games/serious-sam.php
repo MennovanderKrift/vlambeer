@@ -4,7 +4,7 @@ require '../../includes/storeGameHeader.php';
 <div class="backgroundcolor-seriuos-sam1">
 	<div class="container">
 			<div class="col-md-4">
-				<div class="product-img-ss"><img src="../../assets/img/ss_logo.png" alt=""></div>	
+				<a href="http://store.steampowered.com/app/201480/"><div class="product-img-ss"><img src="../../assets/img/ss_logo.png" alt=""></div></a>
 				<div class="product-info"><p>Kies je wapen en richt op het <br>meest willekeurige Serious <br>Sam-avontuur tot nu toe!</p></div>
 				<div class="arrow-down"></div>
 			</div>
