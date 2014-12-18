@@ -483,43 +483,56 @@ EINDE LOGIN SCRIPT CSS
 	border-bottom: 12px solid #A4A5A6;
 }
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
-
-#contact-form {
-	margin: 0 auto;
+.adresbox{
+	float: left;
+	border: 1px solid green;
+	margin: 20px 0px 20px 0px;
 }
+
+.contactbox{
+	float: right;
+	border: 1px solid red;
+	margin: 20px 0px 20px 0px;
+}
+#contact-form{
+	height:365px;
+}
+
 #contact-form p {
-    float: left;
     width: 100%;
     margin: 0 0 5px;
 }
 #contact-form input[type="text"] {
-    height: 13px;
+    height: 15px;
+    margin-bottom: 10px;
+    background-color: #e1e1e1;
 }
 #contact-form input, #contact-form textarea {
     border: medium none;
     float: right;
-    color: #333;
-    padding: 15px;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+	font-size: 16px;
+    padding: 25px;
     width: 420px;
 }
 #contact-form textarea {
-    resize:none;
-    height:89px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:13px;
+    height: 100px;
+    background-color: #e1e1e1;
 }
 .submit-button.button{
     background-color:#444;
+    margin-top: 10px;
 }
 .submit-button.button:hover{
     background-color:#ee1d25;
 }
 #contact-form p input.button {
-    font-family: 'Ubuntu', sans-serif;
-    font-size:18px;
+    font-family: 'Century Gothic', sans-serif;
+	font-size: 18px;
     font-weight:bold;
     color: #FFF;
-    width: 450px;
+    width: 420px;
     cursor:pointer;
 }
 .contact-adress{
@@ -528,9 +541,6 @@ EINDE LOGIN SCRIPT CSS
 	border: 2px solid #f0f0f0;
 }
 
-/*.contact-page{
-	margin: 50px 50px 50px 50px;
-}*/
 
 #contact-info{
 	 font-family: 'Century Gothic', sans-serif;
