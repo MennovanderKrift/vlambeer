@@ -44,8 +44,8 @@
 } ?>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <input type="submit" name="register" class="btn btn-primary" value="Register">
-        <div id="formReset" class="btn btn-default">Reset</div>
+        <input type="submit" name="register" class="btn btn-warning" value="Register">
+        <div id="formReset" class="btn btn-danger">Reset</div>
       </div>
     </div>
 	</form>

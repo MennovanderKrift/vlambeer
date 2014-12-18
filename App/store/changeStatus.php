@@ -29,7 +29,7 @@ if(isset($_POST['order-status'])){
 				$searchOption = trim($_POST['search-option']);
 
 				if(empty($searchTerm)){
-					header('location: searchOrder.php');
+					header('location: changeStatus.php');
 				}
 
 				if($searchOption == 'customer-id'){
@@ -50,8 +50,13 @@ if(isset($_POST['order-status'])){
 
 		</b></p>
 
+			<?php
+				$countRows = mysqli_num_rows($result);
+				echo "<span class='bg-success col-md-12'>Number of orders found: " .$countRows. "</span>";
+			?>
+
 			<!-- search form start -->
-			<form class="form-horizontal col-md-12" role="form" action="searchOrder.php" method="POST">
+			<form class="form-horizontal col-md-12" role="form" action="changeStatus.php" method="POST">
 			   	<label for="search-term" class="col-sm-4 col-md-2 control-label">Search order:</label>
 
 				<div class="col-sm-11 col-md-6">
@@ -74,7 +79,7 @@ if(isset($_POST['order-status'])){
 			<!-- search form end -->
 
 		<!-- results table start -->
-		<table class="table table-hover">
+		<table id='myTable' class="table table-hover tablesorter">
 			<thead>
 				<tr>
 					<th>Invoice ID</th>
@@ -89,6 +94,7 @@ if(isset($_POST['order-status'])){
 				while($row = mysqli_fetch_assoc($result)){
 					$msg = $row['invoice_id'];
 					echo "<form role='form' action='changeStatus.php?invoice_id=" .$row['invoice_id']. "' method='POST'>";
+
 						echo "<tr>";
 
 						echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). "</td>";
@@ -145,11 +151,6 @@ if(isset($_POST['order-status'])){
 			</tbody>
 		</table>
 		<!-- results table start -->
-
-		<!-- An empty div which will be populated using jQuery -->	
-		<div id='page_navigation'></div>
-		<hr>
-
 	</div>
 </div>
 

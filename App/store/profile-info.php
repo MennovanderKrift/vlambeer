@@ -85,7 +85,7 @@
 			";
 			}
 ?>
-				<input type="submit" value="Edit" name="editProfile">
+				<input type="submit" value="Edit" name="editProfile" class="btn btn-warning">
 			</form>
 		</div>
 	</div>

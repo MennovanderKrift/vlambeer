@@ -57,6 +57,5 @@
 	</footer>
 <script src="../assets/js/script.js"></script>
 <script src="../assets/js/slogan.js"></script>
-<script src="../assets/js/paginate.js"></script>
-</body>
+<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
 </html>
