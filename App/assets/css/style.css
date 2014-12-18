@@ -485,13 +485,11 @@ EINDE LOGIN SCRIPT CSS
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
 .adresbox{
 	float: left;
-	border: 1px solid green;
 	margin: 20px 0px 20px 0px;
 }
 
 .contactbox{
 	float: right;
-	border: 1px solid red;
 	margin: 20px 0px 20px 0px;
 }
 #contact-form{
@@ -517,7 +515,7 @@ EINDE LOGIN SCRIPT CSS
     width: 420px;
 }
 #contact-form textarea {
-    height: 100px;
+    height: 135px;
     background-color: #e1e1e1;
 }
 .submit-button.button{

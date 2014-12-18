@@ -28,7 +28,7 @@
 		<input type="text" defaultvalue="Telefoonnummer" value="Tel:" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if ((this.value=='') || (this.value=='')) this.value=this.defaultValue" name="contact_tel">    </p>
 		<p>
 
-		<textarea name="Message" placeholder="test" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" name="contact_message"></textarea>
+		<textarea name="Message" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" name="contact_message">Message:</textarea>
 		<p class="form_buttons">
 		<input class="submit-button button" type="submit" name="btnSubmit" value="Send">
 		</p>
