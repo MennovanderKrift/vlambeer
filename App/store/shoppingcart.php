@@ -44,7 +44,7 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "</tr>";
  
 
-	$stmt = $db->prepare("SELECT product_id, name, price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
+	$stmt = $db->prepare("SELECT product_id, name, item_price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
 	$stmt->execute();
 
 	$total_price = 0;
@@ -60,11 +60,11 @@ elseif(count($_SESSION['cart_items'])>0)
 		{
 			$quantity = $_SESSION['cart_items'][$id]['quantity'];
 		}
-		$sub_total = $price * $quantity;
+		$sub_total = $item_price * $quantity;
 
 		echo "<tr>";
 		echo "<td>{$name}</td>";
-		echo "<td>&euro;{$price}</td>";
+		echo "<td>&euro;{$item_price}</td>";
 		echo "<td><input type='text' name='quantity' value='{$quantity}' class='form-control'>";
 		echo "<span class='input-group-btn'>";
 		echo "<button class='btn btn-default update-quantity' type='button'>Update</button>";
@@ -77,7 +77,7 @@ elseif(count($_SESSION['cart_items'])>0)
 		echo "</td>";
 		echo "</tr>";
 
-		$total_price += $price * $quantity;
+		$total_price += $item_price * $quantity;
 	}
 
 	echo "<tr>";
@@ -87,10 +87,11 @@ elseif(count($_SESSION['cart_items'])>0)
 ?>
 <form action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
 	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="business" value="daniel.ajax.1996@hotmail.com">
+	<input type="hidden" name="business" value="Vlambeer Store">
 	<input type="hidden" name="item_name" value="<?= $name ?>">
+	<input type="hidden" name="quantity" value="<?= $quantity?>">
 	<input type="hidden" name="currency_code" value="EUR">
-	<input type="hidden" name="amount" value="<?= $total_price ?>">
+	<input type="hidden" name="amount" value="<?= $item_price ?>">
 	<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 <?php
