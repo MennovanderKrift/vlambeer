@@ -14,25 +14,25 @@ require '../includes/header.php';
 		<div class="index-items col-md-12">
 			<h2>Games</h2>
 			<div class="col-md-3">
-				<a href="games/serious-sam.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>	
+				<a href="games/serious-sam.php"><div class="product-img"><img src="../assets/img/serious-sam.jpg" alt=""></div></a>	
 				<div class="product-info"><p>Serious Sam: <br>The Random Encounter <br>(PC, Steam)</p></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="games/SuperCrateBox.php"><div class="product-img"><img src="../assets/img/puppy.png" alt=""></div></a>
+				<a href="games/SuperCrateBox.php"><div class="product-img"><img src="../assets/img/supercratebox.png" alt=""></div></a>
 				<div class="product-info"><p>Super Crate Box <br> (PC, Mac)</p></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+				<div class="product-img"><img src="../assets/img/supercratebox.png" alt=""></div>	
 				<div class="product-info"><p>Super Crate Box <br> (iOS)</p></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+				<div class="product-img"><img src="../assets/img/supercratebox.png" alt=""></div>	
 				<div class="product-info"><p>Super Crate Box <br> (Vita)</p></div>
 				<div class="arrow-down"></div>
 			</div>
@@ -79,7 +79,7 @@ require '../includes/header.php';
 
 			<div class="col-md-3">
 				<div class="product-img"><img src="../assets/img/tshirt4.png" alt=""></div>	
-				<div class="product-info"><p>Gund Godz <br> T-shirt</p></div>
+				<div class="product-info"><p>Gun Godz <br> T-shirt</p></div>
 				<div class="arrow-down"></div>
 			</div>
 		</div>
@@ -130,7 +130,7 @@ require '../includes/header.php';
 	<div class="index-items col-md-12">
 		<h2>Non-Vlambeer games</h2>
 		<div class="col-md-3">
-			<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
+			<div class="product-img"><img src="../assets/img/radicalfishing.png" alt=""></div>	
 			<div class="product-info"><p>Radical Fishing <br> via bored.com</p></div>
 			<div class="arrow-down"></div>
 		</div>

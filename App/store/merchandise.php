@@ -10,13 +10,14 @@
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<div class="select-size">
-			<p>selecteer uw maat
-			<select>
+			<p>selecteer uw maat</p>
+			<label for="selectMaat"></label>
+			<select name="selectMaat">
 	  			<option>s</option>
 	  			<option>m</option>
 	  			<option>l</option>
 			</select>
-			</p>
+			
 		</div>
 		
 
