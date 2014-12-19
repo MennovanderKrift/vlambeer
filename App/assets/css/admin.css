@@ -1,0 +1,190 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	height: 0px;
+	background-color: #EDEDED;
+	min-width: 900px;
+}
+aside {
+	height: 100%;
+}
+/*LOGIN*/
+
+.admin-login-screen-top {
+	margin-top: 100px !important;
+	margin: 0 auto;
+	height: 60px;
+	width: 500px;
+	background-color: #484848;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.admin-login-screen-top h1 {
+	padding: 13px;
+	color: white;
+}
+.admin-login-screen {
+	margin: 0 auto;
+	height: 230px;
+	width: 500px;
+	background-color: white;
+	border: 1px solid #dbd0ca;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.admin-login-screen form{
+	margin: 0 auto;
+	width: 300px;
+	margin-top: 10px;
+}
+.admin-login-form input {
+	width: 300px;
+	margin-bottom: 10px;
+}
+.admin-btn-login {
+	background-color: #484848;
+	opacity: 1;
+}
+.admin-btn-login:hover {
+	background-color: #484848;
+	opacity: 0.8;
+}
+.login-error-msg {
+	margin: 10px;
+	padding: 10px;
+	list-style: none;
+	text-align: center;
+	background-color: #FF8D8D;
+	border: 1px solid #FF0000;
+}
+.login-msg {
+	margin: 10px;
+	padding: 10px;
+	list-style: none;
+	text-align: center;
+	background-color: #65ff00;
+	border: 1px solid #4cbf00;
+}
+
+/*ADMIN MENU*/
+
+.admin-nav-menu {
+	height: 100vh;
+	width: 200px;
+	background-color: #484848;
+}
+.admin-nav-profile {
+	width: 100%;
+	min-height: 100px;
+	max-height: 180px;
+	background-color: #d9534f;
+	margin-bottom: 10px;
+}
+.admin-nav-profile img {
+	margin-top: 10px;
+	margin-left: 70px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: black;
+}
+.admin-nav-profile-name {
+	font-size: 18px;
+	text-align: center;
+	margin: 5px auto 0 auto;
+	display: block;
+}
+.admin-nav-menu {
+	width: 200px;
+}
+.admin-nav-menu ul {
+	margin-left: -40px;
+	width: 200px;
+}
+.admin-nav-menu a {
+	color: white;
+	text-decoration: none;
+}
+.admin-nav-menu-items li {
+	text-align: center;
+	list-style: none;
+	padding: 10px 0px 10px 0px; 
+	width: 200px;
+	background-color: #484848;
+}
+.admin-nav-menu-items li:hover { 	
+	background-color: #d9534f;
+}
+.admin-search {
+}
+.admin-search-button {
+	background-image: url('../assets/img/search.png');
+	background-size: 100%;
+	background-position: center;
+	background-color: #D9534F;
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+.admin-search-button:hover {
+	background-color: #484848;
+}
+
+/*ADMIN SCREEN*/
+.setNewScreen {
+	margin-left: 200px;
+	width: 100hv;
+}
+.admin-container {
+	margin-top: 10px !important;
+	border: 1px solid #dbd0ca;
+	margin: 0 auto;
+	min-width: 90%;
+	max-width: 95%;
+	background-color: #D9534F;
+	padding: 5px;
+}
+.admin-title {
+	font-size: 40px;
+	border-bottom: 1px solid #484848;
+	text-align: center;
+	width: 95%;
+	margin: 0 auto;
+	color: white;
+	margin-bottom: 10px;
+}
+/*ADMIN TABLE*/
+.admin-table-head {
+	max-width: 100%;
+	background-color: #484848 !important;
+	color: white;
+}
+.admin-table-content {
+	width: 100%;
+}
+.admin-table-content input {
+	width: 100%;
+}
+.admin-table-content tr:nth-child(odd) {
+	background-color: #EEE;
+}
+.admin-table-content tr:nth-child(even) {
+	background-color: #FFF;
+}
+.admin-table-content td {
+	padding: 10px 5px 10px 5px;	
+}
+/*NEWSLETTER FORM*/
+.newsletter-form {
+	width: 80%;
+	margin: 0 auto;
+}
+.newsletter-form label {
+	font-size: 30px;
+}
+.newsletter-form input, .newsletter-form textarea {
+	width: 100%;
+	color: #484848;
+	font-size: 20px;
+}
