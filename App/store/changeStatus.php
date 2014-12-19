@@ -89,61 +89,58 @@ if(isset($_POST['order-status'])){
 					<th>Order date</th>
 				</tr>
 			</thead>
+
 			<tbody>
 				<?php
 				while($row = mysqli_fetch_assoc($result)){
 					$msg = $row['invoice_id'];
 					echo "<form role='form' action='changeStatus.php?invoice_id=" .$row['invoice_id']. "' method='POST'>";
-
 						echo "<tr>";
+							echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). "</td>";
+							echo "<td>" .mysqli_real_escape_string($con, $row['customer_id']). "</td>";
 
-						echo "<td>" .mysqli_real_escape_string($con, $row['invoice_id']). "</td>";
-						echo "<td>" .mysqli_real_escape_string($con, $row['customer_id']). "</td>";
-
-						echo "<td>";
-							echo "<select class='form-control' name='order_status'>";
-								switch($row['order_status']){
-								case 'send':
-										echo"<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
-									break;
-								case 'paid':
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
+							echo "<td>";
+								echo "<select class='form-control' name='order_status'>";
+									switch($row['order_status']){
+									case 'send':
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
 										break;
-								case 'canceled':
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='backorder'>Backorder</option>";
-										break;
-								case 'backorder':
-										echo "<option value='backorder'>Backorder</option>";
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										break;
-								default:
-										echo "<option value='-'>-</option>";			
-										echo "<option value='send'>Send</option>";
-										echo "<option value='paid'>Paid</option>";
-										echo "<option value='canceled'>Canceled</option>";
-										echo "<option value='backorder'>Backorder</option>";
-										break;
-								}
+									case 'paid':
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									case 'canceled':
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									case 'backorder':
+											echo "<option value='backorder'>Backorder</option>";
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											break;
+									default:
+											echo "<option value='-'>-</option>";			
+											echo "<option value='send'>Send</option>";
+											echo "<option value='paid'>Paid</option>";
+											echo "<option value='canceled'>Canceled</option>";
+											echo "<option value='backorder'>Backorder</option>";
+											break;
+									}
 
-							echo "</select>";
-						echo '</td>';
+								echo "</select>";
+							echo '</td>';
 
-						echo '<td>' .ucfirst($row['payment_status']). '</td>';
-						echo '<td>' .$row['date']. '<td>';
-
-						echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
-
+							echo '<td>' .ucfirst($row['payment_status']). '</td>';
+							echo '<td>' .$row['date']. '<td>';
+							echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
 						echo "</tr>";
 					echo "</form>";
 					}
