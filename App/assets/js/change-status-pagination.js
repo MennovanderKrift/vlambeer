@@ -24,4 +24,8 @@ jQuery(function($) {
                  .slice(showFrom, showTo).show();
         }
     });
+
+    if(numItems < 11){
+        $('.pagination-page').css('display','none');
+    };
 });

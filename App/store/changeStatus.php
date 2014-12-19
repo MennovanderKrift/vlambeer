@@ -52,11 +52,11 @@ if(isset($_POST['order-status'])){
 
 			<?php
 				$countRows = mysqli_num_rows($result);
-				echo "<span class='bg-success col-md-12'>Number of orders found: " .$countRows. "</span>";
+				echo "<p class='bg-success col-md-12'>Number of orders found: " .$countRows. "</p>";
 			?>
 
 			<!-- search form start -->
-			<form class="form-horizontal col-md-12" role="form" action="changeStatus.php" method="POST">
+			<form class="form-horizontal col-md-12 search-order" role="form" action="changeStatus.php" method="POST">
 			   	<label for="search-term" class="col-sm-4 col-md-2 control-label">Search order:</label>
 
 				<div class="col-sm-11 col-md-6">
