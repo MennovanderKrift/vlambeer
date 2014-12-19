@@ -39,8 +39,7 @@
           <li><a href="../store/games/vitaGames.php">VITA</a></li>
           <li><a href="../store/games/CodAW.php?id=1">cod test page</a></li>
           </ul></li>
-        <li><a href="#">MERCHANDISE</a></li>
-        <li><a href="#">MUSIC</a></li>
+        <li><a href="../store/merchandise.php">MERCHANDISE</a></li>
         <li><a href="../store/contact.php">CONTACT</a></li>
         <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>

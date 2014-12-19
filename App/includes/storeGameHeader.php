@@ -34,7 +34,6 @@
             <li><a href="#">VITA</a></li>
           </ul></li>
         <li><a href="#">MERCHANDISE</a></li>
-        <li><a href="#">MUSIC</a></li>
         <li><a href="#">CONTACT</a></li>
         </ul>
       </div>
