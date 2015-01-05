@@ -39,7 +39,47 @@ if (isset($_POST['loginUser'])) {
     header('location: ../store/index.php');    
   } else {
     session_start();
-    $_SESSION['wrongCredentials'] = "Password or username incorrect";
+    $_SESSION['wrongCredentials'] = "Password or username incorrect. <a href='../controllers/authController.php?forgotPassword'>Forgot your password?</a>";
     header("location: ../store/login.php");
+  }
+}
+
+///////////////////////////////// ALS USER PASSWORD VERGETEN IS /////////////////////////////////
+if (isset($_GET['forgotPassword'])) {
+?>
+  <form action="authController.php?sendEmail" method="POST">
+    <label for="email">Email</label>
+      <input type="email" name="email_address" id="email_address">
+      <input type="submit" value="Reset Password">
+  </form>
+<?php
+}
+if (isset($_GET['sendEmail'])) {
+  $stmt = $db->prepare("SELECT * FROM tbl_customers WHERE email_address = :email_address");
+  $stmt->bindParam("email_address", $_POST['email_address']);
+  $stmt->execute();
+  $user = $stmt->fetchAll(PDO::FETCH_OBJ);
+ 
+  
+
+  ini_set("SMTP","aspmx.l.google.com");
+  // Please specify an SMTP Number 25 and 8889 are valid SMTP Ports.
+  ini_set("smtp_port","25");
+  // Please specify the return address to use
+  ini_set('sendmail_from', 'koendebont@gmail.com');
+
+  $to = $_POST['email_address']; 
+  $subject = "Hi!"; 
+  $body = "Hi,\n\nHow are you?"; 
+
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+  $headers .= "From: test@gmail.com" . "\r\n";
+  
+
+  if (mail($to, $subject, $body, $headers)) {   
+    echo("<p>Email successfully sent</p>");  
+  } else {   
+    echo("<p>Email delivery failed</p>");  
   }
 }

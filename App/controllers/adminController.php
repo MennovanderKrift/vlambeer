@@ -11,38 +11,42 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_POST['loginAdmin'])) {
-  $stmt = $db->prepare("SELECT * FROM tbl_users WHERE username = :username");
-  $stmt->bindParam("username",$_POST['username']);
-  $result = $stmt->execute();
 
-  $user = $stmt->fetch(PDO::FETCH_OBJ);
-  $dbpass = $user->password;
-  $pass = $_POST['password'];
-
-  if (empty($_POST['email_address']) || empty($_POST['password'])) {
+  if ($_POST['username'] == "" || $_POST['password'] == "") {
     session_start();
-    $_SESSION['emptyFields'] = "All fields must be filled in";
-    header("location: ../admin/login.php");
-  }
-
-  // if (password_verify($pass, $dbpass)) {
-  if ($dbpass == $pass) {
-    session_start();
-    $_SESSION['id'] = $user->user_id;
-    $_SESSION['username'] = $user->username;
-    $_SESSION['password'] = $user->password;
-    $_SESSION['name'] = $user->name;
-    $_SESSION['last_name'] = $user->last_name;
-    header("location: ../admin/admin.php?id=" . $_SESSION['id']);    
+    $_SESSION['emptyFields'] = "Please fill in your username and password";
+    header("location: ../admin/login.php");  
   } else {
-    session_start();
-    $_SESSION['wrongCredentials'] = "Password or username incorrect";
-    header("location: ../admin/login.php");
+
+    $stmt = $db->prepare("SELECT * FROM tbl_users WHERE username = :username");
+    $stmt->bindParam("username",$_POST['username']);
+    $result = $stmt->execute();
+
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
+    $dbpass = $user->password;
+    $pass = $_POST['password'];
+
+    // if (password_verify($pass, $dbpass)) {
+    if ($dbpass == $pass) {
+      session_start();
+      $_SESSION['id'] = $user->user_id;
+      $_SESSION['username'] = $user->username;
+      $_SESSION['password'] = $user->password;
+      $_SESSION['name'] = $user->name;
+      $_SESSION['last_name'] = $user->last_name;
+      header("location: ../admin/admin.php?id=" . $_SESSION['id']);    
+    } else {
+      session_start();
+      $_SESSION['wrongCredentials'] = "Password or username incorrect";
+      header("location: ../admin/login.php");
+    }
   }
 }
 
 session_start();
-$sessionId = $_SESSION['id'];
+if (isset($_SESSION['id'])) {
+  $sessionId = $_SESSION['id'];
+}
 
 //////////////////// EDIT & DELETE ADMIN ACOUNTS ////////////////////
 if (isset($_POST['editAdminAccounts'])) {
@@ -67,19 +71,29 @@ if (isset($_POST['editAdminAccounts'])) {
   }
 }
 
-if (isset($_POST['deleteAdminAccounts'])) {
-  $stmt = $db->prepare("DELETE FROM tbl_users WHERE user_id = :user_id");
-  
-  $stmt->bindParam(':user_id', $_GET['user_id']);   
- 
-  if (!$stmt->execute()) {
-    header("location: ../admin/admin.php?id=$sessionId&fail");
-  } else {
-    session_start();
-    $_SESSION['deleteSuccesfull'] = "Admin successfully deleted";
-    header("location: ../admin/admin.php?id=$sessionId");
+$result = $db->prepare("SELECT count(*) FROM tbl_users"); 
+$result->execute(); 
+$number_of_rows = $result->fetchColumn();
+
+  if (isset($_POST['deleteAdminAccounts'])) {
+    if ($number_of_rows <= 1) {
+      session_start();
+      $_SESSION['cantDelete'] = "You can't have less than 1 admin account";
+      header("location: ../admin/admin.php?id=$sessionId");
+    } else {
+      $stmt = $db->prepare("DELETE FROM tbl_users WHERE user_id = :user_id");
+      
+      $stmt->bindParam(':user_id', $_GET['user_id']);   
+     
+      if (!$stmt->execute()) {
+        header("location: ../admin/admin.php?id=$sessionId&fail");
+      } else {
+        session_start();
+        $_SESSION['deleteSuccesfull'] = "Admin successfully deleted";
+        header("location: ../admin/admin.php?id=$sessionId");
+      }
+    }
   }
-}
 
 //////////////////// EDIT & DELETE USER ACOUNTS ////////////////////
 if (isset($_POST['editCustomerAccounts'])) {
@@ -126,3 +140,50 @@ if (isset($_POST['deleteCustomerAccounts'])) {
   }
 }
 //////////////////// NEWSLETTER ////////////////////
+
+//   $datetime = date("Y-m-d h:i:s");
+
+//   $sql = "INSERT INTO tbl_newsletter (newsletter_title,
+//                                       newsletter_content,
+//                                       newsletter_date)
+//                               VALUES (:newsletter_title, 
+//                                       :newsletter_content, 
+//                                       :newsletter_date)";                                       
+//   $stmt = $db->prepare($sql);
+                                                
+//   $stmt->bindParam(':newsletter_title', $_POST['newsletter_title'], PDO::PARAM_STR);       
+//   $stmt->bindParam(':newsletter_content', $_POST['newsletter_content'], PDO::PARAM_STR); 
+//   $stmt->bindParam(':newsletter_date', $datetime, PDO::PARAM_STR);                                      
+
+//   if (!$stmt->execute()) {
+//       echo 'wrong statement';
+//   } else {
+//     session_start();
+//     $sessionId = $_SESSION['id'];
+//     header("location: ../admin/newsletter.php?id=$sessionId");
+//   }
+// }
+
+if (isset($_POST['sendNewsletter'])) {
+  $to = "koen-debont@hotmail.com";
+  $subject = "HTML email";
+
+  $message = "
+  <html>
+  <head>
+    <meta charset='UTF-8'>
+  </head>
+  <body>
+  <h1>Thanks for subscribing to our newsletter!</h1>
+  <p>If you want to unsubscribe please <a href='../store/profile-info.php'>click here</a></p>
+  </body>
+  </html>
+  ";
+
+  // Always set content-type when sending HTML email
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+  $headers .= "From: admin@vlambeer.com" . "\r\n";
+
+  mail($to,$subject,$message,$headers);
+}

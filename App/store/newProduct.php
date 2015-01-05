@@ -9,10 +9,9 @@ if(!isset($_POST['new-product'])){
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
 		  <div class="form-group">
 			<h2><center>New product</center></h2>
-		  <span class="col-sm2 col-md-2"></span>
-			<p class="col-sm-10 col-md-10"><b><?php if(!empty($_GET['msg'])){
-			echo "- " .$_GET['msg'];
-			}?></b></p>
+			<?php if(!empty($_GET['msg'])){
+			echo "<p class='col-sm-10 col-md-10 bg-success'><b>" .$_GET['msg']. "</b></p>";
+			}?>
 
 		   	<label for="name" class="col-sm-2 col-md-2 control-label">Name:</label>
 			<div class="col-sm-10 col-md-10">
@@ -86,14 +85,14 @@ if(!isset($_POST['new-product'])){
 
         $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, size, stock, tags, category) VALUES (:name, :description, :price, :size, :stock, :tags, :category)");
 
-        $stmt->bindParam("name", $_POST['name'], PDO::PARAM_STR);
+        $stmt->bindParam("name", $_POST['name'], 				PDO::PARAM_STR);
 
-        $stmt->bindParam("description", $_POST['description'], PDO::PARAM_STR);
-        $stmt->bindParam("price", $_POST['price'], PDO::PARAM_STR);
-        $stmt->bindParam("size", $_POST['size'], PDO::PARAM_STR);
-        $stmt->bindParam("stock", $_POST['stock'], PDO::PARAM_STR);
-        $stmt->bindParam("tags", $_POST['tags'], PDO::PARAM_STR);
-        $stmt->bindParam("category", $_POST['category'], PDO::PARAM_STR);
+        $stmt->bindParam("description", $_POST['description'], 	PDO::PARAM_STR);
+        $stmt->bindParam("price", $_POST['price'], 				PDO::PARAM_STR);
+        $stmt->bindParam("size", $_POST['size'], 				PDO::PARAM_STR);
+        $stmt->bindParam("stock", $_POST['stock'], 				PDO::PARAM_STR);
+        $stmt->bindParam("tags", $_POST['tags'], 				PDO::PARAM_STR);
+        $stmt->bindParam("category", $_POST['category'], 		PDO::PARAM_STR);
 
 		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['tags']) || empty($_POST['category']) ){
 			$msg = urlencode("All fields are required");

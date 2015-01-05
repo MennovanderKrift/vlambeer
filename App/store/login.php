@@ -11,8 +11,12 @@
 						echo '<p class="bg-danger">' .  $_SESSION['wrongCredentials'] . '</p>';
 						session_unset();
 					}
-					if (isset($_SESSION['emptyFields'] )) {
+					if (isset($_SESSION['emptyFields'])) {
 						echo '<p class="bg-danger">' .  $_SESSION['emptyFields']  . '</p>';
+						session_unset();
+					}
+					if (isset($_SESSION['loginFirst'])) {
+						echo '<p class="bg-danger">' .  $_SESSION['loginFirst']  . '</p>';
 						session_unset();
 					}
 ?>

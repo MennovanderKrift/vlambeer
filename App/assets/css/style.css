@@ -520,11 +520,15 @@ EINDE LOGIN SCRIPT CSS
     height: 135px;
     background-color: #e1e1e1;
 }
-.submit-button.button{
-    background-color:#444;
-    margin-top: 10px;
+
+#contact-form input[type="submit"]{
+	   width: 150px;
+	   height: 50px;
+	   margin-top: 20px;
+	   padding: 10px 10px 10px 10px; 
+	   background-color: orange;
 }
-.submit-button.button:hover{
+#contact-form input[type="submit"]:hover{
     background-color:#ee1d25;
 }
 #contact-form p input.button {
@@ -532,8 +536,6 @@ EINDE LOGIN SCRIPT CSS
 	font-size: 18px;
     font-weight:bold;
     color: #FFF;
-    width: 420px;
-    cursor:pointer;
 }
 .contact-adress{
 	width: 465px;
@@ -650,6 +652,52 @@ EINDE LOGIN SCRIPT CSS
 .streep {
 	border-top: 1px solid #bbc5c8;
 }
+
+
+
+
+
+.backgroundcolor-gun-godz1 {
+	height: 480px;
+	background-image: url('../img/gg_bg.png');
+}
+
+.backgroundcolor-gun-godz1 .container {
+	padding-top: 45px;
+}
+
+.backgroundcolor-gun-godz1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-gg {
+	height: 250px;
+	width: 300px;
+}
+
+
+
+.backgroundcolor-gun-godz2{
+	height: 480px;
+	padding-top: 50px;
+	background-color: #857564;
+}
+
+.backgroundcolor-gun-godz3{
+	height: 460px;
+	background-color: #cdd8dc;
+	padding-top: 42px;
+	background-image: url('../img/gg_bg.png');
+}
+
+
+
+
+
+
+
+
 
 /* einde serious sam game page */
 

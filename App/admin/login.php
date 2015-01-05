@@ -20,17 +20,21 @@
 	</div>
 	<div class="admin-login-screen">
 <?php 
+		if (isset($_SESSION['emptyFields'])) {
+			echo '<li class="login-error-msg">' . $_SESSION['emptyFields']. '</li>';
+			unset($_SESSION['emptyFields']);
+		}
 		if (isset($_SESSION['wrongCredentials'])) {
 			echo '<li class="login-error-msg">' . $_SESSION['wrongCredentials'] . '</li>';
-			session_destroy();
+			unset($_SESSION['wrongCredentials']);
 		}
 		if (isset($_SESSION['noRights'])) {
 			echo '<li class="login-error-msg">' . $_SESSION['noRights'] . '</li>';
-			session_destroy();
+			unset($_SESSION['noRights']);
 		}
 		if (isset($_SESSION['logoutSucces'])) {
 			echo '<li class="login-msg">' . $_SESSION['logoutSucces'] . '</li>';
-			session_destroy();
+			unset($_SESSION['logoutSucces']);
 		}
 ?>
 		<form class="admin-login-form" action="../controllers/adminController.php" method="POST">
