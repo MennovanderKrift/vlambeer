@@ -1,6 +1,11 @@
 <?php
  	include '../includes/header.php';
 
+ 	if (!isset($_SESSION['email_address'])) {
+ 		session_start();
+	    $_SESSION['loginFirst'] = "Please, login first";
+ 		header('location: login.php');
+ 	}
  	$urlid = $_GET['id'];
  	$session_id = $_SESSION['id'];
 

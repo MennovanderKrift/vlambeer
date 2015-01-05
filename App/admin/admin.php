@@ -12,6 +12,10 @@
 			echo "<li class='login-msg'>" . $_SESSION['deleteSuccesfull'] . "</li>";
 			unset($_SESSION['deleteSuccesfull']);
 		}
+		if (isset($_SESSION['cantDelete'])) {
+			echo "<li class='login-error-msg'>" . $_SESSION['cantDelete'] . "</li>";
+			unset($_SESSION['cantDelete']);
+		}
 ///////////////////////////////////////////////////////////////////////////////////////
 ?>
 		<table class="admin-table-content">

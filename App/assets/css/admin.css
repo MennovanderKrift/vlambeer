@@ -26,17 +26,17 @@ aside {
 }
 .admin-login-screen {
 	margin: 0 auto;
-	height: 230px;
 	width: 500px;
 	background-color: white;
 	border: 1px solid #dbd0ca;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
-.admin-login-screen form{
+.admin-login-screen form {
 	margin: 0 auto;
 	width: 300px;
 	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .admin-login-form input {
 	width: 300px;
@@ -132,6 +132,7 @@ aside {
 }
 
 /*ADMIN SCREEN*/
+
 .setNewScreen {
 	margin-left: 200px;
 	width: 100hv;
@@ -154,7 +155,9 @@ aside {
 	color: white;
 	margin-bottom: 10px;
 }
+
 /*ADMIN TABLE*/
+
 .admin-table-head {
 	max-width: 100%;
 	background-color: #484848 !important;
@@ -177,14 +180,31 @@ aside {
 }
 /*NEWSLETTER FORM*/
 .newsletter-form {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
 .newsletter-form label {
 	font-size: 30px;
+	width: 100%;
+	background-color: #484848; 
+	color: white;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	margin-top: 10px;
 }
 .newsletter-form input, .newsletter-form textarea {
 	width: 100%;
 	color: #484848;
 	font-size: 20px;
+	padding: 5px;
+}
+.sendNewsletter-button {
+	background-color: #484848;
+	border: 1px solid #3b3b3b;
+	color: white !important;
+	float: right;
+	width: 200px !important;
+}
+.sendNewsletter-button:hover {
+	background-color: #3b3b3b;
 }
