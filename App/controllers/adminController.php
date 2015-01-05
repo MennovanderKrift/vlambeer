@@ -1,4 +1,4 @@
-<?php require '../config/Database.php';
+<?php require '../config/config.php';
 
 //////////////////// LOGIN & LOGOUT ////////////////////
 if (isset($_GET['logout'])) {
@@ -165,8 +165,11 @@ if (isset($_POST['deleteCustomerAccounts'])) {
 // }
 
 if (isset($_POST['sendNewsletter'])) {
-  $to = "koen-debont@hotmail.com";
+  $toEmail = $db->query("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
   $subject = "HTML email";
+
+  var_dump($toEmail);
+  die();
 
   $message = "
   <html>
@@ -174,16 +177,19 @@ if (isset($_POST['sendNewsletter'])) {
     <meta charset='UTF-8'>
   </head>
   <body>
-  <h1>Thanks for subscribing to our newsletter!</h1>
-  <p>If you want to unsubscribe please <a href='../store/profile-info.php'>click here</a></p>
+  <h1>" . $_POST['newsletter_title'] . "</h1>
+  <p>" . $_POST['newsletter_content'] . "</p>
   </body>
   </html>
   ";
 
-  // Always set content-type when sending HTML email
-  $headers = "MIME-Version: 1.0" . "\r\n";
-  $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-  $headers .= "From: admin@vlambeer.com" . "\r\n";
+  ini_set("sendmail_from", "admin@vlambeer.com");
+  // // Always set content-type when sending HTML email
+  // $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+  // $headers .= "From: admin@vlambeer.com" . "\r\n";
 
-  mail($to,$subject,$message,$headers);
+  // mail($to,$subject,$message,$headers);
+
+  mail($toEmail, $subject,$message, $headers);
 }
