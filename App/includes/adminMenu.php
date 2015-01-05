@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require '../config/Database.php';
+  require '../config/config.php';
 
   if ($_SESSION['id'] == $_GET['id']) {
   } else {
@@ -34,35 +34,10 @@
 					<a href="changeStatus.php?id=<?php echo $_SESSION['id']; ?>"><li>Invoices</li></a>
 					<a href="newsletter.php?id=<?php echo $_SESSION['id']; ?>"><li>Newsletter</li></a>
 					<a href="settings.php?id=<?php echo $_SESSION['id']; ?>"><li>Settings</li></a>
+          <a href="inventory.php?id=<?php echo $_SESSION['id']; ?>"><li>Inventory Items</li></a>
 					<a href="../controllers/adminController.php?logout" name="logout"><li>Logout</li></a>
 				</ul>
 			</div>
 		</nav>
 	</aside>
 	<section class="setNewScreen">
-
-	<!-- $sessionId = $_SESSION['id'];
-
-if (isset($_GET['editAdminAccounts'])) {
-  $stmt = $db->prepare("UPDATE tbl_users SET  username = :username, 
-                                              password = :password, 
-                                              name = :name, 
-                                              last_name = :last_name, 
-                                        WHERE user_id = :user_id");
-
-  $stmt->bindParam("user_id", $_GET['id'], PDO::PARAM_STR);
-  $stmt->bindParam("username", $_POST['username'], PDO::PARAM_STR);
-  $stmt->bindParam("password", $_POST['password'], PDO::PARAM_STR);
-  $stmt->bindParam("name", $_POST['name'], PDO::PARAM_STR);
-  $stmt->bindParam("last_name", $_POST['last_name'], PDO::PARAM_STR);
-
-  if (! $stmt->execute()) {
-    header("location: ../admin/admin.php?id=$sessionId&fail");
-  } else {
-    header("location: ../admin/admin.php?id=$sessionId&succes");
-  }
-}
-
-if (isset($_GET['deleteAdminAccounts'])) {
-  echo 'delete';
-} -->
