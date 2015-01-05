@@ -71,9 +71,7 @@ if (isset($_POST['editAdminAccounts'])) {
   }
 }
 
-$result = $db->prepare("SELECT count(*) FROM tbl_users"); 
-$result->execute(); 
-$number_of_rows = $result->fetchColumn();
+$result = $db->query("SELECT count(*) FROM tbl_users"); 
 
   if (isset($_POST['deleteAdminAccounts'])) {
     if ($number_of_rows <= 1) {
@@ -166,10 +164,13 @@ if (isset($_POST['deleteCustomerAccounts'])) {
 
 if (isset($_POST['sendNewsletter'])) {
   $toEmail = $db->query("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
-  $subject = "HTML email";
 
-  var_dump($toEmail);
-  die();
+  foreach ($toEmail as $row) 
+  {
+    $toEmail2 = $row->email_address;
+  }
+
+  $subject = "HTML email";
 
   $message = "
   <html>
@@ -180,16 +181,9 @@ if (isset($_POST['sendNewsletter'])) {
   <h1>" . $_POST['newsletter_title'] . "</h1>
   <p>" . $_POST['newsletter_content'] . "</p>
   </body>
-  </html>
-  ";
+  </html>";
 
   ini_set("sendmail_from", "admin@vlambeer.com");
-  // // Always set content-type when sending HTML email
-  // $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-  // $headers .= "From: admin@vlambeer.com" . "\r\n";
-
-  // mail($to,$subject,$message,$headers);
-
-  mail($toEmail, $subject,$message, $headers);
+  $headers = "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+  mail($toEmail2, $subject, $message, $headers);
 }
