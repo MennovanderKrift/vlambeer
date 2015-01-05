@@ -653,6 +653,52 @@ EINDE LOGIN SCRIPT CSS
 	border-top: 1px solid #bbc5c8;
 }
 
+
+
+
+
+.backgroundcolor-gun-godz1 {
+	height: 480px;
+	background-image: url('../img/gg_bg.png');
+}
+
+.backgroundcolor-gun-godz1 .container {
+	padding-top: 45px;
+}
+
+.backgroundcolor-gun-godz1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-gg {
+	height: 250px;
+	width: 300px;
+}
+
+
+
+.backgroundcolor-gun-godz2{
+	height: 480px;
+	padding-top: 50px;
+	background-color: #857564;
+}
+
+.backgroundcolor-gun-godz3{
+	height: 460px;
+	background-color: #cdd8dc;
+	padding-top: 42px;
+	background-image: url('../img/gg_bg.png');
+}
+
+
+
+
+
+
+
+
+
 /* einde serious sam game page */
 
 

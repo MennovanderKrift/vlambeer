@@ -1,10 +1,10 @@
 <?php 
 require '../../includes/storeGameHeader.php';
 ?>
-<div class="backgroundcolor-seriuos-sam1">
+<div class="backgroundcolor-scb1">
 	<div class="container">
 			<div class="col-md-4">
-				<a href="http://supercratebox.com/"><div class="product-img-ss"><img src="../../assets/img/scb_logo.png" alt=""></div></a>
+				<a href="http://supercratebox.com/"><div class="product-img-scb"><img src="../../assets/img/scb_logo.png" alt=""></div></a>
 				<div class="product-info"><p>Kies je wapen en richt op het <br>meest willekeurige Serious <br>Sam-avontuur tot nu toe!</p></div>
 				<div class="arrow-down"></div>
 			</div>
@@ -15,7 +15,7 @@ require '../../includes/storeGameHeader.php';
 	</div>
 </div>
 
-<div class="backgroundcolor-seriuos-sam2">
+<div class="backgroundcolor-scb2">
 	<div class="container">
 		<div class="col-md-4">
 			<img src="../../assets/img/scb_afb2.png" alt="">
@@ -30,7 +30,7 @@ require '../../includes/storeGameHeader.php';
 	</div>
 </div>
 
-<div class="backgroundcolor-seriuos-sam3">
+<div class="backgroundcolor-scb3">
 	<div class="container">
 		<div class="col-md-6">
 			<h1>Systeemeisen</h1>

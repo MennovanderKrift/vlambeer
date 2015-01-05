@@ -29,66 +29,48 @@
 				<td></td>
 			</tr>
 <?php
-	$stmt = $db->prepare("SELECT * FROM tbl_customers");
-	$stmt->execute();
 ///////////////////////// CHECKT HOEVEEL USERS ER ZIJN ////////////////////////////
-	$result = $db->prepare("SELECT count(*) FROM tbl_customers"); 
-	$result->execute(); 
-	$number_of_rows = $result->fetchColumn();
-///////////////////////////////////////////////////////////////////////////////////
+	$query = $db->query("SELECT * FROM tbl_customers"); 
 
-	$users = $stmt->fetchAll(PDO::FETCH_OBJ);
+	foreach ($query as $row) 
+	{
+	 		echo "<tr>";
+				echo	"<td>" . $row->customer_id . "</td>";
+				echo	"<td>" . $row->username . "</td>";
+				echo	"<td>" . $row->email_address . "</td>";
+				echo	"<td>" . $row->name . "</td>";
+				echo 	"<td>" . $row->last_name . "</td>";
+				echo "<td>" . $row->address . "</td>";
+				echo "<td>" . $row->zipcode . "</td>";
+				echo "<td>" . $row->phone_number . "</td>";
+				echo "<td>" . $row->news_letter . "</td>";	
+			echo "</tr>";
+	 }
 
-	if ($number_of_rows == 0) {
-		echo 	"<tr>
-					<td>No users found</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>"; 
-	} else {
-		foreach ($users as $user) {
-			$customerid = $user->customer_id;
+ // 	if ($number_of_rows == 0) {
+// 		echo 	"<tr>
+// 					<td>No users found</td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 					<td></td>
+// 				</tr>"; 
+// 	 -->
+		
 ?>
-			<form action="../controllers/adminController.php?customer_id=<?php echo $customerid; ?>" method="POST">
-			<tr>
-				<td><?php echo $user->customer_id; ?></td>
-				<td><input type="text" 	 name="username" 		value="<?php echo $user->username; ?>"></td>
-				<td><input type="text" 	 name="email_address" 	value="<?php echo $user->email_address; ?>"></td>
-				<td><input type="text" 	 name="name" 			value="<?php echo $user->name; ?>"></td>
-				<td><input type="text" 	 name="last_name" 		value="<?php echo $user->last_name; ?>"></td>
-				<td><input type="text" 	 name="address" 		value="<?php echo $user->address; ?>"></td>
-				<td><input type="text" 	 name="zipcode" 		value="<?php echo $user->zipcode; ?>"></td>
-				<td><input type="int" 	 name="phone_number" 	value="<?php echo $user->phone_number; ?>"></td>
-				<td>
-<?php 	if ($user->news_letter == 0) {
-			echo 	"<select name='news_letter' id='news_letter'>
-						<option value='0'>No</option>
-						<option value='1'>Yes</option>
-					</select>";
-		} else {
-			echo 	"<select name='news_letter' id='news_letter'>
-						<option value='1'>Yes</option>
-						<option value='0'>No</option>
-					</select>";
-} ?>	
-				</td>
-				<td><input type="submit" value="Edit" name="editCustomerAccounts" class="btn btn-danger"></td>
-				<td><input type="submit" value="Delete" name="deleteCustomerAccounts" class="btn btn-danger"></td>
-			</tr>
-			</form>
-<?php
-		}
-	}
-?>
-		</table>
-	<!-- <div style="admin-new-button"><a href="../controllers/adminController.php?newAdminAccount" class="btn btn-danger">New admin</a></td> -->
-	</div>
-</section>
+<!-- // 			<form action="../controllers/adminController.php?customer_id=<?php echo $customerid; ?>" method="POST">
+// 			<tr>
+
+// 				<td><input type="submit" name="editCustomerAccounts" class="btn btn-danger"></td>
+// 				<td><input type="submit" name="deleteCustomerAccounts" class="btn btn-danger"></td>
+// 			</tr>
+// 			</form>
+// 		</table>
+// 	</div>
+// </section> -->
