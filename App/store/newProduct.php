@@ -71,7 +71,6 @@ if(!isset($_POST['new-product'])){
 	</div>
 </div>
 <?php
-// var_dump($_POST);
 
 }else{
 	$name = $_POST['name'];
@@ -81,7 +80,6 @@ if(!isset($_POST['new-product'])){
 	$stock = $_POST['stock'];
 	$tags = $_POST['tags'];
 	$category = $_POST['category'];
-
 
         $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, size, stock, tags, category) VALUES (:name, :description, :price, :size, :stock, :tags, :category)");
 
@@ -107,9 +105,6 @@ if(!isset($_POST['new-product'])){
     }
 
 		}
-        
-        
-
 	?>
 
 <div class="container">
