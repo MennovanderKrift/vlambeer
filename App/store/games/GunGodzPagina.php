@@ -8,7 +8,7 @@
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">
-				<img class="slider-serious-sam" src="../../assets/img/gg_afb1.png" alt="">
+				<img class="slider-serious-sam" src="../../assets/img/GUNGODZ-Wine-Heaven-4-Triangle-speedrun.gif" alt="">
 			</div>
 
 	</div>
