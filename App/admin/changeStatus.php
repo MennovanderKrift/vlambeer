@@ -1,4 +1,10 @@
-<?php require '../includes/adminMenu.php';  
+<?php require '../includes/adminMenu.php';
+
+if ($_SESSION['role'] == 'admin') {
+  $sessionId = $_SESSION['id'];
+} else {
+  header("location: ../store/index.php");
+}
 
 $con = mysqli_connect('localhost','root','','vlambeer')
 	or die('Could not connect to the database. Please contact the web developer.');

@@ -17,7 +17,6 @@ if (isset($_POST['loginAdmin'])) {
     $_SESSION['emptyFields'] = "Please fill in your username and password";
     header("location: ../admin/login.php");  
   } else {
-
     $stmt = $db->prepare("SELECT * FROM tbl_users WHERE username = :username");
     $stmt->bindParam("username",$_POST['username']);
     $result = $stmt->execute();
@@ -26,10 +25,10 @@ if (isset($_POST['loginAdmin'])) {
     $dbpass = $user->password;
     $pass = $_POST['password'];
 
-    // if (password_verify($pass, $dbpass)) {
     if ($dbpass == $pass) {
       session_start();
       $_SESSION['id'] = $user->user_id;
+      $_SESSION['role'] = 'admin';
       $_SESSION['username'] = $user->username;
       $_SESSION['password'] = $user->password;
       $_SESSION['name'] = $user->name;
@@ -43,10 +42,6 @@ if (isset($_POST['loginAdmin'])) {
   }
 }
 
-session_start();
-if (isset($_SESSION['id'])) {
-  $sessionId = $_SESSION['id'];
-}
 
 //////////////////// EDIT & DELETE ADMIN ACOUNTS ////////////////////
 if (isset($_POST['editAdminAccounts'])) {

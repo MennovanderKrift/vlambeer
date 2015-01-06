@@ -30,6 +30,7 @@ if (isset($_POST['loginUser'])) {
     $_SESSION['username'] = $user->username;
     $_SESSION['password'] = $user->password;
     $_SESSION['name'] = $user->name;
+    $_SESSION['role'] = 'customer';
     $_SESSION['last_name'] = $user->last_name;
     $_SESSION['gender'] = $user->gender;
     $_SESSION['address'] = $user->address;
