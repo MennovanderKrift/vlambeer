@@ -691,7 +691,15 @@ EINDE LOGIN SCRIPT CSS
 	background-image: url('../img/gg_bg.png');
 }
 
+/* footer links */
+footer a{
+	color: #fff;
+}
 
+footer a:hover{
+	color: #fac846;
+	text-decoration: none;
+}
 
 
 
@@ -712,7 +720,7 @@ EINDE LOGIN SCRIPT CSS
 	color: #fff !important;
 }
 
-/* Pagination CSS end*/
+/* Pagination CSS end */
 
 @media (min-width: 1920px) {
 

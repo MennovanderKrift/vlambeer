@@ -21,7 +21,7 @@ require '../../includes/storeGameHeader.php';
 			<img src="../../assets/img/scb_afb2.png" alt="">
 		</div>
 		<div class="col-md-8">
-			<h3>lorem ipson</h3>
+			<h3>Lorem ipsum</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugit velit repellat nulla distinctio quidem dolor rerum, error pariatur consectetur minus quam odit natus aliquid vero debitis iure doloribus id.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquid, similique error consectetur ut consequuntur expedita, corrupti corporis ipsam aperiam facilis omnis quidem perspiciatis, non velit laudantium nesciunt consequatur amet.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat natus, necessitatibus quos reiciendis dolores dignissimos, aperiam rem. Facilis doloribus nesciunt, quam incidunt laboriosam excepturi libero sed, vel vero, velit quisquam.</p>
@@ -33,7 +33,7 @@ require '../../includes/storeGameHeader.php';
 <div class="backgroundcolor-scb3">
 	<div class="container">
 		<div class="col-md-6">
-			<h1>Systeemeisen</h1>
+			<h1>System requirements</h1>
 			<hr class="streep">
 			<p><b>OS:</b> Windows xp, vista, 7</p>
 			<p><b>Processor:</b> 2.0Ghz or faster processor</p>

@@ -3,7 +3,7 @@
 <div class="container">
 
 <div class="adresbox">
-	<h2>Adress</h2>
+	<h2>Address</h2>
 	<div class="contact-adress">
 		<p id="contact-info">
 			Neude 5<br>

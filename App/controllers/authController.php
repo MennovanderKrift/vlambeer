@@ -77,9 +77,9 @@ if (isset($_GET['sendEmail'])) {
   $headers .= "From: test@gmail.com" . "\r\n";
   
 
-  if (mail($to, $subject, $body, $headers)) {   
-    echo("<p>Email successfully sent</p>");  
-  } else {   
-    echo("<p>Email delivery failed</p>");  
-  }
+    if (mail($to, $subject, $body, $headers)) {   
+      echo("<p>Email successfully sent</p>");  
+    } else {   
+      echo("<p>Email delivery failed</p>");  
+    }
 }
