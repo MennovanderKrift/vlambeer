@@ -484,7 +484,6 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
-<<<<<<< HEAD
 /*---------------------------------------------------BEGIN MUSIC PAGINA------------------------------------------*/
 .music-photos-wrapper{
 	display: inline-block;
@@ -505,11 +504,32 @@ img.music-photos{
 	margin-top: 10px;
 	height: 555px;
 	width: 670px;
-	background: #fac846;
+	background: #63676a;
 	float: right;
 	position: absolute;
 	bottom: 12px;
 	right: 30px;
+}
+.musicInfo p{
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 5px;
+	text-align: left;
+	color: #FFFFFF;
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 15px;
+
+}
+.musicInfo-header h2{
+	width: 670px;
+	height: 45px;
+	background: #d6cfbf;
+	margin-top: 20px;
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 23px;
+	padding-top: 10px;
+	text-align: center;
+	color: #9f998d;
 }
 
 .bestel{
@@ -518,10 +538,20 @@ img.music-photos{
 	font-size: 21px;
     font-weight:bold;
 }
+.list1 li{
+	width:200px;
+	text-align: center;
+	float: left;
+}
+.musicInfo li{
+	
+}
+.list2{
+	width: 250px;
+	float: right;
+}
 /*---------------------------------------------------EINDE MUSIC PAGINA------------------------------------------*/
 
-=======
->>>>>>> origin/master
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
 .adresbox{
 	float: left;
