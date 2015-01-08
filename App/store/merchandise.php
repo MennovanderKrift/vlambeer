@@ -25,5 +25,28 @@
 			<a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a>
 		</div>
 	</div>
+	
+	<div class="related">
+		<p style="color:black;">Related products</p>
+		<?php
+		// Info current t-shirt. Normally from database
+		$name = "T-shirt";
+		$description = "Stylish LUFTRAUSERS T-shirt designed by Amon26.";
+		$relatedSearch = $name . " " . $description;
+		echo $relatedSearch;
+
+		// Query which searches for related items
+		$query = $db->prepare("SELECT * FROM tbl_products WHERE description LIKE '% :relatedSearch %' OR name LIKE '% :relatedSearch %' LIMIT 5");
+		$query -> bindParam("relatedSearch", $relatedSearch, PDO::PARAM_STR);
+		if($query -> execute()){
+			while($related = $query->fetch(PDO::FETCH_OBJ)) {
+				echo "<p style='color:black;'>" . $related->description . "</p></br>";
+
+			}
+		}
+
+
+		?>
+	</div>
 </div>
 <?php require '../includes/footer.php'; ?>
