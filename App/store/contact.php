@@ -5,6 +5,7 @@
 <div class="adresbox">
 	<h2>Address</h2>
 	<div class="contact-adress">
+				<img src="../../design/images/contacthoek.png" class="contacthoek" />
 		<p id="contact-info">
 			Neude 5<br>
 			3512 AD<br>

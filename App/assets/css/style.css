@@ -492,7 +492,7 @@ EINDE LOGIN SCRIPT CSS
 }
 
 img.music-photos{
-	border-bottom: 5px solid orange;
+	border-bottom: 5px solid #fac846;
 	height: 230px;
 	width: 225px;
 	margin-bottom: 10px;
@@ -502,11 +502,20 @@ img.music-photos{
 
 .musicInfo{
 	margin-top: 10px;
-	height: 540px;
-	width: 700px;
-	background: orange;
-	display: inline-block;
+	height: 555px;
+	width: 670px;
+	background: #fac846;
 	float: right;
+	position: absolute;
+	bottom: 12px;
+	right: 30px;
+}
+
+.bestel{
+	width: 225px;
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 21px;
+    font-weight:bold;
 }
 /*---------------------------------------------------EINDE MUSIC PAGINA------------------------------------------*/
 
@@ -575,6 +584,13 @@ img.music-photos{
 	 font-size: 21px;
 	 padding: 30px 10px 10px 30px;
 	 margin-bottom: 10px;
+}
+
+.contacthoek{
+	position: relative;
+	bottom: 1px;
+	left: 1px;
+	float: right;
 }
 /*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
 
