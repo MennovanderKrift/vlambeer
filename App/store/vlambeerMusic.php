@@ -2,7 +2,17 @@
 
 <div class="container">
 
-<img class="slider-serious-sam" src="../design/images/vlambeerMusic.jpeg" alt="">
+<div class="music-photos-wrapper">
+<img class="music-photos" src="../../design/images/vlambeerMusic2.jpg" alt="">
+
+<img class="music-photos" src="../../design/images/vlambeerMusic1.jpg" alt="">
+</div>
+
+<div class="musicInfo">
+
+</div>
+
+
 
 </div>
 
