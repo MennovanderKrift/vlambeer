@@ -1,23 +1,24 @@
-<?php require "../../includes/storeGameHeader.php" ?>
-
-<div class="backgroundcolor-gun-godz1">
+<?php 
+require '../../includes/storeGameHeader.php';
+?>
+<div class="backgroundcolor-luftrausers1">
 	<div class="container">
 			<div class="col-md-4">
-				<a href="http://store.steampowered.com/app/201480/"><div class="product-img-gg"><img src="../../assets/img/gg_logo.png" alt=""></div></a>
-				<div class="product-info"><p>GunGodz is een first poerson shooter <br>in ee nstijl van de oude klassieker</p></div>
+				<a href="http://store.steampowered.com/app/201480/"><div class="product-img-lr"><img src="../../assets/img/lr_logo.png" alt=""></div></a>
+				<div class="product-info"><p> luftrausers is een van de meest<br> boeiende arcarde shooter die op<br>markt kwam in de recente <br> geschiedenis</p></div>
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">
-				<img class="slider-serious-sam" src="../../assets/img/GUNGODZ-Wine-Heaven-4-Triangle-speedrun.gif" alt="">
+				<img class="slider-luftrausers" src="../../assets/img/lr_afb1.png" alt="">
 			</div>
 
 	</div>
 </div>
 
-<div class="backgroundcolor-gun-godz2">
+<div class="backgroundcolor-luftrausers2">
 	<div class="container">
 		<div class="col-md-4">
-			<img src="../../assets/img/gg_afb2.png" alt="">
+			<img src="../../assets/img/lr_afb2.png" alt="">
 		</div>
 		<div class="col-md-8">
 			<h3>Lorem ipsum</h3>
@@ -29,7 +30,7 @@
 	</div>
 </div>
 
-<div class="backgroundcolor-gun-godz3">
+<div class="backgroundcolor-luftrausers3">
 	<div class="container">
 		<div class="col-md-6">
 			<h1>System requirements</h1>
@@ -42,7 +43,7 @@
 			<p><b>DirectX:</b> 8.0 or later</p>
 		</div>
 		<div class="col-md-6">
-			<img src="../../assets/img/gg_afb3.png" alt="">
+			<img src="../../assets/img/lr_afb3.png" alt="">
 		</div>
 	
 	

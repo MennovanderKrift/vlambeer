@@ -681,7 +681,7 @@ img.music-photos{
 
 
 
-
+/*gun gods page */
 
 .backgroundcolor-gun-godz1 {
 	height: 480px;
@@ -717,6 +717,58 @@ img.music-photos{
 	background-image: url('../img/gg_bg.png');
 }
 
+/*luftrausers*/
+
+.backgroundcolor-luftrausers1 {
+	height: 480px;
+	background-image: url('../img/lr_bg.png');
+}
+
+.backgroundcolor-luftrausers1 .container {
+	padding-top: 45px;
+}
+
+.backgroundcolor-luftrausers1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-lr {
+	height: 250px;
+	width: 300px;
+}
+
+.slider-luftrausers{
+	margin-top: -45px;
+	margin-left: 50px;
+}
+
+
+.backgroundcolor-luftrausers2{
+	height: 480px;
+	padding-top: 50px;
+	
+}
+
+.backgroundcolor-luftrausers2 img {
+	margin-top: 60px;
+	width: 280px;
+}
+
+
+.backgroundcolor-luftrausers3{
+	height: 460px;
+	background-color: #cdd8dc;
+	padding-top: 42px;
+	background-image: url('../img/lr_bg.png');
+}
+
+
+
+
+
+/* einde serious sam game page */
+
 /* footer links */
 footer a{
 	color: #fff;
@@ -726,15 +778,6 @@ footer a:hover{
 	color: #fac846;
 	text-decoration: none;
 }
-
-
-
-
-
-
-
-/* einde serious sam game page */
-
 
 /* Pagination CSS start */
 #page_navigation a{
