@@ -484,6 +484,7 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
+<<<<<<< HEAD
 /*---------------------------------------------------BEGIN MUSIC PAGINA------------------------------------------*/
 .music-photos-wrapper{
 	display: inline-block;
@@ -519,6 +520,8 @@ img.music-photos{
 }
 /*---------------------------------------------------EINDE MUSIC PAGINA------------------------------------------*/
 
+=======
+>>>>>>> origin/master
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
 .adresbox{
 	float: left;

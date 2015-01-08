@@ -1,4 +1,4 @@
-<?php require '../includes/adminMenu.php';
+<?php require '../includes/adminMenu1.php';
 
 if ($_SESSION['role'] == 'admin') {
   $sessionId = $_SESSION['id'];

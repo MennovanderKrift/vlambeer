@@ -43,7 +43,6 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "<td>BTW</td>";
 	echo "<td>Action</td>";
 	echo "</tr>";
- 
 
 	$stmt = $db->prepare("SELECT product_id, name, item_price FROM tbl_products WHERE product_id IN ({$pids}) ORDER BY name");
 	$stmt->execute();
@@ -111,27 +110,21 @@ else
 {
 	echo "There are no items in your shoppingcart.";
 }
+
+function updateStock()
+{
+	$currentStock = $db->query("SELECT product_id, stock FROM tbl_products WHERE product_id = $id");
+	$updateStock = $currentStock - $quantity;
+}
+
+if (isset($_SESSION['return']))
+{
+	$id = $_GET['id'];
+	$quantity = $_GET['quantity'];
+
+	updateStock();
+}
+
 require '../includes/footer.php';
+require 'shoppingcart.js';
 ?>
-
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-<script>
-$(document).ready(function(){
-	$('.add-to-cart').click(function(){
-		var id = $(this).closest('tr').find('.product-id').text();
-		var name = $(this).closest('tr').find('.product-name').text();
-		var quantity = $(this).closest('tr').find('input').val();
-		window.location.href = "add_to_cart.php?id=" + id + "&name=" + name + "&quantity=" + quantity;
-	});
-	
-	$('.update-quantity').click(function(){
-		var id = $(this).closest('tr').find('.product-id').text();
-		var name = $(this).closest('tr').find('.product-name').text();
-		var quantity = $(this).closest('tr').find('input').val();
-		window.location.href = "update_quantity.php?id=" + id + "&name=" + name + "&quantity=" + quantity;
-	});
-});
-</script>
-

@@ -1,4 +1,4 @@
-<?php require '../includes/adminMenu.php';
+<?php require '../includes/adminMenu1.php';
 
 if ($_SESSION['role'] == 'admin') {
   $sessionId = $_SESSION['id'];
@@ -19,6 +19,7 @@ if ($_SESSION['role'] == 'admin') {
 		</thead>
 		<tbody>
 			<?php
+
 			$query = $db->query("SELECT name, category, stock FROM tbl_products");
 			
 			foreach ($query as $row) 
@@ -28,8 +29,10 @@ if ($_SESSION['role'] == 'admin') {
 					echo '<td>' . $row->category . '</td>';
 					echo '<td>' . $row->stock . '</td>';					
 				echo '</tr>';		
-			}			
+			}	
 			?>				
 		</tbody>
 	</table>
+
+
 </div>
