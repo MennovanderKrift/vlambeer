@@ -52,9 +52,9 @@ if(!isset($_POST['new-product'])){
 		 	<label for="category" class="col-sm-2 col-md-2 control-label">Category:</label>
 		    <div class="col-sm-10 col-md-10">
 		    	<select class="form-control" name="category" id="category">
-		    		<option value="action">T-shirt</option>
-			    	<option value="shooter">Soundtrack</option>
-			    	<option value="rpg">Pluche</option>
+		    		<option value="t-shirt">T-shirt</option>
+			    	<option value="soundtrack">Soundtrack</option>
+			    	<option value="pluche">Pluche</option>
 		    	</select>
 		    </div>
 
@@ -72,19 +72,10 @@ if(!isset($_POST['new-product'])){
 </div>
 <?php
 
-}else{
-	$name = $_POST['name'];
-	$description = $_POST['description'];
-	$price = $_POST['price'];
-	$size = $_POST['size'];
-	$stock = $_POST['stock'];
-	$tags = $_POST['tags'];
-	$category = $_POST['category'];
+} else {
 
         $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, size, stock, tags, category) VALUES (:name, :description, :price, :size, :stock, :tags, :category)");
-
         $stmt->bindParam("name", $_POST['name'], 				PDO::PARAM_STR);
-
         $stmt->bindParam("description", $_POST['description'], 	PDO::PARAM_STR);
         $stmt->bindParam("price", $_POST['price'], 				PDO::PARAM_STR);
         $stmt->bindParam("size", $_POST['size'], 				PDO::PARAM_STR);
@@ -96,14 +87,15 @@ if(!isset($_POST['new-product'])){
 			$msg = urlencode("All fields are required");
 			header('location: newProduct.php?msg=' .$msg);
 		} else {
+
 			if (! $stmt->execute()) {
 	        $msg = urlencode("Cannot add new product");
 	        header('location: ../newProduct.php?msg=' .$msg);
-	    } else {
-	        $msg = urlencode("New product added");
-	        header('location: ../store/newProduct.php?msg=' .$msg. '&new-product=true');
-    }
 
+		    } else {
+		        $msg = urlencode("New product added");
+		        header('location: ../store/newProduct.php?msg=' .$msg. '&new-product=true');
+	    	}
 		}
 	?>
 
