@@ -41,7 +41,10 @@ if (isset($_POST['loginAdmin'])) {
     }
   }
 }
-
+session_start();
+if (isset($_SESSION['id'])) {
+  $sessionId = $_SESSION['id'];
+}
 
 //////////////////// EDIT & DELETE ADMIN ACOUNTS ////////////////////
 if (isset($_POST['editAdminAccounts'])) {
@@ -66,7 +69,8 @@ if (isset($_POST['editAdminAccounts'])) {
   }
 }
 
-$result = $db->query("SELECT count(*) FROM tbl_users"); 
+$result = $db->prepare("SELECT count(*) FROM tbl_users"); 
+$result->execute();
 
   if (isset($_POST['deleteAdminAccounts'])) {
     if ($number_of_rows <= 1) {
@@ -158,27 +162,72 @@ if (isset($_POST['deleteCustomerAccounts'])) {
 // }
 
 if (isset($_POST['sendNewsletter'])) {
-  $toEmail = $db->query("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
+  // $stmt = $db->prepare("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
+  // $stmt->execute();
+  // $toEmail = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-  foreach ($toEmail as $row) 
-  {
-    $toEmail2 = $row->email_address;
+  // foreach ($toEmail as $row) {
+  //   $toEmail2 = $row->email_address . " , ";
+  // }
+  // $to ="koen-debont@hotmail.com";
+
+  // $subject = "HTML email";
+
+  // $message = "<html>
+  //               <head>
+  //                 <meta charset='UTF-8'>
+  //               </head>
+  //               <body>
+  //                 <h1>" . $_POST['newsletter_title'] . "</h1>
+  //                 <p>" . $_POST['newsletter_content'] . "</p>
+  //               </body>
+  //             </html>";
+
+  // ini_set("sendmail_from", "admin@vlambeer.com");
+  // $headers = "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+  // $headers .= 'From: <admin@vlambeer.com>' . "\r\n";
+
+  // if (mail($to, $subject, $message, $headers)) {
+  //   echo "werkt wel";
+  // } else {
+  //   echo "werkt niet";
+  // }
+
+/////////////////////////////////////////
+
+  require 'PHPMailer/PHPMailerAutoload.php';
+
+  $mail = new PHPMailer;
+
+  $mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+  $mail->isSMTP();                                      // Set mailer to use SMTP
+  $mail->Host = 'smtp.localhost';                     // Specify main and backup SMTP servers
+  $mail->SMTPAuth = true;                               // Enable SMTP authentication
+  $mail->Username = 'administrator';                 // SMTP username
+  $mail->Password = 'zemmer123';                           // SMTP password
+  $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+  $mail->Port = 25;                                    // TCP port to connect to
+
+  $mail->From = 'admin@vlambeer.com';
+  $mail->FromName = 'Vlambeer';
+  $mail->addAddress('koen-debont@hotmail.com');               // Name is optional
+  // $mail->addReplyTo('info@example.com', 'Information');
+  // $mail->addCC('cc@example.com');
+  // $mail->addBCC('bcc@example.com');
+
+  // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+  // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+  $mail->isHTML(true);                                  // Set email format to HTML
+
+  $mail->Subject = 'Here is the subject';
+  $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+  if(!$mail->send()) {
+      echo 'Message could not be sent. ';
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+  } else {
+      echo 'Message has been sent';
   }
-
-  $subject = "HTML email";
-
-  $message = "
-  <html>
-  <head>
-    <meta charset='UTF-8'>
-  </head>
-  <body>
-  <h1>" . $_POST['newsletter_title'] . "</h1>
-  <p>" . $_POST['newsletter_content'] . "</p>
-  </body>
-  </html>";
-
-  ini_set("sendmail_from", "admin@vlambeer.com");
-  $headers = "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-  mail($toEmail2, $subject, $message, $headers);
 }

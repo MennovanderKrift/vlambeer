@@ -1,4 +1,5 @@
 <?php require '../includes/adminMenu.php';
+	  require '../config/config.php';
 
 if ($_SESSION['role'] == 'admin') {
   $sessionId = $_SESSION['id'];
@@ -6,7 +7,6 @@ if ($_SESSION['role'] == 'admin') {
   header("location: ../store/index.php");
 }
 ?>
-
 	<div class="admin-container">
 		<div class="admin-title">Customer Accounts</div>
 <?php

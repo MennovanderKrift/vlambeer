@@ -6,7 +6,7 @@
 	    $_SESSION['loginFirst'] = "Please, login first";
  		header('location: login.php');
  	}
- 	$urlid = $_GET['id'];
+ 	$urlid = $_GET['customer_id'];
  	$session_id = $_SESSION['id'];
 
 	if ($session_id == $urlid) {
@@ -78,14 +78,14 @@
 				echo 	"<label for='news_letter'>Newsletter</label>
 							<select name='news_letter'>
 								<option value='1' class='profile-info-input'>Subscribed</option>
-								<option value='0' class='profile-info-input'>unsubscribe</option>
+								<option value='0' class='profile-info-input'>Unsubscribe</option>
 							</select>
 			";
 			} elseif ($_SESSION['news_letter'] == 0) {
 			echo 	"<label for='news_letter'>Newsletter</label>
 							<select name='news_letter'>
-								<option value='0' class='profile-info-input'>unsubscribed</option>
-								<option value='1' class='profile-info-input'>subscribe</option>
+								<option value='0' class='profile-info-input'>Unsubscribed</option>
+								<option value='1' class='profile-info-input'>Subscribe</option>
 							</select>
 			";
 			}
