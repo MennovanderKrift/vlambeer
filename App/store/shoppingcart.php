@@ -89,18 +89,26 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "<td><b>Total</b></td>";
 	echo "<td>&euro;{$total_price}</td>";
 	echo "<td>";
-?>
-<form action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
-	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="business" value="info@vlambeer.com">
-	<input type="hidden" name="item_name" value="<?= $name ?>">
-	<input type="hidden" name="quantity" value="<?= $quantity?>">
-	<input type="hidden" name="currency_code" value="EUR">
-	<input type="hidden" name="amount" value="<?= $item_price ?>">
-	<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
-	<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" name="submit">
-	<input type="hidden" name="return" value="http://www.danielvanbavel.nl">
+	?>
+<form name="_xclick" target="paypal" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="info@vlambeer.com">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="item_name" value="<?= $name?>">
+<input type="hidden" name="amount" value="<?= $item_price ?>">
+<input type="hidden" name="quantity" value="<?= $quantity?>">
+<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
+<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="add" value="1">
 </form>
+
+<form name="_xclick" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="info@vlambeer.com">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/view_cart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="display" value="1">
+</form>
+
 <?php
 	echo "</td>";
 	echo "</tr>";
@@ -119,10 +127,8 @@ function updateStock()
 
 if (isset($_SESSION['return']))
 {
-	$id = $_GET['id'];
-	$quantity = $_GET['quantity'];
-
 	updateStock();
+	echo "De voorraad is bijgewerkt.";
 }
 
 require '../includes/footer.php';
