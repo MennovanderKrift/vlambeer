@@ -31,6 +31,7 @@
 					<li><form action=""><input type="search" name="search" id="search" placeholder="Search.." class="admin-search"><input type="submit" name="submit" value="" class="admin-search-button"></form></li>
 					<a href="admin.php?id=<?php echo $_SESSION['id']; ?>"><li>Admins</li></a>
 					<a href="customers.php?id=<?php echo $_SESSION['id']; ?>"><li>Customers</li></a>
+					<a href="newProduct.php?id=<?php echo $_SESSION['id']; ?>"><li>Add product</li></a>
 					<a href="changeStatus.php?id=<?php echo $_SESSION['id']; ?>"><li>Invoices</li></a>
 					<a href="newsletter.php?id=<?php echo $_SESSION['id']; ?>"><li>Newsletter</li></a>
 					<a href="settings.php?id=<?php echo $_SESSION['id']; ?>"><li>Settings</li></a>

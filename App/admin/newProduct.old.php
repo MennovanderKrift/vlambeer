@@ -1,18 +1,14 @@
-<?php require '../includes/adminMenu.php';
-if ($_SESSION['role'] == 'admin') {
-	$sessionId = $_SESSION['id'];
-} else {
-  	header("location: ../store/index.php");
-}
+<?php
+ 	require '../includes/header.php';
 
 if(!isset($_POST['new-product'])){
 ?>
 
-<div class="admin-container">
+<div class="container">
 	<div class="index-games">
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
 		  <div class="form-group">
-			<div class="admin-title">New product</div>
+			<h2><center>New product</center></h2>
 			<?php if(!empty($_GET['msg'])){
 			echo "<p class='col-sm-10 col-md-10 bg-success'><b>" .$_GET['msg']. "</b></p>";
 			}?>
@@ -122,4 +118,6 @@ if(!isset($_POST['new-product'])){
 </div>
 <?php
 }
+
+include '../includes/footer.php';
 ?>
