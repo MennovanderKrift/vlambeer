@@ -133,52 +133,61 @@ if (isset($_POST['deleteCustomerAccounts'])) {
   }
 }
 //////////////////// NEWSLETTER ////////////////////
+if (isset($_POST['sendNewsletter'])) {
+//   $toEmail = $db->query("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
 
-//   $datetime = date("Y-m-d h:i:s");
-
-//   $sql = "INSERT INTO tbl_newsletter (newsletter_title,
-//                                       newsletter_content,
-//                                       newsletter_date)
-//                               VALUES (:newsletter_title, 
-//                                       :newsletter_content, 
-//                                       :newsletter_date)";                                       
-//   $stmt = $db->prepare($sql);
-                                                
-//   $stmt->bindParam(':newsletter_title', $_POST['newsletter_title'], PDO::PARAM_STR);       
-//   $stmt->bindParam(':newsletter_content', $_POST['newsletter_content'], PDO::PARAM_STR); 
-//   $stmt->bindParam(':newsletter_date', $datetime, PDO::PARAM_STR);                                      
-
-//   if (!$stmt->execute()) {
-//       echo 'wrong statement';
-//   } else {
-//     session_start();
-//     $sessionId = $_SESSION['id'];
-//     header("location: ../admin/newsletter.php?id=$sessionId");
+//   foreach ($toEmail as $row) 
+//   {
+//     $toEmail2 = $row->email_address;
 //   }
+
+//   $subject = "HTML email";
+
+//   $message = "
+//   <html>
+//   <head>
+//     <meta charset='UTF-8'>
+//   </head>
+//   <body>
+//   <h1>" . $_POST['newsletter_title'] . "</h1>
+//   <p>" . $_POST['newsletter_content'] . "</p>
+//   </body>
+//   </html>";
+
+//   ini_set("sendmail_from", "admin@vlambeer.com");
+//   $headers = "Content-type: text/html; charset=iso-8859-1" . "\r\n";
+//   mail($toEmail2, $subject, $message, $headers);
 // }
 
-if (isset($_POST['sendNewsletter'])) {
-  $toEmail = $db->query("SELECT email_address FROM tbl_customers WHERE news_letter = '1'");
+  require 'PHPMailer/PHPMailerAutoload.php';
+  require 'PHPMailer/class.smtp.php';
 
-  foreach ($toEmail as $row) 
-  {
-    $toEmail2 = $row->email_address;
+  $mail = new PHPMailer;
+
+  //$mail->SMTPDebug = 3;
+
+  $mail->isSMTP(); 
+  $mail->Host = 'mail.yor-game.nl';
+  $mail->SMTPAuth = true;
+  $mail->Username = 'koen@yor-game.nl';
+  $mail->Password = 'Radius1234';
+  $mail->SMTPSecure = 'ssl';
+  $mail->Port = 465;
+
+  $mail->From = 'admin@vlambeer.com';
+  $mail->FromName = 'Mailer';
+  $mail->addAddress('koen-debont@hotmail.com');
+
+  $mail->isHTML(true);
+
+  $mail->Subject = 'Here is the subject';
+  $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+  if(!$mail->send()) {
+      echo 'Message could not be sent. ';
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+  } else {
+      echo 'Message has been sent';
   }
-
-  $subject = "HTML email";
-
-  $message = "
-  <html>
-  <head>
-    <meta charset='UTF-8'>
-  </head>
-  <body>
-  <h1>" . $_POST['newsletter_title'] . "</h1>
-  <p>" . $_POST['newsletter_content'] . "</p>
-  </body>
-  </html>";
-
-  ini_set("sendmail_from", "admin@vlambeer.com");
-  $headers = "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-  mail($toEmail2, $subject, $message, $headers);
 }
