@@ -31,7 +31,7 @@
 		$id = $_SESSION['id'];
 	}
 ?>
-					<a href="profile-info.php?id=<?php echo $id; ?>">
+					<a href="profile-info.php?customer_id=<?php echo $id; ?>">
 					<div class='header-profile-menu-item'>
 						<img src='../assets/img/settings.png'>
 						Settings
