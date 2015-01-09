@@ -9,6 +9,17 @@ html, body {
 aside {
 	height: 100%;
 }
+
+.bg-success{
+	color: green;
+}
+
+.bg-success, .bg-danger{
+	padding: 20px;
+	margin: 10px 0;
+	font-weight: bold;
+	width: 100%;
+}
 /*LOGIN*/
 
 .admin-login-screen-top {

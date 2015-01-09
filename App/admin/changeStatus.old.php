@@ -1,10 +1,4 @@
-<?php require '../includes/adminMenu.php';
-
-if ($_SESSION['role'] == 'admin') {
-  $sessionId = $_SESSION['id'];
-} else {
-  header("location: ../store/index.php");
-}
+<?php require '../includes/header.php';  
 
 $con = mysqli_connect('localhost','root','','vlambeer')
 	or die('Could not connect to the database. Please contact the web developer.');
@@ -21,9 +15,9 @@ if(isset($_POST['order-status'])){
 }
 ?>
 
-<div class="admin-container">
+<div class="container">
 	<div class="index-games">
-		<div class="admin-title">Change order status</div>
+		<h2><center>Change order status</center></h2>
 
 		<?php
 			if(isset($_GET['msg'])){
@@ -109,9 +103,9 @@ if(isset($_POST['order-status'])){
 			<!-- search form end -->
 
 		<!-- results table start -->
-		<table id='myTable' class="table table-hover tablesorter admin-table-content">
+		<table id='myTable' class="table table-hover tablesorter">
 			<thead>
-				<tr class="admin-table-head">
+				<tr>
 					<th>Invoice ID</th>
 					<th>Customer ID</th>
 					<th>Status</th>
@@ -182,6 +176,5 @@ if(isset($_POST['order-status'])){
 		<!-- results table end -->
 	</div>
 </div>
-<script src="../assets/js/jquery-1.11.0.min.js"></script>
-<!-- <script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
- --><script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
+<script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
+<?php include '../includes/footer.php'; ?>
