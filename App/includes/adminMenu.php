@@ -6,8 +6,13 @@
   } else {
   	session_start();
     $_SESSION['noRights'] = "You are not allowed to come here, Please login again";
-    header("location: ../admin/login.php");
+    header("location: ../admin/admin.php?id=" . $_SESSION['id']);
   }
+
+  	if (isset($_SESSION['noRights'])) {
+		echo '<li class="login-error-msg">' . $_SESSION['noRights'] . '</li>';
+		unset($_SESSION['noRights']);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
