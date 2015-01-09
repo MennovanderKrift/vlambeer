@@ -117,6 +117,8 @@ if(isset($_POST['order-status'])){
 					<th>Status</th>
 					<th>Payment status</th>
 					<th>Order date</th>
+					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 
@@ -183,5 +185,5 @@ if(isset($_POST['order-status'])){
 	</div>
 </div>
 <script src="../assets/js/jquery-1.11.0.min.js"></script>
-<!-- <script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
- --><script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
+<script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
