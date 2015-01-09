@@ -9,7 +9,7 @@ require '../../includes/storeGameHeader.php';
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">
-				<img class="slider-luftrausers" src="../../assets/img/lr_afb1.png" alt="">
+				<img class="slider-luftrausers" src="../../assets/img/luftrausers.gif" alt="">
 			</div>
 
 	</div>

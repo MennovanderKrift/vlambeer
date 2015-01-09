@@ -786,6 +786,95 @@ img.music-photos{
 	background-image: url('../img/gg_bg.png');
 }
 
+
+
+
+.backgroundcolor-luftrausers1 {
+	height: 480px;
+	background-image: url('../img/lr_bg.png');
+}
+.slider-luftrausers{
+	margin-left: 50px;
+}
+
+.backgroundcolor-luftrausers1 .container {
+	padding-top: 45px;
+}
+
+.backgroundcolor-luftrausers1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-lr {
+	height: 250px;
+	width: 300px;
+}
+
+
+
+.backgroundcolor-luftrausers2{
+	height: 480px;
+	padding-top: 50px;
+	background-color: #857564;
+}
+
+.backgroundcolor-luftrausers2 img{
+	width: 295px;
+	margin-top: 60px;
+}
+
+.backgroundcolor-luftrausers3{
+	height: 460px;
+	background-color: #f6e8b1;
+	padding-top: 42px;
+	
+}
+.backgroundcolor-luftrausers3 img{
+	margin-top: -42px;
+	
+}
+
+
+.backgroundcolor-scb1 {
+	height: 480px;
+	background-color: #ceb395;
+	
+}
+
+.backgroundcolor-scb1 .container {
+	padding-top: 45px;
+}
+
+.backgroundcolor-scb1 .product-info{
+	padding-top: 20px;
+	height: 125px;
+	width:300px;
+}
+.product-img-scb {
+	height: 250px;
+	width: 300px;
+}
+
+
+
+.backgroundcolor-scb2{
+	height: 480px;
+	padding-top: 50px;
+	
+}
+
+.backgroundcolor-scb3{
+	height: 460px;
+	background-color: #ceb395;
+	padding-top: 42px;
+	
+}
+
+
+
+
+
 /* footer links */
 footer a{
 	color: #fff;
