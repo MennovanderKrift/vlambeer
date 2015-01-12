@@ -1,4 +1,40 @@
 <?php require '../includes/header.php'; ?>
+
+<style>
+
+.related-product:first-child {
+	background: black;
+}
+.related-product {
+	margin-right: 13px;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #63676a;
+	float: left;
+	background-color: #63676a;
+}
+
+.related-product:nth-child(2) {
+	margin-left:16px;
+}
+
+.related-product p {
+	font-family:'Arimo', sans-serif;
+	color: white;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
+.related-products {
+	color:#6d6a61;
+	font-size:20px;
+	margin-left:16px;
+	padding-top:20px;
+	font-family:'Arimo', sans-serif;
+}
+
+
+</style>
 <div class="container merchandise">
 	<div class="col-md-9 shirt-img"><img src="../assets/img/TShirt-Vlambeer.png" alt=""></div>
 	<div class="col-md-3 shirt-info">
@@ -42,20 +78,32 @@
 	</div>
 	
 	<div class="related">
-		<p style="color:black;">Related products</p>
+		<p class="related-products">Related products</p>
 		<?php
+		
 		// Info current t-shirt. Normally from database
-		$name = "T-shirt";
-		$description = "Stylish LUFTRAUSERS T-shirt designed by Amon26.";
-		$relatedSearch = $name . " " . $description;
-		echo $relatedSearch;
+		$description = "Stylish LUFTRAUSERS T-shirt designed by Amon26";
+		$description1 = explode(" ", $description);
+		$searchQuery = array();
+
+		foreach($description1 as $word) {
+			if(empty($searchQuery)) {
+				array_push($searchQuery, " description LIKE '%" . $word . "%'");
+			} else {
+				array_push($searchQuery, " OR description LIKE '%" . $word . "%'");
+			}
+		}
+
+		$searchQuery = implode($searchQuery);
+
+		$sql = "SELECT * FROM tbl_products WHERE" . $searchQuery . " LIMIT 4";
 
 		// Query which searches for related items
-		$query = $db->prepare("SELECT * FROM tbl_products WHERE description LIKE '% :relatedSearch %' OR name LIKE '% :relatedSearch %' LIMIT 5");
-		$query -> bindParam("relatedSearch", $relatedSearch, PDO::PARAM_STR);
+		$query = $db->prepare($sql);
+
 		if($query -> execute()){
 			while($related = $query->fetch(PDO::FETCH_OBJ)) {
-				echo "<p style='color:black;'>" . $related->description . "</p></br>";
+				echo "<div class='related-product'><p>" . $related->description . "</p></div>";
 
 			}
 		}
