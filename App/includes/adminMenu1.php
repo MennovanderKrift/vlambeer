@@ -16,7 +16,11 @@
   <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">  
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
+  <link rel="stylesheet" href="../assets/css/sortable.css">
   <script src="../assets/js/jquery-1.11.0.min.js"></script>
+
+  <script src="../assets/js/jquery.simplePagination.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="../assets/css/simplePagination.css">
   <meta charset="UTF-8">
 </head>
 <body>
@@ -35,7 +39,7 @@
 					<a href="changeStatus.php?id=<?php echo $_SESSION['id']; ?>"><li>Invoices</li></a>
 					<a href="newsletter.php?id=<?php echo $_SESSION['id']; ?>"><li>Newsletter</li></a>
 					<a href="settings.php?id=<?php echo $_SESSION['id']; ?>"><li>Settings</li></a>
-          <a href="inventory.php?id=<?php echo $_SESSION['id']; ?>"><li>Inventory Items</li></a>
+          			<a href="inventory.php?id=<?php echo $_SESSION['id']; ?>"><li>Inventory Items</li></a>
 					<a href="../controllers/adminController.php?logout" name="logout"><li>Logout</li></a>
 				</ul>
 			</div>

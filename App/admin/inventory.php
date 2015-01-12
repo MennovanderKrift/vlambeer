@@ -9,14 +9,15 @@ if ($_SESSION['role'] == 'admin') {
 <div class="admin-container">
 	<div class="admin-title">Inventory Items</div>
 
-	<table class="admin-table-content">
+	<table id='myTable' class="admin-table-content tablesorter">
 		<thead>
 		<tr class="admin-table-head">
-			<td>Product Name</td>
-			<td>Category</td>
-			<td>Number of Stock</td>
-		</tr>			
+			<th>Product Name</th>
+			<th>Category</th>
+			<th>Number of Stock</th>
+		</tr>
 		</thead>
+		
 		<tbody>
 			<?php
 
@@ -33,6 +34,7 @@ if ($_SESSION['role'] == 'admin') {
 			?>				
 		</tbody>
 	</table>
-
-
+	<div class="pagination-page"></div>
 </div>
+<script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>

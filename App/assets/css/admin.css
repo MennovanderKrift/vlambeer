@@ -10,6 +10,14 @@ aside {
 	height: 100%;
 }
 
+select, input[type=text], textarea, input[type=number]{
+	margin: 5px;
+}
+
+th{
+	height: 40px;
+}
+
 .form-group{
 	background-color: #eee;
 	padding: 20px;
