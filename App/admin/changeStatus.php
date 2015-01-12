@@ -118,7 +118,6 @@ if(isset($_POST['order-status'])){
 					<th>Payment status</th>
 					<th>Order date</th>
 					<th></th>
-					<th></th>
 				</tr>
 			</thead>
 
@@ -172,7 +171,7 @@ if(isset($_POST['order-status'])){
 						echo '</td>';
 
 						echo '<td>' .ucfirst($invoice ->payment_status). '</td>';
-						echo '<td>' .$invoice ->date. '<td>';
+						echo '<td>' .$invoice ->date. '</td>';
 						echo "<td><input type='submit' value='Update' class='btn btn-warning' name='order-status'></td>";
 					echo "</tr>";
 				echo "</form>";
@@ -184,6 +183,5 @@ if(isset($_POST['order-status'])){
 		<!-- results table end -->
 	</div>
 </div>
-<script src="../assets/js/jquery-1.11.0.min.js"></script>
 <script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
 <script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
