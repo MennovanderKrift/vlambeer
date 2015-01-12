@@ -10,9 +10,9 @@ if(!isset($_POST['new-product'])){
 
 <div class="admin-container">
 	<div class="index-games">
+	<div class="admin-title">New product</div>
 		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
 		  <div class="form-group">
-			<div class="admin-title">New product</div>
 			<?php if(!empty($_GET['msg'])){
 			echo "<p class='col-sm-10 col-md-10 bg-success'><b>" .$_GET['msg']. "</b></p>";
 			}?>
