@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require '../config/Database.php';
+  require '../config/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -37,7 +37,6 @@
           <li><a href="../store/games/pcGames.php">PC</a></li>
           <li><a href="../store/games/iOSgames.php">iOS</a></li>
           <li><a href="../store/games/vitaGames.php">VITA</a></li>
-          <li><a href="../store/games/CodAW.php?id=1">cod test page</a></li>
           </ul></li>
         <li><a href="../store/merchandise.php">MERCHANDISE</a></li>
         <li><a href="../store/contact.php">CONTACT</a></li>

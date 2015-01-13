@@ -1,5 +1,5 @@
 <?php 
-require '../../includes/storeGameHeader.php';
+require 'ROOT../includes/header.php';
 ?>
 <div class="backgroundcolor-seriuos-sam1">
 	<div class="container">

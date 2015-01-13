@@ -1,5 +1,5 @@
 <?php 
-require '../../includes/storeGameHeader.php';
+require '../../includes/Header.php';
 ?>
 <head><link href="../../assets/css/lightbox.css" rel="stylesheet" /></head>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>

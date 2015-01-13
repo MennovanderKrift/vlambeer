@@ -1,4 +1,4 @@
-<?php require "../../includes/storeGameHeader.php" ?>
+<?php require "../../includes/Header.php" ?>
 
 <div class="backgroundcolor-gun-godz1">
 	<div class="container">

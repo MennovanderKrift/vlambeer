@@ -1,5 +1,5 @@
 <?php 
-require '../../includes/storeGameHeader.php';
+require '../../includes/Header.php';
 ?>
 <div class="backgroundcolor-luftrausers1">
 	<div class="container">
