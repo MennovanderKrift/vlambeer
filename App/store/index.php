@@ -18,7 +18,6 @@ require '../includes/header.php';
 				<div class="product-info"><p>Serious Sam: <br>The Random Encounter <br>(PC, Steam)</p></div>
 				<div class="arrow-down"></div>
 			</div>
-
 			<div class="col-md-3">
 				<a href="games/SuperCrateBox.php"><div class="product-img"><img src="../assets/img/supercratebox.png" alt=""></div></a>
 				<div class="product-info"><p>Super Crate Box <br> (PC, Mac)</p></div>
@@ -106,7 +105,8 @@ require '../includes/header.php';
 		<div class="index-items col-md-12">
 			<h2>Music</h2>
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/music1.png" alt=""></div>
+				<a href="vlambeerMusic.php
+				"><div class="product-img"><img src="../assets/img/music1.png" alt=""></div></a>
 				<div class="product-info"><p>Vlambeer <br> Original Soundtrack <br> (Physical)</p></div>
 				<div class="arrow-down"></div>
 			</div>
