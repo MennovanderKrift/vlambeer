@@ -1,5 +1,6 @@
 <?php 
-require 'ROOT../includes/header.php';
+require '../../config/config.php';
+require (ROOT.'includes/header.php');
 ?>
 <div class="backgroundcolor-seriuos-sam1">
 	<div class="container">
