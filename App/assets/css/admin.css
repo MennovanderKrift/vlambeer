@@ -3,14 +3,15 @@ html, body {
 	width: 100%;
 	margin: 0px;
 	height: 0px;
-	background-color: #EDEDED;
+	background-color: #ededed;
 	min-width: 900px;
 }
+
 aside {
 	height: 100%;
 }
 
-select, input[type=text], textarea, input[type=number]{
+select, input[type=text], textarea, input[type=number] {
 	margin: 5px;
 }
 
@@ -18,7 +19,7 @@ th{
 	height: 40px;
 }
 
-.form-group{
+.form-group {
 	background-color: #eee;
 	padding: 20px;
 	width: 99.9%;
@@ -26,18 +27,18 @@ th{
 	margin: 0 auto !important;
 }
 
-.bg-success{
+.bg-success {
 	color: green;
 }
 
-.bg-success, .bg-danger{
+.bg-success, .bg-danger {
 	padding: 20px;
 	margin: 10px 0;
 	font-weight: bold;
 	width: 100%;
 }
-/*LOGIN*/
 
+/*LOGIN*/
 .admin-login-screen-top {
 	margin-top: 100px !important;
 	margin: 0 auto;
@@ -47,24 +48,28 @@ th{
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 }
+
 .admin-login-screen-top h1 {
 	padding: 13px;
-	color: white;
+	color: #ffffff;
 }
+
 .admin-login-screen {
 	margin: 0 auto;
 	width: 500px;
-	background-color: white;
+	background-color: #ffffff;
 	border: 1px solid #dbd0ca;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
+
 .admin-login-screen form {
 	margin: 0 auto;
 	width: 300px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+
 .admin-login-form input {
 	width: 300px;
 	margin-bottom: 10px;
@@ -73,18 +78,21 @@ th{
 	background-color: #484848;
 	opacity: 1;
 }
+
 .admin-btn-login:hover {
 	background-color: #484848;
 	opacity: 0.8;
 }
+
 .login-error-msg {
 	margin: 10px;
 	padding: 10px;
 	list-style: none;
 	text-align: center;
-	background-color: #FF8D8D;
-	border: 1px solid #FF0000;
+	background-color: #ff8d8d;
+	border: 1px solid #ff0000;
 }
+
 .login-msg {
 	margin: 10px;
 	padding: 10px;
@@ -102,6 +110,7 @@ th{
 	width: 200px;
 	background-color: #484848;
 }
+
 .admin-nav-profile {
 	width: 100%;
 	min-height: 100px;
@@ -109,31 +118,37 @@ th{
 	background-color: #d9534f;
 	margin-bottom: 10px;
 }
+
 .admin-nav-profile img {
 	margin-top: 10px;
 	margin-left: 70px;
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	background-color: black;
+	background-color: #000000;
 }
+
 .admin-nav-profile-name {
 	font-size: 18px;
 	text-align: center;
 	margin: 5px auto 0 auto;
 	display: block;
 }
+
 .admin-nav-menu {
 	width: 200px;
 }
+
 .admin-nav-menu ul {
 	margin-left: -40px;
 	width: 200px;
 }
+
 .admin-nav-menu a {
-	color: white;
+	color: #ffffff;
 	text-decoration: none;
 }
+
 .admin-nav-menu-items li {
 	text-align: center;
 	list-style: none;
@@ -141,20 +156,21 @@ th{
 	width: 200px;
 	background-color: #484848;
 }
+
 .admin-nav-menu-items li:hover { 	
 	background-color: #d9534f;
 }
-.admin-search {
-}
+
 .admin-search-button {
 	background-image: url('../assets/img/search.png');
 	background-size: 100%;
 	background-position: center;
-	background-color: #D9534F;
+	background-color: #d9534f;
 	width: 20px;
 	height: 20px;
 	border: none;
 }
+
 .admin-search-button:hover {
 	background-color: #484848;
 }
@@ -165,22 +181,24 @@ th{
 	margin-left: 200px;
 	width: 100hv;
 }
+
 .admin-container {
 	margin-top: 10px !important;
 	border: 1px solid #dbd0ca;
 	margin: 0 auto;
 	min-width: 90%;
 	max-width: 95%;
-	background-color: #D9534F;
+	background-color: #d9534f;
 	padding: 5px;
 }
+
 .admin-title {
 	font-size: 40px;
 	border-bottom: 1px solid #484848;
 	text-align: center;
 	width: 95%;
 	margin: 0 auto;
-	color: white;
+	color: #ffffff;
 	margin-bottom: 10px;
 }
 
@@ -189,50 +207,65 @@ th{
 .admin-table-head {
 	max-width: 100%;
 	background-color: #484848 !important;
-	color: white;
+	color: #ffffff;
 }
+
+.admin-table-head td {
+	border-bottom: 2px solid #eeeeee;
+}
+
 .admin-table-content {
 	width: 100%;
 }
+
 .admin-table-content input {
 	width: 100%;
 }
+
 .admin-table-content tr:nth-child(odd) {
-	background-color: #EEE;
+	background-color: #eeeeee;
 }
+
 .admin-table-content tr:nth-child(even) {
-	background-color: #FFF;
+	background-color: #ffffff;
 }
+
 .admin-table-content td {
 	padding: 10px 5px 10px 5px;	
 }
+
 /*NEWSLETTER FORM*/
 .newsletter-form {
 	width: 100%;
 	margin: 0 auto;
 }
+
 .newsletter-form label {
 	font-size: 30px;
 	width: 100%;
 	background-color: #484848; 
-	color: white;
+	color: #fffff;
 	padding-left: 10px;
 	margin-bottom: 0px;
 	margin-top: 10px;
 }
+
 .newsletter-form input, .newsletter-form textarea {
 	width: 100%;
 	color: #484848;
 	font-size: 20px;
 	padding: 5px;
 }
+
 .sendNewsletter-button {
 	background-color: #484848;
 	border: 1px solid #3b3b3b;
-	color: white !important;
+	color: #ffffff !important;
 	float: right;
 	width: 200px !important;
 }
+
+
 .sendNewsletter-button:hover {
 	background-color: #3b3b3b;
 }

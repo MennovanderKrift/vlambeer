@@ -20,7 +20,7 @@ if(isset($_POST['order-status'])){
 	header('location: changeStatus.php?msg=' .$msg);
 }
 ?>
-
+<body>
 <div class="admin-container">
 	<div class="index-games">
 		<div class="admin-title">Change order status</div>
@@ -117,7 +117,7 @@ if(isset($_POST['order-status'])){
 					<th>Status</th>
 					<th>Payment status</th>
 					<th>Order date</th>
-					<th></th>
+					<td></td>
 				</tr>
 			</thead>
 
@@ -184,4 +184,5 @@ if(isset($_POST['order-status'])){
 	</div>
 </div>
 <script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
-<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script></body>
+<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script>
+</body>

@@ -1,22 +1,24 @@
-th.header { 
+th.header {
     text-indent: 10px;
-    background-image: url(../img/small.gif); 
-    cursor: pointer; 
-    font-weight: bold; 
-    background-repeat: no-repeat; 
-    background-position: center left; 
-    padding-left: 20px; 
-    margin-left: -1px; 
-} 
+    background-image: url(../img/small.gif);
+    cursor: pointer;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 20px;
+    margin-left: -1px;
+}
 
-th.headerSortDown { 
-    background-image: url(../img/small_desc.gif); 
-    background-color: #fac846; 
-} 
+th.headerSortDown {
+    background-image: url(../img/small_desc.gif);
+    background-color: #fac846;
+    color: #484848;
+}
 
-th.headerSortUp { 
-    background-image: url(../img/small_asc.gif); 
-    background-color: #fac846; 
+th.headerSortUp {
+    background-image: url(../img/small_asc.gif);
+    background-color: #fac846;
+    color: #484848;
 }
 
 .search-order{
