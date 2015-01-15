@@ -10,7 +10,7 @@
 
 
 <div class="bestel">
-<div class="product-info"><p>Bestel nu</p></div>
+<div class="product-info"><p><a href="addproduct.php?id=<?php echo $_GET['id'] ?>">Bestel</a></p></div>
 <div class="arrow-down"></div>
 </div>
 
@@ -62,8 +62,10 @@
 <li>35. SCB Construction Yard (Kozilek Remix)</li>
 <li>36. GG Phonecall</li>
 </ul>
-</div>
 
+<div class="musicInfo-footer"></div>
+
+</div>
 
 
 </div>

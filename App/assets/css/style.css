@@ -536,20 +536,43 @@ img.music-photos{
 	width: 225px;
 	font-family: 'Century Gothic', sans-serif;
 	font-size: 21px;
-    font-weight:bold;
+}
+.product-info{
+	padding-top: 20px;
+	color: black;
 }
 .list1 li{
-	width:200px;
-	text-align: center;
+	width:250px;
+	text-align: left;
 	float: left;
+	clear: both;
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 13px;
+	color: white;
+	margin-left:60px;
 }
-.musicInfo li{
-	
-}
-.list2{
+
+.list2 li{
 	width: 250px;
 	float: right;
+	clear: both;
+	text-align: left;
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 13px;
+	color: white;
+	position: relative;
+	bottom: 340px;
+	right: 20px;
 }
+.musicInfo-footer{
+	height: 20px;
+	width: 670px;
+	background: #fac846;
+	position: absolute;
+	bottom: 8px;
+
+}
+
 /*---------------------------------------------------EINDE MUSIC PAGINA------------------------------------------*/
 
 /*---------------------------------------------------BEGIN CONTACT PAGINA------------------------------------------*/
@@ -594,7 +617,7 @@ img.music-photos{
 	   height: 50px;
 	   margin-top: 20px;
 	   padding: 10px 10px 10px 10px; 
-	   background-color: orange;
+	   background-color: #3cb878;
 }
 #contact-form input[type="submit"]:hover{
     background-color:#ee1d25;
@@ -625,6 +648,8 @@ img.music-photos{
 	left: 1px;
 	float: right;
 }
+
+#contact
 /*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
 
 
