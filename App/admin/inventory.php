@@ -16,11 +16,9 @@ if ($_SESSION['role'] == 'admin') {
 			<th>Category</th>
 			<th>Number of Stock</th>
 		</tr>
-		</thead>
-		
+		</thead>		
 		<tbody>
 			<?php
-
 			$query = $db->query("SELECT name, category, stock FROM tbl_products");
 			
 			foreach ($query as $row) 
