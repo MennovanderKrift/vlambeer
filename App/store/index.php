@@ -129,7 +129,7 @@ require '../includes/header.php';
 		</div>
 
 		<div class="col-md-3">
-			<div class="product-img"><a href="http://games.adultswim.com/dinosaur-zookeeper-simulation-online-game.html" target="_blank"><img src="../assets/img/puppy.png" alt="puppy.png"></a></div>	
+			<div class="product-img"><a href="http://games.adultswim.com/dinosaur-zookeeper-simulation-online-game.html" target="_blank"><img src="../assets/img/dinosaur-zookeeper.gif" alt="dinosaur-zookeeper.gif"></a></div>	
 			<div class="product-info"><a href="http://games.adultswim.com/dinosaur-zookeeper-simulation-online-game.html" target="_blank"><p>Dinosaur Zookeeper <br> via Adult Swim</p></a></div>
 			<div class="arrow-down"></div>
 		</div>
@@ -141,12 +141,10 @@ require '../includes/header.php';
 		</div>
 
 		<div class="col-md-3">
-			<div class="product-img"><a href="http://www.vlambeer.com/downloads/misc/superpuppyboy" target="_blank"><img src="../assets/img/puppy.png" alt="puppy.png"></a></div>	
+			<div class="product-img"><a href="http://www.vlambeer.com/downloads/misc/superpuppyboy" target="_blank"><img src="../assets/img/super-puppy-boy.jpg" alt="super-puppy-boy.jpg"></a></div>	
 			<div class="product-info"><a href="http://www.vlambeer.com/downloads/misc/superpuppyboy" target="_blank"><p>Super Puppy Boy <br> via Not Vlambeer</p></a></div>
 			<div class="arrow-down"></div>
 		</div>
 	</div>
 </div>	
-<?php
-	require '../includes/footer.php';
-?>
+<?php require '../includes/footer.php'; ?>
