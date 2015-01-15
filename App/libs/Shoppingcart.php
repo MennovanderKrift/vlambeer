@@ -1,22 +1,48 @@
 <?php
 
-require '../config/config.php';
-
-Class inventoryStock
+Class Shoppingcart
 {
-	private $id;
-	private $name;
-	private $stock;
-	private $quantity;
+	private $cart_id;
 
-	public function __construct($project_id, $name, $quantity, $stock)
+	public function __construct($db)
 	{
-		$this->id = $project_id;
-		$this->name = $name;
-		$this->quantity = $quantity;
-		$this->stock = $stock;
+		$this->db = $db;
+
+		if (isset($_SESSION['id'])) 
+		{
+			$this->cart_id = $_SESSION['id'];
+			
+			if(isset($_SESSION['cid']))
+			{
+				$this->cid = $_SESSION['cid'];
+			}
+			else
+			{
+			 	$this->cid = uniqid(10);
+			}
+		}
 	}
 
+	public function addToCart($product_id, $name, $item_price)
+	{
+		if ($this->db->query("SELECT customer_id FROM customers WHERE customer_id = :cid")) 
+		{
+			# code...
+		}
+	}
+
+	public function removeFromCart($product_id)
+	{
+
+	}
+
+	public function changeQuantity($quantity)
+	{
+
+	}
+
+
+	/*Method to get all the items in the shoppingcart*/
 	public function getStock()
 	{
 		$query = $db->query("SELECT product_id, name, stock FROM tbl_products WHERE product_id = '$id'");
