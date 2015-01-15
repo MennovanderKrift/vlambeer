@@ -25,18 +25,54 @@ Class Shoppingcart
 
 	public function addToCart($product_id, $name, $item_price)
 	{
-		if ($this->db->query("SELECT customer_id FROM customers WHERE customer_id = :cid")) 
+		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid", ["cid" => $this->cart_id]))
 		{
-			# code...
+			$bind = [
+				"cid"	=> $this->cart_id,
+				"id" 	=> $this->cid,
+				"pid" 	=> $product_id,
+				"qu"	=> $quantity,
+				"ip"	=> $item_price	
+				];
+			$this->db->query("INSERT INTO tbl_carts SET customer_id = :cid, cart_id = :id, product_id = :pid, quantity = :qu, item_price = :pr", $bind);
+		} 
+		elseif ($this->db->query("SELECT tempcart_id FROM link_products_tempcarts WHERE tempcart_id = :tid", ["tid" => $this->cart_id])) 
+		{
+			$bind = [
+				"tid" 	=> $this->cart_id,
+				"pid" 	=> $product_id,
+				"qu"	=> $quantity,
+				"ip"	=> $item_price	
+			];
+			$this->db->query("INSERT INTO tbl_tempcarts SET tempcart_id = :tid, product_id = :pid, quantity = :qu, item_price = :ip", $bind);
 		}
 	}
 
 	public function removeFromCart($product_id)
 	{
-
+		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid");
+			$bind = [
+						"id" 	=> $this->cart_id,
+						"pid" 	=> $product_id
+					];
+			$db->query("DELETE FROM tbl_carts WHERE cart_id = :id AND product_id = :pid", $bind);		
+			$bind = [
+						"tid" => $this->cart_id,
+						"pid" => $this->product_id
+					];
+		else
+		{
+			$db->query("DELETE FROM tbl_tempcarts WHERE tempcart_id = :tid AND product_id = :pid", $bind);
+		}
 	}
 
 	public function changeQuantity($quantity)
+	{
+
+
+	}
+
+	public function checkIfProductIsTshirt()
 	{
 
 	}
