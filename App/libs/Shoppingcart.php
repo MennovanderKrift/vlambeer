@@ -40,8 +40,7 @@ Class Shoppingcart
 	{
 
 	}
-
-
+	
 	/*Method to get all the items in the shoppingcart*/
 	public function getStock()
 	{
@@ -73,11 +72,8 @@ Class Shoppingcart
 			echo "De voorraad is bijgewerkt.";
 		}
 	}
-
-	
-
-		//als betaling voltooid is:
+		//check of betaling voltooid is:
 		//1. check alle items op id welke er in winkelmandje zaten.
-		//2. check hoeveel items er in winkelmandje zaten
-		//3. update de item stock
+		//2. check hoeveel items er per id in het winkelmandje zaten
+		//3. haal de huidige inventory op en haal de gekochte producten van die inventory af
 }?>
