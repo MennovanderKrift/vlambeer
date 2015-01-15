@@ -1,4 +1,5 @@
 <?php
+
 require '../includes/header.php';
 
 if(isset($_GET['name'])) 
@@ -99,6 +100,7 @@ elseif(count($_SESSION['cart_items'])>0)
 <input type="hidden" name="quantity" value="<?= $quantity?>">
 <input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
 <input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="hidden" name="return" value="http://www.radiusdev.nl?id=<?=$id ?>">
 <input type="hidden" name="add" value="1">
 </form>
 
@@ -119,17 +121,7 @@ else
 	echo "There are no items in your shoppingcart.";
 }
 
-function updateStock()
-{
-	$currentStock = $db->query("SELECT product_id, stock FROM tbl_products WHERE product_id = $id");
-	$updateStock = $currentStock - $quantity;
-}
 
-if (isset($_SESSION['return']))
-{
-	updateStock();
-	echo "De voorraad is bijgewerkt.";
-}
 
 require '../includes/footer.php';
 require 'shoppingcart.js';
