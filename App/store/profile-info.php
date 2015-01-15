@@ -25,7 +25,7 @@
 		echo '<li class="login-error-msg"><b>' .  htmlspecialchars($_GET['error']) . '</b></li>';
 	}
 	if (isset($_GET['msg'])) {
-		echo '<li class="login-msg"><b>' .  htmlspecialchars($_GET['msg']) . '</b></li>';
+		echo "<li class='login-msg'><p class='bg-success'>" .  htmlspecialchars($_GET['msg']) . '</li>';
 	}
 	if (isset($_GET['id'])) {
 		$id = $_GET['id'];

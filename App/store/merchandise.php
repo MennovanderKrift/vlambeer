@@ -8,39 +8,39 @@
 ?>
 
 <style>
-.related-product:first-child {
-	background: black;
-}
-
 .related-product {
 	margin-right: 13px;
 	width: 150px;
 	height: 150px;
 	border: 1px solid #63676a;
-	display: inline-block;
+	display: inline;
 	background-color: #63676a;
+	float: left;
 
 	position: relative;
-	bottom: 0;
-}
-
-.related-product:nth-child(2) {
-	margin-left: 16px;
+	top: 0;
 }
 
 .related-product p {
 	font-family:'Arimo', sans-serif;
 	color: white;
 	font-size: 14px;
-	padding: 6px;
 	line-height: 1.42857143;
 }
 
+.related-product img{
+	width: 100%;
+}
+
+.related-product img:hover{
+	opacity: 0.7;
+}
+
 .related-products {
-	color:#6d6a61;
+	color: #6d6a61;
 	font-size:20px;
-	margin-left:16px;
-	padding-top:20px;
+	margin-left: 14px;
+	padding-top: 20px;
 	font-family:'Arimo', sans-serif;
 }
 
@@ -57,20 +57,20 @@
 	font-size: 24px;
 	text-align: center;
 }
+
 .related-products-wrapper {
-	height: 150px;
-	background-color:red;
+	margin-left:16px;
 }
 </style>
 <?php foreach($query as $row){ ?>
 
 <div class="container merchandise">
-	<div class="col-md-9 shirt-img"><img src="../assets/img/TShirt-Vlambeer.png" alt="<?php // echo $row['thumbnail']; ?>"></div>
+	<div class="col-md-9 shirt-img"><img src="<?php if(empty($row['image'])){echo "../assets/img/no-product-image.jpg";}else{echo $row['image']; } ?>" alt="<?php // echo $row['thumbnail']; ?>"></div>
 	<div class="col-md-3 shirt-info">
 		<p><?php echo $row['description']; ?></p>
 		<hr>
 		<span class="price">Price</span><br>
-		<p class="amount">&euro; <?php echo $row['item_price'] ?></p>
+		<p class="amount">$ <?php echo $row['item_price'] ?></p>
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<div class="select-size">
@@ -127,26 +127,23 @@
 		}
 
 		$searchQuery = implode($searchQuery);
-
-		$sql = "SELECT * FROM tbl_products WHERE" . $searchQuery . " LIMIT 4";
+		$sql = "SELECT * FROM tbl_products WHERE" . $searchQuery . "LIMIT 4";
 
 		// Query which searches for related items
 		$query = $db->prepare($sql);
 
 		if($query -> execute()){
 			while($related = $query->fetch(PDO::FETCH_OBJ)) {
-				echo "<div class='related-product'><p>" . $related->name . "</p></div>";
+				echo "<div class='related-product'><a href='merchandise.php?product_id=" .$related->product_id. "'><img src='" .$related->image. "'></a></div>";
 
 			}
 		}
-
-
 		?>
 		</div>
 	</div>
 </div>
 <?php
-//endforeach;
+//endforeach product from database;
 };
 
 require '../includes/footer.php'; ?>

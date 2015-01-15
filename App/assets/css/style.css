@@ -459,9 +459,13 @@ EINDE LOGIN SCRIPT CSS
 }
 
 .product-info {
-	height: 70px;
+	height: 65px;
 	background-color: #fac846;
 	text-align: center;
+}
+
+.product-info p{
+	vertical-align: center;
 }
 
 .index-items 
@@ -541,8 +545,8 @@ img.music-photos{
 	font-family: 'Century Gothic', sans-serif;
 	font-size: 21px;
 }
+
 .product-info{
-	padding-top: 20px;
 	color: black;
 }
 .list1 li{

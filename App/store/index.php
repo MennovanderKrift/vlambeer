@@ -58,29 +58,20 @@ require '../includes/header.php';
 	<div class="container">
 		<div class="index-items col-md-12">
 		<h2>Clothes</h2>
+
+		<?php 
+			$clothes = $db->query ("SELECT * FROM tbl_products WHERE category='Clothes' LIMIT 4");
+			$clothes ->execute();
+			while($singleClothe = $clothes->fetch(PDO::FETCH_OBJ)):
+		?>
 			<div class="col-md-3">
-				<a href="merchandise.php?id=1"><div class="product-img"><img src="../assets/img/tshirt1.png" alt=""></div></a>	
-				<div class="product-info"><p>Luftrausers <br> Mens & ladies T-shirt</p></div>
+				<a href="merchandise.php?product_id=<?= $singleClothe->product_id ?>"><div class="product-img"><img src="<?= $singleClothe->image; ?>" alt=""></div></a>	
+				<div class="product-info"><a href="merchandise.php?product_id=<?= $singleClothe->product_id; ?>"<p><?= $singleClothe->name; ?><br> <?= $singleClothe->category; ?></p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/tshirt2.png" alt=""></div>	
-				<div class="product-info"><p>Vlambeer Logo <br> T-shirt</p></div>
-				<div class="arrow-down"></div>
-			</div>
+		<?php endwhile; ?>
 
-			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/tshirt3.png" alt=""></div>	
-				<div class="product-info"><p>Dancing Vlambeer <br> T-shirt</p></div>
-				<div class="arrow-down"></div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/tshirt4.png" alt=""></div>	
-				<div class="product-info"><p>Gun Godz <br> T-shirt</p></div>
-				<div class="arrow-down"></div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -104,24 +95,22 @@ require '../includes/header.php';
 	<div class="container">
 		<div class="index-items col-md-12">
 			<h2>Music</h2>
+
+			<?php 
+				$music = $db->query ("SELECT * FROM tbl_products WHERE category='Music' LIMIT 4");
+				$music ->execute();
+				while($musicItem = $music->fetch(PDO::FETCH_OBJ)):
+			?>
+
 			<div class="col-md-3">
-				<a href="vlambeerMusic.php
-				"><div class="product-img"><img src="../assets/img/music1.png" alt=""></div></a>
-				<div class="product-info"><p>Vlambeer <br> Original Soundtrack <br> (Physical)</p></div>
+				<a href="merchandise.php?product_id=<?= $musicItem->product_id; ?>">
+					<div class="product-img"><img src="<?= $musicItem->image; ?>" alt=""></div>
+				</a>
+				<div class="product-info"><a href="merchandise.php?product_id=<?= $musicItem->product_id; ?>"><p><?= $musicItem->name; ?></p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
-			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/music2.png" alt=""></div>	
-				<div class="product-info"><p>Vlambeer <br> Original Soundtrack <br> (Digital)</p></div>
-				<div class="arrow-down"></div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/puppy.png" alt=""></div>	
-				<div class="product-info"><p>Super Crate Box <br> (Digital)</p></div>
-				<div class="arrow-down"></div>
-			</div>
+			<?php endwhile;?>
 
 		</div>
 	</div>
@@ -157,5 +146,3 @@ require '../includes/header.php';
 <?php
 	require '../includes/footer.php';
 ?>
-
-
