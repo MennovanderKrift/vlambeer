@@ -11,10 +11,10 @@ aside {
 	height: 100%;
 }
 
-select, input[type=text], textarea, input[type=number] {
+/*select, input[type=text], textarea, input[type=number] {
 	margin: 5px;
 }
-
+*/
 th{
 	height: 40px;
 }
@@ -231,7 +231,7 @@ th{
 }
 
 .admin-table-content td {
-	padding: 10px 5px 10px 5px;	
+padding: 0px 2px 2px 0px;
 }
 
 /*NEWSLETTER FORM*/

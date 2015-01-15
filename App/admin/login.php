@@ -39,7 +39,7 @@
 ?>
 		<form class="admin-login-form" action="../controllers/adminController.php" method="POST">
 			<label for="text">Username</label><br>
-				<input type="text" name="username" id="username"><br>
+				<input type="text" name="username" id="username" class="login-input-fix"><br>
 			<label for="password">password</label><br>
 				<input type="password" name="password" id="password">
 				<input type="submit" class="btn btn-primary admin-btn-login" value="Login" name="loginAdmin">

@@ -64,13 +64,23 @@ if ($_SESSION['role'] == 'admin') {
 			<form method="POST" action="../controllers/adminController.php?user_id=<?php echo $userid;?>">
 				<tr>
 					<td><?php echo $user->user_id; ?></td>
+					<td><?php echo $user->username; ?></td>
+					<td><?php echo $user->password; ?></td>
+					<td><?php echo $user->name; ?></td>
+					<td><?php echo $user->last_name; ?></td>
+					<td><input type="submit" value="Edit" name="editAdminAccounts" class="btn btn-danger"></td>
+					<td><input type="submit" value="Delete" name="deleteAdminAccounts" class="btn btn-danger"></td>
+				</tr>
+
+				<!-- <tr>
+					<td><?php echo $user->user_id; ?></td>
 					<td><input type="text" name="username" 	id="username" 	value="<?php echo $user->username; ?>"></td>
 					<td><input type="text" name="password" 	id="password" 	value="<?php echo $user->password; ?>"></td>
 					<td><input type="text" name="name" 		id="name" 		value="<?php echo $user->name; ?>"></td>
 					<td><input type="text" name="last_name" id="last_name" 	value="<?php echo $user->last_name; ?>"></td>
 					<td><input type="submit" value="Edit" name="editAdminAccounts" class="btn btn-danger"></td>
 					<td><input type="submit" value="Delete" name="deleteAdminAccounts" class="btn btn-danger"></td>
-				</tr>
+				</tr> -->
 			</form>
 <?php
 		}

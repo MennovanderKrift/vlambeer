@@ -42,7 +42,6 @@ if (isset($_POST['loginAdmin'])) {
   }
 }
 
-
 //////////////////// EDIT & DELETE ADMIN ACOUNTS ////////////////////
 if (isset($_POST['editAdminAccounts'])) {
   $stmt = $db->prepare("UPDATE tbl_users SET  username = :username, 
@@ -69,7 +68,7 @@ if (isset($_POST['editAdminAccounts'])) {
 $result = $db->query("SELECT count(*) FROM tbl_users"); 
 
   if (isset($_POST['deleteAdminAccounts'])) {
-    if ($number_of_rows <= 1) {
+    if ($result <= 1) {
       session_start();
       $_SESSION['cantDelete'] = "You can't have less than 1 admin account";
       header("location: ../admin/admin.php?id=$sessionId");
@@ -133,3 +132,36 @@ if (isset($_POST['deleteCustomerAccounts'])) {
   }
 }
 //////////////////// NEWSLETTER ////////////////////
+// require 'PHPMailer/PHPMailerAutoload.php';
+
+// $mail = new PHPMailer;
+
+// //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+// $mail->isSMTP();                                      // Set mailer to use SMTP
+// $mail->Host = 'localhost';  // Specify main and backup SMTP servers
+// $mail->SMTPAuth = true;                               // Enable SMTP authentication
+// $mail->Username = 'admin@vlambeer.com';                 // SMTP username
+// $mail->Password = 'zemmer123';                           // SMTP password
+// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+// $mail->Port = 25;                                    // TCP port to connect to
+
+// $mail->From = 'admin@vlambeer.com';
+// $mail->FromName = 'Vlambeer Support';
+
+
+// $mail->addAddress('ellen@example.com');               // Name is optional
+
+
+// $mail->isHTML(true);                                  // Set email format to HTML
+
+// $mail->Subject = 'Here is the subject';
+// $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+// if(!$mail->send()) {
+//     echo 'Message could not be sent.';
+//     echo 'Mailer Error: ' . $mail->ErrorInfo;
+// } else {
+//     echo 'Message has been sent';
+// }
