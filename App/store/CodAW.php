@@ -1,7 +1,7 @@
 <?php 
-require '../../includes/Header.php';
+require '../includes/Header.php';
 ?>
-<head><link href="../../assets/css/lightbox.css" rel="stylesheet" /></head>
+<head><link href="../assets/css/lightbox.css" rel="stylesheet" /></head>
 <div class="col-md-2 col-md-offset-10">F T rss		zoeken</div>
 
 <div class="container">
@@ -27,7 +27,7 @@ require '../../includes/Header.php';
 	</div>
 
 	<div class="col-md-2">
-		<p>59,99€ <a href="../addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a></p>
+		<p>59,99€ <a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a></p>
 	</div>
 
 	<div class="col-md-9 col-md-offset-1 foto-album">
@@ -61,6 +61,6 @@ require '../../includes/Header.php';
 
 
 </div>
-<?php require '../../includes/footer.php'; ?>
+<?php require '../includes/footer.php'; ?>
 
 
