@@ -901,12 +901,19 @@ img.music-photos{
 }
 
 
-
-
+.footer{
+	background-color: black;
+	color: #FFF;
+	font-size: 13px;
+	padding-top: 10px;
+}
+.footerContact{
+	color: #909090;
+}
 
 /* footer links */
 footer a{
-	color: #fff;
+	color: #909090;
 }
 
 footer a:hover{
