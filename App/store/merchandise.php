@@ -1,27 +1,38 @@
-<?php require '../includes/header.php'; ?>
+<?php
+	require '../includes/header.php';
+
+	$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
+	$query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
+
+	$query->execute();
+?>
 
 <style>
-
 .related-product:first-child {
 	background: black;
 }
+
 .related-product {
 	margin-right: 13px;
 	width: 150px;
 	height: 150px;
 	border: 1px solid #63676a;
-	float: left;
+	display: inline-block;
 	background-color: #63676a;
+
+	position: relative;
+	bottom: 0;
 }
 
 .related-product:nth-child(2) {
-	margin-left:16px;
+	margin-left: 16px;
 }
 
 .related-product p {
 	font-family:'Arimo', sans-serif;
 	color: white;
 	font-size: 14px;
+	padding: 6px;
 	line-height: 1.42857143;
 }
 
@@ -33,56 +44,77 @@
 	font-family:'Arimo', sans-serif;
 }
 
+.shirt-info{
+	padding-top: 20px;
+}
 
+.price{
+	font-size: 20px;
+	text-align: left;
+}
+
+.amount{
+	font-size: 24px;
+	text-align: center;
+}
+.related-products-wrapper {
+	height: 150px;
+	background-color:red;
+}
 </style>
+<?php foreach($query as $row){ ?>
+
 <div class="container merchandise">
-	<div class="col-md-9 shirt-img"><img src="../assets/img/TShirt-Vlambeer.png" alt=""></div>
+	<div class="col-md-9 shirt-img"><img src="../assets/img/TShirt-Vlambeer.png" alt="<?php // echo $row['thumbnail']; ?>"></div>
 	<div class="col-md-3 shirt-info">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+		<p><?php echo $row['description']; ?></p>
 		<hr>
-		<p><h3>prijzen</h3><br>mannen: 19.95 <br>vrouwen: 17.95</p>
+		<span class="price">Price</span><br>
+		<p class="amount">&euro; <?php echo $row['item_price'] ?></p>
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<div class="select-size">
-			<p>selecteer uw maat</p>
-			<label for="selectMaat"></label>
-			<select name="selectMaat">
-	  			<option>s</option>
-	  			<option>m</option>
-	  			<option>l</option>
+			<label for="selectMaat">Size</label>
+			<select id="selectMaat" name="selectMaat">
+	  			<option>XS</option>
+	  			<option>S</option>
+	  			<option>M</option>
+	  			<option>L</option>
+	  			<option>XL</option>
+	  			<option>XXL</option>
 			</select>			
 		</div>
 		
 		<div class="select-geslacht">
-			<p>Man/vrouw</p>
-			<label for="Geslacht"></label>
+			<label for="Geslacht">Species</label>
 			<select name="Geslacht">
-				<option>Man</option>
-	  			<option>Vrouw</option>
+				<option>Men</option>
+	  			<option>Women</option>
 			</select>		
 		</div>
 
-		<form name="_xclick" target="paypal" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
+		<form name="_xclick" target="paypal" action="https://www.paypal.com/us/cgi-bin/webscr" method="post" class="paypal-payment">
 			<input type="hidden" name="cmd" value="_cart">
 			<input type="hidden" name="business" value="info@vlambeer.com">
 			<input type="hidden" name="currency_code" value="EUR">
-			<input type="hidden" name="item_name" value="<?= $name; ?>">
-			<input type="hidden" name="amount" value="<?= $item_price; ?>">
-			<input type="hidden" name="quantity" value="<?= $quantity; ?>">
-			<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
+			<input type="hidden" name="item_name" value="<?php $row['name']; ?>">
+			<input type="hidden" name="amount" value="<?php $row['item_price']; ?>">
+			<input type="hidden" name="quantity" value="<?php $row['stock']; ?>">
+			<input type="hidden" name="tax" value="<?php $row['item_price'] * $row['stock'] * 0.21; ?>">
 			<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 			<input type="hidden" name="add" value="1">
 		</form>
 	</div>
+
+	<div class="clear"></div>
 	
 	<div class="related">
-		<p class="related-products">Related products</p>
+		<h1 class="related-products">Related products</h1>
+		<div class="related-products-wrapper">
 		<?php
 		
 		// Info current t-shirt. Normally from database
-		$description = "Stylish LUFTRAUSERS T-shirt designed by Amon26";
+		$description = $row['description'];
 		$description1 = explode(" ", $description);
 		$searchQuery = array();
 
@@ -103,18 +135,22 @@
 
 		if($query -> execute()){
 			while($related = $query->fetch(PDO::FETCH_OBJ)) {
-				echo "<div class='related-product'><p>" . $related->description . "</p></div>";
+				echo "<div class='related-product'><p>" . $related->name . "</p></div>";
 
 			}
 		}
 
 
 		?>
+		</div>
 	</div>
 </div>
-<?php require '../includes/footer.php'; ?>
+<?php
+//endforeach;
+};
+
+require '../includes/footer.php'; ?>
 <!-- 		
 
 		<div class="insert-cart">
 			<!-- <a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a> -->
-

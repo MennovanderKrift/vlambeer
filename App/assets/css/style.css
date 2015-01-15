@@ -4,6 +4,10 @@
 	font-family: 'Arimo', sans-serif;
 }
 
+.clear{
+	clear: both;
+}
+
 .btn-warning{
 	background-color: #fac846;
 }
@@ -35,27 +39,27 @@
 
 /* .container input field placeholder text color */
 .container ::-webkit-input-placeholder {
-	color: #555;
+	color: #555555;
 }
 
 .container::-webkit-input-placeholder {
-   color: #555;
+   color: #555555;
 }
 
 .container :-moz-placeholder { /* Firefox 18- */
-   color: #555;  
+   color: #555555;  
 }
 
 .container ::-moz-placeholder {  /* Firefox 19+ */
-   color: #555;  
+   color: #555555;  
 }
 
 .container :-ms-input-placeholder {  
-   color: #555;  
+   color: #55555;  
 }
 
 .backgroundcolor1-index {
-	background-color: #EBEBEB;
+	background-color: #ebebeb;
 }
 
 /* header */
@@ -64,7 +68,7 @@
 {
 	height: 180px;
 	width: 100%;
-	background-color: black;
+	background-color: #000000;
 }
 .header-top {
 	position: absolute;
@@ -652,14 +656,15 @@ img.music-photos{
 #contact
 /*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
 
-
-.footer 
-{
-/*	min-height: 50px;*/
-	padding-top: 30px;
-	width: 100%;
+.footer{
 	background-color: black;
-	color: white;
+	color: #FFF;
+	font-size: 13px;
+	padding-top: 10px;
+}
+
+.footerContact{
+	color: #909090;
 }
 
 .merchandise{
@@ -678,7 +683,6 @@ img.music-photos{
 }
 .shirt-info{
 	background-color: #63676a;
-	height: 320px;
 }
 
 .select-size {
@@ -694,9 +698,8 @@ img.music-photos{
 .select-size select {
 	float: right;
 	height: 50px;
-	width: 60px;
+	width: 100px;
 	background-color: #fac846;
-	margin-top: -38px;
 }
 
 .select-geslacht {
@@ -713,9 +716,8 @@ img.music-photos{
 .select-geslacht select {
 	float: right;
 	height: 50px;
-	width: 85px;
+	width: 100px;
 	background-color: #fac846;
-	margin-top: -38px;
 }
 
 .shirt-maat{
@@ -723,6 +725,17 @@ img.music-photos{
 	height: 290px;
 	background-color: #63676a;
 }
+
+.shirt-maat label{
+	line-height: 50px;
+	padding-left: 20px;
+}
+
+.paypal-payment input{
+	display: block;
+	margin: 45px auto;
+}
+
 .insert-cart .btn {
 	color: white;
 	font-size: 22px;
@@ -734,6 +747,11 @@ img.music-photos{
 }
 
 /* serious sam game page */
+.serious-sam-description{
+	height: 200px;
+	overflow-y: scroll;
+}
+
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
 	background-image: url('../img/ss_bg.png');
@@ -777,10 +795,6 @@ img.music-photos{
 	border-top: 1px solid #bbc5c8;
 }
 
-
-
-
-
 .backgroundcolor-gun-godz1 {
 	height: 480px;
 	background-image: url('../img/gg_bg.png');
@@ -815,9 +829,6 @@ img.music-photos{
 	background-image: url('../img/gg_bg.png');
 }
 
-
-
-
 .backgroundcolor-luftrausers1 {
 	height: 480px;
 	background-image: url('../img/lr_bg.png');
@@ -839,8 +850,6 @@ img.music-photos{
 	height: 250px;
 	width: 300px;
 }
-
-
 
 .backgroundcolor-luftrausers2{
 	height: 480px;
@@ -904,13 +913,13 @@ img.music-photos{
 	
 }
 
-
 .footer{
 	background-color: black;
 	color: #FFF;
 	font-size: 13px;
 	padding-top: 10px;
 }
+
 .footerContact{
 	color: #909090;
 }

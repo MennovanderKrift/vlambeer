@@ -54,7 +54,7 @@ if(isset($_POST['order-status'])){
 					$stmt->execute();
 
 					$result = $db->prepare("SELECT count(*) FROM tbl_invoice WHERE invoice_id = :searchTerm");
-					$result -> bindParam("searchTerm", $searchTerm, PDO::PARAM_STR);
+					$result -> bindParam(":searchTerm", $searchTerm, PDO::PARAM_STR);
 					$result->execute(); 
 					$countRows = $result->fetchColumn();
 

@@ -1,6 +1,6 @@
 <?php
   session_start();
-  require '../config/config.php';
+  require '../config/Database.php';
 ?>
 <!DOCTYPE html>
 <html lang="nl">
