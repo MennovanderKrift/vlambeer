@@ -62,7 +62,10 @@
 	margin-left:16px;
 }
 </style>
-<?php foreach($query as $row){ ?>
+<?php 
+	foreach($query as $row)
+	{ 
+?>
 
 <div class="container merchandise">
 	<div class="col-md-9 shirt-img"><img src="<?php if(empty($row['image'])){echo "../assets/img/no-product-image.jpg";}else{echo $row['image']; } ?>" alt="<?php // echo $row['thumbnail']; ?>"></div>
@@ -70,7 +73,7 @@
 		<p><?php echo $row['description']; ?></p>
 		<hr>
 		<span class="price">Price</span><br>
-		<p class="amount">$ <?php echo $row['item_price'] ?></p>
+		<p class="amount">$<?php echo $row['item_price'] ?></p>
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<div class="select-size">
@@ -97,10 +100,10 @@
 			<input type="hidden" name="cmd" value="_cart">
 			<input type="hidden" name="business" value="info@vlambeer.com">
 			<input type="hidden" name="currency_code" value="EUR">
-			<input type="hidden" name="item_name" value="<?php $row['name']; ?>">
-			<input type="hidden" name="amount" value="<?php $row['item_price']; ?>">
-			<input type="hidden" name="quantity" value="<?php $row['stock']; ?>">
-			<input type="hidden" name="tax" value="<?php $row['item_price'] * $row['stock'] * 0.21; ?>">
+			<input type="hidden" name="item_name" value="<?= $name ?>">
+			<input type="hidden" name="amount" value="<?= $item_price ?>">
+			<input type="hidden" name="quantity" value="<?= $quantity ?>">
+			<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
 			<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 			<input type="hidden" name="add" value="1">
 		</form>
