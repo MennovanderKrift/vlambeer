@@ -132,6 +132,7 @@ if (isset($_POST['deleteCustomerAccounts'])) {
   }
 }
 //////////////////// NEWSLETTER ////////////////////
+
 // require 'PHPMailer/PHPMailerAutoload.php';
 
 // $mail = new PHPMailer;
