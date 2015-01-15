@@ -7,6 +7,16 @@
     <script type="text/javascript" src="giantbomApi.js"></script>
 </head>
 <body>
-    
+	<div class="deck">
+		
+	</div>
+
+	<div class="game-name">
+		
+	</div>
+
+    <div class="overview">
+    	
+    </div>
 </body>
 </html>

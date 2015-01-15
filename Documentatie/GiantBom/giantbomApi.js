@@ -3,7 +3,8 @@ var baseUrl = "http://www.giantbomb.com/api";
 
 // construct the uri with our apikey
 var GamesSearchUrl = baseUrl + '/search/?api_key=' + apikey + '&format=jsonp';
-var query = "COD";
+var query = "serieus sam";
+var serieus_sam;
 
 $(document).ready(function() {
 
@@ -13,7 +14,11 @@ $(document).ready(function() {
      dataType: 'JSONP',
      success: function (data) {
       console.log(data.results[1]);
-         $(".name").html(data.results[0].name);
+      $(".deck").html(data.results[1].deck);
+      $(".game-name").html(data.results[1].name);
+      $(".overview").html(data.results[1].description);
+      serieus_sam = [data.results[1].description];
+     
    }
  });
 });
