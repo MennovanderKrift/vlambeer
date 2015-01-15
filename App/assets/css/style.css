@@ -456,16 +456,18 @@ EINDE LOGIN SCRIPT CSS
 { 
 	height:175px; 
 	width:100%;
+	transition: opacity 0.2s;
+}
+
+.product-img img:hover{
+	opacity: 0.7;
 }
 
 .product-info {
+	padding-top: 10px;
 	height: 65px;
 	background-color: #fac846;
 	text-align: center;
-}
-
-.product-info p{
-	vertical-align: center;
 }
 
 .index-items 
@@ -492,7 +494,7 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
-/*---------------------------------------------------BEGIN MUSIC PAGINA------------------------------------------*/
+/*---------------------------------------------------START MUSIC PAGE------------------------------------------*/
 .music-photos-wrapper{
 	display: inline-block;
 	width: 230px;
@@ -549,6 +551,7 @@ img.music-photos{
 .product-info{
 	color: black;
 }
+
 .list1 li{
 	width:250px;
 	text-align: left;
@@ -683,7 +686,7 @@ img.music-photos{
 }
 
 .shirt-img img {
-	height: 640px;
+	width: 640px;
 }
 .shirt-info{
 	background-color: #63676a;

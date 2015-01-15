@@ -11,7 +11,9 @@ if(!isset($_POST['new-product'])){
 <div class="admin-container">
 	<div class="index-games">
 	<div class="admin-title">New product</div>
-		<form class="form-horizontal" role="form" action="newProduct.php" method="POST">
+		<form class="form-horizontal" role="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+		<div style="height: 40px;" class="admin-table-head"></div>
+
 		  <div class="form-group">
 			<?php if(!empty($_GET['msg'])){
 			echo "<p class='col-sm-10 col-md-10 bg-success'><b>" .$_GET['msg']. "</b></p>";
@@ -20,6 +22,11 @@ if(!isset($_POST['new-product'])){
 		   	<label for="name" class="col-sm-2 col-md-2 control-label">Name:</label>
 			<div class="col-sm-10 col-md-10">
 				<input type="text" class="form-control" placeholder="Product name" name="name" id="name">
+		    </div>
+
+		    <label for="image" class="col-sm-2 col-md-2 control-label">Image link: </label>
+		    <div class="col-sm-10 col-md-10">
+		    	<input type="text" class="form-control" placeholder="http://www.vlambeer.com/logo.png" name="image" id="image">
 		    </div>
 
 		    <label for="description" class="col-sm-2 col-md-2 control-label">Description:</label>
@@ -56,9 +63,9 @@ if(!isset($_POST['new-product'])){
 		 	<label for="category" class="col-sm-2 col-md-2 control-label">Category:</label>
 		    <div class="col-sm-10 col-md-10">
 		    	<select class="form-control" name="category" id="category">
-		    		<option value="t-shirt">T-shirt</option>
-			    	<option value="soundtrack">Soundtrack</option>
-			    	<option value="pluche">Pluche</option>
+		    		<option value="Clothes">Clothes</option>
+			    	<option value="Bundles">Bundles</option>
+			    	<option value="Music">Music</option>
 		    	</select>
 		    </div>
 
@@ -78,16 +85,16 @@ if(!isset($_POST['new-product'])){
 
 } else {
 
-        $stmt = $db->prepare("INSERT INTO tbl_products (name, description, price, size, stock, tags, category) VALUES (:name, :description, :price, :size, :stock, :tags, :category)");
+        $stmt = $db->prepare("INSERT INTO tbl_products (name, image, description, price, size, stock, category) VALUES (:name, :image, :description, :price, :size, :stock, :category)");
         $stmt->bindParam("name", $_POST['name'], 				PDO::PARAM_STR);
+        $stmt->bindParam("image", $_POST['image'], 				PDO::PARAM_STR);
         $stmt->bindParam("description", $_POST['description'], 	PDO::PARAM_STR);
         $stmt->bindParam("price", $_POST['price'], 				PDO::PARAM_STR);
         $stmt->bindParam("size", $_POST['size'], 				PDO::PARAM_STR);
         $stmt->bindParam("stock", $_POST['stock'], 				PDO::PARAM_STR);
-        $stmt->bindParam("tags", $_POST['tags'], 				PDO::PARAM_STR);
         $stmt->bindParam("category", $_POST['category'], 		PDO::PARAM_STR);
 
-		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['tags']) || empty($_POST['category']) ){
+		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['category'] || empty($_POST['image'])) ){
 			$msg = urlencode("All fields are required");
 			header('location: newProduct.php?msg=' .$msg);
 		} else {

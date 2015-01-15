@@ -25,16 +25,18 @@ if ($_SESSION['role'] == 'admin') {
 		}
 ///////////////////////////////////////////////////////////////////////////////////////
 ?>
-		<table class="admin-table-content">
-			<tr class="admin-table-head">
-				<td>User Id</td>
-				<td>Username</td>
-				<td>Password</td>
-				<td>First Name</td>
-				<td>Last Name</td>
-				<td></td>
-				<td></td>
-			</tr>
+		<table id="myTable" class="table table-hover tablesorter admin-table-content">
+			<thead>
+				<tr class="admin-table-head">
+					<th>User Id</th>
+					<th>Username</th>
+					<th>Password</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<td></td>
+					<td></td>
+				</tr>
+			</thead>
 		
 <?php
 	$stmt = $db->prepare("SELECT * FROM tbl_users");
@@ -62,15 +64,17 @@ if ($_SESSION['role'] == 'admin') {
 			$userid = $user->user_id;
 ?>
 			<form method="POST" action="../controllers/adminController.php?user_id=<?php echo $userid;?>">
-				<tr>
-					<td><?php echo $user->user_id; ?></td>
-					<td><?php echo $user->username; ?></td>
-					<td><?php echo $user->password; ?></td>
-					<td><?php echo $user->name; ?></td>
-					<td><?php echo $user->last_name; ?></td>
-					<td><input type="submit" value="Edit" name="editAdminAccounts" class="btn btn-danger"></td>
-					<td><input type="submit" value="Delete" name="deleteAdminAccounts" class="btn btn-danger"></td>
-				</tr>
+				<tbody>
+					<tr>
+						<td><?php echo $user->user_id; ?></td>
+						<td><?php echo $user->username; ?></td>
+						<td><?php echo $user->password; ?></td>
+						<td><?php echo $user->name; ?></td>
+						<td><?php echo $user->last_name; ?></td>
+						<td><input type="submit" value="Edit" name="editAdminAccounts" class="btn btn-danger"></td>
+						<td><input type="submit" value="Delete" name="deleteAdminAccounts" class="btn btn-danger"></td>
+					</tr>
+				</tbody>
 
 				<!-- <tr>
 					<td><?php echo $user->user_id; ?></td>
@@ -87,6 +91,9 @@ if ($_SESSION['role'] == 'admin') {
 	}
 ?>
 		</table>
+		<div class="pagination-page"></div>
 	<!-- <div style="admin-new-button"><a href="../controllers/adminController.php?newAdminAccount" class="btn btn-danger">New admin</a></td> -->
 	</div>
 </section>
+<script src="../assets/js/change-status-pagination.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/js/jquery.tablesorter.js"></script>
