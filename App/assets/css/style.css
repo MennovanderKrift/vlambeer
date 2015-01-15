@@ -762,6 +762,10 @@ img.music-photos{
 	height: 480px;
 	padding-top: 50px;
 }
+.serious-sam-description{
+	height: 200px;
+	overflow-y: scroll;
+}
 
 .backgroundcolor-seriuos-sam3{
 	height: 380px;

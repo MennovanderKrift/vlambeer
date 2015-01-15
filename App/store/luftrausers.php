@@ -20,7 +20,7 @@ require '../includes/Header.php';
 		<div class="col-md-4">
 			<img src="../assets/img/lr_afb2.png" alt="">
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-8 ">
 			<h3>Lorem ipsum</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugit velit repellat nulla distinctio quidem dolor rerum, error pariatur consectetur minus quam odit natus aliquid vero debitis iure doloribus id.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquid, similique error consectetur ut consequuntur expedita, corrupti corporis ipsam aperiam facilis omnis quidem perspiciatis, non velit laudantium nesciunt consequatur amet.</p>
