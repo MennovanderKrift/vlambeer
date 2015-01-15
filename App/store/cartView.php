@@ -1,7 +1,7 @@
 <?php
 
 require '../includes/header.php';
-
+/*
 if(isset($_GET['name'])) 
 {
 	$name = $_GET['name'];
@@ -91,38 +91,57 @@ elseif(count($_SESSION['cart_items'])>0)
 	echo "<td>&euro;{$total_price}</td>";
 	echo "<td>";
 	?>
+*/
+?>
+<html>
+<head>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>Product Name</td>
+				<td>Item Price</td>
+				<td>Quantity</td>
+				<td>Sub Total</td>
+				<td>BTW</td>
+			</tr>			
+		</thead>
+		<tbody>
+
+			
+		</tbody>
+	</table>
+</body>
+
+
 <form name="_xclick" target="paypal" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="info@vlambeer.com">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="item_name" value="<?= $name?>">
-<input type="hidden" name="amount" value="<?= $item_price ?>">
-<input type="hidden" name="quantity" value="<?= $quantity?>">
-<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
-<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-<input type="hidden" name="return" value="http://www.radiusdev.nl?id=<?=$id ?>">
-<input type="hidden" name="add" value="1">
+	<input type="hidden" name="cmd" value="_cart">
+	<input type="hidden" name="business" value="info@vlambeer.com">
+	<input type="hidden" name="currency_code" value="EUR">
+	<input type="hidden" name="item_name" value="<?= $name?>">
+	<input type="hidden" name="amount" value="<?= $item_price ?>">
+	<input type="hidden" name="quantity" value="<?= $quantity?>">
+	<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
+	<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+	<input type="hidden" name="return" value="http://www.radiusdev.nl?id=<?=$id ?>">
+	<input type="hidden" name="add" value="1">
 </form>
 
-<form name="_xclick" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="info@vlambeer.com">
-<input type="image" src="https://www.paypal.com/en_US/i/btn/view_cart.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-<input type="hidden" name="display" value="1">
-</form>
+
 
 <?php
-	echo "</td>";
-	echo "</tr>";
-	echo "</table>";
-} 
-else 
-{
-	echo "There are no items in your shoppingcart.";
-}
+// 	echo "</td>";
+// 	echo "</tr>";
+// 	echo "</table>";
+// } 
+// else 
+// {
+// 	echo "There are no items in your shoppingcart.";
+// }
 
 
 
 require '../includes/footer.php';
-require 'shoppingcart.js';
+require '../assets/js/shoppingcart.js';
 ?>

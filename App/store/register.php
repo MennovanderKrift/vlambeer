@@ -1,5 +1,5 @@
 <?php 
-  include '../includes/header.php';
+  require '../includes/header.php';
 ?>
 
 <div class="container">
@@ -53,7 +53,7 @@
 </div>
 
 <?php
-  include '../includes/footer.php';
+  require '../includes/footer.php';
 ?>
   <script>
     $('#formReset').click(function(){

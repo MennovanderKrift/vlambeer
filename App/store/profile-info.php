@@ -1,5 +1,5 @@
 <?php
- 	include '../includes/header.php';
+ 	require '../includes/header.php';
 
  	if (!isset($_SESSION['email_address'])) {
  		session_start();
@@ -95,5 +95,5 @@
 		</div>
 	</div>
 <?php
-	include '../includes/footer.php';
+	require '../includes/footer.php';
 ?>

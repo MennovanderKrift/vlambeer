@@ -72,8 +72,8 @@
 	<div class="col-md-3 shirt-info">
 		<p><?php echo $row['description']; ?></p>
 		<hr>
-		<span class="price">Price</span><br>
-		<p class="amount">$<?php echo $row['item_price'] ?></p>
+		<span class="price">Price
+		<p class="amount">€<?php echo $row['item_price'] ?></p></span>
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<div class="select-size">
@@ -136,9 +136,9 @@
 		$query = $db->prepare($sql);
 
 		if($query -> execute()){
-			while($related = $query->fetch(PDO::FETCH_OBJ)) {
-				echo "<div class='related-product'><a href='merchandise.php?product_id=" .$related->product_id. "'><img src='" .$related->image. "'></a></div>";
-
+			while($related = $query->fetch(PDO::FETCH_OBJ)) 
+			{
+				echo "<div class='related-product'><a href='merchandise.php?product_id=" .$related->product_id. "'><img src=" .$related->image. "></a></div>";
 			}
 		}
 		?>

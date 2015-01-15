@@ -1,16 +1,18 @@
 <?php 
-	include '../includes/header.php';
+	require '../includes/header.php';
 
 	$urlid = $_GET['customer_id'];
  	$session_id = $_SESSION['id'];
 
-	if ($_SESSION['id'] == $urlid) {
-	} else {
+	if ($_SESSION['id'] == $urlid) 
+	{
+	} 
+	else 
+	{
 		header("location: ?customer_id=$session_id");
 	}
 
 	$customer_id = $_GET['customer_id'];
-
 	$stmt = $db->prepare("SELECT * FROM tbl_invoice WHERE customer_id = $customer_id");
 	$stmt->execute();
 ?>
@@ -24,9 +26,8 @@
 	<script src="sorttable.js"></script>
 </head>
 <body>
-
 <div class="container">
-<h2>Invoice overview</h2>
+	<h2>Invoice overview</h2>
 	<table class="table table-striped sortable">
 		<thead>
 			<tr>
@@ -38,36 +39,39 @@
 			</tr>
 		</thead>
 		<tbody>
-<?php
-	$invoices = $stmt->fetchAll(PDO::FETCH_OBJ);
+		<?php
+		$invoices = $stmt->fetchAll(PDO::FETCH_OBJ);
 
-	foreach ($invoices as $invoice) {
-		if ($invoice == false) {
-			echo 	"<tr>
-						<td>No invoices found</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>"; 
-					
-		} else {
-			echo 	"<tr>
-						<td>#" . $invoice->order_status . "</td>
-						<td>" . $invoice->amount . "</td>
-						<td>#" . $invoice->payment_status . "</td>
-						<td>" . $invoice->date. "</td>
-						<td><a href='#'>x</a></td>
-					</tr>"; 
+		foreach ($invoices as $invoice) 
+		{
+			if ($invoice == false) 
+			{
+				echo 	"<tr>
+							<td>No invoices found</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>"; 					
+			} 
+			else 
+			{
+				echo 	"<tr>
+							<td>#" . $invoice->order_status . "</td>
+							<td>" . $invoice->amount . "</td>
+							<td>#" . $invoice->payment_status . "</td>
+							<td>" . $invoice->date. "</td>
+							<td><a href='#'>x</a></td>
+						</tr>"; 
+			}
 		}
-	}
-?>
+		?>
 		</tbody>
 	</table>
-<?php
-	include '../includes/footer.php';
-?>
-</div>
+	<?php
+		require '../includes/footer.php';
+	?>
+	</div>
 </body>
 </html>
