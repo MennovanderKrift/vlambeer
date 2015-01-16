@@ -18,7 +18,7 @@ Class Shoppingcart
 			}
 			else
 			{
-			 	$this->cid = uniqid(10);
+			 	$this->cid = GenerateRandomId(10);
 			}
 		}
 	}
@@ -68,19 +68,51 @@ Class Shoppingcart
 
 	public function changeQuantity($quantity)
 	{
+		$id = isset($_GET['id']) ? $_GET['id'] : "";
+		$name = isset($_GET['name']) ? $_GET['name'] : "";
+		$quantity = isset($_GET['quantity']) ? $_GET['quantity'] : "";
 
+		// remove the item from the array
+		unset($_SESSION['cart_items'][$id]);
 
+		// add the item with updated quantity
+		$_SESSION['cart_items'][$id] = array(
+		'name'		=>	$name,
+		'quantity'	=>	$quantity);
+
+		// redirect to product list and tell the user it was added to cart
+		header('Location: cartView.php?action=quantity_updated&id=' . $id . '&name=' . $name);
 	}
 
 	public function checkIfProductIsTshirt()
 	{
+		$query->db->query("SELECT * FROM tbl_products WHERE product_id = :id ");
+		$checkProduct_id = $_GET['product_id'];
 
+		$query1->db->query("SELECT * FROM customers WHERE customer_id = :cid");
+		$getCustomerId = $_GET['customer_id'];
+
+		// if($checkProduct_id <= 4, $getCustomerId)
+		// {
+		// 	$insertInto->db->query("INSERT INTO tbl_carts SET customer_id =: cid, cart_id = :id, product_id = :pid, quantity = :qu, item_price = :ip", $bind)
+		// 	$bind = [
+		// 				"cid"	=> $this->cart_id,
+		// 				"id" 	=> $this->cid,
+		// 				"pid" 	=> $product_id,
+		// 				"qu"	=> $quantity,
+		// 				"ip"	=> $item_price	
+		// 			];
+		// }
+		// else
+		// {
+
+		// }
 	}
 	
 	/*Method to get all the items in the shoppingcart*/
 	public function getStock()
 	{
-		$query = $db->query("SELECT product_id, name, stock FROM tbl_products WHERE product_id = '$id'");
+		$query = $db->query("SELECT product_id, name, stock FROM tbl_products WHERE product_id = '$product_id'");
 
 		if($stock->name == 0)
 		{
