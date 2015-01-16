@@ -20,7 +20,7 @@ require '../includes/header.php';
 		<div class="col-md-4">
 			<img src="../assets/img/ss_afb2.png" alt="">
 		</div>
-		<div class="col-md-8 serious-sam-description">
+		<div class="col-md-8 game-description">
 			
 		</div>
 	</div>
@@ -49,6 +49,4 @@ require '../includes/header.php';
 require '../includes/footer.php'; 
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/giantbomApi.js">
-	giantbom('Serieus Sam', '.serious-sam-description');
-</script>
+<script type="text/javascript" src="../assets/js/giantbomApi.js"></script>

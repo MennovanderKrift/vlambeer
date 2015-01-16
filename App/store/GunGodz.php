@@ -19,11 +19,9 @@
 		<div class="col-md-4">
 			<img src="../assets/img/gg_afb2.png" alt="">
 		</div>
-		<div class="col-md-8">
-			<h3>Lorem ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugit velit repellat nulla distinctio quidem dolor rerum, error pariatur consectetur minus quam odit natus aliquid vero debitis iure doloribus id.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aliquid, similique error consectetur ut consequuntur expedita, corrupti corporis ipsam aperiam facilis omnis quidem perspiciatis, non velit laudantium nesciunt consequatur amet.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat natus, necessitatibus quos reiciendis dolores dignissimos, aperiam rem. Facilis doloribus nesciunt, quam incidunt laboriosam excepturi libero sed, vel vero, velit quisquam.</p>
+		<div class="col-md-8 game-description">
+			
+			
 			
 		</div>
 	</div>
@@ -48,6 +46,8 @@
 	
 	</div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/giantbomApi.js"></script>
 <?php
 require '../includes/footer.php'; 
 ?>

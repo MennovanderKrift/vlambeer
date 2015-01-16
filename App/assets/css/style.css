@@ -750,10 +750,7 @@ float: left;
 }
 
 /* serious sam game page */
-.serious-sam-description{
-	height: 200px;
-	overflow-y: scroll;
-}
+
 
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
@@ -891,7 +888,7 @@ float: left;
 }
 
 /*giant bom api*/
-.serious-sam-description{
+.game-description{
 	height: 320px;
 	overflow-y: hidden;
 }
