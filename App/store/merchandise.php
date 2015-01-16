@@ -89,7 +89,7 @@
 		</div>
 		
 		<div class="select-geslacht">
-			<label for="Geslacht">Species</label>
+			<label for="Geslacht">Gender</label>
 			<select name="Geslacht">
 				<option>Men</option>
 	  			<option>Women</option>
