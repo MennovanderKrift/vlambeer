@@ -20,20 +20,20 @@ require '../includes/header.php';
 			</div>
 			<div class="col-md-3">
 				<a href="SuperCrateBox.php"><div class="product-img"><img src="../assets/img/supercratebox.png" alt="supercratebox.png"></div></a>
-				<div class="product-info"><a href="SuperCrateBox.php"><p>Super Crate Box <br> (PC, Mac)</p></a></div>
+				<div class="product-info"><a href="SuperCrateBox.php"><p>Super Crate Box <br> (PC, Mac)(iOS) (Vita)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/supercratebox.png" alt="supercratebox.png"></div>	
-				<div class="product-info"><a href="#"><p>Super Crate Box <br> (iOS)</p></a></div>
+				<a href="luftrausers.php"><div class="product-img"><img src="../assets/img/luftrausers-limited-edition.jpg" alt="luftrausers.png"></div></a>	
+				<div class="product-info"><a href="#"><p>luftrausers <br> (PS3) (steam) (mac) (linux)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="product-img"><img src="../assets/img/supercratebox.png" alt="supercratebox.png"></div>	
-				<div class="product-info"><a href="#"><p>Super Crate Box <br> (Vita)</p></a></div>
-				<div class="arrow-down"></div>
+				<a href="gunGodz.php"><div class="product-img"><img src="../assets/img/gg_logo.png" alt="gungodz.png"></div></a>	
+				<div class="product-info"><a href="#"><p>Gun-Godz<br> (pc)</p></a></div>
+	<div class="arrow-down"></div>
 			</div>
 		</div>
 	</div>
