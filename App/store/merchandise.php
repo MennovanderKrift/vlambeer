@@ -96,17 +96,9 @@
 			</select>		
 		</div>
 
-		<form name="_xclick" target="paypal" action="https://www.paypal.com/us/cgi-bin/webscr" method="post" class="paypal-payment">
-			<input type="hidden" name="cmd" value="_cart">
-			<input type="hidden" name="business" value="info@vlambeer.com">
-			<input type="hidden" name="currency_code" value="EUR">
-			<input type="hidden" name="item_name" value="<?= $name ?>">
-			<input type="hidden" name="amount" value="<?= $item_price ?>">
-			<input type="hidden" name="quantity" value="<?= $quantity ?>">
-			<input type="hidden" name="tax" value="<?= $item_price * $quantity * 0.21; ?>">
-			<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_xpressCheckout.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-			<input type="hidden" name="add" value="1">
-		</form>
+		<div class="insert-cart-btn">
+			<img class="cart-btn" src="../assets/img/Bestelknop.gif">
+		</div>
 	</div>
 
 	<div class="clear"></div>
@@ -152,5 +144,4 @@
 require '../includes/footer.php'; ?>
 <!-- 		
 
-		<div class="insert-cart">
-			<!-- <a href="addproduct.php?id=<?php echo $_GET['id'] ?>" class="btn">In winkelwagen</a> -->
+<a href="addproduct.php?id=<?php echo $_GET['id'] ?>">In winkelwagen</a> -->

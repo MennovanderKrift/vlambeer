@@ -743,14 +743,10 @@ img.music-photos{
 	margin: 45px auto;
 }
 
-.insert-cart .btn {
-	color: white;
-	font-size: 22px;
-	margin-top: 160px;
-	height: 50px;
-	width: 225px;
-	margin-left: -15px;
-	background-color: #fac846;
+img.cart-btn {
+width: 400px;
+margin-left: -115px;
+float: left;
 }
 
 /* serious sam game page */
@@ -773,6 +769,7 @@ img.music-photos{
 	height: 125px;
 	width:300px;
 }
+
 .product-img-ss {
 	height: 250px;
 	width: 300px;
@@ -787,7 +784,6 @@ img.music-photos{
 	height: 480px;
 	padding-top: 50px;
 }
-
 
 .backgroundcolor-seriuos-sam3{
 	height: 380px;
@@ -813,12 +809,11 @@ img.music-photos{
 	height: 125px;
 	width:300px;
 }
+
 .product-img-gg {
 	height: 250px;
 	width: 300px;
 }
-
-
 
 .backgroundcolor-gun-godz2{
 	height: 480px;
@@ -869,19 +864,16 @@ img.music-photos{
 .backgroundcolor-luftrausers3{
 	height: 460px;
 	background-color: #f6e8b1;
-	padding-top: 42px;
-	
-}
-.backgroundcolor-luftrausers3 img{
-	margin-top: -42px;
-	
+	padding-top: 42px;	
 }
 
+.backgroundcolor-luftrausers3 img{
+	margin-top: -42px;	
+}
 
 .backgroundcolor-scb1 {
 	height: 480px;
-	background-color: #ceb395;
-	
+	background-color: #ceb395;	
 }
 
 .backgroundcolor-scb1 .container {
@@ -943,11 +935,6 @@ footer a:hover{
 	color: #fac846;
 	text-decoration: none;
 }
-
-
-
-
-
 
 
 /* einde serious sam game page */

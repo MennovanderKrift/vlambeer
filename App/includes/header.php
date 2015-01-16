@@ -31,16 +31,15 @@
     <div class="navcolour">
       <div class="navborder">
         <ul>
-        <li><a href="../store/index.php">HOME</a></li>
-        <li><a href="../store/games/index.php">GAMES</a>
-          <ul>
-          <li><a href="../store/games/pcGames.php">PC</a></li>
-          <li><a href="../store/games/iOSgames.php">iOS</a></li>
-          <li><a href="../store/games/vitaGames.php">VITA</a></li>
-          </ul></li>
-        <li><a href="../store/merchandise.php">MERCHANDISE</a></li>
-        <li><a href="../store/contact.php">CONTACT</a></li>
-        <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
+          <li><a href="../store/index.php">HOME</a></li>
+          <li><a href="../store/games/index.php">GAMES</a>
+            <ul>
+              <li><a href="../store/games/pcGames.php">PC</a></li>
+              <li><a href="../store/games/iOSgames.php">iOS</a></li>
+              <li><a href="../store/games/vitaGames.php">VITA</a></li>
+            </ul></li>
+          <li><a href="../store/contact.php">CONTACT</a></li>
+          <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>
       </div>
     </div>    
