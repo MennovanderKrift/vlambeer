@@ -1,5 +1,5 @@
 <?php 
-	include '../includes/header.php'; 
+	require '../includes/header.php'; 
 
     $session_id = $_SESSION['id'];
 

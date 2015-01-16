@@ -1,4 +1,6 @@
-<?php require '../config/Database.php';
+<?php 
+
+require '../config/Database.php';
 
 //////////////////// LOGIN & LOGOUT ////////////////////
 if (isset($_GET['logout'])) {
