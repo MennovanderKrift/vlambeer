@@ -76,7 +76,9 @@
 		<p class="amount">€<?php echo $row['item_price'] ?></p></span>
 	</div>
 	<div class="col-md-3 shirt-maat">
-		<div class="select-size">
+		<?php if($row['category'] == 'Clothes'):
+			?>
+			<div class="select-size">
 			<label for="selectMaat">Size</label>
 			<select id="selectMaat" name="selectMaat">
 	  			<option>XS</option>
@@ -87,6 +89,8 @@
 	  			<option>XXL</option>
 			</select>			
 		</div>
+
+			<?php endif; ?>
 		
 		<div class="select-geslacht">
 			<label for="Geslacht">Gender</label>

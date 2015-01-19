@@ -725,11 +725,11 @@ img.music-photos{
 	height: 50px;
 	width: 100px;
 	background-color: #fac846;
+	border-right: none;
 }
 
 .shirt-maat{
 	margin-top: 30px;
-	height: 290px;
 	background-color: #63676a;
 }
 
@@ -750,8 +750,6 @@ float: left;
 }
 
 /* serious sam game page */
-
-
 .backgroundcolor-seriuos-sam1 {
 	height: 480px;
 	background-image: url('../img/ss_bg.png');
