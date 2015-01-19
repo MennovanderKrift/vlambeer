@@ -14,9 +14,9 @@ var url = document.URL;
 var path = document.location.pathname;
 switch(path){
  case "/git/vlambeer/App/store/serious-sam.php":
-    id = 32945;
+    id = 65;
   break;
- case "/git/vlambeer/App/store/superCrateBox.php":
+ case "/git/vlambeer/App/store/SuperCrateBox.php":      
     id = 32945;
   break;
   case "/git/vlambeer/App/store/gunGodz.php":

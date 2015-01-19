@@ -14,18 +14,18 @@ require '../includes/header.php';
 		<div class="index-items col-md-12">
 			<h2>Games</h2>
 			<div class="col-md-3">
-				<a href="serious-sam.php"><div class="product-img"><img src="../assets/img/serious-sam.jpg" alt="serious-sam.jpg"></div></a>	
+				<a href="serious-sam.php"><div class="product-img"><img src="../assets/img/ss_logo.png" alt="serious-sam.jpg"></div></a>	
 				<div class="product-info"><a href="serious-sam.php"><p>Serious Sam: The Random Encounter (PC, Steam)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-3">
-				<a href="SuperCrateBox.php"><div class="product-img"><img src="../assets/img/supercratebox.png" alt="supercratebox.png"></div></a>
+				<a href="SuperCrateBox.php"><div class="product-img"><img src="../assets/img/scb_logo.png" alt="supercratebox.png"></div></a>
 				<div class="product-info"><a href="SuperCrateBox.php"><p>Super Crate Box <br> (PC, Mac)(iOS) (Vita)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
 			<div class="col-md-3">
-				<a href="luftrausers.php"><div class="product-img"><img src="../assets/img/luftrausers-limited-edition.jpg" alt="luftrausers.png"></div></a>	
+				<a href="luftrausers.php"><div class="product-img"><img src="../assets/img/lr_logo.png" alt="luftrausers.png"></div></a>	
 				<div class="product-info"><a href="#"><p>luftrausers <br> (PS3) (steam) (mac) (linux)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
