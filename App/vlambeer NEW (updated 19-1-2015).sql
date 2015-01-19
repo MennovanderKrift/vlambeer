@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Machine: 127.0.0.1
--- Genereertijd: 19 jan 2015 om 14:17
--- Serverversie: 5.6.14
--- PHP-versie: 5.5.6
+-- Host: 127.0.0.1
+-- Generation Time: Jan 19, 2015 at 05:51 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Databank: `vlambeer`
+-- Database: `new_vlambeer`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_carts`
+-- Table structure for table `tbl_carts`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_carts` (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `tbl_carts` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_customers`
+-- Table structure for table `tbl_customers`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_customers` (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `tbl_customers`
+-- Dumping data for table `tbl_customers`
 --
 
 INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `last_name`, `gender`, `address`, `house_number`, `zipcode`, `phone_number`, `email_address`, `news_letter`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `las
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_games`
+-- Table structure for table `tbl_games`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_games` (
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `tbl_games` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_invoice`
+-- Table structure for table `tbl_invoice`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_invoice` (
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `tbl_invoice` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `tbl_invoice`
+-- Dumping data for table `tbl_invoice`
 --
 
 INSERT INTO `tbl_invoice` (`invoice_id`, `product_id`, `customer_id`, `order_status`, `amount`, `payment_status`, `date`) VALUES
@@ -128,7 +128,7 @@ INSERT INTO `tbl_invoice` (`invoice_id`, `product_id`, `customer_id`, `order_sta
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_products`
+-- Table structure for table `tbl_products`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_products` (
@@ -138,30 +138,31 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
   `item_price` float NOT NULL COMMENT 'Product price',
   `category` varchar(60) NOT NULL COMMENT 'Product category',
   `image` varchar(255) NOT NULL,
+  `image2` varchar(255) NOT NULL COMMENT 'Secondary product image',
   `stock` int(11) NOT NULL,
   PRIMARY KEY (`product_id`),
   UNIQUE KEY `product_id` (`product_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `tbl_products`
+-- Dumping data for table `tbl_products`
 --
 
-INSERT INTO `tbl_products` (`product_id`, `name`, `description`, `item_price`, `category`, `image`, `stock`) VALUES
-(1, 'Luftrauser T-shirt', 'Stylish LUFTRAUSERS T-shirt designed by Amon26', 18, 'Clothes', '../assets/img/tshirt-luftrausers.jpg', 10),
-(2, 'Vlambeer T-shirt', 'T-shirt with Vlambeer logo on chest', 17.99, 'Clothes', '../assets/img/tshirt-vlambeer.jpg', 10),
-(3, 'Vlambeer 1st Birthday T-shirt', 'Dancing Vlambeer T-shirt', 18, 'Clothes', '../assets/img/tshirt-dancing-vlambeer.jpg', 10),
-(4, 'GUN GODZ T-shirt', 'GUN GODZ T-shirt with butt.', 18, 'Clothes', '../assets/img/tshirt-gungodz-butt.jpg', 10),
-(5, 'Vlambeer''s Crate Box Bundle', 'Includes t-shirt, exclusive poster, Vlambeer OST, pins, most of our 2010-2012 games on custom USB-drive', 50, 'Bundles', '../assets/img/crate-box-bundle.jpg', 10),
-(6, 'Vlambeer OST (Physical)', 'All the music from 2010-2012 releases. Includes exclusive tracks and artwork', 12.99, 'Music', '../assets/img/vlambeer-ost-physical.jpg', 10),
-(7, 'Vlambeer OST (Digital)', 'Includes unlimited streaming via the free Bandcamp app, plus high-quality download in MP3, FLAC and more.', 6, 'Music', '../assets/img/vlambeer-ost-digital.jpg', 10),
-(8, 'Super Crate Box Re-arranged OST (Digital)', 'Super Crate Box soundtrack arranged with a band', 4, 'Music', '../assets/img/super-crate-box-ost.jpg', 10),
-(9, 'Luftrauser Limited Edition', 'Luxury LUFTRAUSERS edition incl. soundtrack, 3D printed airplane model. Only one made per LUFTRAUSERS build.', 4, 'Bundles', '../assets/img/luftrausers-limited-edition.jpg', 10);
+INSERT INTO `tbl_products` (`product_id`, `name`, `description`, `item_price`, `category`, `image`, `image2`, `stock`) VALUES
+(1, 'Luftrauser T-shirt', 'Stylish LUFTRAUSERS T-shirt designed by Amon26', 18, 'Clothes', '../assets/img/tshirt-luftrausers.jpg', '', 10),
+(2, 'Vlambeer T-shirt', 'T-shirt with Vlambeer logo on chest', 17.99, 'Clothes', '../assets/img/tshirt-vlambeer.jpg', '', 10),
+(3, 'Vlambeer 1st Birthday T-shirt', 'Dancing Vlambeer T-shirt', 18, 'Clothes', '../assets/img/tshirt-dancing-vlambeer.jpg', '', 10),
+(4, 'GUN GODZ T-shirt', 'GUN GODZ T-shirt with butt.', 18, 'Clothes', '../assets/img/tshirt-gungodz-butt.jpg', '', 10),
+(5, 'Vlambeer''s Crate Box Bundle', 'Includes t-shirt, exclusive poster, Vlambeer OST, pins, most of our 2010-2012 games on custom USB-drive', 50, 'Bundles', '../assets/img/crate-box-bundle.jpg', '', 10),
+(6, 'Vlambeer OST (Physical)', '\n		Few Indie Game Devs get their paws wet with as many composers and artists as Vlambeer does, and the logical conclusion is this, the Vlambeer Original Soundtrack. \n		Comprised of compositions from a variety of artists across a multitude of games, it’s the perfect collection for any gaming, music, or Vlambeer fan.\n	\n\n<ul class="list1">\n<li>1. GG Main Theme</li>										\n<li>2. RF Theme</li>\n<li>3. DZK Calm Seas</li>\n<li>4. DZK Menu Theme</li>\n<li>5. DZK Week #1</li>\n<li>6. DZK Week #2</li>\n<li>7. DZK Week #3</li>\n<li>8. DZK Night Theme</li>\n<li>9. LR Theme</li>\n<li>10. SCB Theme</li>\n<li>11. SCB Tutorial</li>\n<li>12. SCB Construction Ya</li>\n<li>13. SCB Rocket Silo</li>\n<li>14. SCB Moon Temple</li>\n<li>15. SCB Elevator Music</li>\n<li>16. LRS Demo 1</li>\n<li>17. LRS Demo 2</li>\n<li>18. LRS Demo 3</li>\n<li>19. SCB Interlude</li>\n</ul>\n<ul class="list2">\n<li>20. YH Day</li>\n<li>21. YH Night</li>\n<li>22. SS:TRE Menu Theme</li>\n<li>23. SS:TRE Desert Theme</li>\n<li>24. SS:TRE Temple Theme</li>\n<li>25. SS:TRE Pyramid Theme</li>\n<li>26. SS:TRE Boss Theme</li>\n<li>27. RF Radical Fishing</li>\n<li>28. GG Venus Supermax</li>\n<li>29. GG Sewers</li>\n<li>30. GG Boss Battle #1</li>\n<li>31. GG Basement</li>\n<li>32. GG Hotel Lobby</li>\n<li>33. GG Boss Battle #2</li>\n<li>34. SCB Early Test</li>\n<li>35. SCB Construction Yard (Kozilek Remix)</li>\n<li>36. GG Phonecall</li>\n</ul>', 12.99, 'Music', '../assets/img/vlambeer-ost-physical.jpg', '../assets/img/vlambeer-ost-physical-2.jpg', 10),
+(7, 'Vlambeer OST (Digital)', 'Includes unlimited streaming via the free Bandcamp app, plus high-quality download in MP3, FLAC and more.\n\n<ul class="list1">\n<li>1. GUN GODZ - Main Theme</li>										\n<li>2. Ridiculios Fishing - Theme</li>\n<li>3. Ridiculios Fishing - Calm Seas</li>\n<li>4. Dinosaur Zookeeper - Menu Theme</li>\n<li>5. Dinosaur Zookeeper - Week #1</li>\n<li>6. Dinosaur Zookeeper - Week #2</li>\n<li>7. Dinosaur Zookeeper - Week #3</li>\n<li>8. Dinosaur Zookeeper - Night Theme</li>\n<li>9. LUFTRAUSERS - Theme</li>\n<li>10. Super Crate Box - Theme</li>\n<li>11. Super Crate Box - Tutorial</li>\n<li>12. Super Crate Box - Construction Yard</li>\n<li>13. Super Crate Box - Rocket Silo</li>\n<li>14. Super Crate Box - Moon Temple</li>\n<li>15. Super Crate Box - Elevator Music</li>\n<li>16. LUFTRAUSERS - Demo #1</li>\n<li>17. LUFTRAUSERS - Demo #2</li>\n<li>18. LUFTRAUSERS - Demo #3</li>\n<li>19. Super Crate Box - Interlude</li>\n<li>20. Yeti Hunter - Day</li>\n<li>21. Yeti Hunter - Night</li>\n</ul>\n\n<ul class="list2">\n<li>22. Serious Sam: The Random Encounter - Menu Theme</li>\n<li>23. Serious Sam: The Random Encounter - Desert Theme</li>\n<li>24. Serious Sam: The Random Encounter - Temple Theme</li>\n<li>25. Serious Sam: The Random Encounter - Pyramide Theme</li>\n<li>26. Serious Sam: The Random Encounter - Boss Theme</li>\n<li>27. Radical Fishing - Radical Fishing Theme</li>\n<li>28. GUN GODZ - Venus Supermax</li>\n<li>29. GUN GODZ - Sewers</li>\n<li>30. GUN GODZ - Boss Battle #1</li>\n<li>31. GUN GODZ - Basement</li>\n<li>32. GUN GODZ - Hotel Lobby</li>\n<li>33. GUN GODZ - Boss Battle #2 (Rooftop)</li>\n<li>34. Super Crate Box - Early Test</li>\n<li>35. Super Crate Box - Construction Yard (KOZILEK remix)</li>\n<li>36. GUNGODZ - Phonecall</li>\n</ul>', 6, 'Music', '../assets/img/vlambeer-ost-digital.jpg', '', 10),
+(8, 'Super Crate Box Re-arranged OST (Digital)', 'Super Crate Box soundtrack arranged with a band\n\n<ul class="list1">\n<li>1. Tutorial</li>										\n<li>2. Menu</li>\n<li>3. Construction yard</li>\n<li>4. Rocket silo</li>\n<li>5. Rest</li>\n<li>6. Moon temple</li>\n</ul>', 4, 'Music', '../assets/img/super-crate-box-ost.jpg', '', 10),
+(9, 'Luftrauser Limited Edition', 'Luxury LUFTRAUSERS edition incl. soundtrack, 3D printed airplane model. Only one made per LUFTRAUSERS build.', 4, 'Bundles', '../assets/img/luftrausers-limited-edition.jpg', '', 10);
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_tempcarts`
+-- Table structure for table `tbl_tempcarts`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_tempcarts` (
@@ -175,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tempcarts` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `tbl_users`
+-- Table structure for table `tbl_users`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_users` (
@@ -190,7 +191,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
--- Gegevens worden uitgevoerd voor tabel `tbl_users`
+-- Dumping data for table `tbl_users`
 --
 
 INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `email`, `name`, `last_name`) VALUES
@@ -204,11 +205,11 @@ INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `email`, `name`, `la
 (8, 'Jan', 'admin123', 'jan@vlambeer.com', 'Jan', 'Adriaans');
 
 --
--- Beperkingen voor gedumpte tabellen
+-- Constraints for dumped tables
 --
 
 --
--- Beperkingen voor tabel `tbl_invoice`
+-- Constraints for table `tbl_invoice`
 --
 ALTER TABLE `tbl_invoice`
   ADD CONSTRAINT `tbl_invoice_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `tbl_products` (`product_id`),

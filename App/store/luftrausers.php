@@ -5,7 +5,7 @@ require '../includes/Header.php';
 	<div class="container">
 			<div class="col-md-4">
 				<a href="http://luftrausers.com/"><div class="product-img-lr"><img src="../assets/img/lr_logo.png" alt=""></div></a>
-				<div class="product-info"><p> luftrausers is een van de meest<br> boeiende arcarde shooter die op<br>markt kwam in de recente <br> geschiedenis</p></div>
+				<div class="product-info"><p> LUFTRAUSERS is één van de meest <br> boeiende arcade shooter die op<br>markt kwam in de recente <br> geschiedenis</p></div>
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">

@@ -711,6 +711,7 @@ img.music-photos{
 	height: 50px;
 	width: 100px;
 	background-color: #fac846;
+	border: 1px solid #fac846;
 }
 
 .select-geslacht {
@@ -729,7 +730,7 @@ img.music-photos{
 	height: 50px;
 	width: 100px;
 	background-color: #fac846;
-	border-right: none;
+	border: 1px solid #fac846;
 }
 
 .shirt-maat{

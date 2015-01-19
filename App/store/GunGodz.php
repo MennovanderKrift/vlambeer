@@ -4,7 +4,7 @@
 	<div class="container">
 			<div class="col-md-4">
 				<a href="http://venuspatrol.com/subscribe/#subscriptionform"><div class="product-img-gg"><img src="../assets/img/gg_logo.png" alt=""></div></a>
-				<div class="product-info"><p>GunGodz is een first poerson shooter <br>in ee nstijl van de oude klassieker</p></div>
+				<div class="product-info"><p>GunGodz is een first person shooter <br>in de stijl van de oude klassiekers</p></div>
 				<div class="arrow-down"></div>
 			</div>
 			<div class="col-md-8">

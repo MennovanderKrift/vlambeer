@@ -65,14 +65,12 @@
 .related-products-wrapper {
 	margin-left:16px;
 }
-
 </style>
 <?php 
-	foreach($query as $row)
+	foreach($query as $row){
 		if($row['category'] == 'Music'){
 		header("location: vlambeerMusic.php?product_id=" .$_GET['product_id']);
 		}
-	{ 
 ?>
 
 <div class="container merchandise">
@@ -81,7 +79,7 @@
 		<p><?php echo $row['description']; ?></p>
 		<hr>
 		<span class="merchandise-price">Price
-		<p class="amount">€<?php echo $row['item_price'] ?></p></span>
+		<p class="amount">€<?php echo $row['item_price']; ?></p></span>
 	</div>
 	<div class="col-md-3 shirt-maat">
 		<?php if($row['category'] == 'Clothes'):
