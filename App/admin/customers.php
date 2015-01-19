@@ -33,6 +33,7 @@ if ($_SESSION['role'] == 'admin') {
 					<th>Zipcode</th>
 					<th>Phone Number</th>
 					<th>Newsletter</th>
+					<td></td>
 				</tr>
 			</thead>
 
@@ -62,7 +63,8 @@ if ($_SESSION['role'] == 'admin') {
 
 
 
-				 echo "</td>";	
+				echo "</td>";	
+				echo "<td><a href='changeStatus.php' class='btn btn-danger'>Invoices</a></td>";
 			echo "</tr>";
 	 };
 

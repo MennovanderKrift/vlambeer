@@ -91,17 +91,16 @@ if (isset($_GET['sendEmail'])) {
 /////////////////////////////////////////////////
 if (isset($_POST['subscribeToNewsletterSubmit'])) {
   session_start();
-  var_dump($_SESSION['id']);
   if (isset($_SESSION['id'])) {
-    if ($_POST['subscribeToNewsletter'] == 'Yes') {
-      $stmt = $db->prepare("UPDATE tbl_customers SET news_letter = 1 WHERE customer_id = :customer_id");
-      $stmt->bindParam("customer_id", $_SESSION['id']);
-      $stmt->execute();
-      echo "Subscribed";
-    } else {
-      echo "cant subscribe";
+    if (isset($_POST['subscribeToNewsletter'])) {
+      if ($_POST['subscribeToNewsletter'] == 'Yes') {
+        $stmt = $db->prepare("UPDATE tbl_customers SET news_letter = 1 WHERE customer_id = :customer_id");
+        $stmt->bindParam("customer_id", $_SESSION['id']);
+        $stmt->execute();
+        echo "Subscribed";
+      }
     }
   } else {
-    echo "log in or enter your email"?><input type="email" placeholder="example@email.com"><?php ;
+    echo "<a href='../store/login.php'>login</a> or <a href='../store/register.php'>sign up</a>";
   }
 }    
