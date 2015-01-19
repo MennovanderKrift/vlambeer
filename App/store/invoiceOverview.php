@@ -62,7 +62,7 @@
 							<td>" . $invoice->amount . "</td>
 							<td>#" . $invoice->payment_status . "</td>
 							<td>" . $invoice->date. "</td>
-							<td><a href='#'>x</a></td>
+							<td><a href='createInvoice.php?id=" . $invoice->invoice_id . "'>x</a></td>
 						</tr>"; 
 			}
 		}
