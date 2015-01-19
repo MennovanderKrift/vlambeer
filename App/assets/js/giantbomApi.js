@@ -14,10 +14,16 @@ var url = document.URL;
 var path = document.location.pathname;
 switch(path){
  case "/git/vlambeer/App/store/serious-sam.php":
-  id = 32945;
+    id = 32945;
   break;
  case "/git/vlambeer/App/store/superCrateBox.php":
- 
+    id = 32945;
+  break;
+  case "/git/vlambeer/App/store/gunGodz.php":
+    id = 37491;
+  break;
+  case "/git/vlambeer/App/store/luftrausers.php":
+    id = 39474;
   break;
 }
 
