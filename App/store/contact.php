@@ -39,7 +39,7 @@
 </div>
 
   <div id="map" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
-<script Src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=weather&sensor=false"></script>
+<script Src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <script type="text/javascript">
     var locations = [
       ['Vlambeer, Neude 5, 3512 AD, Utrecht', 52.09334, 5.11893, 1]
@@ -54,14 +54,6 @@
     var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
-
-	var weatherLayer = new google.maps.weather.WeatherLayer({
-    temperatureUnits: google.maps.weather.TemperatureUnit.CELCIUS
-   });
-   weatherLayer.setMap(map);
-
-   var cloudLayer = new google.maps.weather.CloudLayer();
-   cloudLayer.setMap(map);
 
 	
     for (i = 0; i < locations.length; i++) {  
