@@ -621,6 +621,7 @@ img.music-photos{
 #contact-form textarea {
     height: 135px;
     background-color: #e1e1e1;
+    resize: none;
 }
 
 #contact-form input[type="submit"]{
@@ -660,7 +661,10 @@ img.music-photos{
 	float: right;
 }
 
-#contact
+.contactMap{
+	height: 200px;
+	width: 400px;
+}
 /*---------------------------------------------------EINDE CONTACT PAGINA------------------------------------------*/
 
 .footer{

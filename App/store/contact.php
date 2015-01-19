@@ -37,4 +37,49 @@
 	</form>
 </div>
 </div>
+
+  <div id="map" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+<script Src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=weather&sensor=false"></script>
+  <script type="text/javascript">
+    var locations = [
+      ['Vlambeer, Neude 5, 3512 AD, Utrecht', 52.09334, 5.11893, 1]
+    ];
+	
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11,
+      center: new google.maps.LatLng(52.09334, 5.11893),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+	var weatherLayer = new google.maps.weather.WeatherLayer({
+    temperatureUnits: google.maps.weather.TemperatureUnit.CELCIUS
+   });
+   weatherLayer.setMap(map);
+
+   var cloudLayer = new google.maps.weather.CloudLayer();
+   cloudLayer.setMap(map);
+
+	
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map,
+        icon : '../../design/images/logoMaps.png'
+
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+	
+	
+  </script>
 <?php require '../includes/footer.php' ?>
