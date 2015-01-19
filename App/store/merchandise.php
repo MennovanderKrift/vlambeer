@@ -89,8 +89,6 @@
 	  			<option>XXL</option>
 			</select>			
 		</div>
-
-			<?php endif; ?>
 		
 		<div class="select-geslacht">
 			<label for="Geslacht">Gender</label>
@@ -99,6 +97,8 @@
 	  			<option>Women</option>
 			</select>		
 		</div>
+
+		<?php endif; ?>
 
 		<div class="insert-cart-btn">
 			<a href="addproduct.php"><img class="cart-btn" src="../assets/img/Bestelknop.gif"></a>
