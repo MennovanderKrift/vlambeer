@@ -1,6 +1,9 @@
 <?php
 
 require '../includes/header.php';
+require '../libs/Shoppingcart.php';
+
+$sc = new Shoppingcart();
 /*
 if(isset($_GET['name'])) 
 {

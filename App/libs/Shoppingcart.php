@@ -50,12 +50,12 @@ Class Shoppingcart
 
 	public function removeFromCart($product_id)
 	{
-		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid");
+		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid", $bind))
 			$bind = [
 						"id" 	=> $this->cart_id,
 						"pid" 	=> $product_id
 					];
-			$db->query("DELETE FROM tbl_carts WHERE cart_id = :id AND product_id = :pid", $bind);		
+			$this->db->query("DELETE FROM tbl_carts WHERE cart_id = :id AND product_id = :pid")	
 			$bind = [
 						"tid" => $this->cart_id,
 						"pid" => $this->product_id

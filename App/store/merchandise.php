@@ -101,7 +101,7 @@
 		</div>
 
 		<div class="insert-cart-btn">
-			<img class="cart-btn" src="../assets/img/Bestelknop.gif">
+			<a href="addproduct.php"><img class="cart-btn" src="../assets/img/Bestelknop.gif"></a>
 		</div>
 	</div>
 
