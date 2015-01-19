@@ -90,7 +90,7 @@ require '../includes/header.php';
 
 		<div class="col-md-3">
 			<div class="product-img"><a href="#"><img src="../assets/img/super-crate-box-pluche.jpg" alt="Super crate box pluche"></a></div>	
-			<div class="product-info"><a href="#"><p>Super Crate Box <br> Plushie</p></a></div>
+			<div class="product-info"><a href="#"><p>Super Crate Box <br> Pluche</p></a></div>
 			<div class="arrow-down"></div>
 		</div>
 	</div>

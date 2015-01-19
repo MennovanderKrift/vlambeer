@@ -1,6 +1,10 @@
 <?php
 	require '../includes/header.php';
 
+	if(!isset($_GET['product_id'])){
+		header("location: index.php");
+	}
+
 	$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
 	$query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
 
@@ -48,7 +52,7 @@
 	padding-top: 20px;
 }
 
-.price{
+.merhcandise-price{
 	font-size: 20px;
 	text-align: left;
 }
@@ -61,9 +65,13 @@
 .related-products-wrapper {
 	margin-left:16px;
 }
+
 </style>
 <?php 
 	foreach($query as $row)
+		if($row['category'] == 'Music'){
+		header("location: vlambeerMusic.php?product_id=" .$_GET['product_id']);
+		}
 	{ 
 ?>
 
@@ -72,7 +80,7 @@
 	<div class="col-md-3 shirt-info">
 		<p><?php echo $row['description']; ?></p>
 		<hr>
-		<span class="price">Price
+		<span class="merchandise-price">Price
 		<p class="amount">€<?php echo $row['item_price'] ?></p></span>
 	</div>
 	<div class="col-md-3 shirt-maat">
