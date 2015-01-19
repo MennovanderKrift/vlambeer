@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 15, 2015 at 10:59 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Machine: 127.0.0.1
+-- Genereertijd: 19 jan 2015 om 14:17
+-- Serverversie: 5.6.14
+-- PHP-versie: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `vlambeer`
+-- Databank: `vlambeer`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_customers`
+-- Tabelstructuur voor tabel `tbl_carts`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_carts` (
+  `customer_id` int(10) NOT NULL,
+  `cart_id` int(20) NOT NULL,
+  `product_id` int(20) NOT NULL,
+  `quantity` int(20) NOT NULL,
+  `item_price` float NOT NULL,
+  PRIMARY KEY (`customer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `tbl_customers`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_customers` (
@@ -44,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
--- Dumping data for table `tbl_customers`
+-- Gegevens worden uitgevoerd voor tabel `tbl_customers`
 --
 
 INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `last_name`, `gender`, `address`, `house_number`, `zipcode`, `phone_number`, `email_address`, `news_letter`) VALUES
@@ -58,7 +73,7 @@ INSERT INTO `tbl_customers` (`customer_id`, `username`, `password`, `name`, `las
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_games`
+-- Tabelstructuur voor tabel `tbl_games`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_games` (
@@ -75,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `tbl_games` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_invoice`
+-- Tabelstructuur voor tabel `tbl_invoice`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_invoice` (
@@ -93,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `tbl_invoice` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
--- Dumping data for table `tbl_invoice`
+-- Gegevens worden uitgevoerd voor tabel `tbl_invoice`
 --
 
 INSERT INTO `tbl_invoice` (`invoice_id`, `product_id`, `customer_id`, `order_status`, `amount`, `payment_status`, `date`) VALUES
@@ -113,7 +128,7 @@ INSERT INTO `tbl_invoice` (`invoice_id`, `product_id`, `customer_id`, `order_sta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_products`
+-- Tabelstructuur voor tabel `tbl_products`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_products` (
@@ -129,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `tbl_products`
+-- Gegevens worden uitgevoerd voor tabel `tbl_products`
 --
 
 INSERT INTO `tbl_products` (`product_id`, `name`, `description`, `item_price`, `category`, `image`, `stock`) VALUES
@@ -146,7 +161,21 @@ INSERT INTO `tbl_products` (`product_id`, `name`, `description`, `item_price`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_users`
+-- Tabelstructuur voor tabel `tbl_tempcarts`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_tempcarts` (
+  `tempcart_id` int(20) NOT NULL,
+  `product_id` int(20) NOT NULL,
+  `quantity` int(20) NOT NULL,
+  `item_price` float NOT NULL,
+  PRIMARY KEY (`tempcart_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `tbl_users`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_users` (
@@ -161,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `tbl_users`
+-- Gegevens worden uitgevoerd voor tabel `tbl_users`
 --
 
 INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `email`, `name`, `last_name`) VALUES
@@ -175,11 +204,11 @@ INSERT INTO `tbl_users` (`user_id`, `username`, `password`, `email`, `name`, `la
 (8, 'Jan', 'admin123', 'jan@vlambeer.com', 'Jan', 'Adriaans');
 
 --
--- Constraints for dumped tables
+-- Beperkingen voor gedumpte tabellen
 --
 
 --
--- Constraints for table `tbl_invoice`
+-- Beperkingen voor tabel `tbl_invoice`
 --
 ALTER TABLE `tbl_invoice`
   ADD CONSTRAINT `tbl_invoice_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `tbl_products` (`product_id`),
