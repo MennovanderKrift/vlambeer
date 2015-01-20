@@ -43,7 +43,7 @@ if ($_SESSION['role'] == 'admin') {
 	$query = $db->query("SELECT * FROM tbl_customers"); 
 
 	foreach ($query as $row) 
-	{
+	{		echo "<form action='changeStatus.php' method='POST'>";
 	 		echo "<tr>";
 				echo "<td>" . $row->customer_id . "</td>";
 				echo "<td>" . $row->username . "</td>";
@@ -61,11 +61,11 @@ if ($_SESSION['role'] == 'admin') {
 					echo "No";
 				};
 
-
-
-				echo "</td>";	
-				echo "<td><a href='changeStatus.php' class='btn btn-danger'>Invoices</a></td>";
+				echo "</td>";
+				echo "<input type='hidden' value='".$row->customer_id."'>";
+				echo "<td><input type='submit' class='btn btn-danger' value='Invoices'></td>";
 			echo "</tr>";
+			echo "</form>";
 	 };
 
 		 echo "</tbody>";
