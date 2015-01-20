@@ -50,15 +50,15 @@ if ($_SESSION['role'] == 'admin') {
 	$users = $stmt->fetchAll(PDO::FETCH_OBJ);
 
 	if ($number_of_rows == 0) {
-			echo 	"<tr>
-						<td>No users found</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>"; 
+			echo "<tr>
+					<td>No users found</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				 </tr>"; 
 	} else {
 		foreach ($users as $user) {
 			$userid = $user->user_id;
@@ -66,11 +66,11 @@ if ($_SESSION['role'] == 'admin') {
 			<form method="POST" action="../controllers/adminController.php?user_id=<?php echo $userid;?>">
 				<tbody>
 					<tr>
-						<td><?php echo $user->user_id; ?></td>
-						<td><?php echo $user->username; ?></td>
-						<td><?php echo $user->password; ?></td>
-						<td><?php echo $user->name; ?></td>
-						<td><?php echo $user->last_name; ?></td>
+						<td><?= $user->user_id; ?></td>
+						<td><?= $user->username; ?></td>
+						<td><?= $user->password; ?></td>
+						<td><?= $user->name; ?></td>
+						<td><?= $user->last_name; ?></td>
 						<td><input type="submit" value="Edit" name="editAdminAccounts" class="btn btn-danger"></td>
 						<td><input type="submit" value="Delete" name="deleteAdminAccounts" class="btn btn-danger"></td>
 					</tr>

@@ -507,7 +507,6 @@ img.music-photos{
 	width: 225px;
 	margin-bottom: 10px;
 	float: left;
-
 }
 
 .musicInfo{
@@ -520,6 +519,7 @@ img.music-photos{
 	bottom: 12px;
 	right: 30px;
 }
+
 .musicInfo p{
 	padding-top: 10px;
 	padding-left: 10px;
@@ -530,6 +530,7 @@ img.music-photos{
 	font-size: 15px;
 
 }
+
 .musicInfo-header h2{
 	width: 670px;
 	height: 45px;
@@ -575,13 +576,21 @@ img.music-photos{
 	bottom: 340px;
 	right: 20px;
 }
+
 .musicInfo-footer{
 	height: 20px;
 	width: 670px;
 	background: #fac846;
 	position: absolute;
 	bottom: 8px;
+}
 
+.album-amount{
+	font-weight: bold;
+	font-style: italic;
+	text-align: center !important;
+	color: #63676a !important;
+	padding-top: 0 !important;
 }
 
 /*---------------------------------------------------EINDE MUSIC PAGINA------------------------------------------*/
@@ -596,6 +605,7 @@ img.music-photos{
 	float: right;
 	margin: 20px 0px 20px 0px;
 }
+
 #contact-form{
 	height:365px;
 }
@@ -604,11 +614,13 @@ img.music-photos{
     width: 100%;
     margin: 0 0 5px;
 }
+
 #contact-form input[type="text"] {
     height: 15px;
     margin-bottom: 10px;
     background-color: #e1e1e1;
 }
+
 #contact-form input, #contact-form textarea {
     border: medium none;
     float: right;
@@ -618,6 +630,7 @@ img.music-photos{
     padding: 25px;
     width: 420px;
 }
+
 #contact-form textarea {
     height: 135px;
     background-color: #e1e1e1;
@@ -631,21 +644,23 @@ img.music-photos{
 	   padding: 10px 10px 10px 10px; 
 	   background-color: #3cb878;
 }
+
 #contact-form input[type="submit"]:hover{
     background-color:#ee1d25;
 }
+
 #contact-form p input.button {
     font-family: 'Century Gothic', sans-serif;
 	font-size: 18px;
     font-weight:bold;
     color: #FFF;
 }
+
 .contact-adress{
 	width: 465px;
 	height: 315px;
 	border: 2px solid #f0f0f0;
 }
-
 
 #contact-info{
 	 font-family: 'Century Gothic', sans-serif;
@@ -678,11 +693,68 @@ img.music-photos{
 	color: #909090;
 }
 
+/*---------------------------------------------------BEGIN MERCHANDICE PAGINA------------------------------------------*/
+.related-product {
+	margin-right: 13px;
+	width: 150px;
+	height: 150px;
+	border: 1px solid #63676a;
+	display: inline;
+	background-color: #63676a;
+	float: left;
+
+	position: relative;
+	top: 0;
+}
+
+.related-product p {
+	font-family:'Arimo', sans-serif;
+	color: white;
+	font-size: 14px;
+	line-height: 1.42857143;
+}
+
+.related-product img{
+	width: 100%;
+}
+
+.related-product img:hover{
+	opacity: 0.7;
+}
+
+.related-products {
+	color: #6d6a61;
+	font-size:20px;
+	margin-left: 14px;
+	padding-top: 20px;
+	font-family:'Arimo', sans-serif;
+}
+
+.shirt-info{
+	padding-top: 20px;
+}
+
+.merhcandise-price{
+	font-size: 20px;
+	text-align: left;
+}
+
+.amount{
+	font-size: 24px;
+	text-align: center;
+}
+
+.related-products-wrapper {
+	margin-left:16px;
+}
+/*---------------------------------------------------EINDE MERCHANDICE PAGINA------------------------------------------*/
+
 .merchandise{
 	margin-top: 40px;
 	margin-bottom: 40px;
 	color:white;
 }
+
 .merchandise h3 {
 	margin-top: -15px;
 	margin-bottom: -15px;

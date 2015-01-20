@@ -23,21 +23,11 @@
 
 	$music->execute();
 
-		foreach($music as $album)
-			if($album['category'] !== 'Music'){
-				header("location: merchandise.php?product_id=" .$productId);
-			}
-	{ 
+	foreach($music as $album)
+		if($album['category'] !== 'Music'){
+			header("location: merchandise.php?product_id=" .$productId);
+	}
 ?>
-<style>
-.album-amount{
-	font-weight: bold;
-	font-style: italic;
-	text-align: center !important;
-	color: #63676a !important;
-	padding-top: 0 !important;
-}
-</style>
 
 <div class="container">
 	<div class="music-photos-wrapper">
@@ -47,18 +37,16 @@
 	</div>
 
 	<div class="bestel">
-	<div class="product-info"><p><a href="addproduct.php?id=<?php echo $album['product_id']; ?>">Bestel</a></p></div>
+	<div class="product-info"><p><a href="addproduct.php?id=<?= $album['product_id']; ?>">Bestel</a></p></div>
 	<div class="arrow-down"></div>
 	</div>
 
 
 	<div class="musicInfo">
 		<div class="musicInfo-header"><h2 class="musicInfo-title"><?= $album['name']; ?></h2></div>
-		<p><?= $album['description'];?></p>
-		<div class="musicInfo-footer"><p class="album-amount">Price: €<?php echo $album['item_price'] ?></p></div>
+		<p><?= $album['description']; ?></p>
+		<div class="musicInfo-footer"><p class="album-amount">Price: €<?= $album['item_price']; ?></p></div>
 	</div>
 </div>
 
-<?php 
-}
-require '../includes/footer.php' ?>
+<?php require '../includes/footer.php'; ?>

@@ -5,7 +5,6 @@
 		// if product_id is not a number, redirect back to index.php
 		header('location: index.php');
 	}else{
-		// else set $productId to $_GET['product_id']
 		$productId = $_GET['product_id'];
 	}
 
@@ -23,68 +22,11 @@
 	$query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
 
 	$query->execute();
-?>
 
-<style>
-.related-product {
-	margin-right: 13px;
-	width: 150px;
-	height: 150px;
-	border: 1px solid #63676a;
-	display: inline;
-	background-color: #63676a;
-	float: left;
-
-	position: relative;
-	top: 0;
-}
-
-.related-product p {
-	font-family:'Arimo', sans-serif;
-	color: white;
-	font-size: 14px;
-	line-height: 1.42857143;
-}
-
-.related-product img{
-	width: 100%;
-}
-
-.related-product img:hover{
-	opacity: 0.7;
-}
-
-.related-products {
-	color: #6d6a61;
-	font-size:20px;
-	margin-left: 14px;
-	padding-top: 20px;
-	font-family:'Arimo', sans-serif;
-}
-
-.shirt-info{
-	padding-top: 20px;
-}
-
-.merhcandise-price{
-	font-size: 20px;
-	text-align: left;
-}
-
-.amount{
-	font-size: 24px;
-	text-align: center;
-}
-
-.related-products-wrapper {
-	margin-left:16px;
-}
-</style>
-<?php 
 	foreach($query as $row){
 		if($row['category'] == 'Music'){
 		header("location: vlambeerMusic.php?product_id=" .$_GET['product_id']);
-		}
+	}
 ?>
 
 <div class="container merchandise">
