@@ -1,22 +1,31 @@
 <?php
 	require '../includes/header.php';
 	
-	if(!isset($_GET['product_id'])){
-		// if product_id is not set, redirect back to index.php
-		header("location: index.php");
-	}elseif(!is_numeric($_GET['product_id'])){
+	if(!is_numeric($_GET['product_id'])){
 		// if product_id is not a number, redirect back to index.php
 		header('location: index.php');
+	}else{
+		$productId = $_GET['product_id'];
+	}
+
+	$countRows = $db-> prepare ("SELECT count(*) FROM tbl_products WHERE product_id=:product_id");
+	$countRows->bindParam(':product_id', $productId, PDO::PARAM_STR);
+	$countRows->execute();
+	$result = $countRows->fetchColumn();
+
+	if(!$result == 1){
+		// if no product is found, redirect to index.php
+		echo header("location: index.php");
 	}
 
 	$music = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
-	$music -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
+	$music -> bindParam(":productID", $productId, PDO::PARAM_STR);
 
 	$music->execute();
 
 		foreach($music as $album)
 			if($album['category'] !== 'Music'){
-				header("location: merchandise.php?product_id=" .$_GET['product_id']);
+				header("location: merchandise.php?product_id=" .$productId);
 			}
 	{ 
 ?>
