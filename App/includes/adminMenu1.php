@@ -21,7 +21,20 @@
 			<div class="admin-nav-menu">
 				<div class="admin-nav-profile">
 					<img src="../assets/img/profile-male.png" alt=""><br>
-					<span class="admin-nav-profile-name"><?php echo $_SESSION['name'] . ' ' . $_SESSION['last_name']; ?></span>
+					
+					<span class="admin-nav-profile-name">
+					<?php
+						$query = $db->query("SELECT name, last_name FROM tbl_users WHERE user_id = :session_id");
+						$query -> bindParam(":session_id", $_SESSION['id'], PDO::PARAM_STR);
+						$result = $user->fetch();
+
+						$result['firstname'];
+						$result['lastname'];
+					
+					 echo $_SESSION['name'] . ' ' . $_SESSION['last_name'];
+					 ?>
+					 </span>
+
 				</div>
 			<nav>
 				<ul class="admin-nav-menu-items">
