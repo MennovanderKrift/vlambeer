@@ -2,7 +2,11 @@
 	require '../includes/header.php';
 	
 	if(!isset($_GET['product_id'])){
+		// if product_id is not set, redirect back to index.php
 		header("location: index.php");
+	}elseif(!is_numeric($_GET['product_id'])){
+		// if product_id is not a number, redirect back to index.php
+		header('location: index.php');
 	}
 
 	$music = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
