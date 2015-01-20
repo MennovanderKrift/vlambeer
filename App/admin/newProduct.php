@@ -26,7 +26,7 @@ if(!isset($_POST['new-product'])){
 
 		    <label for="image" class="col-sm-2 col-md-2 control-label">Image link: </label>
 		    <div class="col-sm-10 col-md-10">
-		    	<input type="text" class="form-control" placeholder="http://www.vlambeer.com/logo.png" name="image" id="image">
+		    	<input type="text" class="form-control" placeholder="http://www.store.vlambeer.com/assets/img/products/Gungodz-OST.jpg" name="image" id="image">
 		    </div>
 
 		    <label for="description" class="col-sm-2 col-md-2 control-label">Description:</label>
@@ -55,11 +55,6 @@ if(!isset($_POST['new-product'])){
 				<input type="number" class="form-control" placeholder="0-9999" name="stock" id="stock" min="0" max="9999">
 		    </div>
 
-		 	<label for="tags" class="col-sm-2 col-md-2 control-label">Tags:</label>
-		    <div class="col-sm-10 col-md-10">
-		    	<textarea class="form-control" rows="3" placeholder="ex. Mario, Luigi, Yoshi, Peach, Toad, Bowser, Koopa, Kart, etc." name="tags" id="tags"></textarea>
-		    </div>
-
 		 	<label for="category" class="col-sm-2 col-md-2 control-label">Category:</label>
 		    <div class="col-sm-10 col-md-10">
 		    	<select class="form-control" name="category" id="category">
@@ -84,30 +79,30 @@ if(!isset($_POST['new-product'])){
 <?php
 
 } else {
+		// If not all fields are filled in, redirect back with the $msg
+		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['category'] || empty($_POST['image']))){
+			$msg = urlencode("All fields are required");
+			header('location: newProduct.php?msg=' .$msg);
+		}
 
-        $stmt = $db->prepare("INSERT INTO tbl_products (name, image, description, price, size, stock, category) VALUES (:name, :image, :description, :price, :size, :stock, :category)");
+        $stmt = $db->prepare("INSERT INTO tbl_products (name, image, description, item_price, size, stock, category) VALUES (:name, :image, :description, :item_price, :size, :stock, :category)");
         $stmt->bindParam("name", $_POST['name'], 				PDO::PARAM_STR);
         $stmt->bindParam("image", $_POST['image'], 				PDO::PARAM_STR);
         $stmt->bindParam("description", $_POST['description'], 	PDO::PARAM_STR);
-        $stmt->bindParam("price", $_POST['price'], 				PDO::PARAM_STR);
+        $stmt->bindParam("item_price", $_POST['price'], 		PDO::PARAM_STR);
         $stmt->bindParam("size", $_POST['size'], 				PDO::PARAM_STR);
         $stmt->bindParam("stock", $_POST['stock'], 				PDO::PARAM_STR);
         $stmt->bindParam("category", $_POST['category'], 		PDO::PARAM_STR);
 
-		if( empty($_POST['name']) || empty($_POST['description']) || empty($_POST['price']) || empty($_POST['stock']) || empty($_POST['category'] || empty($_POST['image'])) ){
-			$msg = urlencode("All fields are required");
-			header('location: newProduct.php?msg=' .$msg);
-		} else {
+		if(!$stmt->execute()){
+        $msg = urlencode("Cannot add new product");
+        header('location: ../newProduct.php?msg=' .$msg);
 
-			if (! $stmt->execute()) {
-	        $msg = urlencode("Cannot add new product");
-	        header('location: ../newProduct.php?msg=' .$msg);
-
-		    } else {
-		        $msg = urlencode("New product added");
-		        header('location: ../store/newProduct.php?msg=' .$msg. '&new-product=true');
-	    	}
-		}
+	    } else {
+	        $msg = urlencode("New product added");
+	        header('location: newProduct.php?msg=' .$msg. '&new-product=true');
+    	}
+	
 	?>
 
 <div class="container">
