@@ -1,13 +1,6 @@
 <?php
   session_start();
   require '../config/config.php';
-
-  if ($_SESSION['id'] == $_GET['id']) {
-  } else {
-  	session_start();
-    $_SESSION['noRights'] = "You are not allowed to come here, Please login again";
-    header("location: ../admin/login.php");
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

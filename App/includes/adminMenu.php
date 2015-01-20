@@ -2,13 +2,6 @@
   session_start();
   require '../config/Database.php';
 
-  if ($_SESSION['id'] == $_GET['id']) {
-  } else {
-  	session_start();
-    $_SESSION['noRights'] = "You are not allowed to come here, Please login again";
-    header("location: ../admin/admin.php?id=" . $_SESSION['id']);
-  }
-
   	if (isset($_SESSION['noRights'])) {
 		echo '<li class="login-error-msg">' . $_SESSION['noRights'] . '</li>';
 		unset($_SESSION['noRights']);
@@ -33,18 +26,28 @@
 			<div class="admin-nav-menu">
 				<div class="admin-nav-profile">
 					<img src="../assets/img/profile-male.png" alt=""><br>
-					<span class="admin-nav-profile-name"><?php echo $_SESSION['name'] . ' ' . $_SESSION['last_name']; ?></span>
+					<span class="admin-nav-profile-name">
+					<?php
+						$stmt = $db->prepare("SELECT username FROM tbl_users WHERE user_id = :id");
+						$stmt->bindParam("id", $_SESSION['id']);
+						$stmt->execute();
+						$users = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+						foreach ($users as $row) {
+							echo $row->username;
+						}
+					?>
 				</div>
 			<nav>
 				<ul class="admin-nav-menu-items">
 					<li><form action=""><input type="search" name="search" id="search" placeholder="Search.." class="admin-search"><input type="submit" name="submit" value="" class="admin-search-button"></form></li>
-					<a href="admin.php?id=<?php echo $_SESSION['id']; ?>"><li>Admins</li></a>
-					<a href="customers.php?id=<?php echo $_SESSION['id']; ?>"><li>Customers</li></a>
-					<a href="newProduct.php?id=<?php echo $_SESSION['id']; ?>"><li>Add product</li></a>
-					<a href="changeStatus.php?id=<?php echo $_SESSION['id']; ?>"><li>Invoices</li></a>
-					<a href="newsletter.php?id=<?php echo $_SESSION['id']; ?>"><li>Newsletter</li></a>
-					<a href="settings.php?id=<?php echo $_SESSION['id']; ?>"><li>Settings</li></a>
-					<a href="inventory.php?id=<?php echo $_SESSION['id']; ?>"><li>Inventory Items</li></a>
+					<a href="admin.php"><li>Admins</li></a>
+					<a href="customers.php"><li>Customers</li></a>
+					<a href="newProduct.php"><li>Add product</li></a>
+					<a href="changeStatus.php"><li>Invoices</li></a>
+					<a href="newsletter.php"><li>Newsletter</li></a>
+					<a href="settings.php"><li>Settings</li></a>
+					<a href="inventory.php"><li>Inventory Items</li></a>
 					<a href="../controllers/adminController.php?logout" name="logout"><li>Logout</li></a>
 				</ul>
 			</div>

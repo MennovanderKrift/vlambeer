@@ -31,10 +31,6 @@ if (isset($_POST['loginAdmin'])) {
       session_start();
       $_SESSION['id'] = $user->user_id;
       $_SESSION['role'] = 'admin';
-      $_SESSION['username'] = $user->username;
-      $_SESSION['password'] = $user->password;
-      $_SESSION['name'] = $user->name;
-      $_SESSION['last_name'] = $user->last_name;
       header("location: ../admin/admin.php?id=" . $_SESSION['id']);    
     } else {
       session_start();
