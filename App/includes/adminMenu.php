@@ -40,7 +40,6 @@
 				</div>
 			<nav>
 				<ul class="admin-nav-menu-items">
-					<li><form action=""><input type="search" name="search" id="search" placeholder="Search.." class="admin-search"><input type="submit" name="submit" value="" class="admin-search-button"></form></li>
 					<a href="admin.php"><li>Admins</li></a>
 					<a href="customers.php"><li>Customers</li></a>
 					<a href="newProduct.php"><li>Add product</li></a>

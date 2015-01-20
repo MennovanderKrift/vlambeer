@@ -25,14 +25,13 @@
 				</div>
 			<nav>
 				<ul class="admin-nav-menu-items">
-					<li><form action=""><input type="search" name="search" id="search" placeholder="Search.." class="admin-search"><input type="submit" name="submit" value="" class="admin-search-button"></form></li>
-					<a href="admin.php?id=<?php echo $_SESSION['id']; ?>"><li>Admins</li></a>
-					<a href="customers.php?id=<?php echo $_SESSION['id']; ?>"><li>Customers</li></a>
-					<a href="newProduct.php?id=<?php echo $_SESSION['id']; ?>"><li>Add product</li></a>
-					<a href="changeStatus.php?id=<?php echo $_SESSION['id']; ?>"><li>Invoices</li></a>
-					<a href="newsletter.php?id=<?php echo $_SESSION['id']; ?>"><li>Newsletter</li></a>
-					<a href="settings.php?id=<?php echo $_SESSION['id']; ?>"><li>Settings</li></a>
-          			<a href="inventory.php?id=<?php echo $_SESSION['id']; ?>"><li>Inventory Items</li></a>
+					<a href="admin.php"><li>Admins</li></a>
+					<a href="customers.php"><li>Customers</li></a>
+					<a href="newProduct.php"><li>Add product</li></a>
+					<a href="changeStatus.php"><li>Invoices</li></a>
+					<a href="newsletter.php"><li>Newsletter</li></a>
+					<a href="settings.php"><li>Settings</li></a>
+					<a href="inventory.php"><li>Inventory Items</li></a>
 					<a href="../controllers/adminController.php?logout" name="logout"><li>Logout</li></a>
 				</ul>
 			</div>
