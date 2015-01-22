@@ -530,6 +530,10 @@ EINDE LOGIN SCRIPT CSS
 	font-size: 6pt;
 }
 
+.twitter-feed p{
+	margin-bottom: 0;
+}
+
 .twitter-feed a{
  color: #fac846;
 }

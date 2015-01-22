@@ -40,14 +40,28 @@ require '../includes/header.php';
 	<div class="col=md-5 twitter-feed">
 		<img src="../assets/img/twitter-header.png" alt="twitter-header" class="col-md-5 twitter-header">
 		<div class="tweet col-md-5">
-			<p class="twitter-poster"> Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
-			<p class="twitter-post">Nuclear Throne (PC) - Episode 282:  <a href="http://youtu.be/wP1ejrcWqDY">http://youtu.be/wP1ejrcWqDY</a></p>
+			<p class="twitter-poster">Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
+			<p class="twitter-post">Nuclear Throne (PC) - Episode 282: <a href="http://youtu.be/wP1ejrcWqDY" target="_blank">http://youtu.be/wP1ejrcWqDY</a> via @YouTube</p>
 		</div>
+
+		<div class="tweet col-md-5">
+			<p class="twitter-poster">KetrinaYim <span class="tweeted-from">@KetrinaYim  ·  12 u</span></p>
+			<p class="twitter-post">Photo: My animals as Nuclear Throne characters. Careful where you point that crossbow, Patty! <a href="http://tmblr.co/Zu6GYs1a9stDy" target="_blank">http://tmblr.co/Zu6GYs1a9stDy</a></p>
+		</div>
+
+		
+		<div class="tweet col-md-5">
+			<p class="twitter-poster"> bisnap <span class="tweeted-from">@bisnapLP  ·  12 u </span></p>
+			<p class="twitter-post">Bisnap Plays Nuclear Throne - Episode 207: <a href="http://youtu.be/Q0d1D4E155U?a" target="_blank">http://youtu.be/Q0d1D4E155U?a</a> via @YouTube</p>
+		</div>
+
 		
 		<div class="tweet col-md-5">
 			<p class="twitter-poster"> Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
-			<p class="twitter-post">Nuclear Throne (PC) - Episode 282:  <a href="http://youtu.be/wP1ejrcWqDY">http://youtu.be/wP1ejrcWqDY</a></p>
+			<p class="twitter-post">Nuclear Throne (PC) - Episode 282: <a href="http://youtu.be/wP1ejrcWqDY" target="_blank">http://youtu.be/wP1ejrcWqDY</a> via @YouTube</p>
 		</div>
+
+
 	</div>
 
 	</div>
