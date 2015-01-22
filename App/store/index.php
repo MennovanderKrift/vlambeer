@@ -13,31 +13,31 @@ require '../includes/header.php';
 	<div class="container">
 		<h2 class="col-md-12" style="text-align:center">Games</h2>
 		<div class="index-items col-md-7 index-games">
-			<div class="col-md-3">
+			<div class="col-md-3 index-game">
 				<a href="serious-sam.php"><div class="product-img"><img src="../assets/img/ss_logo.png" alt="serious-sam.jpg"></div></a>	
 				<div class="product-info"><a href="serious-sam.php"><p>Serious Sam: The Random Encounter (PC, Steam)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3" index-game>
 				<a href="SuperCrateBox.php"><div class="product-img"><img src="../assets/img/scb_logo.png" alt="supercratebox.png"></div></a>
 				<div class="product-info"><a href="SuperCrateBox.php"><p>Super Crate Box <br> (PC, Mac)(iOS) (Vita)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
-			<div class="col-md-3">
+			<div class="col-md-3" index-game>
 				<a href="luftrausers.php"><div class="product-img"><img src="../assets/img/lr_logo.png" alt="luftrausers.png"></div></a>	
 				<div class="product-info"><a href="#"><p>luftrausers <br> (PS3) (steam) (mac) (linux)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 
-			<div class="col-md-3">
+			<div class="col-md-3" index-game>
 				<a href="gunGodz.php"><div class="product-img"><img src="../assets/img/gg_logo.png" alt="gg_logo.png"></div></a>	
 				<div class="product-info"><a href="#"><p>Gun-Godz<br> (pc)</p></a></div>
 				<div class="arrow-down"></div>
 			</div>
 		</div>
 
-	<div class="col=md-5 twitter-feed">
+	<div class="twitter-feed">
 		<img src="../assets/img/twitter-header.png" alt="twitter-header" class="col-md-5 twitter-header">
 		<div class="tweet col-md-5">
 			<p class="twitter-poster">Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
