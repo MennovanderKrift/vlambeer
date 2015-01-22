@@ -28,6 +28,7 @@ if($query->execute()) {
 		$address		= $pdfinfo->address;
 		$zipcode 		= $pdfinfo->zipcode;
 		$email 			= $pdfinfo->email_address;
+		$date 			= $pdfinfo->date;
 
 		$productSql 	= "SELECT * FROM tbl_products WHERE product_id = :product_id";
 		$productQuery 	= $db->prepare($productSql);
@@ -44,127 +45,101 @@ if($query->execute()) {
 	}
 }
 
+$company = "Vlambeer";
+$address1 = "Neude 5";
+$zipcode1 = "3512 AD, Utrecht";
+$email1 = "info@vlambeer.com";
+$telephone = "+316-2120-6363";
+
+$btw = (0.21*$item_price);
+$price = ($item_price-$btw);
+$total = ($btw+$price);
 
 // PDF BESTAND AANMAKEN
-define('EURO',chr(128));
-
+class PDF extends FPDF
+{
+function Header()
+{
+if(!empty($_FILES["file"]))
+  {
+$uploaddir = "logo/";
+$nm = $_FILES["file"]["name"];
+$random = rand(1,99);
+move_uploaded_file($_FILES["file"]["tmp_name"], $uploaddir.$random.$nm);
+$this->Image($uploaddir.$random.$nm,10,10,20);
+unlink($uploaddir.$random.$nm);
+}
+$this->SetFont('Arial','B',12);
+$this->Ln(1);
+}
+function Footer()
+{
+$this->SetY(-15);
+$this->SetFont('Arial','I',8);
+$this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
+}
+function ChapterTitle($num, $label)
+{
+$this->SetFont('Arial','',12);
+$this->SetFillColor(200,220,255);
+$this->Cell(0,6,"$num $label",0,1,'L',true);
+$this->Ln(0);
+}
+function ChapterTitle2($num, $label)
+{
+$this->SetFont('Arial','',12);
+$this->SetFillColor(249,249,249);
+$this->Cell(0,6,"$num $label",0,1,'L',true);
+$this->Ln(0);
+}
+}
 $euro = iconv('utf-8', 'cp1252', '€');
-
-$pdf = new FPDF(); 
-$pdf->Addpage();
-$pdf->Image('../assets/img/slider1.png');
-$pdf->SetFont("Arial", "B", "20");
-$pdf->Cell(0,10,"Vlambeer Invoice",1,1,"C");
-
-//Barroc IT informatie
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"Vlambeer", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"Neude 5", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"3512 AD, Utrecht", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"The Netherlands", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"+31621206363", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"info@vlambeer.com", 0, 0, 'L');
-$pdf->Ln();
-
-$pdf->SetFont("Arial", "", "12");
-$pdf->Cell(0,5,"Rekeningnummer: NL 04 RABO 0197608098", 0, 0, 'L');
-$pdf->Ln();
-$pdf->Ln();
-$pdf->Ln();
-$pdf->Ln();
-
-
-//Klant informatie
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$CompanyName", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$ContactPerson", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$Address1", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$Zipcode1", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$TelephoneNumber1", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"$Email", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"Pay before: $InvoiceDuration", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"Current remaining credit: $euro$Credit,-", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"Limit amount: $euro$Limit,-", 0, 0, 'L');
-// $pdf->Ln();
-
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"Description: $Description", 0, 0, 'R');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"Price: $euro$Price,-", 0, 0, 'R');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"BTW: $BTW%", 0, 0, 'R');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "", "12");
-// $pdf->Cell(0,5,"________________________________________________________________", 0, 0, 'R');
-// $pdf->Ln();
-
-// $pdf->SetFont("Arial", "B", "12");
-// $pdf->Cell(0,5,"Amount to pay: $euro$Amount,-", 0, 0, 'R');
-// $pdf->Ln();
-
-
-
-
-
-
+$pdf = new PDF();
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->Image('../assets/img/logo.png');
+$pdf->SetFont('Times','',24);
+$pdf->SetTextColor(32);
+$pdf->Cell(0,0,"Vlambeer",0,1,'C');
+$pdf->SetFont('Times','',12);
+$pdf->SetTextColor(32);
+$pdf->Cell(5,5,$company,0,1,'L');
+$pdf->Cell(0,5,$address1,0,1,'L');
+$pdf->Cell(0,5,$zipcode1,0,1,'L');
+$pdf->Cell(0,5,$email1,0,1,'L');
+$pdf->Cell(0,5,'Tel: '.$telephone,0,1,'L');
+$pdf->SetFont('Times','',12);
+$pdf->SetTextColor(32);
+$pdf->Cell(0,5,$name . " " . $last_name,0,1,'R');
+$pdf->Cell(0,5,$address,0,1,'R');
+$pdf->Cell(0,5,$zipcode,0,1,'R');
+$pdf->Cell(0,5,$email,0,1,'R');
+$pdf->Cell(0,30,'',0,1,'R');
+$pdf->SetFillColor(200,220,255);
+$pdf->ChapterTitle('Invoice Number ',$invoice_id);
+$pdf->ChapterTitle('Invoice Date ',$date);
+$pdf->Cell(0,20,'',0,1,'R');
+$pdf->SetFillColor(224,235,255);
+$pdf->SetDrawColor(192,192,192);
+$pdf->Cell(170,7,'Item',1,0,'L');
+$pdf->Cell(20,7,'Price',1,1,'C');
+$pdf->Cell(170,7,$product_name,1,0,'L',0);
+$pdf->Cell(20,7,$euro . " " . $price,1,1,'C',0);
+$pdf->Cell(0,0,'',0,1,'R');
+$pdf->Cell(170,7,'BTW 21%',1,0,'R',0);
+$pdf->Cell(20,7,$euro . " " . $btw,1,1,'C',0);
+$pdf->Cell(170,7,'Total',1,0,'R',0);
+$pdf->Cell(20,7,$euro . " " . $total,1,0,'C',0);
+$pdf->Cell(0,20,'',0,1,'R');
+$pdf->Cell(0,5,"Payment information",0,1,'L');
+$pdf->Cell(0,5,"Rabobank",0,1,'L');
+$pdf->Cell(0,5,"NL 04 RABO 0197608098",0,1,'L');
+$pdf->Cell(0,20,'',0,1,'R');
+$pdf->Cell(0,5,'PayPal:',0,1,'L');
+$pdf->Cell(0,5,"info@vlambeer.com",0,1,'L');
+$pdf->Cell(190,40,"Please pay within 14 days after invoice date",0,0,'C');
 
 $pdf->output('invoices/' . $invoice_id . '_Customer-' . $customer_id . '_VLAMBEER.pdf');
-
-
-	header("location: invoices/" . $invoice_id . "_Customer-" . $customer_id . "_VLAMBEER.pdf")
+header("location: invoices/" . $invoice_id . "_Customer-" . $customer_id . "_VLAMBEER.pdf");
+// $filename="invoice.pdf";
+// $pdf->Output($filename,'F');
