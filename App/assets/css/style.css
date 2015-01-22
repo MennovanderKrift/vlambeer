@@ -509,10 +509,13 @@ EINDE LOGIN SCRIPT CSS
 
 .twitter-header{
 	padding: 0;
+	border-top: 1px solid #34cbfe;
 }
 
 .tweet:nth-child(odd){
 	background-color: #f5f5f5;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
 }
 
 .tweet:nth-child(even){
