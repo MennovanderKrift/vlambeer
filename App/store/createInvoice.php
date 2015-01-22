@@ -167,7 +167,4 @@ $pdf->Ln();
 $pdf->output('invoices/' . $invoice_id . '_Customer-' . $customer_id . '_VLAMBEER.pdf');
 
 
-	header("location: invoices/" . $invoice_id . "_Customer-" . $customer_id . "_VLAMBEER.pdf");
-
-
-
+	header("location: invoices/" . $invoice_id . "_Customer-" . $customer_id . "_VLAMBEER.pdf")
