@@ -111,15 +111,17 @@ require '../includes/header.php';
 	<div class="index-items col-md-12">
 		<h2>Miscellaneous</h2>
 		<div class="col-md-3">
-			<div class="product-img"><a href="#"><img src="../assets/img/vlambeer-enemies-poster.png" alt="Vlambeer enemies poster"></a></div>
-			<div class="product-info"><a href="#"><p>Vlambeer <br> Enemies Poster</p></a></div>
+			<div class="comingsoon"><div class="product-img"><img src="../assets/img/vlambeer-enemies-poster.jpg" alt="Vlambeer enemies poster"></div>
+			<div class="product-info"><p>Vlambeer <br> Enemies Poster</p></div>
 			<div class="arrow-down"></div>
 		</div>
+	</div>
 
 		<div class="col-md-3">
-			<div class="product-img"><a href="#"><img src="../assets/img/super-crate-box-pluche.jpg" alt="Super crate box pluche"></a></div>	
-			<div class="product-info"><a href="#"><p>Super Crate Box <br> Pluche</p></a></div>
+			<div class="comingsoon"><div class="product-img"><img src="../assets/img/super-crate-box-pluche.png" alt="Super crate box pluche"></div>	
+			<div class="product-info"><p>Super Crate Box <br> Pluche</p></div>
 			<div class="arrow-down"></div>
+		</div>
 		</div>
 	</div>
 </div>

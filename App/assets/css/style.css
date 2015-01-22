@@ -469,7 +469,10 @@ EINDE LOGIN SCRIPT CSS
 	background-color: #fac846;
 	text-align: center;
 }
-
+.comingsoon{
+	cursor: not-allowed;
+	opacity: 0.6;
+}
 .index-items 
 {
 	height: 400px;
