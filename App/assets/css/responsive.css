@@ -1,0 +1,41 @@
+@media (min-width: 1920px) {
+
+}
+
+@media (max-width: 1680px) {
+
+	
+}
+
+@media (max-width: 1366px) {
+
+		
+}
+
+@media (max-width: 1220px) {
+
+	.navborder {
+		margin-left: 200px;	
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	
+}
+
+@media (max-width: 767px) {
+
+	
+}
+
+@media (max-width: 640px) {
+
+	.navborder
+	{
+		display:none;
+	}
+}
+
+

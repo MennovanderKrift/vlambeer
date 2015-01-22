@@ -27,10 +27,18 @@
     <img class="displayed" src="../assets/img/geanimeerd-logo.gif" width="160" height="130">
     <p class="sloganscript" id="slogan"></p>
   </div>
-  <nav>
-    <div class="navcolour">
-      <div class="navborder">
-        <ul>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <ul>
           <li><a href="../store/index.php">HOME</a></li>
           <li><a href="../store/games/index.php">GAMES</a>
             <ul>
@@ -41,6 +49,17 @@
           <li><a href="../store/contact.php">CONTACT</a></li>
           <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>
-      </div>
-    </div>    
+
+        </div>
+      </div>   
   </nav>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+<!-- /.navbar-collapse -->
+<!--         <div class="navcolour">
+        <div class="navborder"> -->
+
+<!--       </div>
+    </div> -->
