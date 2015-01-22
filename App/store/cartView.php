@@ -1,9 +1,12 @@
 <?php
 
-require '../includes/header.php';
+// require '../includes/header.php';
+require '../config/config.php';
 require '../libs/Shoppingcart.php';
 
 $sc = new Shoppingcart();
+
+$cart->addToCart("product ID", "Amount", "Price");
 
 
 

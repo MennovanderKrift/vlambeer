@@ -23,12 +23,17 @@ if(!isset($_SESSION['cart_items']))
 	$_SESSION['cart_items'] = array();
 }
 
+$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
+$query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
+
+$query->execute();
+
 if(array_key_exists($id, $_SESSION['cart_items'])) 
 {
-	header("location: cartView.php?action=exists&id=" . $id);
+	header("location: cartView.php?action=exists&product_id=" . $id);
 }
 else 
 {
 	$_SESSION['cart_items'][$id] = $name;
-	header("location: cartView.php?action=added&id=" . $id);
+	header("location: cartView.php?action=added&product_id=" . $id);
 }?>

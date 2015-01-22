@@ -1,5 +1,7 @@
 <?php
 
+// require("../config/config.php");
+
 Class Shoppingcart
 {
 	private $cart_id;

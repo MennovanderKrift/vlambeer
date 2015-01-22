@@ -18,12 +18,12 @@
 		echo header("location: index.php");
 	}
 
-	$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
-	$query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
+	$getProductID = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
+	$getProductID -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
 
-	$query->execute();
+	$getProductID->execute();
 
-	foreach($query as $row){
+	foreach($getProductID as $row){
 		if($row['category'] == 'Music'){
 		header("location: vlambeerMusic.php?product_id=" .$_GET['product_id']);
 	}
@@ -63,7 +63,8 @@
 		<?php endif; ?>
 
 		<div class="insert-cart-btn">
-			<a href="addproduct.php"><img class="cart-btn" src="../assets/img/Bestelknop.gif"></a>
+		
+			<a href="addproduct.php?product_id=<?php echo $_GET['product_id']?>"><img class="cart-btn" src="../assets/img/Bestelknop.gif"></a>
 		</div>
 	</div>
 
