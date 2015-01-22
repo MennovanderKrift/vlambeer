@@ -48,21 +48,24 @@ Class Shoppingcart
 		}
 	}
 
-	public function removeFromCart($product_id)
+	public function removeFromCart($product_id) 
 	{
-		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid", $bind))
+		if($this->db->query("SELECT customer_id FROM tbl_customers WHERE customer_id = :cid", 
+			["cid" => $this->cart_id]))
+		{
 			$bind = [
-						"id" 	=> $this->cart_id,
+						"id" 	=> $this->cid,
 						"pid" 	=> $product_id
 					];
-			$this->db->query("DELETE FROM tbl_carts WHERE cart_id = :id AND product_id = :pid")	
-			$bind = [
-						"tid" => $this->cart_id,
-						"pid" => $this->product_id
-					];
-		else
+			$this->db->query("DELETE FROM tbl_carts WHERE cart_id = :id AND product_id = :pid", $bind);
+		} 
+		else 
 		{
-			$db->query("DELETE FROM tbl_tempcarts WHERE tempcart_id = :tid AND product_id = :pid", $bind);
+			$bind = [
+				"tid" 	=> $this->cart_id,
+				"pid" 	=> $product_id
+			];
+			$this->db->query("DELETE FROM tbl_tempcarts WHERE tempcart_id = :tid AND product_id = :pid", $bind);
 		}
 	}
 
