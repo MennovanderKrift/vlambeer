@@ -11,8 +11,8 @@ require '../includes/header.php';
 </div>
 <div class="backgroundcolor1-index">
 	<div class="container">
-		<div class="index-items col-md-12">
-			<h2>Games</h2>
+		<h2 class="col-md-12" style="text-align:center">Games</h2>
+		<div class="index-items col-md-7 index-games">
 			<div class="col-md-3">
 				<a href="serious-sam.php"><div class="product-img"><img src="../assets/img/ss_logo.png" alt="serious-sam.jpg"></div></a>	
 				<div class="product-info"><a href="serious-sam.php"><p>Serious Sam: The Random Encounter (PC, Steam)</p></a></div>
@@ -31,11 +31,25 @@ require '../includes/header.php';
 			</div>
 
 			<div class="col-md-3">
-				<a href="gunGodz.php"><div class="product-img"><img src="../assets/img/gg_logo.png" alt="gungodz.png"></div></a>	
+				<a href="gunGodz.php"><div class="product-img"><img src="../assets/img/gg_logo.png" alt="gg_logo.png"></div></a>	
 				<div class="product-info"><a href="#"><p>Gun-Godz<br> (pc)</p></a></div>
-	<div class="arrow-down"></div>
+				<div class="arrow-down"></div>
 			</div>
 		</div>
+
+	<div class="col=md-5 twitter-feed">
+		<img src="../assets/img/twitter-header.png" alt="twitter-header" class="col-md-5 twitter-header">
+		<div class="tweet col-md-5">
+			<p class="twitter-poster"> Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
+			<p class="twitter-post">Nuclear Throne (PC) - Episode 282:  <a href="http://youtu.be/wP1ejrcWqDY">http://youtu.be/wP1ejrcWqDY</a></p>
+		</div>
+		
+		<div class="tweet col-md-5">
+			<p class="twitter-poster"> Tom (ＳＬＥＥＰＣＹＣＬＥＳ)<span class="tweeted-from">@SleepCycles  ·  12 u</span></p>
+			<p class="twitter-post">Nuclear Throne (PC) - Episode 282:  <a href="http://youtu.be/wP1ejrcWqDY">http://youtu.be/wP1ejrcWqDY</a></p>
+		</div>
+	</div>
+
 	</div>
 </div>
 <div class="container">
@@ -68,11 +82,11 @@ require '../includes/header.php';
 			$clothes ->execute();
 			while($singleClothe = $clothes->fetch(PDO::FETCH_OBJ)):
 		?>
-			<div class="col-md-3">
-				<a href="merchandise.php?product_id=<?= $singleClothe->product_id ?>"><div class="product-img"><img src="<?= $singleClothe->image; ?>" alt=""></div></a>	
-				<div class="product-info"><a href="merchandise.php?product_id=<?= $singleClothe->product_id; ?>"<p><?= $singleClothe->name; ?><br> <?= $singleClothe->category; ?></p></a></div>
-				<div class="arrow-down"></div>
-			</div>
+		<div class="col-md-3">
+			<a href="merchandise.php?product_id=<?= $singleClothe->product_id ?>"><div class="product-img"><img src="<?= $singleClothe->image; ?>" alt=""></div></a>	
+			<div class="product-info"><a href="merchandise.php?product_id=<?= $singleClothe->product_id; ?>"<p><?= $singleClothe->name; ?><br> <?= $singleClothe->category; ?></p></a></div>
+			<div class="arrow-down"></div>
+		</div>
 
 		<?php endwhile; //end clothes ?>
 

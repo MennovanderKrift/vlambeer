@@ -494,6 +494,45 @@ EINDE LOGIN SCRIPT CSS
 	border-right: 12px solid transparent;
 	border-bottom: 12px solid #A4A5A6;
 }
+
+.index-games{
+	height: auto;
+}
+
+.tweet{
+	padding: 15px;
+}
+
+.twitter-header{
+	padding: 0;
+}
+
+.tweet:nth-child(odd){
+	background-color: #f5f5f5;
+}
+
+.tweet:nth-child(even){
+	background-color: #ffffff;
+}
+
+.twitter-feed, .twitter-feed p, .twitter-feed a{
+	font-family: 'Century Gothic' !important;
+}
+
+.twitter-poster{
+	color: #010101;
+	font-size: 8pt;
+	margin-bottom: 0;
+}
+
+.tweeted-from{
+	color: #b7b7b7;
+	font-size: 6pt;
+}
+
+.twitter-feed a{
+ color: #fac846;
+}
 /*---------------------------------------------------START MUSIC PAGE------------------------------------------*/
 .music-photos-wrapper{
 	display: inline-block;
