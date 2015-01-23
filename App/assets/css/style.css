@@ -78,7 +78,7 @@
 	margin-left: 170px;
 }
 .header-profile-bar {
-	width: 900px;
+	
 	height: 40px;
 	position: relative;
 	margin: 0 auto;
@@ -226,6 +226,9 @@ ul li ul{
 li input 
 {
 	margin-top: 20px;
+}
+.search-form{
+	margin-top: -3px;
 }
 
 .index-slider img

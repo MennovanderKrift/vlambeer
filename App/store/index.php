@@ -11,7 +11,7 @@ require '../includes/header.php';
 </div>
 <div class="backgroundcolor1-index">
 	<div class="container">
-		<h2 class="col-md-12" style="text-align:center">Games</h2>
+		<h2 class="col-md-12" style="text-align:center" id="games">Games</h2>
 		<div class="index-items col-md-7 index-games">
 			<div class="col-md-3 index-game">
 				<a href="serious-sam.php"><div class="product-img"><img src="../assets/img/ss_logo.png" alt="serious-sam.jpg"></div></a>	
