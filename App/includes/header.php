@@ -24,7 +24,7 @@
   <script src="../assets/js/jquery.simplePagination.js" type="text/javascript"></script>
 </head>
 <body>
-  <div class="resizePage">
+  
 
     <div class="index-header">
       <?php require 'profile.php'; ?>
