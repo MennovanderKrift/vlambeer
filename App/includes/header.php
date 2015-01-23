@@ -31,6 +31,7 @@
     <img class="displayed" src="../assets/img/geanimeerd-logo.gif" width="160" height="130">
     <p class="sloganscript" id="slogan"></p>
   </div>
+<<<<<<< HEAD
 
 
 <nav class="navbar navbar-inverse">
@@ -102,6 +103,12 @@
 
 
           <ul>
+=======
+  <nav>
+    <div class="navcolour">
+      <div class="navborder">
+        <ul>
+>>>>>>> parent of 6c30c53... responsive
           <li><a href="../store/index.php">HOME</a></li>
           <li><a href="../store/games/index.php">GAMES</a>
             <ul>
@@ -112,6 +119,7 @@
           <li><a href="../store/contact.php">CONTACT</a></li>
           <li><form class="search-form"><input type="submit" name="search" value="" class="search-btn"><input type="text" placeholder="Search.."></form></li>
         </ul>
+<<<<<<< HEAD
 
         </div>
       </div>   
@@ -125,3 +133,8 @@
 
 <!--       </div>
     </div> -->
+=======
+      </div>
+    </div>    
+  </nav>
+>>>>>>> parent of 6c30c53... responsive
