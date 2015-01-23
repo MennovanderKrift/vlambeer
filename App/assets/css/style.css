@@ -32,7 +32,7 @@
 }
 
 .container {
-	width: 960px;
+	width: 100%;
 	position: relative;
 	z-index: 1;
 }
@@ -159,7 +159,7 @@ EINDE HEADERBAR CSS
 ------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------------------
-EINDE LOGO CSS
+BEGIN MENU CSS
 ------------------------------------------------------------------------------------------------*/
 
 .profile-wrapper {
@@ -169,93 +169,7 @@ EINDE LOGO CSS
 
 /* MENU CSS */
 
-.navborder {
-	background: #dddddd;
-	height: 60px;
-	margin: 0 auto;
-	margin-left: 455px;
-}
 
-.navcolour{
-	background: #dddddd;
-	margin-top: -10px;
-}
-
-ul{
-	padding: 0;
-	list-style: none;
-
-}
-
-ul li{
-	display: inline-block;
-	float: left;
-	width: 145px;
-	text-align: center;
-	margin: 0 auto;
-
-}
-
-ul li a{
-    display: block;
-    background: #dddddd;
-    text-decoration: none;
-    padding: 20px 20px 19px 20px;
-    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-	color: #191407;
-	z-index: 9999;
-	position: relative;
-    }
-
-ul li a:hover{
-    background: #fac846;
-
-}
-
-li{
-	display: inline;
-	text-decoration: none;
-}
-
-ul li ul{
-	display: none;
-	position: absolute;
-}
-
- ul li:hover ul{
-    display: block;
-    width: 60px;
-}
-
-li input 
-{
-	margin-top: 18px;
-	width: 120px;
-	float: right;
-	height: 25px;
-}
-.search-form {
-	float: right;
-	width: 200px;
-}
-.search-btn {
-	background-image: url('../img/search.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	float: right;
-	width: 25px;
-	height: 25px;
-	background-color: #5f5f5f;
-	border: none;
-}
-
-td, th {
-padding: 5px;
-}
-
-/*----------------------------------------------------------------------------------------------
-EINDE MENU CSS
-------------------------------------------------------------------------------------------------*/
 
 .index-slider img
 {
