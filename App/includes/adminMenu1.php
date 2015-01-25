@@ -42,8 +42,8 @@
 					<a href="customers.php"><li>Customers</li></a>
 					<a href="newProduct.php"><li>Add product</li></a>
 					<a href="changeStatus.php"><li>Invoices</li></a>
-					<a href="newsletter.php"><li>Newsletter</li></a>
-					<a href="settings.php"><li>Settings</li></a>
+<!-- 					<a href="newsletter.php"><li>Newsletter</li></a>
+					<a href="settings.php"><li>Settings</li></a> -->
 					<a href="inventory.php"><li>Inventory Items</li></a>
 					<a href="../controllers/adminController.php?logout" name="logout"><li>Logout</li></a>
 				</ul>
