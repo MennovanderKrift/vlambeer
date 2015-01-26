@@ -72,24 +72,25 @@
 }
 
 .header-top {
-	position: absolute;
+	z-index: 99;
+	margin-bottom: -40px;
 	height: 40px;
 	background-color: transparent;
 	margin-left: 170px;
 }
 
 .header-profile-bar {
-	
 	height: 40px;
-	position: relative;
+	position: absolute;
 	margin: 0 auto;
 	color: white;
+	min-width: 140px;
 }
 .header-profile-menu {
 	z-index: 99;
 	float: right;
 	position: absolute;
-	width: 200px;
+	min-width: 200px;
 	background-color: transparent;
 }
 
@@ -136,12 +137,12 @@
 .header-profile p {
 	margin-left: 5px;
 	line-height: 40px;
-	float: right;
+	float: left;
 	vertical-align: bottom;
 }
 
 .header-profile img {
-	float: right;
+	float: left;
 	margin: 1px;
 	height: 35px;
 	width: 35px;
@@ -176,6 +177,7 @@ BEGIN MENU CSS
 .profile-wrapper {
 	z-index: 99;
 	float: right;
+	height: 40px;
 }
 
 /* MENU CSS */
