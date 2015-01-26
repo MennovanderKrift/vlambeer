@@ -63,72 +63,100 @@ if (isset($_POST['editAdminAccounts'])) {
   }
 }
 
-$result = $db->query("SELECT count(*) FROM tbl_users"); 
+$result = $db->prepare("SELECT count(*) FROM tbl_users"); 
+$result->execute(); 
+$number_of_rows = $result->fetchColumn();
 
   if (isset($_POST['deleteAdminAccounts'])) {
-    if ($result <= 1) {
+    if ($number_of_rows <= 1) {
       session_start();
-      $_SESSION['cantDelete'] = "You can't have less than 1 admin account";
+      $_SESSION['cantDelete'] = "You must have at least 1 admin account";
       header("location: ../admin/admin.php?id=$sessionId");
     } else {
-      $stmt = $db->prepare("DELETE FROM tbl_users WHERE user_id = :user_id");
-      
-      $stmt->bindParam(':user_id', $_GET['user_id']);   
+      $deleteUser = $db->prepare("DELETE FROM tbl_users WHERE user_id = :user_id");
+      $deleteUser->bindParam(':user_id', $_GET['user_id']);   
      
-      if (!$stmt->execute()) {
+      if ( !$deleteUser->execute() ) {
         header("location: ../admin/admin.php?id=$sessionId&fail");
       } else {
         session_start();
         $_SESSION['deleteSuccesfull'] = "Admin successfully deleted";
-        header("location: ../admin/admin.php?id=$sessionId");
+        header("location: ../admin/admin.php");
       }
     }
   }
 
+  if (isset($_GET['newAdminAccount'])) {
+    $sql = "INSERT INTO tbl_users(username,
+                                  email,
+                                  password,
+                                  name,
+                                  last_name) VALUES (
+                                  :username, 
+                                  :email, 
+                                  :password, 
+                                  :name, 
+                                  :last_name)";
+                                          
+    $stmt = $db->prepare($sql);
+                                                  
+    $stmt->bindParam(':username', $_POST['username'], PDO::PARAM_STR);       
+    $stmt->bindParam(':email', $_POST['email'], PDO::PARAM_STR); 
+    $stmt->bindParam(':password', $_POST['password'], PDO::PARAM_STR);
+    $stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR); 
+    $stmt->bindParam(':last_name', $_POST['last_name'], PDO::PARAM_STR);   
+                                          
+    if ( !$stmt->execute() ) {
+      header('location: ../admin/admin.php?fail');
+    } else {
+      header('location: ../admin/admin.php');
+    }
+  }
+
 //////////////////// EDIT & DELETE USER ACOUNTS ////////////////////
-if (isset($_POST['editCustomerAccounts'])) {
-  $stmt = $db->prepare("UPDATE tbl_customers SET  email_address = :email_address, 
-                                                  username = :username,  
-                                                  name = :name, 
-                                                  last_name = :last_name, 
-                                                  zipcode = :zipcode, 
-                                                  address = :address, 
-                                                  phone_number = :phone_number, 
-                                                  news_letter = :news_letter 
-                                            WHERE customer_id = :customer_id");
+// if (isset($_POST['editCustomerAccounts'])) {
+//   $stmt = $db->prepare("UPDATE tbl_customers SET  email_address = :email_address, 
+//                                                   username = :username,  
+//                                                   name = :name, 
+//                                                   last_name = :last_name, 
+//                                                   zipcode = :zipcode, 
+//                                                   address = :address, 
+//                                                   phone_number = :phone_number, 
+//                                                   news_letter = :news_letter 
+//                                             WHERE customer_id = :customer_id");
 
-    $stmt->bindParam("customer_id", $_GET['customer_id'], PDO::PARAM_STR);
-    $stmt->bindParam("email_address", $_POST['email_address'], PDO::PARAM_STR);
-    $stmt->bindParam("username", $_POST['username'], PDO::PARAM_STR);
-    $stmt->bindParam("name", $_POST['name'], PDO::PARAM_STR);
-    $stmt->bindParam("last_name", $_POST['last_name'], PDO::PARAM_STR);
-    $stmt->bindParam("zipcode", $_POST['zipcode'], PDO::PARAM_STR);
-    $stmt->bindParam("address", $_POST['address'], PDO::PARAM_STR);
-    $stmt->bindParam("phone_number", $_POST['phone_number'], PDO::PARAM_STR);
-    $stmt->bindParam("news_letter", $_POST['news_letter'], PDO::PARAM_STR);
+//     $stmt->bindParam("customer_id", $_GET['customer_id'], PDO::PARAM_STR);
+//     $stmt->bindParam("email_address", $_POST['email_address'], PDO::PARAM_STR);
+//     $stmt->bindParam("username", $_POST['username'], PDO::PARAM_STR);
+//     $stmt->bindParam("name", $_POST['name'], PDO::PARAM_STR);
+//     $stmt->bindParam("last_name", $_POST['last_name'], PDO::PARAM_STR);
+//     $stmt->bindParam("zipcode", $_POST['zipcode'], PDO::PARAM_STR);
+//     $stmt->bindParam("address", $_POST['address'], PDO::PARAM_STR);
+//     $stmt->bindParam("phone_number", $_POST['phone_number'], PDO::PARAM_STR);
+//     $stmt->bindParam("news_letter", $_POST['news_letter'], PDO::PARAM_STR);
 
-  if (!$stmt->execute()) {
-    header("location: ../admin/customers.php?id=$sessionId&fail");
-  } else {
-    session_start();
-    $_SESSION['editSuccesfull'] = "Customer successfully edited";
-    header("location: ../admin/customers.php?id=$sessionId");
-  }
-}
+//   if (!$stmt->execute()) {
+//     header("location: ../admin/customers.php?id=$sessionId&fail");
+//   } else {
+//     session_start();
+//     $_SESSION['editSuccesfull'] = "Customer successfully edited";
+//     header("location: ../admin/customers.php?id=$sessionId");
+//   }
+// }
 
-if (isset($_POST['deleteCustomerAccounts'])) {
-  $stmt = $db->prepare("DELETE FROM tbl_customers WHERE customer_id = :customer_id");
+// if (isset($_POST['deleteCustomerAccounts'])) {
+//   $stmt = $db->prepare("DELETE FROM tbl_customers WHERE customer_id = :customer_id");
   
-  $stmt->bindParam('customer_id', $_GET['customer_id']);   
+//   $stmt->bindParam('customer_id', $_GET['customer_id']);   
  
-  if (!$stmt->execute()) {
-    header("location: ../admin/customers.php?id=$sessionId&fail");
-  } else {
-    session_start();
-    $_SESSION['deleteSuccesfull'] = "Customer successfully deleted";
-    header("location: ../admin/customers.php?id=$sessionId");
-  }
-}
+//   if (!$stmt->execute()) {
+//     header("location: ../admin/customers.php?id=$sessionId&fail");
+//   } else {
+//     session_start();
+//     $_SESSION['deleteSuccesfull'] = "Customer successfully deleted";
+//     header("location: ../admin/customers.php?id=$sessionId");
+//   }
+// }
 //////////////////// NEWSLETTER ////////////////////
 
 // require 'PHPMailer/PHPMailerAutoload.php';

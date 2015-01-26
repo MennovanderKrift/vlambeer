@@ -40,7 +40,7 @@ if ($_SESSION['role'] == 'admin') {
 			<tbody>
 <?php
 ///////////////////////// CHECKT HOEVEEL USERS ER ZIJN ////////////////////////////
-	$query = $db->query("SELECT * FROM tbl_customers"); 
+	$query = $db->prepare("SELECT * FROM tbl_customers"); 
 
 	foreach ($query as $row) 
 	{		echo "<form action='changeStatus.php' method='POST'>";
