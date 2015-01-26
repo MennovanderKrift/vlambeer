@@ -42,7 +42,7 @@ if (isset($_POST['loginUser'])) {
     header('location: ../store/index.php');    
   } else {
     session_start();
-    $_SESSION['wrongCredentials'] = "Password or username incorrect. <a href='../controllers/authController.php?forgotPassword'>Forgot your password?</a>";
+    $_SESSION['wrongCredentials'] = "Password or username incorrect.";
     header("location: ../store/login.php");
   }
 }

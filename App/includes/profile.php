@@ -4,15 +4,15 @@
 	echo "
 		<div class='header-profile-bar'>
 			<div class='profile-wrapper'>
-				<div class='header-profile'>
-					<p>" . $_SESSION['username'] . "</p>";
-				if ($_SESSION['gender'] == 'male') {
-					echo "<img src='../assets/img/profile-male.png'>";
-				} elseif ($_SESSION['gender'] == 'female') {
-					echo "<img src='../assets/img/profile-female.png'>";
-				} else {
-					echo "<img src='../assets/img/profile-male.png'>";
-				}
+				<div class='header-profile'>";
+					if ($_SESSION['gender'] == 'male') {
+						echo "<img src='../assets/img/profile-male.png'>";
+					} elseif ($_SESSION['gender'] == 'female') {
+						echo "<img src='../assets/img/profile-female.png'>";
+					} else {
+						echo "<img src='../assets/img/profile-male.png'>";
+					}
+				echo  "<p>" . $_SESSION['username'] . "</p>";
 ?>		</div>
 			<div class='header-profile-menu'>
 				<div class='header-profile-menu-top'>
