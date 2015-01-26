@@ -839,6 +839,10 @@ img.music-photos{
 	border: 1px solid #fac846;
 }
 
+.shirt-img img {
+	width: 640px;
+}
+
 .shirt-maat{
 	margin-top: 30px;
 	background-color: #63676a;
