@@ -535,12 +535,12 @@ img.music-photos{
 
 .musicInfo{
 	margin-top: 10px;
-	height: 555px;
+	height: 550px;
 	width: 670px;
 	background: #63676a;
 	float: right;
 	position: absolute;
-	bottom: 12px;
+	bottom: 31px;
 	right: 30px;
 }
 
@@ -785,9 +785,6 @@ img.music-photos{
 	
 }
 
-.shirt-img img {
-	width: 640px;
-}
 .shirt-info{
 	background-color: #63676a;
 }

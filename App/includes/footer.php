@@ -1,9 +1,9 @@
 	<footer>
-		<div class="footer col-sm-12">
+		<div class="footer col-sm-12 col-md-12">
 
 			<div class="col-md-2"></div>
 
-			<div class="col-sm-12 col-md-3">
+			<div class="col-sm-12 col-md-3 col-lg-3">
 				<b>VLAMBEER IS A DUTCH INDEPENDENT GAME STUDIO</b> made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1937<br><br>
 			<div class="footerContact">
 				info@vlambeer.com<br>
@@ -16,7 +16,7 @@
 
 			<div class="col-md-1"></div>
 
-			<div class="col-sm-12 col-md-3">
+			<div class="col-sm-12 col-md-3 col-lg-3">
 				<b>FRIENDS OF VLAMBEER</b><br>
 				<a href="http://www.pietepiet.net/" target="_blank">Paul Veer</a><br>
 				<a href="#" target="_blank">Roy Nathan de Groot</a><br>
@@ -35,7 +35,7 @@
 
 			<div class="col-md-1"></div>
 
-			<div class="col-sm-12 col-md-3">
+			<div class="col-sm-12 col-md-3 col-lg-3">
 				<p>
 				
 				<b>FRIENDS OF VLAMBEER</b><br>
