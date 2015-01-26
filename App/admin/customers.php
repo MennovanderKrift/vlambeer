@@ -1,4 +1,4 @@
-<?php require '../includes/adminMenu1.php';
+<?php require '../includes/adminMenu.php';
 
 if ($_SESSION['role'] == 'admin') {
   $sessionId = $_SESSION['id'];
@@ -45,16 +45,16 @@ if ($_SESSION['role'] == 'admin') {
 	foreach ($query as $row) 
 	{		echo "<form action='changeStatus.php' method='POST'>";
 	 		echo "<tr>";
-				echo "<td>" . $row->customer_id . "</td>";
-				echo "<td>" . $row->username . "</td>";
-				echo "<td>" . $row->email_address . "</td>";
-				echo "<td>" . $row->name . "</td>";
-				echo "<td>" . $row->last_name . "</td>";
-				echo "<td>" . $row->address . "</td>";
-				echo "<td>" . $row->zipcode . "</td>";
-				echo "<td>" . $row->phone_number . "</td>";
+				echo "<td>" . $row['customer_id'] . "</td>";
+				echo "<td>" . $row['username'] . "</td>";
+				echo "<td>" . $row['email_address'] . "</td>";
+				echo "<td>" . $row['name'] . "</td>";
+				echo "<td>" . $row['last_name'] . "</td>";
+				echo "<td>" . $row['address'] . "</td>";
+				echo "<td>" . $row['zipcode'] . "</td>";
+				echo "<td>" . $row['phone_number'] . "</td>";
 				echo "<td>";
-				if($row->news_letter == 1){
+				if($row['news_letter'] == 1){
 					echo "Yes";
 
 				}else{
@@ -62,7 +62,7 @@ if ($_SESSION['role'] == 'admin') {
 				};
 
 				echo "</td>";
-				echo "<input type='hidden' value='".$row->customer_id."'>";
+				echo "<input type='hidden' value='".$row['customer_id']."'>";
 				echo "<td><input type='submit' class='btn btn-danger' value='Invoices'></td>";
 			echo "</tr>";
 			echo "</form>";
