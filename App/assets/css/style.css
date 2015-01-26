@@ -32,7 +32,7 @@
 }
 
 .container {
-	width: 960px;
+	max-width: 960px;
 	position: relative;
 	z-index: 1;
 }
@@ -171,7 +171,7 @@ BEGIN MENU CSS
 .navborder{
 	background: #dddddd;
 	height: 60px;
-	width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 }
 
