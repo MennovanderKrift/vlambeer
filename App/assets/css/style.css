@@ -70,13 +70,14 @@
 	width: 100%;
 	background-color: #000000;
 }
+
 .header-top {
 	position: absolute;
 	height: 40px;
-	width: 100px;
 	background-color: transparent;
 	margin-left: 170px;
 }
+
 .header-profile-bar {
 	
 	height: 40px;
@@ -91,17 +92,21 @@
 	width: 200px;
 	background-color: transparent;
 }
+
 .header-profile-menu a {
 	text-decoration: none;
 }
+
 .header-profile-menu-top {
 	height: 12px;
 	width: 100%;
 }
+
 .header-profile-menu-content {
 	border: 1px solid #777777;
 	height: 100%;
 }
+
 .header-profile-menu-item {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -111,25 +116,30 @@
 	border-bottom: 1px solid #A4A5A6;
 	z-index: 999;
 }
+
 .header-profile-menu-item:hover {
 	background-color: #ededed;
 	border-bottom: 1px solid #777777;
 }
+
 .header-profile-menu-item img {
 	float: left;
 	width: 39px;
 	padding-left: 4px;
 	padding-right: 10px;
 }
+
 .header-profile {
 	height: 40px;
 }
+
 .header-profile p {
 	margin-left: 5px;
 	line-height: 40px;
 	float: right;
 	vertical-align: bottom;
 }
+
 .header-profile img {
 	float: right;
 	margin: 1px;
@@ -137,6 +147,7 @@
 	width: 35px;
 	border: 1px solid black;
 }
+
 .header-calltoaction {
 	background-color: #FFFFFF;
 	height: 200px;
