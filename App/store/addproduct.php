@@ -23,7 +23,7 @@ if(!isset($_SESSION['cart_items']))
 	$_SESSION['cart_items'] = array();
 }
 
-$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id= :productID");
+$query = $db->prepare("SELECT * FROM tbl_products WHERE product_id = :productID");
 $query -> bindParam(":productID", $_GET['product_id'], PDO::PARAM_STR);
 
 $query->execute();
